@@ -16,5 +16,6 @@ int main()
 		{
 			tbi(PORTB, 1);
 		}
+_delay_ms(100);
 	}
 }
