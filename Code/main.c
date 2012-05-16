@@ -15,6 +15,5 @@ int main()
 	{
 		uart0PrintString("Hello World!\r");
 		_delay_ms(100);
-_delay_ms(100);
 	}
 }
