@@ -104,7 +104,7 @@ void uartFlush()
  *
  * @return Whether or not there is valid data in the UART receive buffer.
  */
-inline u08 uartReady()
+inline u08 uartDataAvailable()
 {
 	return UCSR0A & (1 << RXC0);
 }
