@@ -13,7 +13,7 @@ int main()
 	
 	while(1)
 	{
-		uart0PrintString("Hello World!\r");
+		uartPrintString("Hello World!\r");
 		_delay_ms(100);
 	}
 }

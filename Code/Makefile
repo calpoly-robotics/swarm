@@ -27,7 +27,7 @@ program: all
 # This target can be called to delete any existing compiled files (binaries), so you know that your next compile is fresh.
 # The dash in front of rm is not passed to the shell, and just tells make to keep running if an error code is returned by rm.
 clean:
-	-rm -f main.elf main.hex
+	-rm -f main.elf main.hex main.lss
 	
 asm: all
 	avr-objdump -h -S main.elf > main.lss

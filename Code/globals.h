@@ -15,13 +15,6 @@
 #define F_CPU 10000000UL
 #include <util/delay.h> 
 
-//! Define a Boolean type and boolean values.
-/*typedef enum
-{
-	FALSE = 0,
-	TRUE = 1
-} bool; */
-
 
 //Define new datatypes as easier shorthand
 typedef unsigned char u08; //!< Unsigned 8-bit integer, range: 0 to +255

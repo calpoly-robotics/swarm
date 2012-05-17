@@ -1,15 +1,8 @@
-/*
- *  serial.c
- *
- *
- *  Created by Christopher MacKenzie and Brian Gomberg on 2/19/12.
- *  Copyright 2012 Cal Poly SLO Robotics Club. All rights reserved.
- *
- */
- 
- /*! @file
-	Implements support functions for serial communication over uart0/uart1.
- */
+/*! @file
+	Implements support functions for serial communication over UART.
+	Code from the Cal Poly SLO Robotics Club Xiphos Board libraries.
+	Originally created by Brian Gomberg and Chris MacKenzie. 
+*/
 
 #include "globals.h"
 #define BAUD_RATE 9600
@@ -40,16 +33,16 @@ inline void uartInit()
 	sei();
 }
 
-volatile u08 transmitBuffer0[256];
-volatile u08 transmitStart0 = 0;
-volatile u08 transmitEnd0 = 0;
+volatile u08 transmitBuffer[256];
+volatile u08 transmitStart = 0;
+volatile u08 transmitEnd = 0;
 
 ISR(USART_UDRE_vect)
 {
 	tbi(PORTB, 0);
-	if (transmitStart0 != transmitEnd0)
+	if (transmitStart != transmitEnd)
 	{
-		UDR0 = transmitBuffer0[transmitStart0++];
+		UDR0 = transmitBuffer[transmitStart++];
 	}
 	else
 	{
@@ -58,74 +51,73 @@ ISR(USART_UDRE_vect)
 }
 
 /**
- * Transmits the given data over UART0 by adding the data to the transmit buffer.
+ * Transmits the given data over UART by adding the data to the transmit buffer.
  *
- * @param data The data to transmit over UART0.
+ * @param data The data to transmit over UART.
  */
-void uart0Transmit_u08(u08 data)
+void uartPrint_u08(u08 data)
 {
-	transmitBuffer0[transmitEnd0++] = data;
+	transmitBuffer[transmitEnd++] = data;
 	UCSR0B |= (1 << UDRIE0);
 }
 
 /**
- * Transmits the given u16 over UART0 by pushing the high byte of the u16
+ * Transmits the given u16 over UART by pushing the high byte of the u16
  * followed by the low byte into the transmit buffer.
  *
  * @param numData The number of bytes to send.
- * @param data The data to transmit over UART0.
+ * @param data The data to transmit over UART.
  */
-void uart0Transmit_u16(u16 data)
+void uartPrint_u16(u16 data)
 {
-	uart0Transmit_u08(data >> 8); // upper byte
-	uart0Transmit_u08(data); // lower byte
+	uartPrint_u08(data >> 8); // upper byte
+	uartPrint_u08(data); // lower byte
 }
 
 /**
- * Transmits the given data over UART0 by adding the data to the transmit buffer.
+ * Transmits the given string over UART by transmitting one char (u08) at a time.
  *
- * @param numData The number of bytes to send.
- * @param data The data to transmit over UART0.
+ * @param str The null-terminated string to be sent.
  */
-void uart0TransmitMultiple(u08 numData, u08 *data)
-{
-	u08 i;
-	for(i = 0; i < numData; i++)
-	{
-		uart0Transmit_u08(data[i]);
-	}
-}
-
-/**
- * Receives the data from UART0 and returns the value. Will not work when the RX ISR is in use.
- *
- * @return The data from the UART0 transmission.
- */
-u08 uart0Receive_u08()
-{
-	//Wait for the data to be received.
-	while(!(UCSR0A & (1 << RXC0)));
-
-	return UDR0;
-}
-
-void uart0PrintString(u08 *str)
+void uartPrintString(u08 *str)
 {
 	while(*str)
 	{
-		uart0Transmit_u08(*str);
-		str++;
+		uartPrint_u08(*str++);
 	}
 }
 
 /**
  * Flush the receive buffer FIFO, code from Atmega documentation.
  */
-void uart0Flush()
+void uartFlush()
 {
 	u08 temp;
 
 	//Read from the register until the buffer is cleared and assign it to a dummy variable.
 	while(UCSR0A & (1 << RXC0))
 		temp = UDR0;
+}
+
+/**
+ * Receives the data from UART and returns the value.
+ *
+ * @return Whether or not there is valid data in the UART receive buffer.
+ */
+inline u08 uartReady()
+{
+	return UCSR0A & (1 << RXC0);
+}
+
+/**
+ * Receives the data from UART and returns the value.
+ *
+ * @return The data from the UART transmission.
+ */
+u08 uartRead()
+{
+	//Wait for the data to be received.
+	while(!uartReady());
+
+	return UDR0;
 }
