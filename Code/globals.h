@@ -30,6 +30,13 @@ typedef signed int    s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
 
 //global variables and defines
 #define SENSOR_PIN 2
-#define IR_OUT 0;
+#define RED_LED	0
+#define GREEN_LED 1
+#define IR_LED 1
+
+#define MAX_MESSAGESIZE 64
+
+#define PULSE_WIDTH 50
+#define BASE 0
 
 #endif //ifndef GLOBALS_H

@@ -1,5 +1,4 @@
 #include "globals.h"
-#include "swarmGlobals.h"
 #include "ir.h"
 
 /* buf = pointer to u08 array 
@@ -10,7 +9,7 @@
  * message = one of the defined messages
  */
 void createMessage(u08 buf[MAX_MESSAGESIZE], u08 sender, u08 hopCount, u08 origSend, u08 message) {
-	int i = 0;
+	u08 i;
 	int ndx = 0;
 	int even = 0;
 	

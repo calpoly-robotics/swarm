@@ -1,5 +1,4 @@
 #include "globals.h"
-#include "swarmGlobals.h"
 #include "messages.h"
 #include "ir.h"
 
