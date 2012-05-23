@@ -1,5 +1,7 @@
 #include "globals.h"
 #include "ir.h"
+#include <util/parity.h>
+
 
 /* buf = pointer to u08 array 
  * sender = robot id 
@@ -8,89 +10,91 @@
  * origSend = 1 if original sender should be preserved
  * message = one of the defined messages
  */
-void createMessage(u08 buf[MAX_MESSAGESIZE], u08 sender, u08 hopCount, u08 origSend, u08 message) {
-	u08 i;
-	int ndx = 0;
-	int even = 0;
+void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 message) {
+	u08 i, index = 0, even = 0;
+	
+	u08 metaData = 0;
+	metaData |= (hopCount << 4) | (origSend << 2) | (BASE << 1);
+	u08 parityBit = (parity_even_bit(sender) + parity_even_bit(message) + parity_even_bit(metaData));
 	
 	for (i = 0; i < 8; i++) {
-		if (sender%2 == 0) {
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
+		if (sender & 0x01) {
+			buf[index++] = 1;
+			buf[index++] = 1;
+			buf[index++] = 0;
+			even++;
 		}
 		else {
-			buf[ndx++] = 1;
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
-			even++;
+			buf[index++] = 1;
+			buf[index++] = 0;
 		}
 		sender = sender >> 1;
 	}
 	
 	for (i = 0; i < 8; i++) {
-		if (message%2 == 0) {
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
+		if (message & 0x01) {
+			buf[index++] = 1;
+			buf[index++] = 1;
+			buf[index++] = 0;
+			even++;
 		}
 		else {
-			buf[ndx++] = 1;
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
-			even++;
+			buf[index++] = 1;
+			buf[index++] = 0;
 		}
 		message = message >> 1;
 	}
 	
 	for (i = 0; i < 2; i++) {
-		if (hopCount%2 == 0) {
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
+		if (hopCount & 0x01) {
+			buf[index++] = 1;
+			buf[index++] = 1;
+			buf[index++] = 0;
+			even++;
 		}
 		else {
-			buf[ndx++] = 1;
-			buf[ndx++] = 1;
-			buf[ndx++] = 0;
-			even++;
+			buf[index++] = 1;
+			buf[index++] = 0;
 		}
 		hopCount = hopCount >> 1;
 	}
 	
-	if (origSend%2 == 0) {
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
+	if (origSend & 0x01) {
+		buf[index++] = 1;
+		buf[index++] = 1;
+		buf[index++] = 0;
+		even++;
 	}
 	else {
-		buf[ndx++] = 1;
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
-		even++;
+		buf[index++] = 1;
+		buf[index++] = 0;
 	}
 
-	if (BASE%2 == 0) {
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
-	}
-	else {
-		buf[ndx++] = 1;
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
+	if (BASE & 0x01) {
+		buf[index++] = 1;
+		buf[index++] = 1;
+		buf[index++] = 0;
 		even++;
 	}
+	else {
+		buf[index++] = 1;
+		buf[index++] = 0;
+	}
 	
-	if (even%2 == 0) {
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
+	if (parityBit & 0x01) {
+		buf[index++] = 1;
+		buf[index++] = 1;
+		buf[index++] = 0;
 	}
 	else {
-		buf[ndx++] = 1;
-		buf[ndx++] = 1;
-		buf[ndx++] = 0;
+		buf[index++] = 1;
+		buf[index++] = 0;
 	}
 	
-	buf[ndx++] = 2;
+	buf[index++] = 2;
 }
 
-void sendMessage(u08 buf[MAX_MESSAGESIZE]) {
+void sendMessage(u08 buf[]) {
 	int i = 0;
 	
 	while (buf[i] < 2) {

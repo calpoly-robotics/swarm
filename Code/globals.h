@@ -36,7 +36,7 @@ typedef signed int    s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
 
 #define MAX_MESSAGESIZE 64
 
-#define PULSE_WIDTH 50
+#define PULSE_WIDTH 1
 #define BASE 0
 
 #endif //ifndef GLOBALS_H
