@@ -88,13 +88,13 @@ void createMessage(u08 buf[MAX_MESSAGESIZE], u08 sender, u08 hopCount, u08 origS
 		buf[ndx++] = 0;
 	}
 	
-	buf[ndx++] = -1;
+	buf[ndx++] = 2;
 }
 
 void sendMessage(u08 buf[MAX_MESSAGESIZE]) {
 	int i = 0;
 	
-	while (buf[i] >= 0) {
+	while (buf[i] < 2) {
 		if (buf[i] == 0) 
 			cbi(PORTB, IR_LED);
 		else if (buf[i] == 1)
