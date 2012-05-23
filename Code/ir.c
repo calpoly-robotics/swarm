@@ -11,7 +11,7 @@
  * message = one of the defined messages
  */
 void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 message) {
-	u08 i, index = 0, even = 0;
+	u08 i, index = 0;
 	
 	u08 metaData = 0;
 	metaData |= (hopCount << 4) | (origSend << 2) | (BASE << 1);
@@ -22,7 +22,6 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 1;
 			buf[index++] = 0;
-			even++;
 		}
 		else {
 			buf[index++] = 1;
@@ -36,7 +35,6 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 1;
 			buf[index++] = 0;
-			even++;
 		}
 		else {
 			buf[index++] = 1;
@@ -50,7 +48,6 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 1;
 			buf[index++] = 0;
-			even++;
 		}
 		else {
 			buf[index++] = 1;
@@ -63,7 +60,6 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 		buf[index++] = 1;
 		buf[index++] = 1;
 		buf[index++] = 0;
-		even++;
 	}
 	else {
 		buf[index++] = 1;
@@ -74,7 +70,6 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 		buf[index++] = 1;
 		buf[index++] = 1;
 		buf[index++] = 0;
-		even++;
 	}
 	else {
 		buf[index++] = 1;
