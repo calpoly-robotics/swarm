@@ -99,8 +99,6 @@ void sendMessage(u08 buf[MAX_MESSAGESIZE]) {
 			cbi(PORTB, IR_LED);
 		else if (buf[i] == 1)
 			sbi(PORTB, IR_LED);
-		else 
-			break;
 		_delay_ms(PULSE_WIDTH);
 		i++;
 		//tbi(PORTB, RED_LED);
