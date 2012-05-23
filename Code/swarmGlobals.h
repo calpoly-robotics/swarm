@@ -8,7 +8,7 @@
 
 #define MAX_MESSAGESIZE 64
 
-#define PULSE_WIDTH 10
+#define PULSE_WIDTH 50
 #define BASE 0
 
 #endif
