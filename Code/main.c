@@ -23,24 +23,4 @@ int main()
 		_delay_ms(1000);
 		cbi(PORTB, RED_LED);
 	}
-	
-	
-	
-	
-	/*sbi(PORTB, RED_LED);
-	while (1) {
-	
-		tbi(PORTB, RED_LED);
-		tbi(PORTB, GREEN_LED);
-		_delay_ms(500);
-	}
-	*/
-	
-	/*while(1)
-	{
-		uartPrintString("Hello World!\r");
-		_delay_ms(100);
-	}
-	*/
-	return 0;
 }

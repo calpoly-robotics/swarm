@@ -13,10 +13,6 @@
 void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 message) {
 	u08 i, index = 0;
 	
-	u08 metaData = 0;
-	metaData |= (hopCount << 4) | (origSend << 2) | (BASE << 1);
-	u08 parityBit = (parity_even_bit(sender) + parity_even_bit(message) + parity_even_bit(metaData));
-	
 	for (i = 0; i < 8; i++) {
 		if (sender & 0x01) {
 			buf[index++] = 1;
@@ -27,7 +23,7 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 0;
 		}
-		sender = sender >> 1;
+		sender >>= 1;
 	}
 	
 	for (i = 0; i < 8; i++) {
@@ -40,7 +36,7 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 0;
 		}
-		message = message >> 1;
+		message >>= 1;
 	}
 	
 	for (i = 0; i < 2; i++) {
@@ -53,7 +49,7 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 			buf[index++] = 1;
 			buf[index++] = 0;
 		}
-		hopCount = hopCount >> 1;
+		hopCount >>= 1;
 	}
 	
 	if (origSend & 0x01) {
@@ -66,17 +62,17 @@ void createMessage(u08 buf[], u08 sender, u08 hopCount, u08 origSend, u08 messag
 		buf[index++] = 0;
 	}
 
-	if (BASE & 0x01) {
+#ifdef BASE
 		buf[index++] = 1;
 		buf[index++] = 1;
 		buf[index++] = 0;
-	}
-	else {
+#else
 		buf[index++] = 1;
 		buf[index++] = 0;
-	}
+#endif
 	
-	if (parityBit & 0x01) {
+	u08 metaBitParity = parity_even_bit((hopCount << 4) | (origSend << 2) | (BASE << 1));
+	if ((parity_even_bit(sender) + parity_even_bit(message) + metaBitParity) & 0x01) {
 		buf[index++] = 1;
 		buf[index++] = 1;
 		buf[index++] = 0;
