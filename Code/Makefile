@@ -1,5 +1,5 @@
 # C files
-FILES = main.c comm.c serial.c ir.c
+FILES = main.c serial.c ir.c
 # chip name
 MCU = atmega328
 # abbreviated chip name

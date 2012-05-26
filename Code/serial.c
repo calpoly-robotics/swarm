@@ -55,7 +55,7 @@ ISR(USART_UDRE_vect)
  *
  * @param data The data to transmit over UART.
  */
-void uartPrint_u08(u08 data)
+void uartPrintChar(u08 data)
 {
 	transmitBuffer[transmitEnd++] = data;
 	UCSR0B |= (1 << UDRIE0);
@@ -68,10 +68,10 @@ void uartPrint_u08(u08 data)
  * @param numData The number of bytes to send.
  * @param data The data to transmit over UART.
  */
-void uartPrint_u16(u16 data)
+void uartPrintChar2(u16 data)
 {
-	uartPrint_u08(data >> 8); // upper byte
-	uartPrint_u08(data); // lower byte
+	uartPrintChar(data >> 8); // upper byte
+	uartPrintChar(data); // lower byte
 }
 
 /**
@@ -83,8 +83,15 @@ void uartPrintString(u08 *str)
 {
 	while(*str)
 	{
-		uartPrint_u08(*str++);
+		uartPrintChar(*str++);
 	}
+}
+
+void uartPrint_u08(u08 num)
+{
+	uartPrintChar('0' + num/100);
+	uartPrintChar('0' + (num % 100)/10);
+	uartPrintChar('0' + num % 10);
 }
 
 /**

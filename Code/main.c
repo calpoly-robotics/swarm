@@ -14,13 +14,20 @@ int main()
 {
 	u08 mess[MAX_MESSAGESIZE];
 	init();
+	Message msg;
+	msg.sender = 0x55;
+	msg.hopCount = 0;
+	msg.origSend = 1;
+	msg.message = IM_HERE;
+	msg.isBase = 0;
+	msg.type = MESSAGE;
 	
 	cbi(PORTB, RED_LED);
 	while (1) {
-		createMessage(mess, 0x55, 0, 1, IM_HERE);
-		sendMessage(mess);
+		sendMessage(msg);
+		doSend();
 		sbi(PORTB, RED_LED);
-		_delay_ms(1000);
+		_delay_ms(10);
 		cbi(PORTB, RED_LED);
 	}
 }
