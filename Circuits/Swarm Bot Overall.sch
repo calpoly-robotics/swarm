@@ -5955,6 +5955,12 @@ Metric Code Size 5664</description>
 <part name="BATTERY" library="con-amp-quick" deviceset="M02S" device=""/>
 <part name="FTDI" library="con-amp-quick" deviceset="M03S" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="R2" library="resistor" deviceset="R-US_" device="0204/5" value="20k"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="0204/5" value="20k"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0204/5" value="20k"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="0204/5" value="20k"/>
+<part name="10K" library="resistor" deviceset="R-US_" device="0204/5"/>
+<part name="20K" library="resistor" deviceset="R-US_" device="0204/5"/>
 </parts>
 <sheets>
 <sheet>
@@ -5965,17 +5971,23 @@ Metric Code Size 5664</description>
 <instance part="GND1" gate="1" x="152.4" y="96.52"/>
 <instance part="IC2" gate="G$1" x="-104.14" y="165.1"/>
 <instance part="R1" gate="G$1" x="-88.9" y="165.1"/>
-<instance part="C1" gate="G$1" x="-124.46" y="157.48"/>
-<instance part="GND2" gate="1" x="-83.82" y="144.78"/>
-<instance part="P+1" gate="1" x="-124.46" y="175.26"/>
+<instance part="C1" gate="G$1" x="-119.38" y="157.48"/>
+<instance part="GND2" gate="1" x="-83.82" y="139.7"/>
+<instance part="P+1" gate="1" x="-119.38" y="187.96"/>
 <instance part="C2" gate="G$1" x="-76.2" y="162.56"/>
-<instance part="P+2" gate="1" x="-76.2" y="177.8"/>
-<instance part="BATTERY" gate="-1" x="-60.96" y="167.64" rot="R180"/>
-<instance part="BATTERY" gate="-2" x="-60.96" y="170.18" rot="R180"/>
+<instance part="P+2" gate="1" x="-76.2" y="187.96"/>
+<instance part="BATTERY" gate="-1" x="-55.88" y="149.86" rot="R180"/>
+<instance part="BATTERY" gate="-2" x="-55.88" y="170.18" rot="R180"/>
 <instance part="FTDI" gate="-1" x="226.06" y="73.66" rot="R180"/>
 <instance part="FTDI" gate="-2" x="226.06" y="76.2" rot="R180"/>
 <instance part="FTDI" gate="-3" x="226.06" y="78.74" rot="R180"/>
 <instance part="GND3" gate="1" x="218.44" y="68.58"/>
+<instance part="R2" gate="G$1" x="-124.46" y="167.64"/>
+<instance part="R3" gate="G$1" x="-134.62" y="167.64"/>
+<instance part="R4" gate="G$1" x="-139.7" y="162.56"/>
+<instance part="R5" gate="G$1" x="-149.86" y="162.56"/>
+<instance part="10K" gate="G$1" x="-66.04" y="165.1" rot="R90"/>
+<instance part="20K" gate="G$1" x="-66.04" y="154.94" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6004,20 +6016,28 @@ Metric Code Size 5664</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="160.02" x2="-83.82" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="165.1" x2="-83.82" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="160.02" x2="-83.82" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="152.4" x2="-124.46" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="152.4" x2="-83.82" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="160.02" x2="-83.82" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="149.86" x2="-83.82" y2="142.24" width="0.1524" layer="91"/>
 <junction x="-83.82" y="160.02"/>
-<junction x="-83.82" y="152.4"/>
+<junction x="-83.82" y="149.86"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="-83.82" y1="152.4" x2="-76.2" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="149.86" x2="-76.2" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="-76.2" y1="152.4" x2="-76.2" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="152.4" x2="-68.58" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="167.64" x2="-68.58" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="149.86" x2="-76.2" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="-119.38" y1="152.4" x2="-119.38" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="149.86" x2="-83.82" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-139.7" y1="167.64" x2="-154.94" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="167.64" x2="-154.94" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="162.56" x2="-154.94" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="149.86" x2="-119.38" y2="149.86" width="0.1524" layer="91"/>
+<junction x="-119.38" y="149.86"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<junction x="-154.94" y="162.56"/>
 <pinref part="BATTERY" gate="-1" pin="S"/>
-<wire x1="-66.04" y1="167.64" x2="-68.58" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="149.86" x2="-60.96" y2="149.86" width="0.1524" layer="91"/>
+<junction x="-76.2" y="149.86"/>
 </segment>
 <segment>
 <pinref part="FTDI" gate="-1" pin="S"/>
@@ -6032,21 +6052,16 @@ Metric Code Size 5664</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="STAT"/>
-<wire x1="-114.3" y1="162.56" x2="-142.24" y2="162.56" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="VDD"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-114.3" y1="167.64" x2="-124.46" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="167.64" x2="-124.46" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="167.64" x2="-124.46" y2="172.72" width="0.1524" layer="91"/>
-<junction x="-124.46" y="167.64"/>
+<wire x1="-114.3" y1="167.64" x2="-119.38" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="167.64" x2="-119.38" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="167.64" x2="-119.38" y2="185.42" width="0.1524" layer="91"/>
+<junction x="-119.38" y="167.64"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="V+" class="0">
@@ -6056,10 +6071,13 @@ Metric Code Size 5664</description>
 <wire x1="-76.2" y1="165.1" x2="-76.2" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="170.18" x2="-93.98" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="170.18" x2="-66.04" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="170.18" x2="-76.2" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="170.18" x2="-60.96" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="170.18" x2="-76.2" y2="185.42" width="0.1524" layer="91"/>
 <junction x="-76.2" y="170.18"/>
 <pinref part="P+2" gate="1" pin="V+"/>
 <pinref part="BATTERY" gate="-2" pin="S"/>
+<pinref part="10K" gate="G$1" pin="2"/>
+<junction x="-66.04" y="170.18"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6075,6 +6093,36 @@ Metric Code Size 5664</description>
 <wire x1="205.74" y1="78.74" x2="218.44" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="FTDI" gate="-3" pin="S"/>
 <wire x1="220.98" y1="78.74" x2="218.44" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VOLTAGEDETECT" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-129.54" y1="167.64" x2="-129.54" y2="177.8" width="0.1524" layer="91"/>
+<label x="-129.54" y="170.18" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="CHARGESTATE" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="-144.78" y1="162.56" x2="-144.78" y2="177.8" width="0.1524" layer="91"/>
+<label x="-144.78" y="170.18" size="1.778" layer="95" rot="R90"/>
+<junction x="-144.78" y="162.56"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="IC2" gate="G$1" pin="STAT"/>
+<wire x1="-134.62" y1="162.56" x2="-114.3" y2="162.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="10K" gate="G$1" pin="1"/>
+<pinref part="20K" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
