@@ -121,6 +121,35 @@
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;VALUE</text>
 </package>
+<package name="16SSOP">
+<smd name="4" x="-0.325" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="3" x="-0.975" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="2" x="-1.625" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="1" x="-2.275" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="5" x="0.325" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="6" x="0.975" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="7" x="1.625" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="8" x="2.275" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="9" x="2.275" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="10" x="1.625" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="11" x="0.975" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="12" x="0.325" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="13" x="-0.325" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="14" x="-0.975" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="15" x="-1.625" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<smd name="16" x="-2.275" y="2.9" dx="1" dy="0.35" layer="1" rot="R90"/>
+<wire x1="-2.75" y1="2.2" x2="2.75" y2="2.2" width="0.127" layer="51"/>
+<wire x1="2.75" y1="2.2" x2="2.75" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="2.75" y1="-2.2" x2="-2.75" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="-2.75" y1="-2.2" x2="-2.75" y2="2.2" width="0.127" layer="51"/>
+<wire x1="-2.75" y1="2.2" x2="2.75" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-2.75" y1="-2.2" x2="-2.75" y2="2.2" width="0.127" layer="21"/>
+<wire x1="2.75" y1="2.2" x2="2.75" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="2.75" y1="-2.2" x2="-2.75" y2="-2.2" width="0.127" layer="21"/>
+<text x="-2.6" y="3.9" size="1.016" layer="25">&gt;NAME</text>
+<text x="-2.6" y="-5.2" size="1.016" layer="27">&gt;VALUE</text>
+<circle x="-2.205" y="-1.67" radius="0.19729375" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGA324P">
@@ -169,6 +198,30 @@
 <wire x1="-27.94" y1="-45.72" x2="-27.94" y2="43.18" width="0.254" layer="94"/>
 <text x="-27.94" y="45.72" size="1.778" layer="95">&gt;NAME</text>
 <text x="-27.94" y="-50.8" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="TB6552">
+<pin name="GND" x="-12.7" y="7.62" length="middle"/>
+<pin name="AIN1" x="-12.7" y="-5.08" length="middle"/>
+<pin name="AIN2" x="-12.7" y="-7.62" length="middle"/>
+<pin name="APWM" x="-12.7" y="-10.16" length="middle"/>
+<pin name="ASTBY" x="-12.7" y="-12.7" length="middle"/>
+<pin name="VM" x="-12.7" y="5.08" length="middle"/>
+<pin name="AO1" x="15.24" y="10.16" length="middle" rot="R180"/>
+<pin name="AO2" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="PGND" x="-12.7" y="2.54" length="middle"/>
+<pin name="BO2" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="BO1" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="BSTBY" x="-12.7" y="-25.4" length="middle"/>
+<pin name="BPWM" x="-12.7" y="-22.86" length="middle"/>
+<pin name="BIN2" x="-12.7" y="-20.32" length="middle"/>
+<pin name="BIN1" x="-12.7" y="-17.78" length="middle"/>
+<pin name="VCC" x="-12.7" y="10.16" length="middle"/>
+<wire x1="-7.62" y1="12.7" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="10.16" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-27.94" x2="-7.62" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-27.94" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-7.62" y="15.24" size="1.016" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-33.02" size="1.016" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -220,6 +273,38 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <connect gate="G$1" pin="VCC" pad="5 17 38"/>
 <connect gate="G$1" pin="XTAL1" pad="8"/>
 <connect gate="G$1" pin="XTAL2" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TB6552" prefix="U">
+<description>Digikey Part Number: TB6552FNG(OEL)CT-ND
+Manufacturer Part Number: TB6552FNG(O,EL)</description>
+<gates>
+<gate name="G$1" symbol="TB6552" x="-2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="FN/FNG" package="16SSOP">
+<connects>
+<connect gate="G$1" pin="AIN1" pad="2"/>
+<connect gate="G$1" pin="AIN2" pad="3"/>
+<connect gate="G$1" pin="AO1" pad="7"/>
+<connect gate="G$1" pin="AO2" pad="8"/>
+<connect gate="G$1" pin="APWM" pad="4"/>
+<connect gate="G$1" pin="ASTBY" pad="5"/>
+<connect gate="G$1" pin="BIN1" pad="15"/>
+<connect gate="G$1" pin="BIN2" pad="14"/>
+<connect gate="G$1" pin="BO1" pad="11"/>
+<connect gate="G$1" pin="BO2" pad="10"/>
+<connect gate="G$1" pin="BPWM" pad="13"/>
+<connect gate="G$1" pin="BSTBY" pad="12"/>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="PGND" pad="9"/>
+<connect gate="G$1" pin="VCC" pad="16"/>
+<connect gate="G$1" pin="VM" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -417,9 +502,9 @@ Manufacturer Part Number: MCP73832T-2ACI/OT</description>
 </library>
 <library name="Passive">
 <packages>
-<package name="LED_TH">
-<pad name="1" x="-1.27" y="0" drill="0.6" shape="square"/>
-<pad name="2" x="1.27" y="0" drill="0.6"/>
+<package name="5MM_LED_RA">
+<pad name="1" x="-1.27" y="0" drill="0.8" shape="square"/>
+<pad name="2" x="1.27" y="0" drill="0.8"/>
 <wire x1="-2.95" y1="1" x2="2.5" y2="1" width="0.127" layer="51"/>
 <wire x1="2.5" y1="1" x2="2.5" y2="2" width="0.127" layer="51"/>
 <wire x1="2.5" y1="2" x2="-2.5" y2="2" width="0.127" layer="51"/>
@@ -692,7 +777,7 @@ Manufacturer Part Number: MCP73832T-2ACI/OT</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="5MMRA" package="LED_TH">
+<device name="5MMRA" package="5MM_LED_RA">
 <connects>
 <connect gate="G$1" pin="A" pad="1"/>
 <connect gate="G$1" pin="C" pad="2"/>
@@ -878,7 +963,7 @@ Manufacturer Part number: TEFT4300</description>
 <gate name="G$1" symbol="FTDI" x="2.54" y="0"/>
 </gates>
 <devices>
-<device name="" package="PINHEADER(1X6)">
+<device name="(1X6)" package="PINHEADER(1X6)">
 <connects>
 <connect gate="G$1" pin="3V3" pad="4"/>
 <connect gate="G$1" pin="CTS" pad="5"/>
@@ -931,7 +1016,7 @@ Manufacturer Part number: TEFT4300</description>
 <part name="P+6" library="Supply" deviceset="+3V" device=""/>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="CON1" library="Mechanical" deviceset="ISP" device="(2X3)"/>
-<part name="CON2" library="Mechanical" deviceset="FTDI" device=""/>
+<part name="CON2" library="Mechanical" deviceset="FTDI" device="(1X6)"/>
 <part name="GND5" library="Supply" deviceset="GND" device=""/>
 <part name="B1" library="Passive" deviceset="PIEZOBUZZER" device=""/>
 <part name="R8" library="Passive" deviceset="RES" device="0603" value="1k"/>
@@ -986,6 +1071,21 @@ Manufacturer Part number: TEFT4300</description>
 <part name="GND14" library="Supply" deviceset="GND" device=""/>
 <part name="GND15" library="Supply" deviceset="GND" device=""/>
 <part name="P+11" library="Supply" deviceset="+3V" device=""/>
+<part name="U3" library="DigitalIC" deviceset="TB6552" device="FN/FNG"/>
+<part name="C8" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
+<part name="C9" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
+<part name="GND16" library="Supply" deviceset="GND" device=""/>
+<part name="GND17" library="Supply" deviceset="GND" device=""/>
+<part name="P+12" library="Supply" deviceset="+3V" device=""/>
+<part name="P+13" library="Supply" deviceset="+VBAT" device=""/>
+<part name="LED8" library="Passive" deviceset="LED" device="0603"/>
+<part name="R25" library="Passive" deviceset="RES" device="0603"/>
+<part name="LED9" library="Passive" deviceset="LED" device="0603"/>
+<part name="R26" library="Passive" deviceset="RES" device="0603"/>
+<part name="LED10" library="Passive" deviceset="LED" device="0603"/>
+<part name="R27" library="Passive" deviceset="RES" device="0603"/>
+<part name="P+14" library="Supply" deviceset="+3V" device=""/>
+<part name="R28" library="Passive" deviceset="RES" device="0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -1019,8 +1119,8 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="P+6" gate="1" x="-68.58" y="-5.08" rot="R90"/>
 <instance part="GND4" gate="1" x="-71.12" y="2.54"/>
 <instance part="CON1" gate="G$1" x="-86.36" y="12.7"/>
-<instance part="CON2" gate="G$1" x="73.66" y="-15.24"/>
-<instance part="GND5" gate="1" x="58.42" y="-27.94"/>
+<instance part="CON2" gate="G$1" x="99.06" y="-15.24"/>
+<instance part="GND5" gate="1" x="83.82" y="-27.94"/>
 <instance part="B1" gate="G$1" x="-119.38" y="35.56"/>
 <instance part="R8" gate="G$1" x="-132.08" y="35.56" rot="R90"/>
 <instance part="P+7" gate="1" x="-132.08" y="48.26"/>
@@ -1074,6 +1174,21 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="GND14" gate="1" x="353.06" y="81.28"/>
 <instance part="GND15" gate="1" x="370.84" y="81.28"/>
 <instance part="P+11" gate="1" x="322.58" y="121.92"/>
+<instance part="U3" gate="G$1" x="-35.56" y="-124.46"/>
+<instance part="C8" gate="G$1" x="-58.42" y="-114.3" rot="R270"/>
+<instance part="C9" gate="G$1" x="-81.28" y="-119.38" rot="R270"/>
+<instance part="GND16" gate="1" x="-68.58" y="-116.84" rot="R270"/>
+<instance part="GND17" gate="1" x="-91.44" y="-121.92" rot="R270"/>
+<instance part="P+12" gate="1" x="-50.8" y="-106.68"/>
+<instance part="P+13" gate="G$1" x="-73.66" y="-114.3"/>
+<instance part="LED8" gate="G$1" x="-236.22" y="25.4"/>
+<instance part="R25" gate="G$1" x="-236.22" y="12.7" rot="R90"/>
+<instance part="LED9" gate="G$1" x="-226.06" y="25.4"/>
+<instance part="R26" gate="G$1" x="-226.06" y="12.7" rot="R90"/>
+<instance part="LED10" gate="G$1" x="-215.9" y="25.4"/>
+<instance part="R27" gate="G$1" x="-215.9" y="12.7" rot="R90"/>
+<instance part="P+14" gate="1" x="-226.06" y="35.56"/>
+<instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 </instances>
 <busses>
 </busses>
@@ -1190,6 +1305,19 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="322.58" y1="114.3" x2="322.58" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="P+11" gate="1" pin="+3V"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="VCC"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="-114.3" x2="-50.8" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-114.3" x2="-53.34" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-114.3" x2="-50.8" y2="-109.22" width="0.1524" layer="91"/>
+<pinref part="P+12" gate="1" pin="+3V"/>
+</segment>
+<segment>
+<pinref part="LED9" gate="G$1" pin="A"/>
+<wire x1="-226.06" y1="27.94" x2="-226.06" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="P+14" gate="1" pin="+3V"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -1247,8 +1375,8 @@ Manufacturer Part number: TEFT4300</description>
 </segment>
 <segment>
 <pinref part="CON2" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="-22.86" x2="58.42" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-22.86" x2="58.42" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="-22.86" x2="83.82" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-22.86" x2="83.82" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -1311,6 +1439,20 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="370.84" y1="86.36" x2="370.84" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="GND"/>
+<wire x1="-48.26" y1="-116.84" x2="-63.5" y2="-116.84" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="-63.5" y1="-116.84" x2="-66.04" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-114.3" x2="-63.5" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-114.3" x2="-63.5" y2="-116.84" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PGND"/>
+<wire x1="-88.9" y1="-121.92" x2="-48.26" y2="-121.92" width="0.1524" layer="91"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+VBAT" class="0">
 <segment>
@@ -1336,6 +1478,14 @@ Manufacturer Part number: TEFT4300</description>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="-33.02" y1="101.6" x2="-22.86" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-33.02" y="101.6"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="VM"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="-119.38" x2="-73.66" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-119.38" x2="-76.2" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-119.38" x2="-73.66" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="P+13" gate="G$1" pin="+VBAT"/>
 </segment>
 </net>
 <net name="CHGSTATUS" class="0">
@@ -1467,7 +1617,7 @@ Manufacturer Part number: TEFT4300</description>
 <net name="N$7" class="0">
 <segment>
 <pinref part="CON2" gate="G$1" pin="RXI"/>
-<wire x1="60.96" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-12.7" x2="43.18" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PD1(PCINT25/TXD0)"/>
 <wire x1="43.18" y1="-25.4" x2="30.48" y2="-25.4" width="0.1524" layer="91"/>
@@ -1479,19 +1629,7 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="30.48" y1="-22.86" x2="43.18" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-22.86" x2="50.8" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="CON2" gate="G$1" pin="TXO"/>
-<wire x1="50.8" y1="-15.24" x2="60.96" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BUZZER" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PD7(PCINT31/OC2A)"/>
-<wire x1="30.48" y1="-40.64" x2="43.18" y2="-40.64" width="0.1524" layer="91"/>
-<label x="43.18" y="-40.64" size="1.778" layer="91" xref="yes"/>
-</segment>
-<segment>
-<wire x1="-137.16" y1="20.32" x2="-147.32" y2="20.32" width="0.1524" layer="91"/>
-<label x="-147.32" y="20.32" size="1.778" layer="91" rot="R180" xref="yes"/>
-<pinref part="T1" gate="G$1" pin="B"/>
+<wire x1="50.8" y1="-15.24" x2="86.36" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -1688,6 +1826,163 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="254" y1="63.5" x2="254" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="254" y1="86.36" x2="238.76" y2="86.36" width="0.1524" layer="91"/>
 <label x="238.76" y="86.36" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="-83.82" y1="-119.38" x2="-86.36" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="-119.38" x2="-86.36" y2="-121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="STBY" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="ASTBY"/>
+<wire x1="-48.26" y1="-137.16" x2="-50.8" y2="-137.16" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-137.16" x2="-50.8" y2="-149.86" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="BSTBY"/>
+<wire x1="-50.8" y1="-149.86" x2="-48.26" y2="-149.86" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-149.86" x2="-68.58" y2="-149.86" width="0.1524" layer="91"/>
+<junction x="-50.8" y="-149.86"/>
+<label x="-68.58" y="-149.86" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BPWM" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="BPWM"/>
+<wire x1="-48.26" y1="-147.32" x2="-58.42" y2="-147.32" width="0.1524" layer="91"/>
+<label x="-58.42" y="-147.32" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BIN2" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="BIN2"/>
+<wire x1="-48.26" y1="-144.78" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
+<label x="-68.58" y="-144.78" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BIN1" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="BIN1"/>
+<wire x1="-48.26" y1="-142.24" x2="-58.42" y2="-142.24" width="0.1524" layer="91"/>
+<label x="-58.42" y="-142.24" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="APWM" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="APWM"/>
+<wire x1="-48.26" y1="-134.62" x2="-58.42" y2="-134.62" width="0.1524" layer="91"/>
+<label x="-58.42" y="-134.62" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="AIN2" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="AIN2"/>
+<wire x1="-48.26" y1="-132.08" x2="-68.58" y2="-132.08" width="0.1524" layer="91"/>
+<label x="-68.58" y="-132.08" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="AIN1" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="AIN1"/>
+<wire x1="-48.26" y1="-129.54" x2="-58.42" y2="-129.54" width="0.1524" layer="91"/>
+<label x="-58.42" y="-129.54" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="MA+" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="AO1"/>
+<wire x1="-20.32" y1="-114.3" x2="-15.24" y2="-114.3" width="0.1524" layer="91"/>
+<label x="-15.24" y="-114.3" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="MA-" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="AO2"/>
+<wire x1="-20.32" y1="-116.84" x2="-5.08" y2="-116.84" width="0.1524" layer="91"/>
+<label x="-5.08" y="-116.84" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="MB+" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="BO1"/>
+<wire x1="-20.32" y1="-121.92" x2="-15.24" y2="-121.92" width="0.1524" layer="91"/>
+<label x="-15.24" y="-121.92" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="MB-" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="BO2"/>
+<wire x1="-20.32" y1="-124.46" x2="-5.08" y2="-124.46" width="0.1524" layer="91"/>
+<label x="-5.08" y="-124.46" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="LED8" gate="G$1" pin="C"/>
+<pinref part="R25" gate="G$1" pin="2"/>
+<wire x1="-236.22" y1="17.78" x2="-236.22" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="LED9" gate="G$1" pin="C"/>
+<pinref part="R26" gate="G$1" pin="2"/>
+<wire x1="-226.06" y1="17.78" x2="-226.06" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="LED10" gate="G$1" pin="C"/>
+<pinref part="R27" gate="G$1" pin="2"/>
+<wire x1="-215.9" y1="17.78" x2="-215.9" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="LED8" gate="G$1" pin="A"/>
+<wire x1="-236.22" y1="27.94" x2="-236.22" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="30.48" x2="-215.9" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="LED10" gate="G$1" pin="A"/>
+<wire x1="-215.9" y1="30.48" x2="-215.9" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED1" class="0">
+<segment>
+<pinref part="R25" gate="G$1" pin="1"/>
+<wire x1="-236.22" y1="7.62" x2="-236.22" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="5.08" x2="-243.84" y2="5.08" width="0.1524" layer="91"/>
+<label x="-243.84" y="5.08" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LED2" class="0">
+<segment>
+<pinref part="R26" gate="G$1" pin="1"/>
+<wire x1="-226.06" y1="7.62" x2="-226.06" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-226.06" y1="2.54" x2="-254" y2="2.54" width="0.1524" layer="91"/>
+<label x="-254" y="2.54" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LED3" class="0">
+<segment>
+<pinref part="R27" gate="G$1" pin="1"/>
+<wire x1="-215.9" y1="7.62" x2="-215.9" y2="0" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="0" x2="-243.84" y2="0" width="0.1524" layer="91"/>
+<label x="-243.84" y="0" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$26" class="0">
+<segment>
+<pinref part="T1" gate="G$1" pin="B"/>
+<pinref part="R28" gate="G$1" pin="2"/>
+<wire x1="-137.16" y1="20.32" x2="-139.7" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BUZZER" class="0">
+<segment>
+<pinref part="R28" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="20.32" x2="-160.02" y2="20.32" width="0.1524" layer="91"/>
+<label x="-160.02" y="20.32" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
