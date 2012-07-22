@@ -233,12 +233,6 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <packages>
 </packages>
 <symbols>
-<symbol name="+3V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
@@ -250,21 +244,14 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+VCHG">
+<wire x1="1.27" y1="0.635" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="0.635" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+VCHG" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="+3V" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+3V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -282,6 +269,19 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+VCHG" prefix="P+">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+VCHG" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -364,6 +364,25 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <wire x1="0.75" y1="5.35" x2="-0.75" y2="5.35" width="0.127" layer="51"/>
 <wire x1="-0.75" y1="5.35" x2="-1.5" y2="4.08" width="0.127" layer="51"/>
 <wire x1="-1.5" y1="4.08" x2="-1.5" y2="0.5" width="0.127" layer="51"/>
+</package>
+<package name="S0-8">
+<smd name="1" x="-1.905" y="-2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="2" x="-0.635" y="-2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="5" x="1.905" y="2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="6" x="0.635" y="2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="7" x="-0.635" y="2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<smd name="8" x="-1.905" y="2.34" dx="1.78" dy="0.72" layer="1" rot="R90"/>
+<wire x1="-2.45" y1="1.95" x2="2.45" y2="1.95" width="0.127" layer="51"/>
+<wire x1="2.45" y1="1.95" x2="2.45" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="2.45" y1="-1.95" x2="-2.45" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="-2.45" y1="-1.95" x2="-2.45" y2="1.95" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
+<circle x="-1.9" y="-0.7" radius="0.22360625" width="0.127" layer="21"/>
+<text x="-2" y="3.9" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -474,6 +493,43 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <wire x1="-1" y1="-1" x2="-3" y2="1" width="0.254" layer="94"/>
 <wire x1="-2" y1="-1" x2="-1" y2="-1" width="0.254" layer="94"/>
 <wire x1="-1" y1="-1" x2="-1" y2="0" width="0.254" layer="94"/>
+</symbol>
+<symbol name="P-FET">
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="0" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="0.762" y2="0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-3.175" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="0.762" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="1.905" x2="0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="2.54" x2="0.762" y2="3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="0.762" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="3.302" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.508" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="4.318" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="0.508" x2="4.572" y2="0.254" width="0.1524" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.3592" width="0" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
+<text x="-11.43" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-11.43" y="-1.27" size="1.778" layer="95">&gt;NAME</text>
+<pin name="S" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="G" x="-2.54" y="2.54" visible="off" length="short" direction="pas"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="3.81" y="0.508"/>
+<vertex x="4.318" y="-0.254"/>
+<vertex x="3.302" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="0"/>
+<vertex x="1.524" y="0.762"/>
+<vertex x="1.524" y="-0.762"/>
+</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -600,6 +656,25 @@ Manufacturer Part number: TEFT4300</description>
 <connects>
 <connect gate="G$1" pin="C" pad="1"/>
 <connect gate="G$1" pin="E" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IRF7416PBF" prefix="T">
+<description>Digikey Part Number: IRF7416PBF-ND
+Manufacturer Part Number: IRF7416PBF</description>
+<gates>
+<gate name="G$1" symbol="P-FET" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="S0-8">
+<connects>
+<connect gate="G$1" pin="D" pad="5 6 7 8"/>
+<connect gate="G$1" pin="G" pad="4"/>
+<connect gate="G$1" pin="S" pad="1 2 3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -793,6 +868,67 @@ Manufacturer Part number: TEFT4300</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="PowerIC">
+<packages>
+<package name="8SOIC">
+<smd name="2" x="-0.635" y="-2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="1" x="-1.905" y="-2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="5" x="1.905" y="2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="6" x="0.635" y="2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="7" x="-0.635" y="2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<smd name="8" x="-1.905" y="2.8" dx="1.75" dy="0.65" layer="1" rot="R90"/>
+<wire x1="-2.55" y1="1.95" x2="2.55" y2="1.95" width="0.127" layer="51"/>
+<wire x1="2.55" y1="1.95" x2="2.55" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="2.55" y1="-1.95" x2="-2.55" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="-2.55" y1="-1.95" x2="-2.55" y2="1.95" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="1.905" x2="-2.54" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="2.54" y1="1.905" x2="2.54" y2="-1.905" width="0.127" layer="21"/>
+<text x="-1.905" y="0.635" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-0.635" size="0.8128" layer="27">&gt;VALUE</text>
+<circle x="-1.9" y="-1.3" radius="0.22360625" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ACS711">
+<pin name="IP+" x="-7.62" y="5.08" length="middle"/>
+<pin name="IP-" x="-7.62" y="-5.08" length="middle"/>
+<pin name="VCC" x="12.7" y="7.62" length="middle" rot="R180"/>
+<pin name="GND" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="!FAULT" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="VIOUT" x="12.7" y="-7.62" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<text x="-2.54" y="12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ACS711" prefix="U">
+<gates>
+<gate name="G$1" symbol="ACS711" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="8SOIC">
+<connects>
+<connect gate="G$1" pin="!FAULT" pad="6"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="IP+" pad="1 2"/>
+<connect gate="G$1" pin="IP-" pad="3 4"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="VIOUT" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -807,7 +943,6 @@ Manufacturer Part number: TEFT4300</description>
 <part name="GND1" library="Supply" deviceset="GND" device=""/>
 <part name="C3" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="R7" library="Passive" deviceset="RES" device="0603" value="10k"/>
-<part name="P+6" library="Supply" deviceset="+3V" device=""/>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="CON1" library="Mechanical" deviceset="ISP" device="(2X3)"/>
 <part name="CON2" library="Mechanical" deviceset="FTDI" device="(1X6)"/>
@@ -859,24 +994,34 @@ Manufacturer Part number: TEFT4300</description>
 <part name="R28" library="Passive" deviceset="RES" device="0603"/>
 <part name="P+1" library="Supply" deviceset="+5V" device=""/>
 <part name="P+2" library="Supply" deviceset="+5V" device=""/>
-<part name="P+4" library="Supply" deviceset="+5V" device=""/>
-<part name="P+5" library="Supply" deviceset="+5V" device=""/>
-<part name="P+7" library="Supply" deviceset="+5V" device=""/>
 <part name="S1" library="Mechanical" deviceset="ROCKER_SWITCH" device=""/>
-<part name="P+3" library="Supply" deviceset="+5V" device=""/>
 <part name="CON3" library="Mechanical" deviceset="CHARGERCONTACTS" device=""/>
 <part name="GND2" library="Supply" deviceset="GND" device=""/>
+<part name="U2" library="PowerIC" deviceset="ACS711" device=""/>
+<part name="C1" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="GND3" library="Supply" deviceset="GND" device=""/>
+<part name="P+3" library="Supply" deviceset="+VCHG" device=""/>
+<part name="P+4" library="Supply" deviceset="+VCHG" device=""/>
+<part name="P+5" library="Supply" deviceset="+VCHG" device=""/>
+<part name="P+7" library="Supply" deviceset="+VCHG" device=""/>
+<part name="P+8" library="Supply" deviceset="+VCHG" device=""/>
+<part name="C2" library="Passive" deviceset="CAP" device="0603" value="1nf"/>
+<part name="GND7" library="Supply" deviceset="GND" device=""/>
+<part name="R1" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="P+6" library="Supply" deviceset="+VCHG" device=""/>
+<part name="T3" library="Passive" deviceset="IRF7416PBF" device=""/>
+<part name="P+9" library="Supply" deviceset="+VCHG" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="78.74" y="-175.26" size="1.778" layer="97">These go to the charger contacts</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="0"/>
 <instance part="GND1" gate="1" x="-55.88" y="25.4"/>
 <instance part="C3" gate="G$1" x="-50.8" y="33.02"/>
 <instance part="R7" gate="G$1" x="-63.5" y="2.54" rot="R90"/>
-<instance part="P+6" gate="1" x="-68.58" y="-5.08" rot="R90"/>
 <instance part="GND4" gate="1" x="-71.12" y="2.54"/>
 <instance part="CON1" gate="G$1" x="-86.36" y="12.7"/>
 <instance part="CON2" gate="G$1" x="99.06" y="-15.24"/>
@@ -928,25 +1073,27 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 <instance part="P+1" gate="1" x="393.7" y="182.88"/>
 <instance part="P+2" gate="1" x="510.54" y="154.94"/>
-<instance part="P+4" gate="1" x="-55.88" y="43.18"/>
-<instance part="P+5" gate="1" x="-132.08" y="48.26"/>
-<instance part="P+7" gate="1" x="-226.06" y="35.56"/>
 <instance part="S1" gate="G$1" x="-149.86" y="106.68"/>
-<instance part="P+3" gate="1" x="-129.54" y="111.76"/>
-<instance part="CON3" gate="G$1" x="71.12" y="-165.1"/>
-<instance part="GND2" gate="1" x="58.42" y="-175.26"/>
+<instance part="CON3" gate="G$1" x="71.12" y="-175.26"/>
+<instance part="GND2" gate="1" x="58.42" y="-185.42"/>
+<instance part="U2" gate="G$1" x="30.48" y="-142.24"/>
+<instance part="C1" gate="G$1" x="53.34" y="-137.16"/>
+<instance part="GND3" gate="1" x="53.34" y="-144.78"/>
+<instance part="P+3" gate="G$1" x="-226.06" y="33.02"/>
+<instance part="P+4" gate="G$1" x="-132.08" y="45.72"/>
+<instance part="P+5" gate="G$1" x="-129.54" y="109.22"/>
+<instance part="P+7" gate="G$1" x="-55.88" y="40.64"/>
+<instance part="P+8" gate="G$1" x="53.34" y="-129.54"/>
+<instance part="C2" gate="G$1" x="58.42" y="-157.48"/>
+<instance part="GND7" gate="1" x="58.42" y="-165.1"/>
+<instance part="R1" gate="G$1" x="68.58" y="-149.86"/>
+<instance part="P+6" gate="G$1" x="-66.04" y="-5.08" rot="R90"/>
+<instance part="T3" gate="G$1" x="-25.4" y="-127"/>
+<instance part="P+9" gate="G$1" x="-22.86" y="-114.3"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="+3V" class="0">
-<segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="-2.54" x2="-63.5" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="-5.08" x2="-66.04" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="1" pin="+3V"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
@@ -1016,9 +1163,20 @@ Manufacturer Part number: TEFT4300</description>
 </segment>
 <segment>
 <pinref part="CON3" gate="G$1" pin="GND"/>
-<wire x1="63.5" y1="-167.64" x2="58.42" y2="-167.64" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-167.64" x2="58.42" y2="-172.72" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-177.8" x2="58.42" y2="-177.8" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-177.8" x2="58.42" y2="-182.88" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="GND"/>
+<wire x1="43.18" y1="-139.7" x2="53.34" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-139.7" x2="53.34" y2="-142.24" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="58.42" y1="-162.56" x2="58.42" y2="-160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1360,6 +1518,57 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="510.54" y1="147.32" x2="510.54" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 </segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="S1" gate="G$1" pin="1"/>
+<wire x1="-157.48" y1="106.68" x2="-177.8" y2="106.68" width="0.1524" layer="91"/>
+<label x="-175.26" y="106.68" size="1.778" layer="91"/>
+</segment>
+</net>
+<net name="CURRENTSENSE" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PA0(ADC0/PCINT0)"/>
+<wire x1="30.48" y1="38.1" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
+<label x="58.42" y="38.1" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="-149.86" x2="78.74" y2="-149.86" width="0.1524" layer="91"/>
+<label x="78.74" y="-149.86" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="CON3" gate="G$1" pin="+V"/>
+<pinref part="U2" gate="G$1" pin="IP-"/>
+<wire x1="22.86" y1="-147.32" x2="15.24" y2="-147.32" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-147.32" x2="15.24" y2="-172.72" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-172.72" x2="63.5" y2="-172.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+VCHG" class="0">
+<segment>
+<pinref part="LED9" gate="G$1" pin="A"/>
+<wire x1="-226.06" y1="27.94" x2="-226.06" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="P+3" gate="G$1" pin="+VCHG"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="-132.08" y1="45.72" x2="-132.08" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="+"/>
+<wire x1="-132.08" y1="43.18" x2="-132.08" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="43.18" x2="-124.46" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-124.46" y1="43.18" x2="-124.46" y2="38.1" width="0.1524" layer="91"/>
+<junction x="-132.08" y="43.18"/>
+<pinref part="P+4" gate="G$1" pin="+VCHG"/>
+</segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="2"/>
+<wire x1="-144.78" y1="106.68" x2="-129.54" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="106.68" x2="-129.54" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="P+5" gate="G$1" pin="+VCHG"/>
+</segment>
 <segment>
 <wire x1="-35.56" y1="33.02" x2="-35.56" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="35.56" x2="-35.56" y2="38.1" width="0.1524" layer="91"/>
@@ -1376,48 +1585,56 @@ Manufacturer Part number: TEFT4300</description>
 <junction x="-35.56" y="35.56"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <junction x="-50.8" y="38.1"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
+<pinref part="P+7" gate="G$1" pin="+VCHG"/>
 </segment>
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="-132.08" y1="45.72" x2="-132.08" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="B1" gate="G$1" pin="+"/>
-<wire x1="-132.08" y1="43.18" x2="-132.08" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="43.18" x2="-124.46" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="43.18" x2="-124.46" y2="38.1" width="0.1524" layer="91"/>
-<junction x="-132.08" y="43.18"/>
-<pinref part="P+5" gate="1" pin="+5V"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="-134.62" x2="43.18" y2="-132.08" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-132.08" x2="53.34" y2="-132.08" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-132.08" x2="53.34" y2="-129.54" width="0.1524" layer="91"/>
+<pinref part="P+8" gate="G$1" pin="+VCHG"/>
 </segment>
 <segment>
-<pinref part="LED9" gate="G$1" pin="A"/>
-<wire x1="-226.06" y1="27.94" x2="-226.06" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="1" pin="+5V"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="-2.54" x2="-63.5" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-5.08" x2="-66.04" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="P+6" gate="G$1" pin="+VCHG"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="2"/>
-<wire x1="-144.78" y1="106.68" x2="-129.54" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="-129.54" y1="106.68" x2="-129.54" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="P+3" gate="1" pin="+5V"/>
+<pinref part="T3" gate="G$1" pin="S"/>
+<wire x1="-22.86" y1="-121.92" x2="-22.86" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="P+9" gate="G$1" pin="+VCHG"/>
 </segment>
 </net>
-<net name="VIN" class="0">
+<net name="N$1" class="0">
 <segment>
-<pinref part="S1" gate="G$1" pin="1"/>
-<wire x1="-157.48" y1="106.68" x2="-177.8" y2="106.68" width="0.1524" layer="91"/>
-<label x="-175.26" y="106.68" size="1.778" layer="91"/>
+<pinref part="U2" gate="G$1" pin="IP+"/>
+<wire x1="22.86" y1="-137.16" x2="-22.86" y2="-137.16" width="0.1524" layer="91"/>
+<pinref part="T3" gate="G$1" pin="D"/>
+<wire x1="-22.86" y1="-132.08" x2="-22.86" y2="-137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="CURRENTSENSE" class="0">
+<net name="N$12" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA0(ADC0/PCINT0)"/>
-<wire x1="30.48" y1="38.1" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
-<label x="58.42" y="38.1" size="1.778" layer="91" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="VIOUT"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="-149.86" x2="58.42" y2="-149.86" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="-149.86" x2="63.5" y2="-149.86" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-149.86" x2="58.42" y2="-152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="CHARGER" class="0">
 <segment>
-<pinref part="CON3" gate="G$1" pin="+V"/>
-<wire x1="63.5" y1="-162.56" x2="48.26" y2="-162.56" width="0.1524" layer="91"/>
+<pinref part="T3" gate="G$1" pin="G"/>
+<wire x1="-27.94" y1="-124.46" x2="-40.64" y2="-124.46" width="0.1524" layer="91"/>
+<label x="-40.64" y="-124.46" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB0(XCK0/T0/PCINT8)"/>
+<wire x1="30.48" y1="15.24" x2="58.42" y2="15.24" width="0.1524" layer="91"/>
+<label x="58.42" y="15.24" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 </nets>
