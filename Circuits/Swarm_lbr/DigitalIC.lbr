@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -117,10 +117,6 @@
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;VALUE</text>
 </package>
-<package name="DUMMY">
-<text x="-16.51" y="3.81" size="1.27" layer="21">DUMMY PACKAGE NEEDS REPLACING</text>
-<smd name="P$1" x="0" y="0" dx="5.08" dy="5.08" layer="1"/>
-</package>
 <package name="16SSOP">
 <smd name="4" x="-0.325" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
 <smd name="3" x="-0.975" y="-2.95" dx="1" dy="0.35" layer="1" rot="R90"/>
@@ -149,6 +145,24 @@
 <text x="-2.6" y="3.9" size="1.016" layer="25">&gt;NAME</text>
 <text x="-2.6" y="-5.2" size="1.016" layer="27">&gt;VALUE</text>
 <circle x="-2.205" y="-1.67" radius="0.19729375" width="0.127" layer="21"/>
+</package>
+<package name="DUMMY">
+<text x="-16.51" y="3.81" size="1.27" layer="21">DUMMY PACKAGE NEEDS REPLACING</text>
+<smd name="P$2" x="-2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$3" x="-1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$4" x="0" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$5" x="1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$6" x="2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$7" x="2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$8" x="0" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$9" x="1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$10" x="-1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$11" x="-2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$12" x="-2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$13" x="-1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$14" x="0" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$15" x="2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$16" x="1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>

@@ -89,7 +89,21 @@
 </package>
 <package name="DUMMY">
 <text x="-16.51" y="3.81" size="1.27" layer="21">DUMMY PACKAGE NEEDS REPLACING</text>
-<smd name="P$1" x="0" y="0" dx="5.08" dy="5.08" layer="1"/>
+<smd name="P$2" x="-2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$3" x="-1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$4" x="0" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$5" x="1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$6" x="2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$7" x="2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$8" x="0" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$9" x="1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$10" x="-1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$11" x="-2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$12" x="-2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$13" x="-1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$14" x="0" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$15" x="2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$16" x="1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
