@@ -1,0 +1,7 @@
+Links
+
+Hall effect sensor: http://www.digikey.com/product-detail/en/SS451A/480-3587-ND/2505488
+hall effect sensor: http://www.digikey.com/product-detail/en/AH180-PL-A/AH180-PL-ADICT-ND/1286527
+Magnets: http://www.kjmagnetics.com/proddetail.asp?prod=D22
+1x40 main connector male: http://www.digikey.com/product-detail/en/NRPN401PAEN-RC/S5800-40-ND/804914
+2x6 main connector female: http://www.digikey.com/product-detail/en/NPPN062AFCN-RC/S5750-06-ND/804791
