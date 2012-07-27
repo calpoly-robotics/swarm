@@ -1132,6 +1132,9 @@ Manufacturer Part Number: PMEG3050EP,115</description>
 <part name="GND23" library="Supply" deviceset="GND" device=""/>
 <part name="P+17" library="Supply" deviceset="+5V" device=""/>
 <part name="U10" library="DigitalIC" deviceset="HALLEFFECT" device=""/>
+<part name="GND24" library="Supply" deviceset="GND" device=""/>
+<part name="P+18" library="Supply" deviceset="+5V" device=""/>
+<part name="U11" library="DigitalIC" deviceset="HALLEFFECT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1240,6 +1243,9 @@ Manufacturer Part Number: PMEG3050EP,115</description>
 <instance part="GND23" gate="1" x="157.48" y="-114.3" rot="R270"/>
 <instance part="P+17" gate="1" x="162.56" y="-106.68"/>
 <instance part="U10" gate="G$1" x="175.26" y="-114.3"/>
+<instance part="GND24" gate="1" x="154.94" y="-162.56" rot="R270"/>
+<instance part="P+18" gate="1" x="160.02" y="-154.94"/>
+<instance part="U11" gate="G$1" x="172.72" y="-162.56"/>
 </instances>
 <busses>
 </busses>
@@ -1377,6 +1383,11 @@ Manufacturer Part Number: PMEG3050EP,115</description>
 <wire x1="165.1" y1="-114.3" x2="160.02" y2="-114.3" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 <pinref part="U10" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="162.56" y1="-162.56" x2="157.48" y2="-162.56" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<pinref part="U11" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1838,6 +1849,12 @@ Manufacturer Part Number: PMEG3050EP,115</description>
 <pinref part="P+17" gate="1" pin="+5V"/>
 <pinref part="U10" gate="G$1" pin="VCC"/>
 </segment>
+<segment>
+<wire x1="162.56" y1="-160.02" x2="160.02" y2="-160.02" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="-160.02" x2="160.02" y2="-157.48" width="0.1524" layer="91"/>
+<pinref part="P+18" gate="1" pin="+5V"/>
+<pinref part="U11" gate="G$1" pin="VCC"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -2016,6 +2033,13 @@ Manufacturer Part Number: PMEG3050EP,115</description>
 <pinref part="U1" gate="G$1" pin="PC7(TOSC2/PCINT23)"/>
 <wire x1="30.48" y1="-17.78" x2="35.56" y2="-17.78" width="0.1524" layer="91"/>
 <label x="35.56" y="-17.78" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="DATACENTER" class="0">
+<segment>
+<wire x1="162.56" y1="-165.1" x2="149.86" y2="-165.1" width="0.1524" layer="91"/>
+<label x="149.86" y="-165.1" size="1.778" layer="91" rot="R180" xref="yes"/>
+<pinref part="U11" gate="G$1" pin="!VOUT"/>
 </segment>
 </net>
 </nets>
