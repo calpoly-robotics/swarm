@@ -1144,11 +1144,15 @@ Manufacturer Part number: TEFT4300</description>
 <part name="R28" library="Passive" deviceset="RES" device="0603"/>
 <part name="U$1" library="Mechanical" deviceset="MAIN_CONNECTOR" device=""/>
 <part name="U$2" library="Mechanical" deviceset="FTDI_3PIN" device=""/>
+<part name="P+15" library="Supply" deviceset="+VCHG" device=""/>
+<part name="GND18" library="Supply" deviceset="GND" device=""/>
+<part name="P+16" library="Supply" deviceset="+3V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-127" y="127" size="1.778" layer="97">4.6v ideal</text>
+<text x="-281.94" y="-33.02" size="1.778" layer="97">Antenna connections</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="0"/>
@@ -1168,7 +1172,7 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="GND3" gate="1" x="-78.74" y="78.74"/>
 <instance part="C4" gate="G$1" x="-71.12" y="93.98"/>
 <instance part="C5" gate="G$1" x="-109.22" y="86.36"/>
-<instance part="R2" gate="G$1" x="-116.84" y="109.22" rot="R90"/>
+<instance part="R2" gate="G$1" x="-137.16" y="111.76" rot="R90"/>
 <instance part="R3" gate="G$1" x="-127" y="109.22" rot="R90"/>
 <instance part="R4" gate="G$1" x="-127" y="93.98" rot="R90"/>
 <instance part="R5" gate="G$1" x="-60.96" y="96.52" rot="R90"/>
@@ -1211,7 +1215,7 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="LED13" gate="G$1" x="299.72" y="177.8"/>
 <instance part="C7" gate="G$1" x="309.88" y="154.94"/>
 <instance part="P+10" gate="1" x="309.88" y="190.5"/>
-<instance part="LED1" gate="G$1" x="-116.84" y="99.06"/>
+<instance part="LED1" gate="G$1" x="-137.16" y="101.6"/>
 <instance part="T4" gate="G$1" x="373.38" y="210.82"/>
 <instance part="T5" gate="G$1" x="393.7" y="210.82"/>
 <instance part="T6" gate="G$1" x="414.02" y="210.82"/>
@@ -1246,6 +1250,9 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 <instance part="U$1" gate="G$1" x="114.3" y="-106.68"/>
 <instance part="U$2" gate="G$1" x="93.98" y="-15.24"/>
+<instance part="P+15" gate="G$1" x="-251.46" y="-48.26" rot="R270"/>
+<instance part="GND18" gate="1" x="-248.92" y="-63.5" rot="R90"/>
+<instance part="P+16" gate="1" x="-137.16" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -1385,6 +1392,11 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="-170.18" y1="-20.32" x2="-170.18" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="-17.78" x2="-160.02" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-160.02" y="-17.78"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-137.16" y1="116.84" x2="-137.16" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="P+16" gate="1" pin="+3V"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1532,6 +1544,10 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="101.6" y1="-106.68" x2="88.9" y2="-106.68" width="0.1524" layer="91"/>
 <label x="88.9" y="-106.68" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="GND18" gate="1" pin="GND"/>
+<wire x1="-251.46" y1="-63.5" x2="-271.78" y2="-63.5" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+VBAT" class="0">
 <segment>
@@ -1573,37 +1589,30 @@ Manufacturer Part number: TEFT4300</description>
 <label x="76.2" y="-104.14" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="CHGSTATUS" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="STAT"/>
-<wire x1="-104.14" y1="93.98" x2="-116.84" y2="93.98" width="0.1524" layer="91"/>
-<label x="-147.32" y="93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<wire x1="-116.84" y1="93.98" x2="-147.32" y2="93.98" width="0.1524" layer="91"/>
-<junction x="-116.84" y="93.98"/>
-</segment>
-</net>
 <net name="+VCHG" class="0">
 <segment>
-<pinref part="P+4" gate="G$1" pin="+VCHG"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-116.84" y1="116.84" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="P+15" gate="G$1" pin="+VCHG"/>
+<wire x1="-251.46" y1="-48.26" x2="-271.78" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-109.22" y1="91.44" x2="-109.22" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-109.22" y1="99.06" x2="-109.22" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="114.3" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="VDD"/>
 <wire x1="-104.14" y1="99.06" x2="-109.22" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-109.22" y="99.06"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-127" y1="114.3" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="P+4" gate="G$1" pin="+VCHG"/>
+<wire x1="-116.84" y1="114.3" x2="-109.22" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="116.84" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
 <junction x="-116.84" y="114.3"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-116.84" y1="104.14" x2="-116.84" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="106.68" x2="-137.16" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
 </segment>
 </net>
@@ -1702,13 +1711,22 @@ Manufacturer Part number: TEFT4300</description>
 <label x="48.26" y="30.48" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="DATAANTENNA" class="0">
 <segment>
-<wire x1="83.82" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-12.7" x2="76.2" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-12.7" x2="43.18" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PD1(PCINT25/TXD0)"/>
 <wire x1="43.18" y1="-25.4" x2="30.48" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="RXI"/>
+<wire x1="76.2" y1="-12.7" x2="76.2" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="-2.54" x2="88.9" y2="-2.54" width="0.1524" layer="91"/>
+<label x="88.9" y="-2.54" size="1.778" layer="91" xref="yes"/>
+<junction x="76.2" y="-12.7"/>
+</segment>
+<segment>
+<wire x1="-251.46" y1="-55.88" x2="-271.78" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-251.46" y="-55.88" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -2066,6 +2084,16 @@ Manufacturer Part number: TEFT4300</description>
 <pinref part="R28" gate="G$1" pin="1"/>
 <wire x1="-149.86" y1="20.32" x2="-160.02" y2="20.32" width="0.1524" layer="91"/>
 <label x="-160.02" y="20.32" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="CHGSTATUS" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="STAT"/>
+<wire x1="-104.14" y1="93.98" x2="-137.16" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<wire x1="-137.16" y1="93.98" x2="-137.16" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="93.98" x2="-147.32" y2="93.98" width="0.1524" layer="91"/>
+<label x="-147.32" y="93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
