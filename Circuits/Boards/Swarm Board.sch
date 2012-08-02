@@ -1352,8 +1352,8 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 <instance part="U$1" gate="G$1" x="114.3" y="-106.68"/>
 <instance part="U$2" gate="G$1" x="93.98" y="-15.24"/>
-<instance part="P+15" gate="G$1" x="-251.46" y="-48.26" rot="R270"/>
-<instance part="GND18" gate="1" x="-248.92" y="-63.5" rot="R90"/>
+<instance part="P+15" gate="G$1" x="-251.46" y="-43.18" rot="R270"/>
+<instance part="GND18" gate="1" x="-248.92" y="-68.58" rot="R90"/>
 <instance part="P+16" gate="1" x="-137.16" y="121.92"/>
 <instance part="T10" gate="G$1" x="264.16" y="-15.24"/>
 <instance part="R27" gate="G$1" x="266.7" y="-30.48" rot="R90"/>
@@ -1383,9 +1383,9 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <instance part="C10" gate="G$1" x="-45.72" y="-2.54" rot="R270"/>
 <instance part="C11" gate="G$1" x="-45.72" y="-7.62" rot="R270"/>
 <instance part="GND27" gate="1" x="-55.88" y="-5.08" rot="R270"/>
-<instance part="ANT1" gate="G$1" x="-271.78" y="-48.26"/>
+<instance part="ANT1" gate="G$1" x="-271.78" y="-43.18"/>
 <instance part="ANT2" gate="G$1" x="-271.78" y="-55.88"/>
-<instance part="ANT3" gate="G$1" x="-271.78" y="-63.5"/>
+<instance part="ANT3" gate="G$1" x="-271.78" y="-68.58"/>
 </instances>
 <busses>
 </busses>
@@ -1698,7 +1698,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 </segment>
 <segment>
 <pinref part="GND18" gate="1" pin="GND"/>
-<wire x1="-251.46" y1="-63.5" x2="-271.78" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-251.46" y1="-68.58" x2="-271.78" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="ANT3" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
@@ -1787,7 +1787,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <net name="+VCHG" class="0">
 <segment>
 <pinref part="P+15" gate="G$1" pin="+VCHG"/>
-<wire x1="-251.46" y1="-48.26" x2="-271.78" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-251.46" y1="-43.18" x2="-271.78" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="ANT1" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
