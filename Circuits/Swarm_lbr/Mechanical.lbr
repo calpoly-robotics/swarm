@@ -318,6 +318,8 @@
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR">
+<description>Digikey Part Number: S5750-06-ND
+Manufacturer Part Number: NPPN062AFCN-RC</description>
 <gates>
 <gate name="G$1" symbol="2X6MAIN" x="0" y="0"/>
 </gates>
