@@ -387,6 +387,18 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <text x="-3.81" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 <wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.127" layer="21"/>
 </package>
+<package name="SMDXTAL">
+<smd name="1" x="-2" y="0" dx="2" dy="2.4" layer="1"/>
+<smd name="2" x="2" y="0" dx="2" dy="2.4" layer="1"/>
+<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="2.5" y1="1.6" x2="2.5" y2="-1.6" width="0.127" layer="51"/>
+<wire x1="2.5" y1="-1.6" x2="-2.5" y2="-1.6" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-1.6" x2="-2.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.127" layer="21"/>
+<text x="-1.6" y="2" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-1.9" y="-2.6" size="0.6096" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -521,6 +533,22 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="XTAL">
+<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
+<text x="2.54" y="1.016" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.159" y="-1.143" size="0.8636" layer="93">1</text>
+<text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
+<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -666,6 +694,24 @@ Manufacturer Part Number: MBRS410LT3G</description>
 <connects>
 <connect gate="G$1" pin="A" pad="1"/>
 <connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NX5032GA-10.000000MHZ" prefix="XTAL" uservalue="yes">
+<description>Digikey Part Number: 644-1033-1-ND
+Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
+<gates>
+<gate name="G$1" symbol="XTAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMDXTAL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1038,6 +1084,10 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="R20" library="Passive" deviceset="RES" device="0603" value="100"/>
 <part name="U$3" library="Passive" deviceset="MBRS410LT3" device=""/>
 <part name="U$4" library="Passive" deviceset="MBRS410LT3" device=""/>
+<part name="XTAL1" library="Passive" deviceset="NX5032GA-10.000000MHZ" device="" value="10Mhz"/>
+<part name="C10" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
+<part name="C11" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
+<part name="GND27" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1123,6 +1173,10 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="R20" gate="G$1" x="375.92" y="-114.3" rot="R90"/>
 <instance part="U$3" gate="G$1" x="0" y="-121.92"/>
 <instance part="U$4" gate="G$1" x="0" y="-127"/>
+<instance part="XTAL1" gate="G$1" x="-38.1" y="-5.08" rot="R90"/>
+<instance part="C10" gate="G$1" x="-45.72" y="-2.54" rot="R270"/>
+<instance part="C11" gate="G$1" x="-45.72" y="-7.62" rot="R270"/>
+<instance part="GND27" gate="1" x="-55.88" y="-5.08" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1232,6 +1286,17 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <wire x1="5.08" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="88.9" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
 <junction x="5.08" y="88.9"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="-2.54" x2="-50.8" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-2.54" x2="-50.8" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="-5.08" x2="-50.8" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="-7.62" x2="-50.8" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-5.08" x2="-53.34" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+<junction x="-50.8" y="-5.08"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1833,6 +1898,24 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="S1" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="101.6" x2="-66.04" y2="101.6" width="0.1524" layer="91"/>
 <label x="-58.42" y="101.6" size="1.778" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="XTAL1" gate="G$1" pin="2"/>
+<wire x1="-33.02" y1="-2.54" x2="-38.1" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-2.54" x2="-40.64" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<wire x1="-33.02" y1="-5.08" x2="-35.56" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="XTAL1" gate="G$1" pin="1"/>
+<wire x1="-35.56" y1="-5.08" x2="-35.56" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-7.62" x2="-38.1" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-7.62" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
