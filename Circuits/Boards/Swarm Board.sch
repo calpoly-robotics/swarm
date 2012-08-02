@@ -1053,7 +1053,6 @@ Manufacturer Part number: TEFT4300</description>
 <part name="V1" library="PowerIC" deviceset="MCP1700-3002E" device=""/>
 <part name="P+1" library="Supply" deviceset="+3V" device=""/>
 <part name="P+2" library="Supply" deviceset="+VBAT" device=""/>
-<part name="P+3" library="Supply" deviceset="+VBAT" device=""/>
 <part name="P+4" library="Supply" deviceset="+VCHG" device=""/>
 <part name="GND1" library="Supply" deviceset="GND" device=""/>
 <part name="P+5" library="Supply" deviceset="+3V" device=""/>
@@ -1169,6 +1168,8 @@ Manufacturer Part number: TEFT4300</description>
 <part name="GND23" library="Supply" deviceset="GND" device=""/>
 <part name="GND24" library="Supply" deviceset="GND" device=""/>
 <part name="GND25" library="Supply" deviceset="GND" device=""/>
+<part name="GND26" library="Supply" deviceset="GND" device=""/>
+<part name="P+21" library="Supply" deviceset="+VBAT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1181,7 +1182,6 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="V1" gate="G$1" x="30.48" y="96.52"/>
 <instance part="P+1" gate="1" x="50.8" y="106.68"/>
 <instance part="P+2" gate="G$1" x="10.16" y="104.14"/>
-<instance part="P+3" gate="G$1" x="-71.12" y="104.14"/>
 <instance part="P+4" gate="G$1" x="-116.84" y="116.84"/>
 <instance part="GND1" gate="1" x="-55.88" y="25.4"/>
 <instance part="P+5" gate="1" x="-55.88" y="43.18"/>
@@ -1297,6 +1297,8 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="GND23" gate="1" x="88.9" y="-139.7"/>
 <instance part="GND24" gate="1" x="93.98" y="-139.7"/>
 <instance part="GND25" gate="1" x="99.06" y="-139.7"/>
+<instance part="GND26" gate="1" x="-48.26" y="81.28" rot="R90"/>
+<instance part="P+21" gate="G$1" x="-50.8" y="101.6" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1499,7 +1501,6 @@ Manufacturer Part number: TEFT4300</description>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-71.12" y1="81.28" x2="-71.12" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="81.28" x2="-60.96" y2="81.28" width="0.1524" layer="91"/>
-<label x="-50.8" y="81.28" size="1.778" layer="91" xref="yes"/>
 <wire x1="-60.96" y1="81.28" x2="-50.8" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="81.28" x2="-78.74" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-71.12" y="81.28"/>
@@ -1509,6 +1510,7 @@ Manufacturer Part number: TEFT4300</description>
 <junction x="-109.22" y="81.28"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 <junction x="-60.96" y="81.28"/>
+<pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="-76.2" y1="7.62" x2="-71.12" y2="7.62" width="0.1524" layer="91"/>
@@ -1661,14 +1663,12 @@ Manufacturer Part number: TEFT4300</description>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-83.82" y1="101.6" x2="-71.12" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="101.6" x2="-71.12" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="101.6" x2="-71.12" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="P+3" gate="G$1" pin="+VBAT"/>
 <junction x="-71.12" y="101.6"/>
 <wire x1="-71.12" y1="101.6" x2="-60.96" y2="101.6" width="0.1524" layer="91"/>
-<label x="-50.8" y="101.6" size="1.778" layer="91" xref="yes"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="-60.96" y1="101.6" x2="-50.8" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-60.96" y="101.6"/>
+<pinref part="P+21" gate="G$1" pin="+VBAT"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="VM"/>
