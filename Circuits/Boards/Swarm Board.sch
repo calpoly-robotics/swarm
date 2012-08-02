@@ -1066,7 +1066,7 @@ Manufacturer Part number: TEFT4300</description>
 <part name="GND3" library="Supply" deviceset="GND" device=""/>
 <part name="C4" library="Passive" deviceset="CAP" device="0603" value="4.7uf"/>
 <part name="C5" library="Passive" deviceset="CAP" device="0603" value="4.7uf"/>
-<part name="R2" library="Passive" deviceset="RES" device="0603" value="1.5k"/>
+<part name="R2" library="Passive" deviceset="RES" device="0603" value="750"/>
 <part name="R3" library="Passive" deviceset="RES" device="0603" value="2k"/>
 <part name="R4" library="Passive" deviceset="RES" device="0603" value="3k"/>
 <part name="R5" library="Passive" deviceset="RES" device="0603" value="7k"/>
@@ -1151,6 +1151,24 @@ Manufacturer Part number: TEFT4300</description>
 <part name="R27" library="Passive" deviceset="RES" device="0603"/>
 <part name="GND19" library="Supply" deviceset="GND" device=""/>
 <part name="P+17" library="Supply" deviceset="+3V" device=""/>
+<part name="P+18" library="Supply" deviceset="+3V" device=""/>
+<part name="GND20" library="Supply" deviceset="GND" device=""/>
+<part name="T11" library="Passive" deviceset="NPN2N2222" device=""/>
+<part name="R29" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="GND21" library="Supply" deviceset="GND" device=""/>
+<part name="P+19" library="Supply" deviceset="+3V" device=""/>
+<part name="R30" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="T12" library="Passive" deviceset="NPN2N2222" device=""/>
+<part name="R31" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="GND22" library="Supply" deviceset="GND" device=""/>
+<part name="P+20" library="Supply" deviceset="+3V" device=""/>
+<part name="R32" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R33" library="Passive" deviceset="RES" device="0603"/>
+<part name="R34" library="Passive" deviceset="RES" device="0603"/>
+<part name="R35" library="Passive" deviceset="RES" device="0603"/>
+<part name="GND23" library="Supply" deviceset="GND" device=""/>
+<part name="GND24" library="Supply" deviceset="GND" device=""/>
+<part name="GND25" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1250,7 +1268,7 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="R25" gate="G$1" x="-170.18" y="-35.56" rot="R90"/>
 <instance part="LED9" gate="G$1" x="-160.02" y="-22.86"/>
 <instance part="R26" gate="G$1" x="-160.02" y="-35.56" rot="R90"/>
-<instance part="P+14" gate="1" x="-160.02" y="-12.7"/>
+<instance part="P+14" gate="1" x="-165.1" y="-12.7"/>
 <instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 <instance part="U$1" gate="G$1" x="114.3" y="-106.68"/>
 <instance part="U$2" gate="G$1" x="93.98" y="-15.24"/>
@@ -1261,6 +1279,24 @@ Manufacturer Part number: TEFT4300</description>
 <instance part="R27" gate="G$1" x="266.7" y="-30.48" rot="R90"/>
 <instance part="GND19" gate="1" x="266.7" y="-40.64"/>
 <instance part="P+17" gate="1" x="266.7" y="2.54"/>
+<instance part="P+18" gate="1" x="76.2" y="-109.22" rot="R90"/>
+<instance part="GND20" gate="1" x="86.36" y="-111.76" rot="R270"/>
+<instance part="T11" gate="G$1" x="-101.6" y="-139.7"/>
+<instance part="R29" gate="G$1" x="-99.06" y="-129.54" rot="R270"/>
+<instance part="GND21" gate="1" x="-99.06" y="-147.32"/>
+<instance part="P+19" gate="1" x="-99.06" y="-121.92"/>
+<instance part="R30" gate="G$1" x="-111.76" y="-134.62" rot="R270"/>
+<instance part="T12" gate="G$1" x="-73.66" y="-152.4"/>
+<instance part="R31" gate="G$1" x="-71.12" y="-142.24" rot="R270"/>
+<instance part="GND22" gate="1" x="-71.12" y="-160.02"/>
+<instance part="P+20" gate="1" x="-71.12" y="-134.62"/>
+<instance part="R32" gate="G$1" x="-83.82" y="-147.32" rot="R270"/>
+<instance part="R33" gate="G$1" x="88.9" y="-129.54" rot="R90"/>
+<instance part="R34" gate="G$1" x="93.98" y="-129.54" rot="R90"/>
+<instance part="R35" gate="G$1" x="99.06" y="-129.54" rot="R90"/>
+<instance part="GND23" gate="1" x="88.9" y="-139.7"/>
+<instance part="GND24" gate="1" x="93.98" y="-139.7"/>
+<instance part="GND25" gate="1" x="99.06" y="-139.7"/>
 </instances>
 <busses>
 </busses>
@@ -1392,14 +1428,15 @@ Manufacturer Part number: TEFT4300</description>
 <junction x="-50.8" y="-114.3"/>
 </segment>
 <segment>
-<pinref part="LED9" gate="G$1" pin="A"/>
-<wire x1="-160.02" y1="-20.32" x2="-160.02" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="P+14" gate="1" pin="+3V"/>
 <pinref part="LED8" gate="G$1" pin="A"/>
-<wire x1="-160.02" y1="-17.78" x2="-160.02" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-165.1" y1="-17.78" x2="-165.1" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="-20.32" x2="-170.18" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-170.18" y1="-17.78" x2="-160.02" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="-160.02" y="-17.78"/>
+<wire x1="-170.18" y1="-17.78" x2="-165.1" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="LED9" gate="G$1" pin="A"/>
+<wire x1="-160.02" y1="-20.32" x2="-160.02" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="-17.78" x2="-165.1" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="-165.1" y="-17.78"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
@@ -1410,6 +1447,19 @@ Manufacturer Part number: TEFT4300</description>
 <pinref part="T10" gate="G$1" pin="C"/>
 <wire x1="266.7" y1="0" x2="266.7" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="P+17" gate="1" pin="+3V"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="+3V"/>
+<wire x1="101.6" y1="-109.22" x2="78.74" y2="-109.22" width="0.1524" layer="91"/>
+<pinref part="P+18" gate="1" pin="+3V"/>
+</segment>
+<segment>
+<pinref part="R29" gate="G$1" pin="1"/>
+<pinref part="P+19" gate="1" pin="+3V"/>
+</segment>
+<segment>
+<pinref part="R31" gate="G$1" pin="1"/>
+<pinref part="P+20" gate="1" pin="+3V"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1566,6 +1616,34 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="266.7" y1="-35.56" x2="266.7" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="101.6" y1="-111.76" x2="88.9" y2="-111.76" width="0.1524" layer="91"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="T11" gate="G$1" pin="E"/>
+<pinref part="GND21" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="T12" gate="G$1" pin="E"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R33" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="-134.62" x2="88.9" y2="-137.16" width="0.1524" layer="91"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R34" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="-134.62" x2="93.98" y2="-137.16" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R35" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="-134.62" x2="99.06" y2="-137.16" width="0.1524" layer="91"/>
+<pinref part="GND25" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+VBAT" class="0">
 <segment>
@@ -1721,12 +1799,30 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="30.48" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
 <label x="71.12" y="33.02" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="LINER"/>
+<wire x1="101.6" y1="-116.84" x2="88.9" y2="-116.84" width="0.1524" layer="91"/>
+<label x="86.36" y="-116.84" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="88.9" y1="-116.84" x2="86.36" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-116.84" x2="88.9" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="88.9" y="-116.84"/>
+<pinref part="R33" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="LINESENSE2" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PA3(ADC3/PCINT3)"/>
 <wire x1="30.48" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
 <label x="48.26" y="30.48" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="LINEL"/>
+<wire x1="101.6" y1="-119.38" x2="93.98" y2="-119.38" width="0.1524" layer="91"/>
+<label x="68.58" y="-119.38" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="-119.38" x2="68.58" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-119.38" x2="93.98" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="93.98" y="-119.38"/>
+<pinref part="R34" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="DATAANTENNA" class="0">
@@ -1913,9 +2009,9 @@ Manufacturer Part number: TEFT4300</description>
 <wire x1="-50.8" y1="-137.16" x2="-50.8" y2="-149.86" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="BSTBY"/>
 <wire x1="-50.8" y1="-149.86" x2="-48.26" y2="-149.86" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="-149.86" x2="-68.58" y2="-149.86" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-149.86" x2="-53.34" y2="-149.86" width="0.1524" layer="91"/>
 <junction x="-50.8" y="-149.86"/>
-<label x="-68.58" y="-149.86" size="1.778" layer="91" rot="R180" xref="yes"/>
+<label x="-53.34" y="-149.86" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="BPWM" class="0">
@@ -1929,14 +2025,15 @@ Manufacturer Part number: TEFT4300</description>
 <segment>
 <pinref part="U3" gate="G$1" pin="BIN2"/>
 <wire x1="-48.26" y1="-144.78" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
-<label x="-68.58" y="-144.78" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="BIN1" class="0">
+<net name="BIN" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="BIN1"/>
-<wire x1="-48.26" y1="-142.24" x2="-58.42" y2="-142.24" width="0.1524" layer="91"/>
-<label x="-58.42" y="-142.24" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="-48.26" y1="-142.24" x2="-83.82" y2="-142.24" width="0.1524" layer="91"/>
+<pinref part="R32" gate="G$1" pin="1"/>
+<wire x1="-83.82" y1="-142.24" x2="-86.36" y2="-142.24" width="0.1524" layer="91"/>
+<label x="-86.36" y="-142.24" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="APWM" class="0">
@@ -1949,15 +2046,21 @@ Manufacturer Part number: TEFT4300</description>
 <net name="AIN2" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="AIN2"/>
-<wire x1="-48.26" y1="-132.08" x2="-68.58" y2="-132.08" width="0.1524" layer="91"/>
-<label x="-68.58" y="-132.08" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="-48.26" y1="-132.08" x2="-96.52" y2="-132.08" width="0.1524" layer="91"/>
+<pinref part="T11" gate="G$1" pin="C"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="-134.62" x2="-96.52" y2="-134.62" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-134.62" x2="-96.52" y2="-132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="AIN1" class="0">
+<net name="AIN" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="AIN1"/>
-<wire x1="-48.26" y1="-129.54" x2="-58.42" y2="-129.54" width="0.1524" layer="91"/>
-<label x="-58.42" y="-129.54" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="-48.26" y1="-129.54" x2="-111.76" y2="-129.54" width="0.1524" layer="91"/>
+<label x="-114.3" y="-129.54" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="-111.76" y1="-129.54" x2="-114.3" y2="-129.54" width="0.1524" layer="91"/>
+<pinref part="R30" gate="G$1" pin="1"/>
+<junction x="-111.76" y="-129.54"/>
 </segment>
 </net>
 <net name="MA+" class="0">
@@ -2133,9 +2236,54 @@ Manufacturer Part number: TEFT4300</description>
 <label x="259.08" y="-22.86" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
+<pinref part="U1" gate="G$1" pin="PA5(ADC5/PCINT5)"/>
+<wire x1="30.48" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<label x="45.72" y="25.4" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="IRENABLE" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="ENABLE"/>
+<wire x1="101.6" y1="-114.3" x2="68.58" y2="-114.3" width="0.1524" layer="91"/>
+<label x="68.58" y="-114.3" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BUMPER" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="BUMP"/>
+<wire x1="101.6" y1="-121.92" x2="99.06" y2="-121.92" width="0.1524" layer="91"/>
+<label x="86.36" y="-121.92" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="99.06" y1="-121.92" x2="86.36" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="-121.92" x2="99.06" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="99.06" y="-121.92"/>
+<pinref part="R35" gate="G$1" pin="2"/>
+</segment>
+<segment>
 <pinref part="U1" gate="G$1" pin="PA4(ADC4/PCINT4)"/>
 <wire x1="30.48" y1="27.94" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
 <label x="71.12" y="27.94" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="T11" gate="G$1" pin="B"/>
+<wire x1="-111.76" y1="-139.7" x2="-104.14" y2="-139.7" width="0.1524" layer="91"/>
+<pinref part="R30" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="AIN3" class="0">
+<segment>
+<pinref part="T12" gate="G$1" pin="C"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="-147.32" x2="-68.58" y2="-147.32" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-147.32" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="T12" gate="G$1" pin="B"/>
+<wire x1="-83.82" y1="-152.4" x2="-76.2" y2="-152.4" width="0.1524" layer="91"/>
+<pinref part="R32" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>

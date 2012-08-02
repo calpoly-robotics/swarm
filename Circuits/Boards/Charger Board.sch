@@ -998,9 +998,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="U2" library="PowerIC" deviceset="ACS711" device=""/>
 <part name="C1" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
 <part name="GND3" library="Supply" deviceset="GND" device=""/>
-<part name="C2" library="Passive" deviceset="CAP" device="0603" value="1nf"/>
-<part name="GND7" library="Supply" deviceset="GND" device=""/>
-<part name="R1" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+4" library="Supply" deviceset="+5V" device=""/>
 <part name="P+8" library="Supply" deviceset="+5V" device=""/>
 <part name="GND9" library="Supply" deviceset="GND" device=""/>
@@ -1086,10 +1083,7 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="U2" gate="G$1" x="-5.08" y="-93.98"/>
 <instance part="C1" gate="G$1" x="17.78" y="-88.9"/>
 <instance part="GND3" gate="1" x="17.78" y="-96.52"/>
-<instance part="C2" gate="G$1" x="22.86" y="-109.22"/>
-<instance part="GND7" gate="1" x="22.86" y="-116.84"/>
-<instance part="R1" gate="G$1" x="33.02" y="-101.6"/>
-<instance part="P+4" gate="1" x="-43.18" y="109.22"/>
+<instance part="P+4" gate="1" x="-12.7" y="106.68"/>
 <instance part="P+8" gate="1" x="-58.42" y="-63.5"/>
 <instance part="GND9" gate="1" x="5.08" y="83.82"/>
 <instance part="CON3" gate="G$1" x="172.72" y="-93.98" rot="R90"/>
@@ -1177,11 +1171,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <junction x="17.78" y="-91.44"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="22.86" y1="-114.3" x2="22.86" y2="-111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON3" gate="G$1" pin="3"/>
@@ -1479,10 +1468,15 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="T3" gate="G$1" pin="S"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="101.6" x2="-43.18" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="IC1" gate="G$1" pin="IN"/>
+<wire x1="-20.32" y1="101.6" x2="-12.7" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="-12.7" y1="101.6" x2="-7.62" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="101.6" x2="-12.7" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-12.7" y="101.6"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="-43.18" y1="101.6" x2="-43.18" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="101.6" x2="-12.7" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CURRENTSENSE" class="0">
@@ -1492,9 +1486,9 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <label x="58.42" y="38.1" size="1.778" layer="91" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="38.1" y1="-101.6" x2="43.18" y2="-101.6" width="0.1524" layer="91"/>
-<label x="43.18" y="-101.6" size="1.778" layer="91" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="VIOUT"/>
+<wire x1="7.62" y1="-101.6" x2="27.94" y2="-101.6" width="0.1524" layer="91"/>
+<label x="27.94" y="-101.6" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1503,16 +1497,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <wire x1="-12.7" y1="-88.9" x2="-58.42" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="-83.82" x2="-58.42" y2="-88.9" width="0.1524" layer="91"/>
 <pinref part="T3" gate="G$1" pin="D"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="VIOUT"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="-101.6" x2="22.86" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="-101.6" x2="27.94" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-101.6" x2="22.86" y2="-104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CHARGER" class="0">
@@ -1711,17 +1695,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <junction x="22.86" y="101.6"/>
 </segment>
 </net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="S1" gate="G$1" pin="2"/>
-<pinref part="IC1" gate="G$1" pin="IN"/>
-<wire x1="-20.32" y1="101.6" x2="-12.7" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="101.6" x2="-7.62" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="101.6" x2="-12.7" y2="99.06" width="0.1524" layer="91"/>
-<junction x="-12.7" y="101.6"/>
-</segment>
-</net>
 <net name="SECTION2" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -1853,6 +1826,13 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="CON12" gate="G$1" pin="1"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="375.92" y1="-99.06" x2="375.92" y2="-109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="S1" gate="G$1" pin="1"/>
+<wire x1="-33.02" y1="101.6" x2="-66.04" y2="101.6" width="0.1524" layer="91"/>
+<label x="-58.42" y="101.6" size="1.778" layer="91"/>
 </segment>
 </net>
 </nets>
