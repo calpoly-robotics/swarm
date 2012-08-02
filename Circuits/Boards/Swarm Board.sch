@@ -973,6 +973,11 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <text x="-3.81" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.81" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="ANTENNA">
+<pad name="P$1" x="0" y="0" drill="0.8"/>
+<text x="-1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -1018,6 +1023,13 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
 <text x="-3.556" y="6.604" size="1.27" layer="95">&gt;NAME</text>
 <text x="-3.81" y="-7.62" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="ANTENNA">
+<pin name="P$1" x="0" y="0" length="short" rot="R180"/>
+<wire x1="-2.54" y1="0" x2="-10.16" y2="7.62" width="0.254" layer="94" curve="90"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="5.08" width="0.254" layer="94" curve="180"/>
+<text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1076,6 +1088,21 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <connect gate="G$1" pin="GND" pad="3"/>
 <connect gate="G$1" pin="RXI" pad="1"/>
 <connect gate="G$1" pin="TXO" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ANTENNA" prefix="ANT">
+<gates>
+<gate name="G$1" symbol="ANTENNA" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="ANTENNA">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1220,6 +1247,9 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="C10" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="C11" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="GND27" library="Supply" deviceset="GND" device=""/>
+<part name="ANT1" library="Mechanical" deviceset="ANTENNA" device=""/>
+<part name="ANT2" library="Mechanical" deviceset="ANTENNA" device=""/>
+<part name="ANT3" library="Mechanical" deviceset="ANTENNA" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1353,6 +1383,9 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <instance part="C10" gate="G$1" x="-45.72" y="-2.54" rot="R270"/>
 <instance part="C11" gate="G$1" x="-45.72" y="-7.62" rot="R270"/>
 <instance part="GND27" gate="1" x="-55.88" y="-5.08" rot="R270"/>
+<instance part="ANT1" gate="G$1" x="-271.78" y="-48.26"/>
+<instance part="ANT2" gate="G$1" x="-271.78" y="-55.88"/>
+<instance part="ANT3" gate="G$1" x="-271.78" y="-63.5"/>
 </instances>
 <busses>
 </busses>
@@ -1666,6 +1699,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <segment>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="-251.46" y1="-63.5" x2="-271.78" y2="-63.5" width="0.1524" layer="91"/>
+<pinref part="ANT3" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="R27" gate="G$1" pin="1"/>
@@ -1754,6 +1788,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <segment>
 <pinref part="P+15" gate="G$1" pin="+VCHG"/>
 <wire x1="-251.46" y1="-48.26" x2="-271.78" y2="-48.26" width="0.1524" layer="91"/>
+<pinref part="ANT1" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -1906,6 +1941,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <segment>
 <wire x1="-251.46" y1="-55.88" x2="-271.78" y2="-55.88" width="0.1524" layer="91"/>
 <label x="-251.46" y="-55.88" size="1.778" layer="91" xref="yes"/>
+<pinref part="ANT2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$8" class="0">
