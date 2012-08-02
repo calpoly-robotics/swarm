@@ -1137,7 +1137,7 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="R13" library="Passive" deviceset="RES" device="0603"/>
 <part name="R14" library="Passive" deviceset="RES" device="0603"/>
 <part name="R15" library="Passive" deviceset="RES" device="0603"/>
-<part name="R16" library="Passive" deviceset="RES" device="0603" value="500"/>
+<part name="R16" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND8" library="Supply" deviceset="GND" device=""/>
 <part name="LED2" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="LED3" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
@@ -1149,12 +1149,12 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="P+9" library="Supply" deviceset="+3V" device=""/>
 <part name="T3" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="R22" library="Passive" deviceset="RES" device="0603"/>
-<part name="R23" library="Passive" deviceset="RES" device="0603" value="500"/>
+<part name="R23" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND9" library="Supply" deviceset="GND" device=""/>
 <part name="LED13" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="C7" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
 <part name="P+10" library="Supply" deviceset="+3V" device=""/>
-<part name="LED1" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED1" library="Passive" deviceset="LED" device="0603" value="red"/>
 <part name="T4" library="Passive" deviceset="TEFT4300" device=""/>
 <part name="T5" library="Passive" deviceset="TEFT4300" device=""/>
 <part name="T6" library="Passive" deviceset="TEFT4300" device=""/>
@@ -1181,12 +1181,12 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="GND17" library="Supply" deviceset="GND" device=""/>
 <part name="P+12" library="Supply" deviceset="+3V" device=""/>
 <part name="P+13" library="Supply" deviceset="+VBAT" device=""/>
-<part name="LED8" library="Passive" deviceset="LED" device="0603"/>
-<part name="R25" library="Passive" deviceset="RES" device="0603"/>
-<part name="LED9" library="Passive" deviceset="LED" device="0603"/>
-<part name="R26" library="Passive" deviceset="RES" device="0603"/>
+<part name="LED8" library="Passive" deviceset="LED" device="0603" value="red"/>
+<part name="R25" library="Passive" deviceset="RES" device="0603" value="750"/>
+<part name="LED9" library="Passive" deviceset="LED" device="0603" value="green"/>
+<part name="R26" library="Passive" deviceset="RES" device="0603" value="750"/>
 <part name="P+14" library="Supply" deviceset="+3V" device=""/>
-<part name="R28" library="Passive" deviceset="RES" device="0603"/>
+<part name="R28" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="U$1" library="Mechanical" deviceset="MAIN_CONNECTOR" device=""/>
 <part name="U$2" library="Mechanical" deviceset="FTDI_3PIN" device=""/>
 <part name="P+15" library="Supply" deviceset="+VCHG" device=""/>
