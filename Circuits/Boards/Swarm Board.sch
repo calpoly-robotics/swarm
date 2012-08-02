@@ -1217,8 +1217,8 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="GND26" library="Supply" deviceset="GND" device=""/>
 <part name="P+21" library="Supply" deviceset="+VBAT" device=""/>
 <part name="XTAL1" library="Passive" deviceset="NX5032GA-10.000000MHZ" device="" value="10Mhz"/>
-<part name="C10" library="Passive" deviceset="CAP" device="0603"/>
-<part name="C11" library="Passive" deviceset="CAP" device="0603"/>
+<part name="C10" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
+<part name="C11" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="GND27" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
