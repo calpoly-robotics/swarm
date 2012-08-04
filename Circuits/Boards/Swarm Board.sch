@@ -349,7 +349,7 @@ Manufacturer Part Number: TB6552FNG(O,EL)</description>
 </package>
 </packages>
 <symbols>
-<symbol name="MCP1700T-3002E">
+<symbol name="VOLTAGEREGULATOR">
 <pin name="IN" x="-12.7" y="2.54" length="middle"/>
 <pin name="OUT" x="12.7" y="2.54" length="middle" rot="R180"/>
 <pin name="GND" x="0" y="-10.16" length="middle" rot="R90"/>
@@ -379,7 +379,7 @@ Manufacturer Part Number: TB6552FNG(O,EL)</description>
 <description>Digikey Part Number: MCP1700T-3002E/TTCT-ND
 Manufacturer Part Number: MCP1700T-3002E/TT</description>
 <gates>
-<gate name="G$1" symbol="MCP1700T-3002E" x="0" y="0"/>
+<gate name="G$1" symbol="VOLTAGEREGULATOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="(TT/NB)SOT-23(3PAD)">
@@ -547,8 +547,8 @@ Manufacturer Part Number: MCP73832T-2ACI/OT</description>
 <text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="CDSPHOTOCELL">
-<pad name="1" x="-1.69418125" y="0" drill="0.5"/>
-<pad name="2" x="1.7018" y="0" drill="0.5"/>
+<pad name="1" x="-1.69418125" y="0" drill="0.508"/>
+<pad name="2" x="1.7018" y="0" drill="0.508"/>
 <circle x="0" y="0" radius="2.159" width="0.127" layer="51"/>
 <circle x="0" y="0" radius="2.159" width="0.127" layer="21"/>
 <text x="-2.54" y="3.81" size="1.27" layer="25">&gt;NAME</text>
@@ -978,6 +978,9 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <text x="-1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
 </package>
+<package name="MOUNTINGHOLE">
+<pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -1031,6 +1034,11 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="MOUNTINGHOLE">
+<circle x="0" y="-2.54" radius="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ISP" prefix="CON">
@@ -1053,6 +1061,8 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR">
+<description>Digikey Part Number: S5750-06-ND
+Manufacturer Part Number: NPPN062AFCN-RC</description>
 <gates>
 <gate name="G$1" symbol="2X6MAIN" x="0" y="0"/>
 </gates>
@@ -1104,6 +1114,18 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOUNTINGHOLE" prefix="H">
+<gates>
+<gate name="G$1" symbol="MOUNTINGHOLE" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="MOUNTINGHOLE">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1250,6 +1272,8 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <part name="ANT1" library="Mechanical" deviceset="ANTENNA" device=""/>
 <part name="ANT2" library="Mechanical" deviceset="ANTENNA" device=""/>
 <part name="ANT3" library="Mechanical" deviceset="ANTENNA" device=""/>
+<part name="H1" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
+<part name="H2" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1386,6 +1410,8 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <instance part="ANT1" gate="G$1" x="-271.78" y="-43.18"/>
 <instance part="ANT2" gate="G$1" x="-271.78" y="-55.88"/>
 <instance part="ANT3" gate="G$1" x="-271.78" y="-68.58"/>
+<instance part="H1" gate="G$1" x="91.44" y="129.54"/>
+<instance part="H2" gate="G$1" x="96.52" y="129.54"/>
 </instances>
 <busses>
 </busses>

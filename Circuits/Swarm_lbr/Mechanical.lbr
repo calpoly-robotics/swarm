@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -161,6 +161,9 @@
 <text x="-1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
 </package>
+<package name="MOUNTINGHOLE">
+<pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -255,6 +258,11 @@
 <wire x1="-10.16" y1="7.62" x2="-10.16" y2="5.08" width="0.254" layer="94" curve="180"/>
 <text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="MOUNTINGHOLE">
+<circle x="0" y="-2.54" radius="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -400,6 +408,18 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOUNTINGHOLE" prefix="H">
+<gates>
+<gate name="G$1" symbol="MOUNTINGHOLE" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="MOUNTINGHOLE">
 <technologies>
 <technology name=""/>
 </technologies>
