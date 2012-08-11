@@ -2192,6 +2192,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <junction x="-50.8" y="-149.86"/>
 <label x="-53.34" y="-149.86" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB1(T1/CLKO/PCINT9)"/>
+<wire x1="30.48" y1="12.7" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<label x="38.1" y="12.7" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="BPWM" class="0">
 <segment>
@@ -2199,20 +2204,24 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-48.26" y1="-147.32" x2="-58.42" y2="-147.32" width="0.1524" layer="91"/>
 <label x="-58.42" y="-147.32" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="BIN2" class="0">
 <segment>
-<pinref part="U3" gate="G$1" pin="BIN2"/>
-<wire x1="-48.26" y1="-144.78" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PB4(!SS!/OC0B/PCINT12)"/>
+<wire x1="30.48" y1="5.08" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<label x="48.26" y="5.08" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="BIN" class="0">
 <segment>
-<pinref part="U3" gate="G$1" pin="BIN1"/>
-<wire x1="-48.26" y1="-142.24" x2="-83.82" y2="-142.24" width="0.1524" layer="91"/>
 <pinref part="R32" gate="G$1" pin="1"/>
 <wire x1="-83.82" y1="-142.24" x2="-86.36" y2="-142.24" width="0.1524" layer="91"/>
 <label x="-86.36" y="-142.24" size="1.778" layer="91" rot="R180" xref="yes"/>
+<pinref part="U3" gate="G$1" pin="BIN1"/>
+<wire x1="-83.82" y1="-142.24" x2="-48.26" y2="-142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB2(AIN0/INT2/PCINT10)"/>
+<wire x1="30.48" y1="10.16" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
+<label x="48.26" y="10.16" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="APWM" class="0">
@@ -2220,6 +2229,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="U3" gate="G$1" pin="APWM"/>
 <wire x1="-48.26" y1="-134.62" x2="-58.42" y2="-134.62" width="0.1524" layer="91"/>
 <label x="-58.42" y="-134.62" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB3(AIN1/OC0A/PCINT11)"/>
+<wire x1="30.48" y1="7.62" x2="38.1" y2="7.62" width="0.1524" layer="91"/>
+<label x="38.1" y="7.62" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="AIN2" class="0">
@@ -2240,6 +2254,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-111.76" y1="-129.54" x2="-114.3" y2="-129.54" width="0.1524" layer="91"/>
 <pinref part="R30" gate="G$1" pin="1"/>
 <junction x="-111.76" y="-129.54"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB0(XCK0/T0/PCINT8)"/>
+<wire x1="30.48" y1="15.24" x2="48.26" y2="15.24" width="0.1524" layer="91"/>
+<label x="48.26" y="15.24" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="MA+" class="0">
@@ -2390,12 +2409,14 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="R30" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="AIN3" class="0">
+<net name="BIN2" class="0">
 <segment>
 <pinref part="T12" gate="G$1" pin="C"/>
 <pinref part="R31" gate="G$1" pin="2"/>
 <wire x1="-71.12" y1="-147.32" x2="-68.58" y2="-147.32" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="-147.32" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="BIN2"/>
+<wire x1="-48.26" y1="-144.78" x2="-68.58" y2="-144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
