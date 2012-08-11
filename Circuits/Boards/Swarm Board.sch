@@ -518,6 +518,17 @@ Manufacturer Part Number: MCP73832T-2ACI/OT</description>
 <text x="-2" y="1" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-2" y="-2" size="0.6096" layer="27">&gt;VALUE</text>
 </package>
+<package name="LED0603">
+<smd name="1" x="-0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-1.07" y1="0.635" x2="1.07" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="0.635" x2="1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="-0.635" x2="-1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.07" y1="-0.635" x2="-1.07" y2="0.635" width="0.127" layer="21"/>
+<text x="-0.97" y="0.87" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.07" y="-1.27" size="0.4064" layer="27">&gt;VALUE</text>
+<circle x="-1.37" y="0.97" radius="0.07615625" width="0.127" layer="21"/>
+</package>
 <package name="0603">
 <smd name="1" x="-0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
 <smd name="2" x="0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
@@ -796,19 +807,19 @@ Manufacturer Part Number: MCP73832T-2ACI/OT</description>
 <gate name="G$1" symbol="LED" x="0" y="0"/>
 </gates>
 <devices>
-<device name="0603" package="0603">
+<device name="5MMRA" package="5MM_LED_RA">
 <connects>
-<connect gate="G$1" pin="A" pad="2"/>
-<connect gate="G$1" pin="C" pad="1"/>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="5MMRA" package="5MM_LED_RA">
+<device name="0603" package="LED0603">
 <connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="A" pad="2"/>
+<connect gate="G$1" pin="C" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
