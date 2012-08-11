@@ -1275,6 +1275,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="R41" library="Passive" deviceset="RES" device="0603"/>
 <part name="GND28" library="Supply" deviceset="GND" device=""/>
 <part name="GND21" library="Supply" deviceset="GND" device=""/>
+<part name="GND20" library="Supply" deviceset="GND" device=""/>
+<part name="P+3" library="Supply" deviceset="+3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1383,12 +1385,12 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="R27" gate="G$1" x="266.7" y="-30.48" rot="R90"/>
 <instance part="GND19" gate="1" x="266.7" y="-40.64"/>
 <instance part="P+17" gate="1" x="266.7" y="2.54"/>
-<instance part="R33" gate="G$1" x="38.1" y="-109.22" rot="R90"/>
-<instance part="R34" gate="G$1" x="43.18" y="-109.22" rot="R90"/>
-<instance part="R35" gate="G$1" x="48.26" y="-109.22" rot="R90"/>
-<instance part="GND23" gate="1" x="38.1" y="-119.38"/>
-<instance part="GND24" gate="1" x="43.18" y="-119.38"/>
-<instance part="GND25" gate="1" x="48.26" y="-119.38"/>
+<instance part="R33" gate="G$1" x="50.8" y="-111.76" rot="R90"/>
+<instance part="R34" gate="G$1" x="55.88" y="-111.76" rot="R90"/>
+<instance part="R35" gate="G$1" x="60.96" y="-111.76" rot="R90"/>
+<instance part="GND23" gate="1" x="50.8" y="-121.92"/>
+<instance part="GND24" gate="1" x="55.88" y="-121.92"/>
+<instance part="GND25" gate="1" x="60.96" y="-121.92"/>
 <instance part="GND26" gate="1" x="-48.26" y="81.28" rot="R90"/>
 <instance part="P+21" gate="G$1" x="-50.8" y="101.6" rot="R270"/>
 <instance part="XTAL1" gate="G$1" x="-38.1" y="-5.08" rot="R90"/>
@@ -1412,8 +1414,10 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="R39" gate="G$1" x="360.68" y="96.52" rot="R90"/>
 <instance part="R40" gate="G$1" x="381" y="96.52" rot="R90"/>
 <instance part="R41" gate="G$1" x="401.32" y="96.52" rot="R90"/>
-<instance part="GND28" gate="1" x="86.36" y="-106.68" rot="R270"/>
+<instance part="GND28" gate="1" x="78.74" y="-106.68" rot="R270"/>
 <instance part="GND21" gate="1" x="-165.1" y="-48.26"/>
+<instance part="GND20" gate="1" x="96.52" y="-114.3" rot="R270"/>
+<instance part="P+3" gate="1" x="88.9" y="-111.76" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1578,6 +1582,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="266.7" y1="0" x2="266.7" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="P+17" gate="1" pin="+3V"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="8"/>
+<wire x1="101.6" y1="-111.76" x2="91.44" y2="-111.76" width="0.1524" layer="91"/>
+<pinref part="P+3" gate="1" pin="+3V"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -1691,7 +1700,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="6"/>
-<wire x1="101.6" y1="-106.68" x2="88.9" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-106.68" x2="81.28" y2="-106.68" width="0.1524" layer="91"/>
 <pinref part="GND28" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -1706,17 +1715,17 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="R33" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="-114.3" x2="38.1" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-116.84" x2="50.8" y2="-119.38" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="R34" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="-114.3" x2="43.18" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-116.84" x2="55.88" y2="-119.38" width="0.1524" layer="91"/>
 <pinref part="GND24" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="R35" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="-114.3" x2="48.26" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-116.84" x2="60.96" y2="-119.38" width="0.1524" layer="91"/>
 <pinref part="GND25" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -1800,6 +1809,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-165.1" y1="-43.18" x2="-165.1" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="9"/>
+<wire x1="101.6" y1="-114.3" x2="99.06" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+VBAT" class="0">
 <segment>
@@ -1835,8 +1849,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="7"/>
-<wire x1="101.6" y1="-109.22" x2="78.74" y2="-109.22" width="0.1524" layer="91"/>
-<label x="78.74" y="-109.22" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="-109.22" x2="76.2" y2="-109.22" width="0.1524" layer="91"/>
+<label x="76.2" y="-109.22" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+VCHG" class="0">
@@ -1955,28 +1969,35 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </net>
 <net name="LINESENSE1" class="0">
 <segment>
-<label x="35.56" y="-96.52" size="1.778" layer="91" rot="R180" xref="yes"/>
-<wire x1="38.1" y1="-96.52" x2="35.56" y2="-96.52" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="-96.52" x2="38.1" y2="-104.14" width="0.1524" layer="91"/>
-<pinref part="R33" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="U1" gate="G$1" pin="PA1(ADC1/PCINT1)"/>
 <wire x1="30.48" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
 <label x="48.26" y="35.56" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3"/>
+<label x="48.26" y="-99.06" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="50.8" y1="-99.06" x2="48.26" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-99.06" x2="50.8" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R33" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="-99.06" x2="50.8" y2="-99.06" width="0.1524" layer="91"/>
+<junction x="50.8" y="-99.06"/>
+</segment>
 </net>
 <net name="LINESENSE2" class="0">
-<segment>
-<label x="17.78" y="-99.06" size="1.778" layer="91" rot="R180" xref="yes"/>
-<wire x1="43.18" y1="-99.06" x2="17.78" y2="-99.06" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-99.06" x2="43.18" y2="-104.14" width="0.1524" layer="91"/>
-<pinref part="R34" gate="G$1" pin="2"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PA2(ADC2/PCINT2)"/>
 <wire x1="30.48" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
 <label x="71.12" y="33.02" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="4"/>
+<label x="30.48" y="-101.6" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="55.88" y1="-101.6" x2="53.34" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-101.6" x2="30.48" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-101.6" x2="55.88" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R34" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="-101.6" x2="55.88" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="55.88" y="-101.6"/>
 </segment>
 </net>
 <net name="DATAANTENNA" class="0">
@@ -2214,8 +2235,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="11"/>
-<wire x1="101.6" y1="-119.38" x2="93.98" y2="-119.38" width="0.1524" layer="91"/>
-<label x="93.98" y="-119.38" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="-119.38" x2="78.74" y2="-119.38" width="0.1524" layer="91"/>
+<label x="78.74" y="-119.38" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MB+" class="0">
@@ -2226,8 +2247,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="-96.52" x2="86.36" y2="-96.52" width="0.1524" layer="91"/>
-<label x="86.36" y="-96.52" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="-96.52" x2="76.2" y2="-96.52" width="0.1524" layer="91"/>
+<label x="76.2" y="-96.52" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MB-" class="0">
@@ -2238,8 +2259,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="-93.98" x2="93.98" y2="-93.98" width="0.1524" layer="91"/>
-<label x="93.98" y="-93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="-93.98" x2="83.82" y2="-93.98" width="0.1524" layer="91"/>
+<label x="83.82" y="-93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -2338,18 +2359,26 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="30.48" y1="27.94" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
 <label x="71.12" y="27.94" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="10"/>
+<wire x1="101.6" y1="-116.84" x2="93.98" y2="-116.84" width="0.1524" layer="91"/>
+<label x="93.98" y="-116.84" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="BUMPER" class="0">
-<segment>
-<label x="35.56" y="-101.6" size="1.778" layer="91" rot="R180" xref="yes"/>
-<wire x1="48.26" y1="-101.6" x2="35.56" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-101.6" x2="48.26" y2="-104.14" width="0.1524" layer="91"/>
-<pinref part="R35" gate="G$1" pin="2"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PA3(ADC3/PCINT3)"/>
 <wire x1="30.48" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
 <label x="48.26" y="30.48" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="5"/>
+<label x="48.26" y="-104.14" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="60.96" y1="-104.14" x2="48.26" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-104.14" x2="60.96" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R35" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="-104.14" x2="60.96" y2="-104.14" width="0.1524" layer="91"/>
+<junction x="60.96" y="-104.14"/>
 </segment>
 </net>
 <net name="BIN2" class="0">
