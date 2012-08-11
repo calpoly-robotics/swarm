@@ -1808,6 +1808,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-165.1" y1="-43.18" x2="-170.18" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-165.1" y1="-43.18" x2="-165.1" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="GND21" gate="1" pin="GND"/>
+<junction x="-165.1" y="-43.18"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="9"/>
@@ -2330,6 +2331,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-137.16" y1="93.98" x2="-137.16" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="93.98" x2="-147.32" y2="93.98" width="0.1524" layer="91"/>
 <label x="-147.32" y="93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
+<junction x="-137.16" y="93.98"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB0(XCK0/T0/PCINT8)"/>
@@ -2400,6 +2402,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-33.02" y1="-2.54" x2="-38.1" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="-2.54" x2="-40.64" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
+<junction x="-38.1" y="-2.54"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -2411,6 +2414,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-35.56" y1="-7.62" x2="-38.1" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="-7.62" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="1"/>
+<junction x="-38.1" y="-7.62"/>
 </segment>
 </net>
 <net name="N$27" class="0">
