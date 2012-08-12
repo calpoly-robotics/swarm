@@ -746,24 +746,6 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <wire x1="-2.54" y1="-3.175" x2="2.54" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="2.54" y1="-3.175" x2="2.54" y2="-2.54" width="0.127" layer="21"/>
 </package>
-<package name="DUMMY">
-<text x="-16.51" y="3.81" size="1.27" layer="21">DUMMY PACKAGE NEEDS REPLACING</text>
-<smd name="P$2" x="-2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$3" x="-1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$4" x="0" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$5" x="1.27" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$6" x="2.54" y="2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$7" x="2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$8" x="0" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$9" x="1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$10" x="-1.27" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$11" x="-2.54" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$12" x="-2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$13" x="-1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$14" x="0" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$15" x="2.54" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$16" x="1.27" y="-2.54" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-</package>
 <package name="3PINHEADER_.100&quot;">
 <pad name="2" x="0" y="0" drill="0.8"/>
 <pad name="1" x="-2.54" y="0" drill="0.8"/>
@@ -782,6 +764,14 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <package name="MOUNTINGHOLE">
 <pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
 </package>
+<package name="SCREWTERMINAL_1X2">
+<pad name="1" x="-2.5" y="0" drill="0.9"/>
+<pad name="2" x="2.5" y="0" drill="0.9"/>
+<wire x1="-5" y1="5" x2="5" y2="5" width="0.127" layer="51"/>
+<wire x1="5" y1="5" x2="5" y2="-5" width="0.127" layer="51"/>
+<wire x1="5" y1="-5" x2="-5" y2="-5" width="0.127" layer="51"/>
+<wire x1="-5" y1="-5" x2="-5" y2="5" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -796,15 +786,6 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
 <text x="-5.08" y="8.382" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="CHARGER_ROCKER_SWITCH">
-<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<pin name="1" x="-7.62" y="0" length="short"/>
-<pin name="2" x="5.08" y="0" length="short" rot="R180"/>
-<text x="-5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="HEADER_1X3">
 <pin name="1" x="-5.08" y="2.54" length="middle"/>
@@ -833,6 +814,16 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <wire x1="0" y1="-1.27" x2="0" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
+<symbol name="SCREWTERMINAL">
+<pin name="1" x="-2.54" y="2.54" length="middle"/>
+<pin name="2" x="-2.54" y="-2.54" length="middle"/>
+<wire x1="2.54" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ISP" prefix="CON">
@@ -847,22 +838,6 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <connect gate="G$1" pin="MISO" pad="6"/>
 <connect gate="G$1" pin="MOSI" pad="2"/>
 <connect gate="G$1" pin="SCK" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ROCKER_SWITCH" prefix="S">
-<gates>
-<gate name="G$1" symbol="CHARGER_ROCKER_SWITCH" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DUMMY">
-<connects>
-<connect gate="G$1" pin="1" pad="P$2"/>
-<connect gate="G$1" pin="2" pad="P$3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -910,6 +885,22 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 </gates>
 <devices>
 <device name="" package="MOUNTINGHOLE">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCREWTERMINAL_1X2" prefix="CON">
+<gates>
+<gate name="G$1" symbol="SCREWTERMINAL" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="SCREWTERMINAL_1X2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1060,7 +1051,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="LED10" library="Passive" deviceset="LED" device="0603"/>
 <part name="R27" library="Passive" deviceset="RES" device="0603" value="470"/>
 <part name="R28" library="Passive" deviceset="RES" device="0603"/>
-<part name="S1" library="Mechanical" deviceset="ROCKER_SWITCH" device=""/>
 <part name="U2" library="PowerIC" deviceset="ACS711" device=""/>
 <part name="C1" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
 <part name="GND3" library="Supply" deviceset="GND" device=""/>
@@ -1113,6 +1103,8 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="H3" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 <part name="H4" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 <part name="GND11" library="Supply" deviceset="GND" device=""/>
+<part name="CON2" library="Mechanical" deviceset="SCREWTERMINAL_1X2" device=""/>
+<part name="GND12" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1154,7 +1146,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="LED10" gate="G$1" x="-50.8" y="-93.98"/>
 <instance part="R27" gate="G$1" x="-50.8" y="-106.68" rot="R90"/>
 <instance part="R28" gate="G$1" x="-167.64" y="48.26"/>
-<instance part="S1" gate="G$1" x="-25.4" y="101.6"/>
 <instance part="U2" gate="G$1" x="-5.08" y="-93.98"/>
 <instance part="C1" gate="G$1" x="17.78" y="-88.9"/>
 <instance part="GND3" gate="1" x="17.78" y="-96.52"/>
@@ -1207,6 +1198,8 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="H3" gate="G$1" x="-132.08" y="-53.34"/>
 <instance part="H4" gate="G$1" x="-127" y="-53.34"/>
 <instance part="GND11" gate="1" x="-170.18" y="-27.94"/>
+<instance part="CON2" gate="G$1" x="-27.94" y="99.06" rot="MR0"/>
+<instance part="GND12" gate="1" x="-20.32" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -1341,6 +1334,12 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <wire x1="-160.02" y1="-22.86" x2="-170.18" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="-22.86" x2="-170.18" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CON2" gate="G$1" pin="2"/>
+<wire x1="-25.4" y1="96.52" x2="-20.32" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="96.52" x2="-20.32" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1560,15 +1559,15 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="T3" gate="G$1" pin="S"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="IN"/>
-<wire x1="-20.32" y1="101.6" x2="-12.7" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="101.6" x2="-7.62" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="101.6" x2="-12.7" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-12.7" y="101.6"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <wire x1="-12.7" y1="101.6" x2="-12.7" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="CON2" gate="G$1" pin="1"/>
+<wire x1="-12.7" y1="101.6" x2="-25.4" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CURRENTSENSE" class="0">
@@ -1897,13 +1896,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <pinref part="U1" gate="G$1" pin="PC5(TDI/PCINT21)"/>
 <wire x1="30.48" y1="-12.7" x2="45.72" y2="-12.7" width="0.1524" layer="91"/>
 <label x="45.72" y="-12.7" size="1.778" layer="91" xref="yes"/>
-</segment>
-</net>
-<net name="VIN" class="0">
-<segment>
-<pinref part="S1" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="101.6" x2="-66.04" y2="101.6" width="0.1524" layer="91"/>
-<label x="-58.42" y="101.6" size="1.778" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
