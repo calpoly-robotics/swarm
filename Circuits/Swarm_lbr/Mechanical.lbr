@@ -445,6 +445,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </devices>
 </deviceset>
 <deviceset name="SCREWTERMINAL_1X2" prefix="CON">
+<description>Digikey Part Number: ED1631-ND
+Manufacturer Part Number: ED700/2</description>
 <gates>
 <gate name="G$1" symbol="SCREWTERMINAL" x="-2.54" y="0"/>
 </gates>
