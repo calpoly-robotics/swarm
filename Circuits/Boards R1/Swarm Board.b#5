@@ -16,8 +16,8 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -40,12 +40,12 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -61,6 +61,12 @@
 <circle x="31.75" y="31.75" radius="31.75" width="0.2032" layer="20"/>
 <wire x1="4.318" y1="47.625" x2="4.318" y2="15.7988" width="0.254" layer="20"/>
 <wire x1="59.182" y1="47.625" x2="59.182" y2="15.7988" width="0.254" layer="20"/>
+<text x="44.069" y="31.115" size="0.6096" layer="21" rot="R90">RXI</text>
+<text x="44.069" y="33.655" size="0.6096" layer="21" rot="R90">TXO</text>
+<text x="18.288" y="49.022" size="0.6096" layer="21">GND</text>
+<text x="30.988" y="49.022" size="0.6096" layer="21">PWR</text>
+<text x="43.307" y="49.022" size="0.6096" layer="21">DATA</text>
+<text x="16.256" y="29.972" size="0.6096" layer="21">CHGSTATUS</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
@@ -194,6 +200,17 @@
 </library>
 <library name="Passive">
 <packages>
+<package name="LED0603">
+<smd name="1" x="-0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-1.07" y1="0.635" x2="1.07" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="0.635" x2="1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="-0.635" x2="-1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.07" y1="-0.635" x2="-1.07" y2="0.635" width="0.127" layer="21"/>
+<text x="-0.97" y="0.87" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.07" y="-1.27" size="0.4064" layer="27">&gt;VALUE</text>
+<circle x="-1.37" y="0.97" radius="0.07615625" width="0.127" layer="21"/>
+</package>
 <package name="0603">
 <smd name="1" x="-0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
 <smd name="2" x="0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
@@ -580,7 +597,7 @@ design rules under a new name.</description>
 <element name="R23" library="Passive" package="0603" value="1k" x="21.844" y="54.102" rot="R180"/>
 <element name="LED13" library="Passive" package="5MM_LED_RA" value="IR" x="27.94" y="53.34" rot="MR0"/>
 <element name="C7" library="Passive" package="0805" value="10uf" x="22.987" y="59.309" rot="R180"/>
-<element name="LED1" library="Passive" package="0603" value="red" x="15.748" y="28.829"/>
+<element name="LED1" library="Passive" package="LED0603" value="red" x="15.748" y="28.829"/>
 <element name="T4" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="35.56" y="57.15"/>
 <element name="T5" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.68795" y="44.4202875" rot="R300"/>
 <element name="T6" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.594" y="19.05" rot="R240"/>
@@ -596,9 +613,9 @@ design rules under a new name.</description>
 <element name="U3" library="DigitalIC" package="16SSOP" value="TB6552FN/FNG" x="42.545" y="40.513" rot="R90"/>
 <element name="C8" library="Passive" package="0603" value="1uf" x="39.497" y="36.703" rot="R270"/>
 <element name="C9" library="Passive" package="0603" value="1uf" x="46.863" y="40.005" rot="R270"/>
-<element name="LED8" library="Passive" package="0603" value="red" x="34.29" y="16.256"/>
+<element name="LED8" library="Passive" package="LED0603" value="red" x="34.29" y="16.256"/>
 <element name="R25" library="Passive" package="0603" value="750" x="31.75" y="16.256"/>
-<element name="LED9" library="Passive" package="0603" value="green" x="34.29" y="14.605"/>
+<element name="LED9" library="Passive" package="LED0603" value="green" x="34.29" y="14.605"/>
 <element name="R26" library="Passive" package="0603" value="750" x="31.75" y="14.605"/>
 <element name="R28" library="Passive" package="0603" value="1k" x="42.799" y="14.732"/>
 <element name="U$1" library="Mechanical" package="FEMALE_HEADER_2MM_2X6" value="MAIN_CONNECTOR" x="31.75" y="44.45" rot="MR0"/>
