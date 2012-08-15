@@ -1421,6 +1421,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="P+19" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+2" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+13" library="Supply" deviceset="+VRAW" device=""/>
+<part name="LED1" library="Passive" deviceset="LED" device="0603"/>
+<part name="R1" library="Passive" deviceset="RES" device="0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -1549,7 +1551,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="R30" gate="G$1" x="-66.04" y="83.82" rot="R90"/>
 <instance part="R31" gate="G$1" x="-81.28" y="86.36" rot="R90"/>
 <instance part="R32" gate="G$1" x="-86.36" y="86.36" rot="R90"/>
-<instance part="P+14" gate="G$1" x="-129.54" y="116.84"/>
+<instance part="P+14" gate="G$1" x="-129.54" y="121.92"/>
 <instance part="P+18" gate="G$1" x="-66.04" y="104.14"/>
 <instance part="C12" gate="G$1" x="-129.54" y="96.52"/>
 <instance part="C13" gate="G$1" x="-73.66" y="88.9"/>
@@ -1559,6 +1561,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="P+19" gate="G$1" x="-20.32" y="101.6" rot="R270"/>
 <instance part="P+2" gate="G$1" x="10.16" y="104.14"/>
 <instance part="P+13" gate="G$1" x="-73.66" y="-114.3"/>
+<instance part="LED1" gate="G$1" x="-139.7" y="114.3"/>
+<instance part="R1" gate="G$1" x="-139.7" y="101.6" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1989,7 +1993,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="C12" gate="G$1" pin="1"/>
 <junction x="-129.54" y="101.6"/>
 <pinref part="F1" gate="G$1" pin="A"/>
-<wire x1="-129.54" y1="111.76" x2="-129.54" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="111.76" x2="-129.54" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="119.38" x2="-129.54" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="111.76" x2="-53.34" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="F1" gate="G$1" pin="G"/>
 <wire x1="-53.34" y1="111.76" x2="-129.54" y2="111.76" width="0.1524" layer="91"/>
@@ -2000,6 +2005,10 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <junction x="-53.34" y="106.68"/>
 <junction x="-53.34" y="111.76"/>
 <junction x="-129.54" y="111.76"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="-129.54" y1="119.38" x2="-139.7" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="119.38" x2="-139.7" y2="116.84" width="0.1524" layer="91"/>
+<junction x="-129.54" y="119.38"/>
 </segment>
 </net>
 <net name="CHGDETECT" class="0">
@@ -2730,6 +2739,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <segment>
 <pinref part="U$3" gate="G$1" pin="STAT1"/>
 <wire x1="-124.46" y1="96.52" x2="-139.7" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -2774,6 +2784,13 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-73.66" y1="-119.38" x2="-73.66" y2="-114.3" width="0.1524" layer="91"/>
 <junction x="-73.66" y="-119.38"/>
 <pinref part="P+13" gate="G$1" pin="+VRAW"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<wire x1="-139.7" y1="109.22" x2="-139.7" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
