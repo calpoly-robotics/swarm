@@ -355,7 +355,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="MAIN_CONNECTOR">
+<deviceset name="MAIN_CONNECTOR" prefix="CON">
 <description>Digikey Part Number: S5750-06-ND
 Manufacturer Part Number: NPPN062AFCN-RC</description>
 <gates>
@@ -383,7 +383,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FTDI_3PIN">
+<deviceset name="FTDI_3PIN" prefix="CON">
 <gates>
 <gate name="G$1" symbol="FTDI_3PIN" x="0" y="0"/>
 </gates>

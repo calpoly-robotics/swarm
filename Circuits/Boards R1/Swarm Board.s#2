@@ -1422,8 +1422,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="P+2" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+13" library="Supply" deviceset="+VRAW" device=""/>
 <part name="LED1" library="Passive" deviceset="LED" device="0603" value="red"/>
-<part name="R1" library="Passive" deviceset="RES" device="0603"/>
-<part name="C4" library="Passive" deviceset="CAP" device="0603"/>
+<part name="R1" library="Passive" deviceset="RES" device="0603" value="1.5k"/>
+<part name="C4" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="GND3" library="Supply" deviceset="GND" device=""/>
 <part name="T11" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="R2" library="Passive" deviceset="RES" device="0603"/>
