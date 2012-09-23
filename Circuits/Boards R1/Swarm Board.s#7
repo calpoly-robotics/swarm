@@ -1421,7 +1421,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="P+19" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+2" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+13" library="Supply" deviceset="+VRAW" device=""/>
-<part name="LED1" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED1" library="Passive" deviceset="LED" device="0603" value="red"/>
 <part name="R1" library="Passive" deviceset="RES" device="0603"/>
 </parts>
 <sheets>
@@ -1977,6 +1977,9 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="F1" gate="G$1" pin="D"/>
 <wire x1="-66.04" y1="101.6" x2="-50.8" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-66.04" y="101.6"/>
+<pinref part="U$3" gate="G$1" pin="VBAT"/>
+<wire x1="-93.98" y1="101.6" x2="-73.66" y2="101.6" width="0.1524" layer="91"/>
+<junction x="-73.66" y="101.6"/>
 </segment>
 </net>
 <net name="+VCHG" class="0">
@@ -2748,12 +2751,6 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="R31" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="96.52" x2="-81.28" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="96.52" x2="-81.28" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="VBAT"/>
-<wire x1="-93.98" y1="101.6" x2="-73.66" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+VRAW" class="0">
