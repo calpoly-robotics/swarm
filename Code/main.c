@@ -18,8 +18,8 @@ int main()
 	
 	while (1)
 	{
-		sendMessage(msg);
-		manageTransmit();
+		//sendMessage(msg);
+		//manageTransmit();
 		sbi(PORTB, RED_LED);
 		_delay_ms(10);
 		cbi(PORTB, RED_LED);
