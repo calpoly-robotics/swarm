@@ -39,4 +39,8 @@ typedef signed int    s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
 #define PULSE_WIDTH 1
 #define BASE 0
 
+// user-defined includes
+#include "messages.h"
+#include "ir.h"
+
 #endif //ifndef GLOBALS_H

@@ -1,5 +1,4 @@
-#include "messages.h"
-#include "ir.h"
+#include "globals.h"
 
 void init()
 {
@@ -12,16 +11,8 @@ void init()
 int main()
 {
 	init();
-	initIR();
-	
-	Message msg = {0x55, 0, 1, IM_HERE, 0, MESSAGE};
 	
 	while (1)
 	{
-		//sendMessage(msg);
-		//manageTransmit();
-		sbi(PORTB, RED_LED);
-		_delay_ms(10);
-		cbi(PORTB, RED_LED);
 	}
 }
