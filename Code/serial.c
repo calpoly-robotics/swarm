@@ -37,7 +37,7 @@ volatile u08 transmitBuffer[256];
 volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 
-ISR(USART_UDRE_vect)
+ISR(USART0_UDRE_vect)
 {
 	tbi(PORTB, 0);
 	if (transmitStart != transmitEnd)
