@@ -8,22 +8,22 @@
 </settings>
 <grid distance="0.005" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.0005" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -592,99 +592,335 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U1" library="DigitalIC" package="TQFP44" value="ATMEGA324P" x="35.814" y="26.797" rot="R180"/>
-<element name="V1" library="PowerIC" package="(TT/NB)SOT-23(3PAD)" value="MCP1700-3002E" x="20.066" y="27.051"/>
-<element name="C1" library="Passive" package="0603" value="1uf" x="17.78" y="29.591" rot="R270"/>
-<element name="C2" library="Passive" package="0805" value="10uf" x="20.066" y="23.876" rot="R180"/>
-<element name="C3" library="Passive" package="0603" value="1uf" x="27.559" y="27.178" rot="R270"/>
-<element name="R7" library="Passive" package="0603" value="10k" x="50.292" y="25.908" rot="R90"/>
-<element name="CON1" library="Mechanical" package="PINHEADER(2X3)" value="ISP(2X3)" x="45.466" y="23.368" rot="R90"/>
-<element name="B1" library="Passive" package="PIEZOBUZZER" value="PIEZOBUZZER" x="41.656" y="9.779"/>
-<element name="R8" library="Passive" package="0603" value="1k" x="41.656" y="8.128" rot="R180"/>
-<element name="PR1" library="Passive" package="CDSPHOTOCELL" value="500k-20k" x="24.892" y="21.844" rot="R180"/>
-<element name="R9" library="Passive" package="0603" value="20k" x="24.892" y="22.733" rot="R90"/>
-<element name="T1" library="Passive" package="SOT23" value="NPN2N2222" x="41.656" y="12.192"/>
-<element name="T2" library="Passive" package="SOT23" value="NPN2N2222" x="45.974" y="55.245" rot="R180"/>
-<element name="R10" library="Passive" package="0603" value="" x="33.782" y="55.245"/>
-<element name="R11" library="Passive" package="0603" value="" x="51.25915625" y="45.07108125" rot="R300"/>
-<element name="R12" library="Passive" package="0603" value="" x="52.959" y="21.463" rot="R240"/>
-<element name="R13" library="Passive" package="0603" value="" x="33.528" y="8.255" rot="R180"/>
-<element name="R14" library="Passive" package="0603" value="" x="12.319" y="18.415" rot="R120"/>
-<element name="R15" library="Passive" package="0603" value="" x="10.541" y="41.91" rot="R60"/>
-<element name="R16" library="Passive" package="0603" value="1k" x="42.291" y="52.832" rot="R90"/>
-<element name="LED2" library="Passive" package="5MM_LED_RA" value="IR" x="35.56" y="53.34" rot="MR0"/>
-<element name="LED3" library="Passive" package="5MM_LED_RA" value="IR" x="50.511078125" y="42.556790625" rot="MR60"/>
-<element name="LED4" library="Passive" package="5MM_LED_RA" value="IR" x="50.4444" y="20.955" rot="MR120"/>
-<element name="LED5" library="Passive" package="5MM_LED_RA" value="IR" x="31.75" y="10.16" rot="MR180"/>
-<element name="LED6" library="Passive" package="5MM_LED_RA" value="IR" x="13.0556" y="20.955" rot="MR240"/>
-<element name="LED7" library="Passive" package="5MM_LED_RA" value="IR" x="13.0556" y="42.545" rot="MR300"/>
-<element name="C6" library="Passive" package="0805" value="10uf" x="47.879" y="52.324" rot="R180"/>
-<element name="T3" library="Passive" package="SOT23" value="NPN2N2222" x="21.971" y="56.134"/>
-<element name="R22" library="Passive" package="0603" value="" x="26.162" y="55.118"/>
-<element name="R23" library="Passive" package="0603" value="1k" x="20.574" y="53.467" rot="R180"/>
-<element name="LED13" library="Passive" package="5MM_LED_RA" value="IR" x="27.94" y="53.34" rot="MR0"/>
-<element name="C7" library="Passive" package="0805" value="10uf" x="23.368" y="59.69" rot="R180"/>
-<element name="T4" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="35.56" y="57.15"/>
-<element name="T5" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.68795" y="44.4202875" rot="R300"/>
-<element name="T6" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.594" y="19.05" rot="R240"/>
-<element name="T7" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="31.75" y="6.35" rot="R180"/>
-<element name="T8" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="9.906" y="19.05" rot="R120"/>
-<element name="T9" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="9.906" y="44.45" rot="R60"/>
-<element name="R17" library="Passive" package="0603" value="" x="39.243" y="57.531" rot="R90"/>
-<element name="R18" library="Passive" package="0603" value="" x="55.558921875" y="40.51064375" rot="R30"/>
-<element name="R19" library="Passive" package="0603" value="" x="51.308" y="15.367" rot="R330"/>
-<element name="R20" library="Passive" package="0603" value="" x="27.686" y="6.858" rot="R270"/>
-<element name="R21" library="Passive" package="0603" value="" x="8.001" y="22.86" rot="R210"/>
-<element name="R24" library="Passive" package="0603" value="" x="12.573" y="48.26" rot="R150"/>
-<element name="C8" library="Passive" package="0603" value="1uf" x="48.768" y="41.148" rot="R270"/>
-<element name="C9" library="Passive" package="0603" value="1uf" x="45.847" y="47.371" rot="R180"/>
-<element name="LED8" library="Passive" package="LED0603" value="red" x="34.671" y="16.764"/>
-<element name="R25" library="Passive" package="0603" value="750" x="31.75" y="16.764"/>
-<element name="LED9" library="Passive" package="LED0603" value="green" x="34.671" y="14.605"/>
-<element name="R26" library="Passive" package="0603" value="750" x="31.75" y="14.605"/>
-<element name="R28" library="Passive" package="0603" value="1k" x="40.259" y="15.113"/>
-<element name="CON2" library="Mechanical" package="FEMALE_HEADER_2MM_2X6" value="MAIN_CONNECTOR" x="31.75" y="44.45" rot="MR0"/>
-<element name="CON3" library="Mechanical" package="3PINHEADER_.100&quot;" value="FTDI_3PIN" x="46.863" y="31.877" rot="R270"/>
-<element name="T10" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="27.94" y="57.15"/>
-<element name="R27" library="Passive" package="0603" value="" x="30.734" y="55.499" rot="R270"/>
-<element name="R33" library="Passive" package="0603" value="" x="34.29" y="40.894" rot="R180"/>
-<element name="R34" library="Passive" package="0603" value="" x="31.496" y="40.894"/>
-<element name="R35" library="Passive" package="0603" value="" x="28.702" y="40.894"/>
-<element name="XTAL1" library="Passive" package="SMDXTAL" value="10Mhz" x="50.419" y="30.861" rot="R270"/>
-<element name="C10" library="Passive" package="0603" value="12pf" x="53.213" y="29.591" rot="R90"/>
-<element name="C11" library="Passive" package="0603" value="12pf" x="53.213" y="32.258" rot="R270"/>
-<element name="ANT1" library="Mechanical" package="ANTENNA" value="ANTENNA" x="31.75" y="50.8"/>
-<element name="ANT2" library="Mechanical" package="ANTENNA" value="ANTENNA" x="44.323" y="50.8"/>
-<element name="ANT3" library="Mechanical" package="ANTENNA" value="ANTENNA" x="19.05" y="50.8"/>
-<element name="H1" library="Mechanical" package="MOUNTINGHOLE" value="MOUNTINGHOLE" x="6.35" y="31.75"/>
-<element name="H2" library="Mechanical" package="MOUNTINGHOLE" value="MOUNTINGHOLE" x="57.15" y="31.75"/>
-<element name="T13" library="Passive" package="SOT23" value="NPN2N2222" x="42.291" y="56.515" rot="R90"/>
-<element name="T14" library="Passive" package="SOT23" value="NPN2N2222" x="53.7061875" y="36.752909375" rot="R300"/>
-<element name="T15" library="Passive" package="SOT23" value="NPN2N2222" x="50.292" y="12.827" rot="R330"/>
-<element name="T16" library="Passive" package="SOT23" value="NPN2N2222" x="24.765" y="7.366" rot="R270"/>
-<element name="T17" library="Passive" package="SOT23" value="NPN2N2222" x="10.16" y="25.654" rot="R120"/>
-<element name="T18" library="Passive" package="SOT23" value="NPN2N2222" x="14.478" y="50.8" rot="R150"/>
-<element name="R36" library="Passive" package="0603" value="" x="37.338" y="55.245" rot="R180"/>
-<element name="R37" library="Passive" package="0603" value="" x="53.03715625" y="41.99149375" rot="R120"/>
-<element name="R38" library="Passive" package="0603" value="" x="51.181" y="18.415" rot="R60"/>
-<element name="R39" library="Passive" package="0603" value="" x="29.972" y="8.255"/>
-<element name="R40" library="Passive" package="0603" value="" x="10.541" y="21.59" rot="R300"/>
-<element name="R41" library="Passive" package="0603" value="" x="12.319" y="45.085" rot="R240"/>
-<element name="U2" library="PowerIC" package="MSOP10" value="MCP73833" x="11.684" y="34.417" rot="R180"/>
-<element name="R29" library="Passive" package="0603" value="7k" x="14.478" y="31.877" rot="R180"/>
-<element name="R30" library="Passive" package="0603" value="18k" x="15.875" y="29.591" rot="R90"/>
-<element name="R31" library="Passive" package="0603" value="10k" x="12.065" y="29.591" rot="R90"/>
-<element name="R32" library="Passive" package="0603" value="2k" x="10.16" y="29.591" rot="R90"/>
-<element name="C12" library="Passive" package="0603" value="4.7uf" x="11.049" y="38.862" rot="R90"/>
-<element name="C13" library="Passive" package="0603" value="4.7uf" x="13.97" y="29.591" rot="R270"/>
-<element name="F1" library="Passive" package="MICROFET2X2MM" value="FDFMA2P857" x="15.24" y="34.163" rot="R270"/>
-<element name="R42" library="Passive" package="0603" value="10k" x="12.954" y="38.862" rot="R270"/>
-<element name="LED1" library="Passive" package="LED0603" value="red" x="14.859" y="38.608" rot="R90"/>
-<element name="R1" library="Passive" package="0603" value="1.5k" x="14.732" y="36.576"/>
-<element name="C4" library="Passive" package="0603" value="1uf" x="30.099" y="47.879"/>
-<element name="T11" library="Passive" package="SOT23" value="NPN2N2222" x="35.052" y="48.514"/>
-<element name="R2" library="Passive" package="0603" value="1k" x="38.227" y="49.276" rot="R180"/>
-<element name="U$1" library="DigitalIC" package="24SSOP" value="TB6612" x="43.053" y="42.291" rot="R270"/>
+<element name="U1" library="DigitalIC" package="TQFP44" value="ATMEGA324P" x="35.814" y="26.797" smashed="yes" rot="R180">
+<attribute name="NAME" x="38.354" y="25.527" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="38.354" y="29.337" size="1.27" layer="25" rot="R180"/>
+</element>
+<element name="V1" library="PowerIC" package="(TT/NB)SOT-23(3PAD)" value="MCP1700-3002E" x="20.066" y="27.051" smashed="yes">
+<attribute name="NAME" x="19.431" y="26.797" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="18.796" y="24.511" size="0.4064" layer="27"/>
+</element>
+<element name="C1" library="Passive" package="0603" value="1uf" x="17.78" y="29.591" smashed="yes" rot="R270">
+<attribute name="NAME" x="17.507" y="30.307" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="16.51" y="30.661" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="C2" library="Passive" package="0805" value="10uf" x="20.066" y="23.876" smashed="yes" rot="R180">
+<attribute name="NAME" x="20.955" y="24.003" size="0.6096" layer="25" rot="R180"/>
+</element>
+<element name="C3" library="Passive" package="0603" value="1uf" x="27.559" y="27.178" smashed="yes" rot="R270">
+<attribute name="NAME" x="27.286" y="27.894" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="26.289" y="28.248" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="R7" library="Passive" package="0603" value="10k" x="50.292" y="25.908" smashed="yes" rot="R90">
+<attribute name="NAME" x="50.565" y="25.446" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="51.562" y="24.838" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="CON1" library="Mechanical" package="PINHEADER(2X3)" value="ISP(2X3)" x="45.466" y="23.368" smashed="yes" rot="R90"/>
+<element name="B1" library="Passive" package="PIEZOBUZZER" value="PIEZOBUZZER" x="41.656" y="9.779" smashed="yes">
+<attribute name="NAME" x="45.847" y="8.128" size="1.27" layer="25"/>
+<attribute name="VALUE" x="36.576" y="2.159" size="1.27" layer="27"/>
+</element>
+<element name="R8" library="Passive" package="0603" value="1k" x="41.656" y="8.128" smashed="yes" rot="R180">
+<attribute name="NAME" x="42.245" y="8.401" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="42.726" y="9.398" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="PR1" library="Passive" package="CDSPHOTOCELL" value="500k-20k" x="24.892" y="21.844" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.432" y="18.034" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="27.432" y="26.924" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R9" library="Passive" package="0603" value="20k" x="24.892" y="22.733" smashed="yes" rot="R90">
+<attribute name="NAME" x="25.165" y="22.271" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="26.162" y="21.663" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="T1" library="Passive" package="SOT23" value="NPN2N2222" x="41.656" y="12.192" smashed="yes">
+<attribute name="VALUE" x="40.056" y="9.792" size="0.6096" layer="27"/>
+</element>
+<element name="T2" library="Passive" package="SOT23" value="NPN2N2222" x="45.974" y="55.245" smashed="yes" rot="R180">
+<attribute name="VALUE" x="47.574" y="57.645" size="0.6096" layer="27" rot="R180"/>
+</element>
+<element name="R10" library="Passive" package="0603" value="" x="33.782" y="55.245" smashed="yes">
+<attribute name="NAME" x="32.939" y="54.972" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="32.712" y="53.975" size="0.4064" layer="27"/>
+</element>
+<element name="R11" library="Passive" package="0603" value="" x="51.25915625" y="45.07108125" smashed="yes" rot="R300">
+<attribute name="NAME" x="50.638596875" y="45.584125" size="0.6096" layer="25" rot="R300"/>
+<attribute name="VALUE" x="49.624303125" y="45.362728125" size="0.4064" layer="27" rot="R300"/>
+</element>
+<element name="R12" library="Passive" package="0603" value="" x="52.959" y="21.463" smashed="yes" rot="R240">
+<attribute name="NAME" x="53.181440625" y="22.37604375" size="0.6096" layer="25" rot="R240"/>
+<attribute name="VALUE" x="52.394146875" y="23.024646875" size="0.4064" layer="27" rot="R240"/>
+</element>
+<element name="R13" library="Passive" package="0603" value="" x="33.528" y="8.255" smashed="yes" rot="R180">
+<attribute name="NAME" x="34.498" y="8.528" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="34.598" y="9.525" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="R14" library="Passive" package="0603" value="" x="12.319" y="18.415" smashed="yes" rot="R120">
+<attribute name="NAME" x="13.06655625" y="17.774953125" size="0.6096" layer="25" rot="R120"/>
+<attribute name="VALUE" x="13.95385" y="18.12335" size="0.4064" layer="27" rot="R120"/>
+</element>
+<element name="R15" library="Passive" package="0603" value="" x="10.541" y="41.91" smashed="yes" rot="R60">
+<attribute name="NAME" x="10.44555625" y="41.123953125" size="0.6096" layer="25" rot="R60"/>
+<attribute name="VALUE" x="11.10585" y="40.34835" size="0.4064" layer="27" rot="R60"/>
+</element>
+<element name="R16" library="Passive" package="0603" value="1k" x="42.291" y="52.832" smashed="yes" rot="R90">
+<attribute name="NAME" x="42.564" y="52.116" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="43.561" y="51.762" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="LED2" library="Passive" package="5MM_LED_RA" value="IR" x="35.56" y="53.34" smashed="yes" rot="MR0">
+<attribute name="NAME" x="37.56" y="54.34" size="0.6096" layer="26" rot="MR0"/>
+<attribute name="VALUE" x="37.56" y="51.34" size="0.6096" layer="28" rot="MR0"/>
+</element>
+<element name="LED3" library="Passive" package="5MM_LED_RA" value="IR" x="50.511078125" y="42.556790625" smashed="yes" rot="MR60">
+<attribute name="NAME" x="52.37710625" y="41.3247375" size="0.6096" layer="26" rot="MR60"/>
+<attribute name="VALUE" x="49.779028125" y="39.8247375" size="0.6096" layer="28" rot="MR60"/>
+</element>
+<element name="LED4" library="Passive" package="5MM_LED_RA" value="IR" x="50.4444" y="20.955" smashed="yes" rot="MR120">
+<attribute name="NAME" x="50.310428125" y="18.722946875" size="0.6096" layer="26" rot="MR120"/>
+<attribute name="VALUE" x="47.71235" y="20.222946875" size="0.6096" layer="28" rot="MR120"/>
+</element>
+<element name="LED5" library="Passive" package="5MM_LED_RA" value="IR" x="31.75" y="10.16" smashed="yes" rot="MR180">
+<attribute name="NAME" x="29.75" y="9.795" size="0.6096" layer="26" rot="MR180"/>
+<attribute name="VALUE" x="29.75" y="12.16" size="0.6096" layer="28" rot="MR180"/>
+</element>
+<element name="LED6" library="Passive" package="5MM_LED_RA" value="IR" x="13.0556" y="20.955" smashed="yes" rot="MR240">
+<attribute name="NAME" x="12.078575" y="22.18705" size="0.6096" layer="26" rot="MR240"/>
+<attribute name="VALUE" x="13.787653125" y="23.68705" size="0.6096" layer="28" rot="MR240"/>
+</element>
+<element name="LED7" library="Passive" package="5MM_LED_RA" value="IR" x="13.0556" y="42.545" smashed="yes" rot="MR300">
+<attribute name="NAME" x="13.189575" y="44.77705" size="0.6096" layer="26" rot="MR300"/>
+<attribute name="VALUE" x="15.787653125" y="43.27705" size="0.6096" layer="28" rot="MR300"/>
+</element>
+<element name="C6" library="Passive" package="0805" value="10uf" x="47.879" y="52.324" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.26" y="52.578" size="0.6096" layer="25" rot="R180"/>
+</element>
+<element name="T3" library="Passive" package="SOT23" value="NPN2N2222" x="21.971" y="56.134" smashed="yes">
+<attribute name="VALUE" x="20.371" y="53.734" size="0.6096" layer="27"/>
+</element>
+<element name="R22" library="Passive" package="0603" value="" x="26.162" y="55.118" smashed="yes">
+<attribute name="NAME" x="25.319" y="54.845" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="25.092" y="53.848" size="0.4064" layer="27"/>
+</element>
+<element name="R23" library="Passive" package="0603" value="1k" x="20.574" y="53.467" smashed="yes" rot="R180">
+<attribute name="NAME" x="21.417" y="53.867" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="21.644" y="54.737" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="LED13" library="Passive" package="5MM_LED_RA" value="IR" x="27.94" y="53.34" smashed="yes" rot="MR0">
+<attribute name="NAME" x="29.94" y="54.34" size="0.6096" layer="26" rot="MR0"/>
+<attribute name="VALUE" x="29.94" y="51.34" size="0.6096" layer="28" rot="MR0"/>
+</element>
+<element name="C7" library="Passive" package="0805" value="10uf" x="23.368" y="59.69" smashed="yes" rot="R180">
+<attribute name="NAME" x="24.003" y="60.071" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.668" y="61.29" size="0.6096" layer="25" rot="R180"/>
+</element>
+<element name="T4" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="35.56" y="57.15" smashed="yes"/>
+<element name="T5" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.68795" y="44.4202875" smashed="yes" rot="R300"/>
+<element name="T6" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="53.594" y="19.05" smashed="yes" rot="R240"/>
+<element name="T7" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="31.75" y="6.35" smashed="yes" rot="R180"/>
+<element name="T8" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="9.906" y="19.05" smashed="yes" rot="R120"/>
+<element name="T9" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="9.906" y="44.45" smashed="yes" rot="R60"/>
+<element name="R17" library="Passive" package="0603" value="" x="39.243" y="57.531" smashed="yes" rot="R90">
+<attribute name="NAME" x="39.516" y="56.815" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="40.513" y="56.461" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="R18" library="Passive" package="0603" value="" x="55.558921875" y="40.51064375" smashed="yes" rot="R30">
+<attribute name="NAME" x="55.045875" y="39.890084375" size="0.6096" layer="25" rot="R30"/>
+<attribute name="VALUE" x="55.267271875" y="38.875790625" size="0.4064" layer="27" rot="R30"/>
+</element>
+<element name="R19" library="Passive" package="0603" value="" x="51.308" y="15.367" smashed="yes" rot="R330">
+<attribute name="NAME" x="50.521953125" y="15.462440625" size="0.6096" layer="25" rot="R330"/>
+<attribute name="VALUE" x="49.74635" y="14.802146875" size="0.4064" layer="27" rot="R330"/>
+</element>
+<element name="R20" library="Passive" package="0603" value="" x="27.686" y="6.858" smashed="yes" rot="R270">
+<attribute name="NAME" x="27.413" y="7.828" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="26.416" y="7.928" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="R21" library="Passive" package="0603" value="" x="8.001" y="22.86" smashed="yes" rot="R210">
+<attribute name="NAME" x="8.64104375" y="23.60755625" size="0.6096" layer="25" rot="R210"/>
+<attribute name="VALUE" x="8.292646875" y="24.49485" size="0.4064" layer="27" rot="R210"/>
+</element>
+<element name="R24" library="Passive" package="0603" value="" x="12.573" y="48.26" smashed="yes" rot="R150">
+<attribute name="NAME" x="13.48604375" y="48.03755625" size="0.6096" layer="25" rot="R150"/>
+<attribute name="VALUE" x="14.134646875" y="48.82485" size="0.4064" layer="27" rot="R150"/>
+</element>
+<element name="C8" library="Passive" package="0603" value="1uf" x="48.768" y="41.148" smashed="yes" rot="R270">
+<attribute name="NAME" x="48.495" y="41.737" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="47.498" y="42.218" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="C9" library="Passive" package="0603" value="1uf" x="45.847" y="47.371" smashed="yes" rot="R180">
+<attribute name="NAME" x="46.309" y="47.644" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="46.917" y="48.641" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="LED8" library="Passive" package="LED0603" value="red" x="34.671" y="16.764" smashed="yes">
+<attribute name="NAME" x="33.828" y="16.491" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="33.601" y="15.494" size="0.4064" layer="27"/>
+</element>
+<element name="R25" library="Passive" package="0603" value="750" x="31.75" y="16.764" smashed="yes">
+<attribute name="NAME" x="30.907" y="16.491" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="30.68" y="15.494" size="0.4064" layer="27"/>
+</element>
+<element name="LED9" library="Passive" package="LED0603" value="green" x="34.671" y="14.605" smashed="yes">
+<attribute name="NAME" x="33.828" y="14.332" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="33.601" y="13.335" size="0.4064" layer="27"/>
+</element>
+<element name="R26" library="Passive" package="0603" value="750" x="31.75" y="14.605" smashed="yes">
+<attribute name="NAME" x="30.907" y="14.332" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="30.68" y="13.335" size="0.4064" layer="27"/>
+</element>
+<element name="R28" library="Passive" package="0603" value="1k" x="40.259" y="15.113" smashed="yes">
+<attribute name="NAME" x="39.543" y="14.84" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="39.189" y="13.843" size="0.4064" layer="27"/>
+</element>
+<element name="CON2" library="Mechanical" package="FEMALE_HEADER_2MM_2X6" value="MAIN_CONNECTOR" x="31.75" y="44.45" smashed="yes" rot="MR0">
+<attribute name="NAME" x="35.75" y="47.45" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="VALUE" x="35.75" y="40.45" size="0.8128" layer="28" rot="MR0"/>
+</element>
+<element name="CON3" library="Mechanical" package="3PINHEADER_.100&quot;" value="FTDI_3PIN" x="46.863" y="31.877" smashed="yes" rot="R270">
+<attribute name="VALUE" x="43.053" y="35.687" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="T10" library="Passive" package="3MM_LED_RA" value="TEFT4300" x="27.94" y="57.15" smashed="yes"/>
+<element name="R27" library="Passive" package="0603" value="" x="30.734" y="55.499" smashed="yes" rot="R270">
+<attribute name="NAME" x="30.461" y="56.342" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="29.464" y="56.569" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="R33" library="Passive" package="0603" value="" x="34.29" y="40.894" smashed="yes" rot="R180">
+<attribute name="NAME" x="35.26" y="41.167" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="35.36" y="42.164" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="R34" library="Passive" package="0603" value="" x="31.496" y="40.894" smashed="yes">
+<attribute name="NAME" x="30.78" y="40.621" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="30.426" y="39.624" size="0.4064" layer="27"/>
+</element>
+<element name="R35" library="Passive" package="0603" value="" x="28.702" y="40.894" smashed="yes">
+<attribute name="NAME" x="27.859" y="40.621" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="27.632" y="39.624" size="0.4064" layer="27"/>
+</element>
+<element name="XTAL1" library="Passive" package="SMDXTAL" value="10Mhz" x="50.419" y="30.861" smashed="yes" rot="R270">
+<attribute name="VALUE" x="47.819" y="32.761" size="0.6096" layer="27" rot="R270"/>
+</element>
+<element name="C10" library="Passive" package="0603" value="12pf" x="53.213" y="29.591" smashed="yes" rot="R90">
+<attribute name="NAME" x="53.486" y="28.875" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="54.483" y="28.521" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="C11" library="Passive" package="0603" value="12pf" x="53.213" y="32.258" smashed="yes" rot="R270">
+<attribute name="NAME" x="52.94" y="33.228" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="51.943" y="33.328" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="ANT1" library="Mechanical" package="ANTENNA" value="ANTENNA" x="31.75" y="50.8" smashed="yes">
+<attribute name="NAME" x="30.48" y="52.07" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="30.48" y="48.895" size="0.6096" layer="27"/>
+</element>
+<element name="ANT2" library="Mechanical" package="ANTENNA" value="ANTENNA" x="44.323" y="50.8" smashed="yes">
+<attribute name="NAME" x="43.053" y="52.07" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="43.053" y="48.895" size="0.6096" layer="27"/>
+</element>
+<element name="ANT3" library="Mechanical" package="ANTENNA" value="ANTENNA" x="19.05" y="50.8" smashed="yes">
+<attribute name="NAME" x="17.78" y="52.07" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="17.78" y="48.895" size="0.6096" layer="27"/>
+</element>
+<element name="H1" library="Mechanical" package="MOUNTINGHOLE" value="MOUNTINGHOLE" x="6.35" y="31.75" smashed="yes"/>
+<element name="H2" library="Mechanical" package="MOUNTINGHOLE" value="MOUNTINGHOLE" x="57.15" y="31.75" smashed="yes"/>
+<element name="T13" library="Passive" package="SOT23" value="NPN2N2222" x="42.291" y="56.515" smashed="yes" rot="R90">
+<attribute name="VALUE" x="44.691" y="54.915" size="0.6096" layer="27" rot="R90"/>
+</element>
+<element name="T14" library="Passive" package="SOT23" value="NPN2N2222" x="53.7061875" y="36.752909375" smashed="yes" rot="R300">
+<attribute name="VALUE" x="50.827725" y="36.93855" size="0.6096" layer="27" rot="R300"/>
+</element>
+<element name="T15" library="Passive" package="SOT23" value="NPN2N2222" x="50.292" y="12.827" smashed="yes" rot="R330">
+<attribute name="VALUE" x="47.70635625" y="11.5485375" size="0.6096" layer="27" rot="R330"/>
+</element>
+<element name="T16" library="Passive" package="SOT23" value="NPN2N2222" x="24.765" y="7.366" smashed="yes" rot="R270">
+<attribute name="VALUE" x="22.365" y="8.966" size="0.6096" layer="27" rot="R270"/>
+</element>
+<element name="T17" library="Passive" package="SOT23" value="NPN2N2222" x="10.16" y="25.654" smashed="yes" rot="R120">
+<attribute name="VALUE" x="13.038459375" y="25.46835625" size="0.6096" layer="27" rot="R120"/>
+</element>
+<element name="T18" library="Passive" package="SOT23" value="NPN2N2222" x="14.478" y="50.8" smashed="yes" rot="R150">
+<attribute name="VALUE" x="17.063640625" y="52.078459375" size="0.6096" layer="27" rot="R150"/>
+</element>
+<element name="R36" library="Passive" package="0603" value="" x="37.338" y="55.245" smashed="yes" rot="R180">
+<attribute name="NAME" x="38.181" y="55.518" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="38.408" y="56.515" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="R37" library="Passive" package="0603" value="" x="53.03715625" y="41.99149375" smashed="yes" rot="R120">
+<attribute name="NAME" x="53.7847125" y="41.224446875" size="0.6096" layer="25" rot="R120"/>
+<attribute name="VALUE" x="54.67200625" y="41.69984375" size="0.4064" layer="27" rot="R120"/>
+</element>
+<element name="R38" library="Passive" package="0603" value="" x="51.181" y="18.415" smashed="yes" rot="R60">
+<attribute name="NAME" x="51.08555625" y="17.628953125" size="0.6096" layer="25" rot="R60"/>
+<attribute name="VALUE" x="51.74585" y="16.85335" size="0.4064" layer="27" rot="R60"/>
+</element>
+<element name="R39" library="Passive" package="0603" value="" x="29.972" y="8.255" smashed="yes">
+<attribute name="NAME" x="29.256" y="7.982" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="28.902" y="6.985" size="0.4064" layer="27"/>
+</element>
+<element name="R40" library="Passive" package="0603" value="" x="10.541" y="21.59" smashed="yes" rot="R300">
+<attribute name="NAME" x="9.920440625" y="22.10304375" size="0.6096" layer="25" rot="R300"/>
+<attribute name="VALUE" x="8.906146875" y="21.881646875" size="0.4064" layer="27" rot="R300"/>
+</element>
+<element name="R41" library="Passive" package="0603" value="" x="12.319" y="45.085" smashed="yes" rot="R240">
+<attribute name="NAME" x="12.541440625" y="45.99804375" size="0.6096" layer="25" rot="R240"/>
+<attribute name="VALUE" x="11.754146875" y="46.646646875" size="0.4064" layer="27" rot="R240"/>
+</element>
+<element name="U2" library="PowerIC" package="MSOP10" value="MCP73833" x="11.684" y="34.417" smashed="yes" rot="R180">
+<attribute name="NAME" x="12.168" y="34.6" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="13.184" y="38.417" size="0.6096" layer="27" rot="R180"/>
+</element>
+<element name="R29" library="Passive" package="0603" value="7k" x="14.478" y="31.877" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.448" y="32.15" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="15.548" y="33.147" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="R30" library="Passive" package="0603" value="18k" x="15.875" y="29.591" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.148" y="28.875" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="17.145" y="28.521" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="R31" library="Passive" package="0603" value="10k" x="12.065" y="29.591" smashed="yes" rot="R90">
+<attribute name="NAME" x="12.338" y="28.875" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="13.335" y="28.521" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="R32" library="Passive" package="0603" value="2k" x="10.16" y="29.591" smashed="yes" rot="R90">
+<attribute name="NAME" x="10.433" y="28.875" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="11.43" y="28.521" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="C12" library="Passive" package="0603" value="4.7uf" x="11.049" y="38.862" smashed="yes" rot="R90">
+<attribute name="NAME" x="11.322" y="38.146" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="12.319" y="37.792" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="C13" library="Passive" package="0603" value="4.7uf" x="13.97" y="29.591" smashed="yes" rot="R270">
+<attribute name="NAME" x="13.697" y="30.434" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="12.7" y="30.661" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="F1" library="Passive" package="MICROFET2X2MM" value="FDFMA2P857" x="15.24" y="34.163" smashed="yes" rot="R270">
+<attribute name="NAME" x="14.829" y="33.939" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="12.64" y="35.463" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="R42" library="Passive" package="0603" value="10k" x="12.954" y="38.862" smashed="yes" rot="R270">
+<attribute name="NAME" x="12.681" y="39.832" size="0.6096" layer="25" rot="R270"/>
+<attribute name="VALUE" x="11.684" y="39.932" size="0.4064" layer="27" rot="R270"/>
+</element>
+<element name="LED1" library="Passive" package="LED0603" value="red" x="14.859" y="38.608" smashed="yes" rot="R90">
+<attribute name="NAME" x="15.132" y="37.638" size="0.6096" layer="25" rot="R90"/>
+<attribute name="VALUE" x="16.129" y="37.538" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="R1" library="Passive" package="0603" value="1.5k" x="14.732" y="36.576" smashed="yes">
+<attribute name="NAME" x="14.27" y="36.303" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="13.662" y="35.306" size="0.4064" layer="27"/>
+</element>
+<element name="C4" library="Passive" package="0603" value="1uf" x="30.099" y="47.879" smashed="yes">
+<attribute name="NAME" x="29.637" y="47.606" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="29.029" y="46.609" size="0.4064" layer="27"/>
+</element>
+<element name="T11" library="Passive" package="SOT23" value="NPN2N2222" x="35.052" y="48.514" smashed="yes">
+<attribute name="NAME" x="33.652" y="50.414" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="33.452" y="46.114" size="0.6096" layer="27"/>
+</element>
+<element name="R2" library="Passive" package="0603" value="1k" x="38.227" y="49.276" smashed="yes" rot="R180">
+<attribute name="NAME" x="38.816" y="49.549" size="0.6096" layer="25" rot="R180"/>
+<attribute name="VALUE" x="39.297" y="50.546" size="0.4064" layer="27" rot="R180"/>
+</element>
+<element name="U$1" library="DigitalIC" package="24SSOP" value="TB6612" x="43.053" y="42.291" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.323" y="44.831" size="0.8128" layer="21" rot="R270"/>
+<attribute name="VALUE" x="41.783" y="44.831" size="0.8128" layer="21" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="+3V">
@@ -902,7 +1138,7 @@ design rules under a new name.</description>
 <vertex x="27.686" y="-4.064"/>
 <vertex x="4.064" y="8.636"/>
 <vertex x="-1.905" y="28.067"/>
-<vertex x="-0.381" y="47.625"/>
+<vertex x="-0.635" y="48.006"/>
 <vertex x="13.462" y="60.198"/>
 </polygon>
 <wire x1="41.564" y1="26.797" x2="43.307" y2="26.797" width="0.254" layer="1"/>
