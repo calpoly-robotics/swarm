@@ -1,0 +1,11 @@
+Cutting Plexiglass for SWARM Bots
+
+CUTTING:
+   Power: 100
+   Speed: 3
+   DPI:   1000
+
+ENGRAVING:
+   Power: 40
+   Speed: 10
+   DPI:   1000
