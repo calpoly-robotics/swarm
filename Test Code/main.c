@@ -12,7 +12,7 @@ int main()
 	while (1)
 	{
 		sbi(PORTB, RED_LED);
-		_delay_ms(2);
+		_delay_ms(200);
 		cbi(PORTB, RED_LED);
 		_delay_ms(2);
 	}
