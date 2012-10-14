@@ -323,12 +323,12 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <circle x="-1.37" y="0.97" radius="0.07615625" width="0.127" layer="21"/>
 </package>
 <package name="0603">
-<smd name="1" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="2" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<wire x1="-1.3" y1="0.635" x2="1.3" y2="0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="0.635" x2="1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="-0.635" x2="-1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-1.3" y1="-0.635" x2="-1.3" y2="0.635" width="0.127" layer="21"/>
+<smd name="1" x="-0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="0.5" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-1.07" y1="0.635" x2="1.07" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="0.635" x2="1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.07" y1="-0.635" x2="-1.07" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.07" y1="-0.635" x2="-1.07" y2="0.635" width="0.127" layer="21"/>
 <text x="-0.97" y="0.87" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.07" y="-1.27" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
@@ -341,6 +341,14 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <wire x1="-1.84" y1="-0.97" x2="-1.84" y2="0.97" width="0.127" layer="21"/>
 <text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.3" y="-1.6" size="0.4064" layer="25">&gt;VALUE</text>
+</package>
+<package name="PIEZOBUZZER">
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="2" x="2.54" y="0" drill="0.8"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
+<text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOT23">
 <smd name="3" x="0" y="-1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
@@ -377,6 +385,19 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <text x="-2" y="3.9" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
+<package name="SMD_DIODE">
+<smd name="1" x="-3.5685" y="0" dx="3.81" dy="2.794" layer="1" rot="R90"/>
+<smd name="2" x="3.5685" y="0" dx="3.81" dy="2.794" layer="1" rot="R90"/>
+<wire x1="-3.43" y1="2.92" x2="3.43" y2="2.92" width="0.127" layer="51"/>
+<wire x1="3.43" y1="2.92" x2="3.43" y2="-2.92" width="0.127" layer="51"/>
+<wire x1="3.43" y1="-2.92" x2="-3.43" y2="-2.92" width="0.127" layer="51"/>
+<wire x1="-3.43" y1="-2.92" x2="-3.43" y2="2.92" width="0.127" layer="51"/>
+<wire x1="-3.175" y1="3.175" x2="3.175" y2="3.175" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="-3.175" x2="3.175" y2="-3.175" width="0.127" layer="21"/>
+<text x="-2.54" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.127" layer="21"/>
+</package>
 <package name="SMDXTAL">
 <smd name="1" x="-2" y="0" dx="2" dy="2.4" layer="1"/>
 <smd name="2" x="2" y="0" dx="2" dy="2.4" layer="1"/>
@@ -388,31 +409,6 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.127" layer="21"/>
 <text x="-1.6" y="2" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-1.9" y="-2.6" size="0.6096" layer="27">&gt;VALUE</text>
-</package>
-<package name="5MM_LED_VERT">
-<pad name="1" x="-1.27" y="0" drill="0.8" shape="square"/>
-<pad name="2" x="1.27" y="0" drill="0.8"/>
-<text x="-2" y="1" size="0.6096" layer="25">&gt;NAME</text>
-<text x="-2" y="-2" size="0.6096" layer="27">&gt;VALUE</text>
-<circle x="0" y="0" radius="2.5" width="0.127" layer="51"/>
-</package>
-<package name="PIEZOBUZZER">
-<pad name="1" x="-2.54" y="0" drill="0.8"/>
-<pad name="2" x="2.54" y="0" drill="0.8"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
-<text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-<package name="PIEZOBUZZER_HORIZONTAL">
-<smd name="P$1" x="0" y="2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="-2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
-<wire x1="3.81" y1="6.35" x2="10.16" y2="6.35" width="0.127" layer="51"/>
-<wire x1="10.16" y1="6.35" x2="10.16" y2="-6.35" width="0.127" layer="51"/>
-<wire x1="10.16" y1="-6.35" x2="3.81" y2="-6.35" width="0.127" layer="51"/>
-<wire x1="3.81" y1="-6.35" x2="3.81" y2="6.35" width="0.127" layer="51"/>
-<text x="-2.54" y="5.08" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -465,6 +461,23 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <vertex x="-2.921" y="-2.413"/>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
+</symbol>
+<symbol name="BUZZER">
+<pin name="+" x="-5.08" y="2.54" length="middle"/>
+<pin name="-" x="-5.08" y="0" length="middle"/>
+<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="8.128" y1="4.064" x2="8.89" y2="3.302" width="0.254" layer="94"/>
+<wire x1="8.89" y1="3.302" x2="8.89" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="8.89" y1="-0.762" x2="8.128" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="8.89" y1="5.08" x2="10.16" y2="3.81" width="0.254" layer="94"/>
+<wire x1="10.16" y1="3.81" x2="10.16" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-1.27" x2="8.89" y2="-2.54" width="0.254" layer="94"/>
+<text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="NPN2N2222">
 <wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
@@ -521,6 +534,17 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <vertex x="1.524" y="-0.762"/>
 </polygon>
 </symbol>
+<symbol name="DIODE">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
 <symbol name="XTAL">
 <wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
 <wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
@@ -536,23 +560,6 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
-</symbol>
-<symbol name="BUZZER">
-<pin name="+" x="-5.08" y="2.54" length="middle"/>
-<pin name="-" x="-5.08" y="0" length="middle"/>
-<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="8.128" y1="4.064" x2="8.89" y2="3.302" width="0.254" layer="94"/>
-<wire x1="8.89" y1="3.302" x2="8.89" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="8.89" y1="-0.762" x2="8.128" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="8.89" y1="5.08" x2="10.16" y2="3.81" width="0.254" layer="94"/>
-<wire x1="10.16" y1="3.81" x2="10.16" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-1.27" x2="8.89" y2="-2.54" width="0.254" layer="94"/>
-<text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -629,10 +636,19 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="" package="5MM_LED_VERT">
+</devices>
+</deviceset>
+<deviceset name="PIEZOBUZZER" prefix="B">
+<description>Digikey Part Number: 445-2525-1-ND
+Manufacturer Part Number: PS1240P02BT</description>
+<gates>
+<gate name="G$1" symbol="BUZZER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PIEZOBUZZER">
 <connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -678,6 +694,24 @@ Manufacturer Part Number: SI4421DY-T1-E3</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="MBRS410LT3">
+<description>Digikey Part Number: MBRS410LT3GOSCT-ND
+Manufacturer Part Number: MBRS410LT3G</description>
+<gates>
+<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMD_DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="NX5032GA-10.000000MHZ" prefix="XTAL" uservalue="yes">
 <description>Digikey Part Number: 644-1033-1-ND
 Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
@@ -689,33 +723,6 @@ Manufacturer Part Number: NX5032GA-10.000000MHZ-LN-CD-1</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="PIEZOBUZZER" prefix="B">
-<description>Digikey Part Number: 445-2525-1-ND
-Manufacturer Part Number: PS1240P02BT</description>
-<gates>
-<gate name="G$1" symbol="BUZZER" x="0" y="0"/>
-</gates>
-<devices>
-<device name="PTH" package="PIEZOBUZZER">
-<connects>
-<connect gate="G$1" pin="+" pad="1"/>
-<connect gate="G$1" pin="-" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="" package="PIEZOBUZZER_HORIZONTAL">
-<connects>
-<connect gate="G$1" pin="+" pad="P$1"/>
-<connect gate="G$1" pin="-" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -783,14 +790,13 @@ Manufacturer Part Number: PS1240P02BT</description>
 <pin name="SCK" x="10.16" y="0" length="middle" rot="R180"/>
 <pin name="MISO" x="10.16" y="2.54" length="middle" rot="R180"/>
 <pin name="!RESET" x="10.16" y="-2.54" length="middle" rot="R180"/>
-<pin name="GND" x="10.16" y="-7.62" length="middle" rot="R180"/>
-<wire x1="5.08" y1="-10.16" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="GND" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<wire x1="5.08" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
 <text x="-5.08" y="8.382" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VCC" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<text x="-5.08" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="HEADER_1X3">
 <pin name="1" x="-5.08" y="2.54" length="middle"/>
@@ -843,7 +849,6 @@ Manufacturer Part Number: PS1240P02BT</description>
 <connect gate="G$1" pin="MISO" pad="6"/>
 <connect gate="G$1" pin="MOSI" pad="2"/>
 <connect gate="G$1" pin="SCK" pad="5"/>
-<connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -868,7 +873,7 @@ Manufacturer Part Number: PS1240P02BT</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FTDI_3PIN" prefix="CON">
+<deviceset name="FTDI_3PIN">
 <gates>
 <gate name="G$1" symbol="FTDI_3PIN" x="0" y="0"/>
 </gates>
@@ -1032,6 +1037,7 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="CON1" library="Mechanical" deviceset="ISP" device="(2X3)"/>
 <part name="GND5" library="Supply" deviceset="GND" device=""/>
+<part name="B1" library="Passive" deviceset="PIEZOBUZZER" device=""/>
 <part name="R8" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND6" library="Supply" deviceset="GND" device=""/>
 <part name="T1" library="Passive" deviceset="NPN2N2222" device=""/>
@@ -1098,6 +1104,8 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="R18" library="Passive" deviceset="RES" device="0603" value="100"/>
 <part name="R19" library="Passive" deviceset="RES" device="0603" value="100"/>
 <part name="R20" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="U$3" library="Passive" deviceset="MBRS410LT3" device=""/>
+<part name="U$4" library="Passive" deviceset="MBRS410LT3" device=""/>
 <part name="XTAL1" library="Passive" deviceset="NX5032GA-10.000000MHZ" device="" value="10Mhz"/>
 <part name="C10" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="C11" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
@@ -1110,7 +1118,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="GND11" library="Supply" deviceset="GND" device=""/>
 <part name="CON2" library="Mechanical" deviceset="SCREWTERMINAL_1X2" device=""/>
 <part name="GND12" library="Supply" deviceset="GND" device=""/>
-<part name="B1" library="Passive" deviceset="PIEZOBUZZER" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -1125,6 +1132,7 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="GND4" gate="1" x="-71.12" y="2.54"/>
 <instance part="CON1" gate="G$1" x="-86.36" y="12.7"/>
 <instance part="GND5" gate="1" x="147.32" y="-30.48"/>
+<instance part="B1" gate="G$1" x="-142.24" y="63.5"/>
 <instance part="R8" gate="G$1" x="-154.94" y="63.5" rot="R90"/>
 <instance part="GND6" gate="1" x="-154.94" y="38.1"/>
 <instance part="T1" gate="G$1" x="-157.48" y="48.26"/>
@@ -1191,6 +1199,8 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="R18" gate="G$1" x="335.28" y="-114.3" rot="R90"/>
 <instance part="R19" gate="G$1" x="358.14" y="-114.3" rot="R90"/>
 <instance part="R20" gate="G$1" x="381" y="-114.3" rot="R90"/>
+<instance part="U$3" gate="G$1" x="0" y="-121.92"/>
+<instance part="U$4" gate="G$1" x="0" y="-127"/>
 <instance part="XTAL1" gate="G$1" x="-38.1" y="-5.08" rot="R90"/>
 <instance part="C10" gate="G$1" x="-45.72" y="-2.54" rot="R270"/>
 <instance part="C11" gate="G$1" x="-45.72" y="-7.62" rot="R270"/>
@@ -1203,7 +1213,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="GND11" gate="1" x="-170.18" y="-27.94"/>
 <instance part="CON2" gate="G$1" x="-27.94" y="99.06" rot="MR0"/>
 <instance part="GND12" gate="1" x="-20.32" y="88.9"/>
-<instance part="B1" gate="G$1" x="-142.24" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -1219,7 +1228,7 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <junction x="-43.18" y="30.48"/>
 </segment>
 <segment>
-<wire x1="-76.2" y1="5.08" x2="-71.12" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="7.62" x2="-71.12" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="7.62" x2="-71.12" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="CON1" gate="G$1" pin="GND"/>
@@ -1396,6 +1405,7 @@ Manufacturer Part Number: NCP1117DT33G</description>
 </net>
 <net name="N$9" class="0">
 <segment>
+<pinref part="B1" gate="G$1" pin="-"/>
 <wire x1="-147.32" y1="63.5" x2="-147.32" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="55.88" x2="-154.94" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -1403,7 +1413,6 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <junction x="-154.94" y="55.88"/>
 <wire x1="-154.94" y1="55.88" x2="-154.94" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="C"/>
-<pinref part="B1" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -1612,6 +1621,17 @@ Manufacturer Part Number: NCP1117DT33G</description>
 </net>
 <net name="CHARGE+" class="0">
 <segment>
+<wire x1="27.94" y1="-124.46" x2="5.08" y2="-124.46" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-124.46" x2="5.08" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-121.92" x2="2.54" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-124.46" x2="5.08" y2="-127" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-127" x2="2.54" y2="-127" width="0.1524" layer="91"/>
+<label x="27.94" y="-124.46" size="1.778" layer="91" xref="yes"/>
+<junction x="5.08" y="-124.46"/>
+<pinref part="U$3" gate="G$1" pin="C"/>
+<pinref part="U$4" gate="G$1" pin="C"/>
+</segment>
+<segment>
 <wire x1="154.94" y1="-101.6" x2="172.72" y2="-101.6" width="0.1524" layer="91"/>
 <pinref part="CON12" gate="G$1" pin="2"/>
 <wire x1="172.72" y1="-101.6" x2="195.58" y2="-101.6" width="0.1524" layer="91"/>
@@ -1653,10 +1673,20 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <junction x="355.6" y="-101.6"/>
 <label x="154.94" y="-101.6" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
+</net>
+<net name="N$23" class="0">
 <segment>
+<wire x1="-2.54" y1="-121.92" x2="-5.08" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-127" x2="-5.08" y2="-127" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-127" x2="-5.08" y2="-124.46" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="IP-"/>
+<wire x1="-5.08" y1="-124.46" x2="-5.08" y2="-121.92" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-99.06" x2="-20.32" y2="-99.06" width="0.1524" layer="91"/>
-<label x="-20.32" y="-99.06" size="1.778" layer="91" rot="R180" xref="yes"/>
+<wire x1="-20.32" y1="-99.06" x2="-20.32" y2="-124.46" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-124.46" x2="-20.32" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="-5.08" y="-124.46"/>
+<pinref part="U$3" gate="G$1" pin="A"/>
+<pinref part="U$4" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="SECTION1" class="0">
@@ -1749,12 +1779,12 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="-154.94" y1="73.66" x2="-154.94" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="+"/>
 <wire x1="-154.94" y1="71.12" x2="-154.94" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-154.94" y1="71.12" x2="-147.32" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="71.12" x2="-147.32" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-154.94" y="71.12"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
-<pinref part="B1" gate="G$1" pin="+"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
