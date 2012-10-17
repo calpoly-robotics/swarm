@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1164,16 +1164,6 @@ Manufacturer Part Number: PS1240P02BT</description>
 <package name="MOUNTINGHOLE">
 <pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
 </package>
-<package name="PINHEADER(1X2)">
-<pad name="1" x="-1.27" y="0" drill="0.8"/>
-<pad name="2" x="1.27" y="0" drill="0.8"/>
-<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="-1.27" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
-<text x="-2.54" y="2.54" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="0.8128" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -1233,15 +1223,16 @@ Manufacturer Part Number: PS1240P02BT</description>
 <wire x1="0" y1="-1.27" x2="0" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
-<symbol name="POWERJUMPER">
-<pin name="1" x="-7.62" y="0" length="middle"/>
-<pin name="2" x="12.7" y="0" length="middle" rot="R180"/>
-<wire x1="-2.54" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<text x="-2.54" y="5.08" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
+<symbol name="HEADER_1X3">
+<pin name="1" x="-5.08" y="2.54" length="middle"/>
+<pin name="2" x="-5.08" y="0" length="middle"/>
+<pin name="3" x="-5.08" y="-2.54" length="middle"/>
+<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1337,15 +1328,16 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="POWERJUMPER" prefix="CON">
+<deviceset name="HEADER_3X1" prefix="CON">
 <gates>
-<gate name="G$1" symbol="POWERJUMPER" x="-2.54" y="0"/>
+<gate name="G$1" symbol="HEADER_1X3" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PINHEADER(1X2)">
+<device name="" package="3PINHEADER_.100&quot;">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1504,7 +1496,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="U$1" library="DigitalIC" deviceset="TB6612" device=""/>
 <part name="B1" library="Passive" deviceset="PIEZOBUZZER" device="PTH"/>
 <part name="P+4" library="Supply" deviceset="+3V" device=""/>
-<part name="CON4" library="Mechanical" deviceset="POWERJUMPER" device=""/>
+<part name="CON4" library="Mechanical" deviceset="HEADER_3X1" device=""/>
 <part name="P+16" library="Supply" deviceset="+VBAT" device=""/>
 </parts>
 <sheets>
@@ -1652,8 +1644,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="U$1" gate="G$1" x="-30.48" y="-147.32"/>
 <instance part="B1" gate="G$1" x="-119.38" y="35.56"/>
 <instance part="P+4" gate="1" x="-71.12" y="7.62" rot="R270"/>
-<instance part="CON4" gate="G$1" x="73.66" y="-109.22"/>
-<instance part="P+16" gate="G$1" x="58.42" y="-127" rot="R90"/>
+<instance part="CON4" gate="G$1" x="38.1" y="-129.54" rot="R180"/>
+<instance part="P+16" gate="G$1" x="53.34" y="-129.54" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -2086,9 +2078,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <junction x="-73.66" y="101.6"/>
 </segment>
 <segment>
-<pinref part="CON4" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="-109.22" x2="66.04" y2="-127" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="-127" x2="58.42" y2="-127" width="0.1524" layer="91"/>
+<pinref part="CON4" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="-129.54" x2="53.34" y2="-129.54" width="0.1524" layer="91"/>
 <pinref part="P+16" gate="G$1" pin="+VBAT"/>
 </segment>
 </net>
@@ -2914,8 +2905,10 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <net name="N$29" class="0">
 <segment>
 <pinref part="CON2" gate="G$1" pin="7"/>
-<pinref part="CON4" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="-109.22" x2="86.36" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-109.22" x2="66.04" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="-109.22" x2="66.04" y2="-132.08" width="0.1524" layer="91"/>
+<pinref part="CON4" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="-132.08" x2="43.18" y2="-132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

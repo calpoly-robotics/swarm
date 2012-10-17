@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -71,6 +71,18 @@
 <text x="17.653" y="8.382" size="1.27" layer="21">CPRC</text>
 <wire x1="4.318" y1="47.625" x2="59.182" y2="47.625" width="0.2032" layer="20" curve="-120"/>
 <wire x1="4.318" y1="15.748" x2="59.182" y2="15.748" width="0.2032" layer="20" curve="120"/>
+<text x="27.051" y="48.387" size="0.8128" layer="22" rot="MR270">B+</text>
+<text x="27.178" y="42.164" size="0.8128" layer="22" rot="MR270">B-</text>
+<text x="30.353" y="46.863" size="0.8128" layer="22" rot="MR90">GND</text>
+<text x="28.321" y="46.863" size="0.8128" layer="22" rot="MR90">+3V</text>
+<text x="37.338" y="42.164" size="0.8128" layer="22" rot="MR270">MB-</text>
+<text x="35.179" y="42.164" size="0.8128" layer="22" rot="MR270">MB+</text>
+<text x="37.211" y="49.149" size="0.8128" layer="22" rot="MR270">MA-</text>
+<text x="35.179" y="49.149" size="0.8128" layer="22" rot="MR270">MA+</text>
+<text x="33.02" y="49.911" size="0.8128" layer="22" rot="MR270">PA4T</text>
+<text x="29.21" y="42.164" size="0.8128" layer="22" rot="MR270">PA3</text>
+<text x="31.242" y="42.164" size="0.8128" layer="22" rot="MR270">PA2</text>
+<text x="33.274" y="42.164" size="0.8128" layer="22" rot="MR270">PA1</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
@@ -413,16 +425,6 @@
 <package name="MOUNTINGHOLE">
 <pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
 </package>
-<package name="PINHEADER(1X2)">
-<pad name="1" x="-1.27" y="0" drill="0.8"/>
-<pad name="2" x="1.27" y="0" drill="0.8"/>
-<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="2.54" y1="-1.27" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
-<text x="-2.54" y="2.54" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="0.8128" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 </library>
 </libraries>
@@ -434,7 +436,7 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -930,7 +932,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="41.783" y="44.831" size="0.8128" layer="21" rot="R270"/>
 </element>
 <element name="B1" library="Passive" package="PIEZOBUZZER" value="PIEZOBUZZERPTH" x="41.402" y="10.033"/>
-<element name="CON4" library="Mechanical" package="PINHEADER(1X2)" value="POWERJUMPER" x="21.59" y="39.116" rot="R90"/>
+<element name="CON4" library="Mechanical" package="3PINHEADER_.100&quot;" value="HEADER_3X1" x="21.59" y="37.846" rot="R90"/>
 </elements>
 <signals>
 <signal name="+3V">
@@ -1026,8 +1028,8 @@ design rules under a new name.</description>
 <wire x1="10.16" y1="18.542" x2="10.916" y2="20.940478125" width="0.254" layer="1"/>
 <wire x1="10.541" y1="17.950146875" x2="10.16" y2="18.542" width="0.254" layer="1"/>
 <wire x1="10.541" y1="17.950146875" x2="5.7785" y2="15.6845" width="0.4064" layer="16"/>
-<wire x1="11.944" y1="44.435478125" x2="13.6906" y2="43.64485" width="0.254" layer="1"/>
-<wire x1="11.944" y1="44.435478125" x2="9.271" y2="43.350146875" width="0.254" layer="1"/>
+<wire x1="11.944" y1="44.435478125" x2="13.6906" y2="43.64485" width="0.4064" layer="1"/>
+<wire x1="11.944" y1="44.435478125" x2="9.271" y2="43.350146875" width="0.4064" layer="1"/>
 <wire x1="5.461" y1="39.624" x2="9.187146875" y2="43.350146875" width="0.4064" layer="16"/>
 <wire x1="9.187146875" y1="43.350146875" x2="9.271" y2="43.350146875" width="0.3048" layer="16"/>
 <wire x1="40.906" y1="8.128" x2="40.759" y2="8.136" width="0.254" layer="1"/>
@@ -1040,7 +1042,6 @@ design rules under a new name.</description>
 <wire x1="38.608" y1="22.987" x2="38.608" y2="24.765" width="0.3048" layer="1"/>
 <wire x1="38.608" y1="24.765" x2="38.608" y2="25.997" width="0.3048" layer="1"/>
 <wire x1="38.608" y1="30.734" x2="38.608" y2="25.997" width="0.3048" layer="1"/>
-<wire x1="35.814" y1="32.547" x2="35.814" y2="30.734" width="0.3048" layer="1"/>
 <wire x1="27.559" y1="27.547" x2="27.297" y2="27.678" width="0.254" layer="1"/>
 <wire x1="27.297" y1="27.678" x2="25.908" y2="26.289" width="0.3048" layer="1"/>
 <via x="25.908" y="26.289" extent="1-16" drill="0.6" diameter="0.4064"/>
@@ -1092,7 +1093,6 @@ design rules under a new name.</description>
 <wire x1="43.053" y1="33.274" x2="45.593" y2="35.814" width="0.3048" layer="1"/>
 <wire x1="45.593" y1="35.814" x2="46.482" y2="35.814" width="0.3048" layer="1"/>
 <wire x1="46.482" y1="35.814" x2="49.784" y2="39.116" width="0.3048" layer="1"/>
-<wire x1="35.814" y1="30.734" x2="38.608" y2="30.734" width="0.3048" layer="1"/>
 <wire x1="46.431" y1="43.266" x2="48.047" y2="43.266" width="0.3048" layer="1"/>
 <wire x1="48.047" y1="43.266" x2="48.895" y2="42.418" width="0.3048" layer="1"/>
 <wire x1="48.895" y1="41.771" x2="49.157" y2="41.648" width="0.3048" layer="1"/>
@@ -1111,6 +1111,9 @@ design rules under a new name.</description>
 <wire x1="48.895" y1="42.418" x2="48.895" y2="41.771" width="0.3048" layer="1"/>
 <wire x1="49.784" y1="40.894" x2="48.907" y2="41.771" width="0.3048" layer="1"/>
 <wire x1="48.907" y1="41.771" x2="48.895" y2="41.771" width="0.3048" layer="1"/>
+<wire x1="35.814" y1="32.547" x2="35.814" y2="31.369" width="0.254" layer="1"/>
+<wire x1="35.814" y1="31.369" x2="36.449" y2="30.734" width="0.254" layer="1"/>
+<wire x1="36.449" y1="30.734" x2="38.608" y2="30.734" width="0.254" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U1" pad="6"/>
@@ -1344,10 +1347,10 @@ design rules under a new name.</description>
 <wire x1="15.09" y1="33.513" x2="15.24" y2="33.663" width="0.4064" layer="1"/>
 <wire x1="14.605" y1="30.341" x2="14.605" y2="31" width="0.254" layer="1"/>
 <wire x1="14.605" y1="31" x2="13.728" y2="31.877" width="0.254" layer="1"/>
-<contactref element="CON4" pad="1"/>
-<wire x1="21.59" y1="37.846" x2="20.955" y2="37.846" width="0.4064" layer="16"/>
 <wire x1="20.955" y1="37.846" x2="17.907" y2="40.894" width="0.4064" layer="16"/>
 <wire x1="17.907" y1="40.894" x2="16.637" y2="40.894" width="0.4064" layer="16"/>
+<contactref element="CON4" pad="2"/>
+<wire x1="20.955" y1="37.846" x2="21.59" y2="37.846" width="0.4064" layer="16"/>
 </signal>
 <signal name="+VCHG">
 <contactref element="ANT1" pad="P$1"/>
@@ -2234,12 +2237,13 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$29">
 <contactref element="CON2" pad="7"/>
-<contactref element="CON4" pad="2"/>
 <wire x1="26.75" y1="45.45" x2="20.939" y2="45.45" width="0.4064" layer="1"/>
 <wire x1="20.939" y1="45.45" x2="20.32" y2="44.831" width="0.4064" layer="1"/>
 <wire x1="20.32" y1="44.831" x2="20.32" y2="43.688" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="43.688" x2="21.59" y2="42.418" width="0.4064" layer="1"/>
-<wire x1="21.59" y1="42.418" x2="21.59" y2="40.386" width="0.4064" layer="1"/>
+<contactref element="CON4" pad="1"/>
+<wire x1="20.32" y1="43.688" x2="22.987" y2="41.021" width="0.4064" layer="1"/>
+<wire x1="22.987" y1="41.021" x2="22.987" y2="36.703" width="0.4064" layer="1"/>
+<wire x1="22.987" y1="36.703" x2="21.59" y2="35.306" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>
