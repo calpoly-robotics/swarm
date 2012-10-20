@@ -25,18 +25,19 @@ int main()
 		// Run Task If:
 		if (tasks[i].runNow == 1) // If task has requested to be run immediately
 			{
+				tasks[i].runNow = 0; // Clear immediate running
 				tasks[i].lastRun = getTime32(); // This needs Connor's gettime32 function
-				tasks[i].run(); //Runs the state machine belonging to the task
+				tasks[i].run(); // Runs the state machine belonging to the task
 			}
 		else if (getTime32() > (tasks[i].lastRun + tasks[i].interval))
 			{
 				tasks[i].lastRun = getTime32(); // This needs Connor's gettime32 function
-				tasks[i].run(); //Runs the state machine belonging to the task
+				tasks[i].run(); // Runs the state machine belonging to the task
 			}
 	
 		i++; // Increment to next task
 		
-		if (i > NUM_TASKS) //reset i after last task is checked
+		if (i > NUM_TASKS) // reset i after last task is checked
 		{
 			i = 0;
 		}
