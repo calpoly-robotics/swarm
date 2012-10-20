@@ -15,7 +15,7 @@ void init()
 int main()
 {
 	uartInit();		// Initialize the UART
-	ClockInit();	// Connor's Clock init function
+	clockInit();	// Connor's Clock init function
 	
 	u08 i = 0;		// Cycles through each task
 	
@@ -23,7 +23,7 @@ int main()
 	{
 	
 		// Run Task If:
-		if (tasks[i].runNow == 1) // If task has requested to be run immediately
+		if (tasks[i].runNow) // If task has requested to be run immediately
 			{
 				tasks[i].runNow = 0; // Clear immediate running
 				tasks[i].lastRun = getTime32(); // This needs Connor's gettime32 function
@@ -37,7 +37,7 @@ int main()
 	
 		i++; // Increment to next task
 		
-		if (i > NUM_TASKS) // reset i after last task is checked
+		if (i == NUM_TASKS) // reset i after last task is checked
 		{
 			i = 0;
 		}

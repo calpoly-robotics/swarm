@@ -19,7 +19,7 @@ volatile Task tasks[NUM_TASKS];
 
 // Initialze Task Variables
 tasks[BATTERYTASK] = 	(0,0,100,&runBattery);
-tasks[IR_TASK] = 		(0,0,100,&runIR);
+tasks[IR_TASK] = 		(0,0,10,&runIR);
 tasks[BUZZER_TASK] = 	(0,0,100,&runBuzzer);
 tasks[LED_TASK] = 		(0,0,100,&runLed);
 tasks[BEHAVIOR_TASK] = 	(0,0,100,&runBehavior);
