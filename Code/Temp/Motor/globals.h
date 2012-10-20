@@ -21,6 +21,7 @@ typedef unsigned char u08; //!< Unsigned 8-bit integer, range: 0 to +255
 typedef signed char   s08; //!< Signed 8-bit integer, range: -128 to +127
 typedef unsigned int  u16; //!< Unsigned 16-bit integer, range: 0 to +65,535
 typedef signed int    s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
+typedef unsigned long  u32; //!< Unsigned 32-bit integer, range: 0 to +4,294,967,296
 
 //Bit manipulation macros
 #define sbi(a, b) ((a) |= 1 << (b))       //!< Sets bit b in variable a.
