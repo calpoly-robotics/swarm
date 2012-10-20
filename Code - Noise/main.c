@@ -34,7 +34,7 @@ int main()
   // set clock select bit
   //sbi(TCCR0B, CS02);
   TCCR0B = 0x04;
-  OCR0A = 74;
+  OCR0A = 74; // Datasheet & stuff says it should be OCR0B, not OCR0A
 
   sei();
 
