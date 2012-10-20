@@ -39,64 +39,26 @@ int main()
 	sbi(TCCR2A, COM2B1);
 
 	// set clock select bit CS20 & CS21
-	TCCR0B = 0x03;
+	TCCR2B = 0x03;
 
 	sei();
 
 	while (1)
 	{
-		_delay_ms(250);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 125; //D#5
-	   _delay_ms(125);
-		delay();
-	   TCCR0B = 0x03; 
-	   OCR0A = 167; //A#4
-	   _delay_ms(375);
-		delay();
-	
-		TCCR0B = 0x03;
-	   OCR0A = 148; //C5
-		_delay_ms(250);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 125; //D#5
-	   _delay_ms(125);
-		delay();
-	   TCCR0B = 0x03; 
-	   OCR0A = 167; //A#4
-	   _delay_ms(375);
-		delay();
-	
-		TCCR0B = 0x03;
-	   OCR0A = 148; //C5
-		_delay_ms(250);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 125; //D#5
-	   _delay_ms(125);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 83; //A#5
-	   _delay_ms(250);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 93; //G#5
-	   _delay_ms(125);
-		delay();
-	
-	   TCCR0B = 0x03;
-	   OCR0A = 125; //D#5
-	   _delay_ms(375);
-		delay();
-	   TCCR0B = 0x03;
-	   OCR0A = 125; //D#5
-	   _delay_ms(125);
-		delay();
+		sbi(PORTD, 4); // STBY
 
-	   TCCR0B = 0x00;
-	   _delay_ms(5000);      
+		sbi(PORTD, 5); // AIN1 //Forward AIN1 & BIN2
+		sbi(PORTD, 2); // BIN2
+		
+		sbi(PORTD, 7); // APWM
+		sbi(PORTD, 6); // BPWM
+	    OCR2A = 125;
+		OCR2B = 125;
+	  
+		_delay_ms(2000);
+		cbi(PORTD, 4); // STBY
+		_delay_ms(2000);
+   
    }
 
    return 0;
