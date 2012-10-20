@@ -1,21 +1,23 @@
 #include "globals.h"
 
-// Notes in ms
-// 1 = 1000
-// 1/2 = 500
-// 1/4 = 250
-// 1/8 = 125
-
-
 void init()
 {
-	sbi(DDRB, 4); // Buzzer out as output
-}
-
-void delay()
-{
-	TCCR0B = 0x00;
-	_delay_ms(100);
+	cbi(PORTD, 5); // AIN1
+	sbi(DDRD, 5); // Data Direction Register <Letter (D)>, <#>
+	cbi(PORTC, 0); // AIN2
+	sbi(DDRC, 0); 
+	cbi(PORTD, 7); // APWM
+	sbi(DDRD, 7); 
+	
+	cbi(PORTD, 3); // BIN1
+	sbi(DDRD, 3); 
+	cbi(PORTD, 2); // BIN2
+	sbi(DDRD, 2); 
+	cbi(PORTD, 6); // BPWM
+	sbi(DDRD, 6); 
+	
+	cbi(PORTD, 4); // STBY
+	sbi(DDRD, 4); 
 }
 
 int main()
@@ -24,30 +26,25 @@ int main()
 	
 	//uartInit();
 	
-  // set bit WGM01
-  sbi(TCCR0A, WGM01);
-  //cbi(TCCR0A, WGM00);
-  // set bit COM0A0
-  sbi(TCCR0A, COM0B0);
-  cbi(TCCR0A, COM0B1);
-  
-  // set clock select bit
-  //sbi(TCCR0B, CS02);
-  TCCR0B = 0x04;
-  OCR0A = 74;
+	// set bit WGM20 & WGM21
+	sbi(TCCR2A, WGM20);
+	sbi(TCCR2A, WGM21);
+	cbi(TCCR2A, WGM22);
 
-  sei();
+	// set bit COM0A1
+	cbi(TCCR2A, COM2A0);
+	sbi(TCCR2A, COM2A1);
+	// set bit COM0B1
+	cbi(TCCR2A, COM2B0);
+	sbi(TCCR2A, COM2B1);
 
-    //uartPrint_u08(TCCR0A);
-    //uartPrintString("\n");
-    //uartPrint_u08(TCCR0B);
+	// set clock select bit CS20 & CS21
+	TCCR0B = 0x03;
 
-   TCCR0B = 0x03;
+	sei();
 
-   while (1)
+	while (1)
 	{
-		
-	   OCR0A = 148; //C5
 		_delay_ms(250);
 		delay();
 	   TCCR0B = 0x03;
