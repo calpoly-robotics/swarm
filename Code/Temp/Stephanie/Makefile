@@ -1,5 +1,5 @@
 # C files
-FILES = main.c sense.c serial.c lineSensor.c bumper.c charger.c distanceIR.c lightSensor.c
+FILES = main.c sense.c serial.c lineSensor.c shortIR.c charger.c distanceIR.c led.c
 # chip name
 MCU = atmega1284p
 # abbreviated chip name

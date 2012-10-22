@@ -3,6 +3,9 @@
 
 #define CHARGER_PIN 0
 
+// WHAT IS PROPER PULLUP CONFIG???
+void chargerInit();
+
 /* TODO
  */
-u16 getChargerValue();
+u16 getVoltage();

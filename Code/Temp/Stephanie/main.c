@@ -1,26 +1,14 @@
-#include "globals.h"
-#include "sense.h"
 
-void init()
-{
-   sbi(DDRB, 2); // red LED out as output
-}
+#include "led.h"
 
 int main()
 {
-   int i = 0;
-   u08 buf[3] = {'\n', '\r', '\0'};
-   init();
-   uartInit();
-   senseInit();
-   
+   ledInit();
    
    while (1) {
-       u16 val = readSensorValue(5);
-	   
-	   uartPrint_u16(val);	   
-	   uartPrintString(buf);
-
+       redLedOn();
+	   _delay_ms(500);
+	   redLedOff();
 	   _delay_ms(500);
    }
    

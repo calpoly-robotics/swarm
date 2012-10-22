@@ -13,10 +13,18 @@ void greenLedOff() {
    cbi(PORTB, GREEN_LED);
 }
 
+void toggleGreenLed() {
+   tbi(PORTB, GREEN_LED);
+}
+
 void redLedOn() {
    sbi(PORTB, RED_LED);
 }
 
 void redLedOff() {
    cbi(PORTB, RED_LED);
+}
+
+void toggleRedLed() {
+   tbi(PORTB, RED_LED);
 }

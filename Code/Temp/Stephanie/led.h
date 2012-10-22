@@ -9,6 +9,11 @@ void greenLedOn();
 
 void greenLedOff();
 
+void toggleGreenLed();
+
 void redLedOn();
 
 void redLedOff();
+
+void toggleRedLed();
+
