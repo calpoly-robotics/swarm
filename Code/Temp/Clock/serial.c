@@ -94,6 +94,29 @@ void uartPrint_u08(u08 num)
 	uartPrintChar('0' + num % 10);
 }
 
+void uartPrint_u16(u16 num)
+{
+	uartPrintChar('0' + num/10000);
+	uartPrintChar('0' + (num % 10000)/1000);
+	uartPrintChar('0' + (num % 1000)/100);
+	uartPrintChar('0' + (num % 100)/10);
+	uartPrintChar('0' + num % 10);
+}
+
+void uartPrint_u32(u32 num)
+{
+	uartPrintChar('0' + num/1000000000);
+	uartPrintChar('0' + (num % 1000000000)/100000000);
+	uartPrintChar('0' + (num % 100000000)/10000000);
+	uartPrintChar('0' + (num % 10000000)/1000000);
+	uartPrintChar('0' + (num % 1000000)/100000);
+	uartPrintChar('0' + (num % 100000)/10000);
+	uartPrintChar('0' + (num % 10000)/1000);
+	uartPrintChar('0' + (num % 1000)/100);
+	uartPrintChar('0' + (num % 100)/10);
+	uartPrintChar('0' + num % 10);
+}
+
 /**
  * Flush the receive buffer FIFO, code from Atmega documentation.
  */
