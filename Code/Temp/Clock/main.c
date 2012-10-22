@@ -2,7 +2,7 @@
 
 void init()
 {
-	cbi(PORTD, 5); // AIN1
+/*	cbi(PORTD, 5); // AIN1
 	sbi(DDRD, 5); // Data Direction Register <Letter (D)>, <#>
 	cbi(PORTC, 0); // AIN2
 	sbi(DDRC, 0); 
@@ -17,61 +17,77 @@ void init()
 	sbi(DDRD, 6); 
 	
 	cbi(PORTD, 4); // STBY
-	sbi(DDRD, 4); 
+	sbi(DDRD, 4); */
 }
+
+u32 getTime32()
+{
+	u16 lower;
+	u16 upper;
+	u32 time;
+	
+	u16 *upoint;
+	u16 *lpoint;
+	
+	upoint = (u16*)&time;
+	lpoint = (u16*)&time + 1;
+	
+	*upoint = upper;
+	*lpoint = lower;
+}
+
+u16 upper16;
+u32 time;
 
 int main()
 {
-	init();
+	//init();
 	
 	//uartInit();
+	u16 timeUpper = 0;
 	
-	// set bit WGM20 & WGM21
-	sbi(TCCR2A, WGM20);
-	sbi(TCCR2A, WGM21);
-	cbi(TCCR2A, WGM22);
-
+	u16 *upoint;
+	u16 *lpoint;
+	
+	upoint = (u16*)&time;
+	lpoint = (u16*)&time + 1;
+	
+	*upoint = upper;
+	*lpoint = lower;
+	
+	
+	// clear bits
+	cbi(TCCR3A, WGM30);
+	cbi(TCCR3A, WGM31);
+	cbi(TCCR3B, WGM32);
+	cbi(TCCR3B, WGM33);
+	
 	// set bit COM0A1
-	cbi(TCCR2A, COM2A0);
-	sbi(TCCR2A, COM2A1);
+	cbi(TCCR3A, COM3A0);
+	cbi(TCCR3A, COM3A1);
 	// set bit COM0B1
-	cbi(TCCR2A, COM2B0);
-	sbi(TCCR2A, COM2B1);
+	cbi(TCCR3A, COM3B0);
+	cbi(TCCR3A, COM3B1);
 
-	// set clock select bit CS20 & CS21
-	TCCR2B = 0x03;
+	// set clock select bit CS30 & CS32
+	sbi(TCCR3B, CS30);
+	sbi(TCCR3B, CS32);
+	//TCCR3B = 0x05;
 
 	sei();
 
 	while (1)
 	{
-		sbi(PORTD, 4); // STBY
-
-		sbi(PORTD, 5); // AIN1 //Forward AIN1 & BIN2
-		sbi(PORTD, 2); // BIN2
+		*upoint = upper16;
+		*lpoint = TCNT3H;
 		
-		sbi(PORTD, 7); // APWM
-		sbi(PORTD, 6); // BPWM
-	    OCR2A = 125;
-		OCR2B = 125;
-	  
-		_delay_ms(2000);
-		cbi(PORTD, 4); // STBY
-		_delay_ms(2000);
-   
+		_delay_ms(1000);
    }
 
    return 0;
 }
 
-/*ISR(TIMER0_COMPA_vect)
+ISR(TIMER3_OVF_vect)
 {
-	//sbi(PORTB, 4); // set Buzzer to 1
-	
-	//cbi(PORTB, 4); // set Buzzer to 0
-	
-	tbi(PORTB, 4); // toggle Buzzer value
-	
-	//gbi(PORTB, 4); // get Buzzer value
-}*/
-
+	upper16++;
+}
