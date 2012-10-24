@@ -1,10 +1,4 @@
 #include "globals.h"
-// #include "BatteryTask.h"
-// #include "IRTask.h"
-// #include "BuzzerTask.h"
-// #include "LedTask.h"
-// #include "BehaviorTask.h"
-
 
 
 void init()
@@ -16,6 +10,13 @@ int main()
 {
 	uartInit();		// Initialize the UART
 	clockInit();	// Connor's Clock init function
+	
+	// Initialze Task Variables
+	tasks[BATTERYTASK] = 	(0,0,0,100,&runBattery);
+	tasks[IR_TASK] = 		(0,0,0,10,&runIR);
+	tasks[BUZZER_TASK] = 	(0,0,0,100,&runBuzzer);
+	tasks[LED_TASK] = 		(0,0,0,100,&runLed);
+	tasks[BEHAVIOR_TASK] = 	(0,0,0,100,&runBehavior);
 	
 	u08 i = 0;		// Cycles through each task
 	
