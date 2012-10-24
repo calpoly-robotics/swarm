@@ -41,7 +41,7 @@ typedef unsigned long u32; //!< Unsigned 32-bit integer, range: 0 to +4,294,967,
 #define BASE 0
 
 // user-defined includes
-#include "messages.h"
-#include "ir.h"
+#include "tasks.h"
+
 
 #endif //ifndef GLOBALS_H

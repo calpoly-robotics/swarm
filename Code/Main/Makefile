@@ -1,5 +1,5 @@
 # C files
-FILES = main.c ir.c serial.c
+FILES = *.c
 # chip name
 MCU = atmega1284p
 # abbreviated chip name

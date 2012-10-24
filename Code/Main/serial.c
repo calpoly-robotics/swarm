@@ -87,9 +87,48 @@ void uartPrintString(u08 *str)
 	}
 }
 
+void uartPrintNibble(u08 nibble)
+{
+	if (nibble > 15)
+	{
+		uartPrintChar('B');
+	}
+	else if (nibble > 9)
+	{
+		uartPrintChar('A'+(nibble-10));
+	}
+	else
+	{
+		uartPrintChar('0'+nibble);
+	}
+}
+
 void uartPrint_u08(u08 num)
 {
-	uartPrintChar('0' + num/100);
+	if (num >= 100)
+	{
+		uartPrintChar('0' + num/100);
+	}
+	else
+	{
+		uartPrintChar(' ');
+	}
+	if (num >= 10)
+	{
+		uartPrintChar('0' + (num % 100)/10);
+	}
+	else
+	{
+		uartPrintChar(' ');
+	}
+	uartPrintChar('0' + num % 10);
+}
+
+void uartPrint_u16(u16 num)
+{
+	uartPrintChar('0' + num/10000);
+	uartPrintChar('0' + (num % 10000)/1000);
+	uartPrintChar('0' + (num % 1000)/100);
 	uartPrintChar('0' + (num % 100)/10);
 	uartPrintChar('0' + num % 10);
 }
