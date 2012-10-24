@@ -1,41 +1,22 @@
 #include "globals.h"
 
-
-void init()
-{
-	sbi(IR_LED_DDR, IR_LED_PIN); // IR out as output
-	sbi(DDRB, RED_LED); // green LED as output
-	cbi(DDRA, 3);
-	sbi(DDRA, 2);
-}
+u16 test = 0;
 
 int main()
 {
-	init();
-	sbi(PORTB, RED_LED);
-	_delay_ms(500);
-	cbi(PORTB, RED_LED);
 	initIR();
-	
-#if (IS_RECEIVER == 1)
 	uartInit();
-#endif
-	
-#if (IS_RECEIVER == 0)
-	Message msg = {0x55, 0, 1, 0, 1};
-#endif
+	sbi(DDRB, 2);
+	uartPrintString("HELLO!\r\n");
+	_delay_ms(2000);
 	
 	while (1)
 	{
-#if (IS_RECEIVER == 0)
-		sendMessage(msg);
-		manageTransmit();
-		_delay_ms(1000);
-#endif
-
-#if (IS_RECEIVER == 1)
-		doTest();
-		_delay_ms(100);
-#endif
+		// sendMessage(2, IM_HERE, 0x55);
+		// manageTransmit();
+		// _delay_us(400);
+		manageReceive();
+		_delay_ms(1);
+		tbi(PORTB, 2);
 	}
 }

@@ -31,18 +31,15 @@ typedef signed int    s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
 //global variables and defines
 #define RED_LED	2
 #define GREEN_LED 1
-#define IR_LED_DDR DDRA
-#define IR_LED_PORT PORTA
-#define IR_LED_PIN 4
 
-#define MAX_MESSAGESIZE 64
-
-#define PULSE_WIDTH 1
-#define BASE 0
-#define IS_RECEIVER 0
+#define SENDER_ID 0b1010111
+#define IS_BASE 0
 
 // user-defined includes
 #include "messages.h"
 #include "ir.h"
+
+extern u16 test;
+extern volatile s08 recvWidthIndex;
 
 #endif //ifndef GLOBALS_H
