@@ -9,7 +9,7 @@ void init()
 int main()
 {
 	uartInit();		// Initialize the UART
-	clockInit();	// Connor's Clock init function
+	initClock();	// Connor's Clock init function
 	
 	// Initialze Task Variables
 	tasks[BATTERYTASK] = 	(0,0,0,100,&runBattery);
@@ -27,12 +27,12 @@ int main()
 		if (tasks[i].runNow) // If task has requested to be run immediately
 			{
 				tasks[i].runNow = 0; // Clear immediate running
-				tasks[i].lastRun = getTime32(); // This needs Connor's gettime32 function
+				tasks[i].lastRun = getTime32(); // This is Connor's gettime32 function
 				tasks[i].run(); // Runs the state machine belonging to the task
 			}
 		else if (getTime32() > (tasks[i].lastRun + tasks[i].interval))
 			{
-				tasks[i].lastRun = getTime32(); // This needs Connor's gettime32 function
+				tasks[i].lastRun = getTime32(); // This is Connor's gettime32 function
 				tasks[i].run(); // Runs the state machine belonging to the task
 			}
 	
