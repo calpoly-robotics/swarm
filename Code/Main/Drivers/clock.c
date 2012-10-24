@@ -1,10 +1,11 @@
-#include "globals.h"
+#include "../globals.h"
 
 volatile u16 upper16;
-volatile u32 time;
+volatile static u32 time;
 
 volatile u16 *upoint;
 volatile u16 *lpoint;
+
 
 void initClock()
 {
@@ -41,6 +42,7 @@ u32 getTime32()
 {
 	*upoint = upper16;
 	*lpoint = TCNT3;
+	return time;
 }
 
 ISR(TIMER3_OVF_vect)
