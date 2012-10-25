@@ -1,8 +1,4 @@
-volatile u16 upper16;
-volatile u32 time;
-
-volatile u16 *upoint;
-volatile u16 *lpoint;
+#include "clock.h"
 
 void initClock()
 {
@@ -35,7 +31,7 @@ void initClock()
 	upoint = (u16*)&time + 1;
 }
 
-u32 getTime32()
+void getTime32()
 {
 	*upoint = upper16;
 	*lpoint = TCNT3;
