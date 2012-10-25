@@ -43,5 +43,7 @@ typedef uint32_t		u32; //!< Unsigned 32-bit integer, range: 0 to +4,294,967,295
 
 // user-defined includes
 #include "Tasks/tasks.h"
+#include "Drivers/clock.h"
 
 #endif //ifndef GLOBALS_H
+

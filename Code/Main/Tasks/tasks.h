@@ -2,7 +2,7 @@
 typedef struct {
 	u08 state;
 	u08 runNow;
-	u08 lastRun;
+	u32 lastRun;
 	u32 interval;
 	void (*run)();
 } Task;
