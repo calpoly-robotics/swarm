@@ -675,6 +675,17 @@ Mouser Part Number: 579-MCP73833-AMI/UN</description>
 <text x="-2.54" y="5.08" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="PLCC4">
+<smd name="1" x="-1.5" y="0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
+<smd name="4" x="1.5" y="0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
+<smd name="3" x="1.5" y="-0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
+<smd name="2" x="-1.5" y="-0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
+<circle x="-2.11" y="1.97" radius="0.25" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="1.4" x2="-1.6" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="-1.4" x2="1.6" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="1.6" y1="-1.4" x2="1.6" y2="1.4" width="0.127" layer="21"/>
+<wire x1="1.6" y1="1.4" x2="-1.6" y2="1.4" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -883,6 +894,79 @@ Mouser Part Number: 579-MCP73833-AMI/UN</description>
 <text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="CA_RGB_LED">
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
+<pin name="BLUECATHODE" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="COMMONANODE" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="-2.159"/>
+<vertex x="-3.048" y="-1.27"/>
+<vertex x="-2.54" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-3.302"/>
+<vertex x="-2.921" y="-2.413"/>
+<vertex x="-2.413" y="-2.921"/>
+</polygon>
+<wire x1="-6.35" y1="0" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-8.89" y2="0" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-8.89" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-8.89" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-7.62" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-9.652" y1="-0.762" x2="-11.049" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-9.525" y1="-1.905" x2="-10.922" y2="-3.302" width="0.1524" layer="94"/>
+<text x="-11.684" y="-4.572" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<pin name="REDCATHODE" x="-7.62" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-11.049" y="-2.159"/>
+<vertex x="-10.668" y="-1.27"/>
+<vertex x="-10.16" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-10.922" y="-3.302"/>
+<vertex x="-10.541" y="-2.413"/>
+<vertex x="-10.033" y="-2.921"/>
+</polygon>
+<wire x1="8.89" y1="0" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="0" width="0.254" layer="94"/>
+<wire x1="8.89" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="8.89" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="6.35" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="-0.762" x2="4.191" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="5.715" y1="-1.905" x2="4.318" y2="-3.302" width="0.1524" layer="94"/>
+<text x="10.795" y="-4.572" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="GREENCATHODE" x="7.62" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="4.191" y="-2.159"/>
+<vertex x="4.572" y="-1.27"/>
+<vertex x="5.08" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="4.318" y="-3.302"/>
+<vertex x="4.699" y="-2.413"/>
+<vertex x="5.207" y="-2.921"/>
+</polygon>
+<wire x1="-7.62" y1="0" x2="-7.62" y2="2.54" width="0.2032" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="0" y2="2.54" width="0.2032" layer="94"/>
+<wire x1="0" y1="2.54" x2="7.62" y2="2.54" width="0.2032" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="0" width="0.2032" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.2032" layer="94"/>
+<text x="-5.08" y="-6.35" size="1.27" layer="94" rot="R90">Red</text>
+<text x="2.54" y="-6.35" size="1.27" layer="94" rot="R90">Blue</text>
+<text x="10.16" y="-7.62" size="1.27" layer="94" rot="R90">Green</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP" prefix="C" uservalue="yes">
@@ -1083,6 +1167,26 @@ Manufacturer Part Number: PS1240P02BT</description>
 <connects>
 <connect gate="G$1" pin="+" pad="P$1"/>
 <connect gate="G$1" pin="-" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD_RGB" prefix="LED">
+<description>Digikey Part Number: CLVBA-FKA-CAEDH8BBB7A363CT-ND
+Manufacturer Part Number: CLVBA-FKA-CAEDH8BBB7A363</description>
+<gates>
+<gate name="G$1" symbol="CA_RGB_LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PLCC4">
+<connects>
+<connect gate="G$1" pin="BLUECATHODE" pad="3"/>
+<connect gate="G$1" pin="COMMONANODE" pad="2"/>
+<connect gate="G$1" pin="GREENCATHODE" pad="4"/>
+<connect gate="G$1" pin="REDCATHODE" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1380,12 +1484,12 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="GND7" library="Supply" deviceset="GND" device=""/>
 <part name="T1" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="T2" library="Passive" deviceset="NPN2N2222" device=""/>
-<part name="R10" library="Passive" deviceset="RES" device="0603"/>
-<part name="R11" library="Passive" deviceset="RES" device="0603"/>
-<part name="R12" library="Passive" deviceset="RES" device="0603"/>
-<part name="R13" library="Passive" deviceset="RES" device="0603"/>
-<part name="R14" library="Passive" deviceset="RES" device="0603"/>
-<part name="R15" library="Passive" deviceset="RES" device="0603"/>
+<part name="R10" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="R11" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="R12" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="R13" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="R14" library="Passive" deviceset="RES" device="0603" value="100"/>
+<part name="R15" library="Passive" deviceset="RES" device="0603" value="100"/>
 <part name="R16" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND8" library="Supply" deviceset="GND" device=""/>
 <part name="LED2" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
@@ -1397,7 +1501,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="C6" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
 <part name="P+9" library="Supply" deviceset="+3V" device=""/>
 <part name="T3" library="Passive" deviceset="NPN2N2222" device=""/>
-<part name="R22" library="Passive" deviceset="RES" device="0603"/>
+<part name="R22" library="Passive" deviceset="RES" device="0603" value="15"/>
 <part name="R23" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND9" library="Supply" deviceset="GND" device=""/>
 <part name="LED13" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
@@ -1409,12 +1513,12 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="T7" library="Passive" deviceset="TEFT4300" device=""/>
 <part name="T8" library="Passive" deviceset="TEFT4300" device=""/>
 <part name="T9" library="Passive" deviceset="TEFT4300" device=""/>
-<part name="R17" library="Passive" deviceset="RES" device="0603"/>
-<part name="R18" library="Passive" deviceset="RES" device="0603"/>
-<part name="R19" library="Passive" deviceset="RES" device="0603"/>
-<part name="R20" library="Passive" deviceset="RES" device="0603"/>
-<part name="R21" library="Passive" deviceset="RES" device="0603"/>
-<part name="R24" library="Passive" deviceset="RES" device="0603"/>
+<part name="R17" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="R18" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="R19" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="R20" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="R21" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="R24" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="GND10" library="Supply" deviceset="GND" device=""/>
 <part name="GND11" library="Supply" deviceset="GND" device=""/>
 <part name="GND12" library="Supply" deviceset="GND" device=""/>
@@ -1427,17 +1531,13 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="GND16" library="Supply" deviceset="GND" device=""/>
 <part name="GND17" library="Supply" deviceset="GND" device=""/>
 <part name="P+12" library="Supply" deviceset="+3V" device=""/>
-<part name="LED8" library="Passive" deviceset="LED" device="0603" value="red"/>
-<part name="R25" library="Passive" deviceset="RES" device="0603" value="750"/>
-<part name="LED9" library="Passive" deviceset="LED" device="0603" value="green"/>
-<part name="R26" library="Passive" deviceset="RES" device="0603" value="750"/>
 <part name="R28" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="CON2" library="Mechanical" deviceset="MAIN_CONNECTOR" device=""/>
 <part name="CON3" library="Mechanical" deviceset="FTDI_3PIN" device=""/>
 <part name="P+15" library="Supply" deviceset="+VCHG" device=""/>
 <part name="GND18" library="Supply" deviceset="GND" device=""/>
 <part name="T10" library="Passive" deviceset="TEFT4300" device=""/>
-<part name="R27" library="Passive" deviceset="RES" device="0603"/>
+<part name="R27" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="GND19" library="Supply" deviceset="GND" device=""/>
 <part name="P+17" library="Supply" deviceset="+3V" device=""/>
 <part name="R33" library="Passive" deviceset="RES" device="0603"/>
@@ -1461,14 +1561,13 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="T16" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="T17" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="T18" library="Passive" deviceset="NPN2N2222" device=""/>
-<part name="R36" library="Passive" deviceset="RES" device="0603"/>
-<part name="R37" library="Passive" deviceset="RES" device="0603"/>
-<part name="R38" library="Passive" deviceset="RES" device="0603"/>
-<part name="R39" library="Passive" deviceset="RES" device="0603"/>
-<part name="R40" library="Passive" deviceset="RES" device="0603"/>
-<part name="R41" library="Passive" deviceset="RES" device="0603"/>
+<part name="R36" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
+<part name="R37" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
+<part name="R38" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
+<part name="R39" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
+<part name="R40" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
+<part name="R41" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="GND28" library="Supply" deviceset="GND" device=""/>
-<part name="GND21" library="Supply" deviceset="GND" device=""/>
 <part name="GND20" library="Supply" deviceset="GND" device=""/>
 <part name="P+3" library="Supply" deviceset="+3V" device=""/>
 <part name="U2" library="PowerIC" deviceset="MCP73833" device=""/>
@@ -1498,11 +1597,16 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="P+4" library="Supply" deviceset="+3V" device=""/>
 <part name="CON4" library="Mechanical" deviceset="HEADER_3X1" device=""/>
 <part name="P+16" library="Supply" deviceset="+VBAT" device=""/>
+<part name="LED10" library="Passive" deviceset="SMD_RGB" device=""/>
+<part name="P+20" library="Supply" deviceset="+VRAW" device=""/>
+<part name="R3" library="Passive" deviceset="RES" device="0603" value="180"/>
+<part name="R4" library="Passive" deviceset="RES" device="0603" value="70"/>
+<part name="R5" library="Passive" deviceset="RES" device="0603" value="70"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-281.94" y="-33.02" size="1.778" layer="97">Antenna connections</text>
+<text x="-254" y="-10.16" size="1.778" layer="97">Antenna connections</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="0"/>
@@ -1575,15 +1679,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="GND16" gate="1" x="12.7" y="-160.02" rot="MR270"/>
 <instance part="GND17" gate="1" x="35.56" y="-167.64" rot="MR270"/>
 <instance part="P+12" gate="1" x="-5.08" y="-149.86" rot="MR0"/>
-<instance part="LED8" gate="G$1" x="-170.18" y="-22.86"/>
-<instance part="R25" gate="G$1" x="-170.18" y="-35.56" rot="R90"/>
-<instance part="LED9" gate="G$1" x="-160.02" y="-22.86"/>
-<instance part="R26" gate="G$1" x="-160.02" y="-35.56" rot="R90"/>
 <instance part="R28" gate="G$1" x="-144.78" y="20.32"/>
 <instance part="CON2" gate="G$1" x="114.3" y="-106.68"/>
 <instance part="CON3" gate="G$1" x="99.06" y="-25.4"/>
-<instance part="P+15" gate="G$1" x="-251.46" y="-43.18" rot="R270"/>
-<instance part="GND18" gate="1" x="-248.92" y="-68.58" rot="R90"/>
+<instance part="P+15" gate="G$1" x="-223.52" y="-20.32" rot="R270"/>
+<instance part="GND18" gate="1" x="-220.98" y="-45.72" rot="R90"/>
 <instance part="T10" gate="G$1" x="264.16" y="-15.24"/>
 <instance part="R27" gate="G$1" x="266.7" y="-30.48" rot="R90"/>
 <instance part="GND19" gate="1" x="266.7" y="-40.64"/>
@@ -1598,9 +1698,9 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="C10" gate="G$1" x="-45.72" y="-2.54" rot="R270"/>
 <instance part="C11" gate="G$1" x="-45.72" y="-7.62" rot="R270"/>
 <instance part="GND27" gate="1" x="-55.88" y="-5.08" rot="R270"/>
-<instance part="ANT1" gate="G$1" x="-271.78" y="-43.18"/>
-<instance part="ANT2" gate="G$1" x="-271.78" y="-55.88"/>
-<instance part="ANT3" gate="G$1" x="-271.78" y="-68.58"/>
+<instance part="ANT1" gate="G$1" x="-243.84" y="-20.32"/>
+<instance part="ANT2" gate="G$1" x="-243.84" y="-33.02"/>
+<instance part="ANT3" gate="G$1" x="-243.84" y="-45.72"/>
 <instance part="H1" gate="G$1" x="91.44" y="129.54"/>
 <instance part="H2" gate="G$1" x="96.52" y="129.54"/>
 <instance part="T13" gate="G$1" x="297.18" y="81.28"/>
@@ -1616,7 +1716,6 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="R40" gate="G$1" x="381" y="96.52" rot="R90"/>
 <instance part="R41" gate="G$1" x="401.32" y="96.52" rot="R90"/>
 <instance part="GND28" gate="1" x="96.52" y="-106.68" rot="R270"/>
-<instance part="GND21" gate="1" x="-165.1" y="-48.26"/>
 <instance part="GND20" gate="1" x="96.52" y="-114.3" rot="R270"/>
 <instance part="P+3" gate="1" x="78.74" y="-114.3" rot="R90"/>
 <instance part="U2" gate="G$1" x="-114.3" y="93.98"/>
@@ -1646,6 +1745,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <instance part="P+4" gate="1" x="-71.12" y="7.62" rot="R270"/>
 <instance part="CON4" gate="G$1" x="38.1" y="-129.54" rot="R180"/>
 <instance part="P+16" gate="G$1" x="53.34" y="-129.54" rot="R270"/>
+<instance part="LED10" gate="G$1" x="-132.08" y="-30.48"/>
+<instance part="P+20" gate="G$1" x="-132.08" y="-22.86"/>
+<instance part="R3" gate="G$1" x="-139.7" y="-43.18" rot="R90"/>
+<instance part="R4" gate="G$1" x="-132.08" y="-43.18" rot="R90"/>
+<instance part="R5" gate="G$1" x="-124.46" y="-43.18" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1910,7 +2014,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 </segment>
 <segment>
 <pinref part="GND18" gate="1" pin="GND"/>
-<wire x1="-251.46" y1="-68.58" x2="-271.78" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-223.52" y1="-45.72" x2="-243.84" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="ANT3" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
@@ -2005,17 +2109,6 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <junction x="393.7" y="66.04"/>
 </segment>
 <segment>
-<pinref part="R25" gate="G$1" pin="1"/>
-<wire x1="-170.18" y1="-40.64" x2="-170.18" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="R26" gate="G$1" pin="1"/>
-<wire x1="-160.02" y1="-40.64" x2="-160.02" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-160.02" y1="-43.18" x2="-165.1" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="-43.18" x2="-170.18" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="-43.18" x2="-165.1" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="GND21" gate="1" pin="GND"/>
-<junction x="-165.1" y="-43.18"/>
-</segment>
-<segment>
 <pinref part="CON2" gate="G$1" pin="9"/>
 <wire x1="101.6" y1="-114.3" x2="99.06" y2="-114.3" width="0.1524" layer="91"/>
 <pinref part="GND20" gate="1" pin="GND"/>
@@ -2086,7 +2179,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <net name="+VCHG" class="0">
 <segment>
 <pinref part="P+15" gate="G$1" pin="+VCHG"/>
-<wire x1="-251.46" y1="-43.18" x2="-271.78" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-223.52" y1="-20.32" x2="-243.84" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="ANT1" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
@@ -2141,28 +2234,23 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <label x="-45.72" y="88.9" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="MOSI" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB5(PCINT13/MOSI)"/>
 <wire x1="-33.02" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="CON1" gate="G$1" pin="MOSI"/>
+<label x="-45.72" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB6(PCINT14/MISO)"/>
-<wire x1="-33.02" y1="15.24" x2="-76.2" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="CON1" gate="G$1" pin="MISO"/>
-</segment>
-</net>
-<net name="N$5" class="0">
+<net name="SCK" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB7(PCINT15/SCK)"/>
 <wire x1="-33.02" y1="12.7" x2="-76.2" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="CON1" gate="G$1" pin="SCK"/>
+<label x="-45.72" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="RESET" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="!RESET"/>
 <wire x1="-33.02" y1="10.16" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
@@ -2171,6 +2259,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="-63.5" y1="10.16" x2="-63.5" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-63.5" y="10.16"/>
 <pinref part="CON1" gate="G$1" pin="!RESET"/>
+<label x="-45.72" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LIGHTSENSE" class="0">
@@ -2236,8 +2325,8 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <junction x="81.28" y="-22.86"/>
 </segment>
 <segment>
-<wire x1="-251.46" y1="-55.88" x2="-271.78" y2="-55.88" width="0.1524" layer="91"/>
-<label x="-251.46" y="-55.88" size="1.778" layer="91" xref="yes"/>
+<wire x1="-223.52" y1="-33.02" x2="-243.84" y2="-33.02" width="0.1524" layer="91"/>
+<label x="-223.52" y="-33.02" size="1.778" layer="91" xref="yes"/>
 <pinref part="ANT2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
@@ -2480,20 +2569,6 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <label x="83.82" y="-93.98" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="LED8" gate="G$1" pin="C"/>
-<pinref part="R25" gate="G$1" pin="2"/>
-<wire x1="-170.18" y1="-30.48" x2="-170.18" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="LED9" gate="G$1" pin="C"/>
-<pinref part="R26" gate="G$1" pin="2"/>
-<wire x1="-160.02" y1="-30.48" x2="-160.02" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="LED1" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB2(AIN0/INT2/PCINT10)"/>
@@ -2501,10 +2576,10 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <label x="48.26" y="10.16" size="1.778" layer="91" xref="yes"/>
 </segment>
 <segment>
-<pinref part="LED8" gate="G$1" pin="A"/>
-<wire x1="-170.18" y1="-20.32" x2="-170.18" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-170.18" y1="-17.78" x2="-185.42" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-185.42" y="-17.78" size="1.778" layer="91" rot="R180" xref="yes"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-132.08" y1="-48.26" x2="-132.08" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="-53.34" x2="-109.22" y2="-53.34" width="0.1524" layer="91"/>
+<label x="-109.22" y="-53.34" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="LED2" class="0">
@@ -2514,10 +2589,10 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <label x="66.04" y="7.62" size="1.778" layer="91" xref="yes"/>
 </segment>
 <segment>
-<pinref part="LED9" gate="G$1" pin="A"/>
-<wire x1="-160.02" y1="-20.32" x2="-160.02" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-160.02" y1="-15.24" x2="-175.26" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-175.26" y="-15.24" size="1.778" layer="91" rot="R180" xref="yes"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="-124.46" y1="-48.26" x2="-124.46" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-124.46" y1="-50.8" x2="-119.38" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-119.38" y="-50.8" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -2879,6 +2954,11 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <pinref part="P+13" gate="G$1" pin="+VRAW"/>
 <pinref part="U$1" gate="G$1" pin="VM"/>
 </segment>
+<segment>
+<pinref part="LED10" gate="G$1" pin="COMMONANODE"/>
+<pinref part="P+20" gate="G$1" pin="+VRAW"/>
+<wire x1="-132.08" y1="-22.86" x2="-132.08" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -2909,6 +2989,41 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <wire x1="66.04" y1="-109.22" x2="66.04" y2="-132.08" width="0.1524" layer="91"/>
 <pinref part="CON4" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="-132.08" x2="43.18" y2="-132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="LED10" gate="G$1" pin="REDCATHODE"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-139.7" y1="-38.1" x2="-139.7" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="LED10" gate="G$1" pin="BLUECATHODE"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-132.08" y1="-38.1" x2="-132.08" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="LED10" gate="G$1" pin="GREENCATHODE"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="-124.46" y1="-38.1" x2="-124.46" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-139.7" y1="-48.26" x2="-139.7" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="-55.88" x2="-119.38" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-119.38" y="-55.88" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB6(PCINT14/MISO)"/>
+<wire x1="-33.02" y1="15.24" x2="-76.2" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="CON1" gate="G$1" pin="MISO"/>
+<label x="-45.72" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
