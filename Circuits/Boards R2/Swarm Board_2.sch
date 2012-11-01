@@ -1540,9 +1540,9 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="R27" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="GND19" library="Supply" deviceset="GND" device=""/>
 <part name="P+17" library="Supply" deviceset="+3V" device=""/>
-<part name="R33" library="Passive" deviceset="RES" device="0603"/>
-<part name="R34" library="Passive" deviceset="RES" device="0603"/>
-<part name="R35" library="Passive" deviceset="RES" device="0603"/>
+<part name="R33" library="Passive" deviceset="RES" device="0603" value="20k"/>
+<part name="R34" library="Passive" deviceset="RES" device="0603" value="20k"/>
+<part name="R35" library="Passive" deviceset="RES" device="0603" value="20k"/>
 <part name="GND23" library="Supply" deviceset="GND" device=""/>
 <part name="GND24" library="Supply" deviceset="GND" device=""/>
 <part name="GND25" library="Supply" deviceset="GND" device=""/>
