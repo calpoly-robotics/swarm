@@ -922,6 +922,22 @@ Manufacturer Part Number: CLVBA-FKA-CAEDH8BBB7A363</description>
 <wire x1="5" y1="-5" x2="-5" y2="-5" width="0.127" layer="51"/>
 <wire x1="-5" y1="-5" x2="-5" y2="5" width="0.127" layer="51"/>
 </package>
+<package name="4PINHEADER_.100&quot;">
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="3" x="2.54" y="0" drill="0.8"/>
+<wire x1="-3.81" y1="1.27" x2="6.35" y2="1.27" width="0.127" layer="51"/>
+<wire x1="6.35" y1="1.27" x2="6.35" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="6.35" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="1.27" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="1.27" x2="6.35" y2="1.27" width="0.127" layer="21"/>
+<wire x1="6.35" y1="1.27" x2="6.35" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-1.27" x2="6.35" y2="-1.27" width="0.127" layer="21"/>
+<text x="-3.81" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<pad name="4" x="5.08" y="0" drill="0.8"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ISP">
@@ -974,6 +990,18 @@ Manufacturer Part Number: CLVBA-FKA-CAEDH8BBB7A363</description>
 <wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
 <text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
 <text x="0" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="HEADER_1X4">
+<pin name="1" x="-5.08" y="2.54" length="middle"/>
+<pin name="2" x="-5.08" y="0" length="middle"/>
+<pin name="3" x="-5.08" y="-2.54" length="middle"/>
+<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="0" y2="5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="4" x="-5.08" y="-5.08" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1054,6 +1082,24 @@ Manufacturer Part Number: ED700/2</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HEADER_4X1" prefix="CON">
+<gates>
+<gate name="G$1" symbol="HEADER_1X4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="4PINHEADER_.100&quot;">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1262,6 +1308,9 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <part name="P+1" library="Supply" deviceset="+5V" device=""/>
 <part name="C2" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
 <part name="C7" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="CON13" library="Mechanical" deviceset="HEADER_4X1" device=""/>
+<part name="GND11" library="Supply" deviceset="GND" device=""/>
+<part name="+3V8" library="Supply" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1360,6 +1409,9 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <instance part="P+1" gate="1" x="-218.44" y="-15.24"/>
 <instance part="C2" gate="G$1" x="228.6" y="71.12"/>
 <instance part="C7" gate="G$1" x="236.22" y="71.12"/>
+<instance part="CON13" gate="G$1" x="99.06" y="0"/>
+<instance part="GND11" gate="1" x="91.44" y="-10.16"/>
+<instance part="+3V8" gate="G$1" x="91.44" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -1500,6 +1552,12 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <wire x1="-25.4" y1="96.52" x2="-20.32" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="96.52" x2="-20.32" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CON13" gate="G$1" pin="4"/>
+<wire x1="93.98" y1="-5.08" x2="91.44" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="-5.08" x2="91.44" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1953,6 +2011,12 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <wire x1="-76.2" y1="7.62" x2="-71.12" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="CON13" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="2.54" x2="91.44" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="2.54" x2="91.44" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="+3V8" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="SECTION2" class="0">
 <segment>
@@ -2191,15 +2255,15 @@ Manufacturer Part Number: NCP1117DT33G</description>
 <net name="SCL" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PC0(PCINT16/SCL)"/>
-<wire x1="30.48" y1="0" x2="33.02" y2="0" width="0.1524" layer="91"/>
-<label x="33.02" y="0" size="1.778" layer="91" xref="yes"/>
+<wire x1="30.48" y1="0" x2="93.98" y2="0" width="0.1524" layer="91"/>
+<pinref part="CON13" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PC1(PCINT17/SDA)"/>
-<wire x1="30.48" y1="-2.54" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
-<label x="48.26" y="-2.54" size="1.778" layer="91" xref="yes"/>
+<wire x1="30.48" y1="-2.54" x2="93.98" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="CON13" gate="G$1" pin="3"/>
 </segment>
 </net>
 </nets>
