@@ -4,7 +4,9 @@ void shortInit() {
    sbi(DDRA, FRONT_PIN);
    sbi(DDRA, LEFT_PIN);
    sbi(DDRA, RIGHT_PIN);
-   sbi(MCUCR, 4);
+   cbi(PORTA, FRONT_PIN);
+   cbi(PORTA, LEFT_PIN);
+   cbi(PORTA, RIGHT_PIN);
 }
 
 void shortOn() {

@@ -3,7 +3,7 @@
 
 #define LIGHT_PIN 5
 
-/* Double check on input as 0
+/* Initialize light sensor as input.
  */
 void lightInit();
 

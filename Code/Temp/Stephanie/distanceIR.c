@@ -2,6 +2,8 @@
 
 void distanceInit() {
    sbi(DDRA, DIST_PIN);
+   
+   cbi(PORTA, DIST_PIN);
 }
 
 void distanceOn() {

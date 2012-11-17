@@ -2,8 +2,9 @@
 #include "sense.h"
 
 #define CHARGER_PIN 0
+#define DETECT_PIN 1 
+#define STATUS_PIN 0
 
-// WHAT IS PROPER PULLUP CONFIG???
 void chargerInit();
 
 /* TODO
