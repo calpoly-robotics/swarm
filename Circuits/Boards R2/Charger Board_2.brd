@@ -171,6 +171,35 @@
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;VALUE</text>
 </package>
+<package name="SOIC16R">
+<description>&lt;b&gt;16-Lead SOIC (R) Package&lt;/b&gt;&lt;p&gt;
+Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</description>
+<wire x1="5.14" y1="-3.7" x2="-5.14" y2="-3.7" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="-3.7" x2="-5.14" y2="-2.775" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="-2.775" x2="-5.14" y2="3.7" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="3.7" x2="5.14" y2="3.7" width="0.2032" layer="21"/>
+<wire x1="5.14" y1="3.7" x2="5.14" y2="-2.775" width="0.2032" layer="21"/>
+<wire x1="5.14" y1="-2.775" x2="5.14" y2="-3.7" width="0.2032" layer="21"/>
+<smd name="2" x="-3.175" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="13" x="-0.635" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-4.445" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="-1.905" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="-0.635" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="14" x="-1.905" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="12" x="0.635" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="11" x="1.905" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="1.905" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="9" x="4.445" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="0.635" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="3.175" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="10" x="3.175" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="4.445" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="15" x="-3.175" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="16" x="-4.445" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<text x="-5.715" y="-3.175" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="-4.445" y="-0.635" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-4.191" y="-2.667" radius="0.40160625" width="0.127" layer="21"/>
+</package>
 </packages>
 </library>
 <library name="Passive">
@@ -784,6 +813,8 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="176432" x="-130.81" y="-17.78" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C14" library="Passive" package="0603" value=".1uf" x="-138.43" y="-21.59"/>
+<element name="U4" library="DigitalIC" package="SOIC16R" value="MX25L25735E" x="-132.08" y="-30.48"/>
+<element name="C15" library="Passive" package="0603" value=".1uf" x="-142.24" y="-34.29"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -876,6 +907,9 @@ design rules under a new name.</description>
 <contactref element="S1" pad="1"/>
 <contactref element="S1" pad="2"/>
 <contactref element="C14" pad="2"/>
+<contactref element="U4" pad="10"/>
+<contactref element="C15" pad="2"/>
+<wire x1="-137.68" y1="-21.59" x2="-141.49" y2="-34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="-134.0612" y1="-15.5194" x2="-137.68" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-127.5588" y1="-15.5194" x2="-134.0612" y2="-15.5194" width="0" layer="19" extent="1-1"/>
 <wire x1="-122.44" y1="-21.59" x2="-127.5588" y2="-15.5194" width="0" layer="19" extent="1-1"/>
@@ -883,6 +917,7 @@ design rules under a new name.</description>
 <wire x1="-114.82" y1="-21.59" x2="-120.13" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-111.01" y1="-21.59" x2="-114.82" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-106.95" y1="-20.32" x2="-111.01" y2="-21.59" width="0" layer="19" extent="1-1"/>
+<wire x1="-128.905" y1="-25.68" x2="-122.44" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-102.87" y1="-12.7" x2="-106.95" y2="-20.32" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-20.32" x2="-102.87" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-76.72" y1="-12.7" x2="-90.17" y2="-20.32" width="0" layer="19" extent="1-1"/>
@@ -1260,8 +1295,12 @@ design rules under a new name.</description>
 <contactref element="U3" pad="V1"/>
 <contactref element="U3" pad="H1"/>
 <contactref element="U3" pad="B1A"/>
-<wire x1="-102.87" y1="-7.62" x2="-95.25" y2="-20.32" width="0" layer="19" extent="1-1"/>
+<contactref element="U4" pad="2"/>
+<contactref element="C15" pad="1"/>
+<wire x1="-135.255" y1="-35.255" x2="-142.99" y2="-34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="-102.87" y1="-7.62" x2="-135.255" y2="-35.255" width="0" layer="19" extent="1-1"/>
 <wire x1="-95.885" y1="2.54" x2="-102.87" y2="-7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="-95.25" y1="-20.32" x2="-102.87" y2="-7.62" width="0" layer="19" extent="1-1"/>
 <wire x1="5.08" y1="31.242" x2="-95.885" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="12.7" y1="31.75" x2="13.97" y2="27.94" width="0" layer="19" extent="16-16"/>
 </signal>
@@ -1456,7 +1495,14 @@ design rules under a new name.</description>
 <signal name="SCK">
 <contactref element="CON1" pad="5"/>
 <contactref element="U1" pad="3"/>
-<wire x1="10.16" y1="29.21" x2="18.38" y2="27.8" width="0" layer="19" extent="1-1"/>
+<contactref element="U4" pad="16"/>
+<wire x1="10.16" y1="29.21" x2="-136.525" y2="-25.68" width="0" layer="19" extent="1-1"/>
+<wire x1="18.38" y1="27.8" x2="10.16" y2="29.21" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="CS">
+<contactref element="U4" pad="7"/>
+<contactref element="U1" pad="30"/>
+<wire x1="29.88" y1="27" x2="-128.905" y2="-35.255" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

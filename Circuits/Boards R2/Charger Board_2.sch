@@ -165,6 +165,35 @@
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;VALUE</text>
 </package>
+<package name="SOIC16R">
+<description>&lt;b&gt;16-Lead SOIC (R) Package&lt;/b&gt;&lt;p&gt;
+Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</description>
+<wire x1="5.14" y1="-3.7" x2="-5.14" y2="-3.7" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="-3.7" x2="-5.14" y2="-2.775" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="-2.775" x2="-5.14" y2="3.7" width="0.2032" layer="21"/>
+<wire x1="-5.14" y1="3.7" x2="5.14" y2="3.7" width="0.2032" layer="21"/>
+<wire x1="5.14" y1="3.7" x2="5.14" y2="-2.775" width="0.2032" layer="21"/>
+<wire x1="5.14" y1="-2.775" x2="5.14" y2="-3.7" width="0.2032" layer="21"/>
+<smd name="2" x="-3.175" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="13" x="-0.635" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-4.445" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="-1.905" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="-0.635" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="14" x="-1.905" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="12" x="0.635" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="11" x="1.905" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="1.905" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="9" x="4.445" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="0.635" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="3.175" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="10" x="3.175" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="4.445" y="-4.775" dx="0.6" dy="2.2" layer="1"/>
+<smd name="15" x="-3.175" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<smd name="16" x="-4.445" y="4.8" dx="0.6" dy="2.2" layer="1"/>
+<text x="-5.715" y="-3.175" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="-4.445" y="-0.635" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-4.191" y="-2.667" radius="0.40160625" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGA324P">
@@ -213,6 +242,22 @@
 <wire x1="-27.94" y1="-45.72" x2="-27.94" y2="43.18" width="0.254" layer="94"/>
 <text x="-27.94" y="45.72" size="1.778" layer="95">&gt;NAME</text>
 <text x="-27.94" y="-50.8" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="MX25L25735E">
+<pin name="HOLD#/SIO3" x="-17.78" y="-2.54" length="middle"/>
+<pin name="VCC" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="CS#" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="SO/SIO1" x="-17.78" y="2.54" length="middle"/>
+<pin name="SCLK" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="SI/SIO0" x="-17.78" y="5.08" length="middle"/>
+<pin name="GND" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="WP#/SIO2" x="-17.78" y="0" length="middle"/>
+<wire x1="-12.7" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-5.08" x2="-12.7" y2="7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="10.16" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -264,6 +309,30 @@ Manufacturer Part Number: ATMEGA324P-20AU</description>
 <connect gate="G$1" pin="VCC" pad="5 17 38"/>
 <connect gate="G$1" pin="XTAL1" pad="8"/>
 <connect gate="G$1" pin="XTAL2" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MX25L25735E" prefix="U">
+<description>Digikey Part Number: 1092-1000-ND
+Manufacturer Part Number: MX25L25735EMI-12G</description>
+<gates>
+<gate name="G$1" symbol="MX25L25735E" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC16R">
+<connects>
+<connect gate="G$1" pin="CS#" pad="7"/>
+<connect gate="G$1" pin="GND" pad="10"/>
+<connect gate="G$1" pin="HOLD#/SIO3" pad="1"/>
+<connect gate="G$1" pin="SCLK" pad="16"/>
+<connect gate="G$1" pin="SI/SIO0" pad="15"/>
+<connect gate="G$1" pin="SO/SIO1" pad="8"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
+<connect gate="G$1" pin="WP#/SIO2" pad="9"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1582,6 +1651,10 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="GND16" library="Supply" deviceset="GND" device=""/>
 <part name="C14" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="U4" library="DigitalIC" deviceset="MX25L25735E" device=""/>
+<part name="C15" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="+3V1" library="Supply" deviceset="+3V3" device=""/>
+<part name="GND17" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1696,6 +1769,10 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="S1" gate="1" x="-119.38" y="0" rot="R270"/>
 <instance part="GND16" gate="1" x="-106.68" y="-2.54" rot="R90"/>
 <instance part="C14" gate="G$1" x="-119.38" y="-7.62" rot="R90"/>
+<instance part="U4" gate="G$1" x="-127" y="68.58"/>
+<instance part="C15" gate="G$1" x="-104.14" y="73.66"/>
+<instance part="+3V1" gate="G$1" x="-104.14" y="83.82"/>
+<instance part="GND17" gate="1" x="-91.44" y="71.12" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1887,6 +1964,14 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="-111.76" y1="-2.54" x2="-111.76" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-111.76" y1="-7.62" x2="-116.84" y2="-7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="GND"/>
+<pinref part="C15" gate="G$1" pin="2"/>
+<wire x1="-111.76" y1="71.12" x2="-104.14" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="71.12" x2="-93.98" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-104.14" y="71.12"/>
+<pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -2353,6 +2438,16 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 <wire x1="114.3" y1="101.6" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="VCC"/>
+<wire x1="-111.76" y1="73.66" x2="-109.22" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="73.66" x2="-109.22" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="-109.22" y1="78.74" x2="-104.14" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="78.74" x2="-104.14" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<junction x="-104.14" y="78.74"/>
+</segment>
 </net>
 <net name="SECTION2" class="0">
 <segment>
@@ -2681,6 +2776,23 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="U1" gate="G$1" pin="PB7(PCINT15/SCK)"/>
 <wire x1="-33.02" y1="12.7" x2="-40.64" y2="12.7" width="0.1524" layer="91"/>
 <label x="-40.64" y="12.7" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="SCLK"/>
+<wire x1="-111.76" y1="66.04" x2="-109.22" y2="66.04" width="0.1524" layer="91"/>
+<label x="-109.22" y="66.04" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="CS" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="CS#"/>
+<wire x1="-111.76" y1="68.58" x2="-99.06" y2="68.58" width="0.1524" layer="91"/>
+<label x="-99.06" y="68.58" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PA7(ADC7/PCINT7)"/>
+<wire x1="30.48" y1="20.32" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
+<label x="43.18" y="20.32" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 </nets>
