@@ -455,24 +455,6 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 <text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.3" y="-1.6" size="0.4064" layer="25">&gt;VALUE</text>
 </package>
-<package name="PIEZOBUZZER_HORIZONTAL">
-<smd name="P$1" x="0" y="2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="-2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
-<wire x1="3.81" y1="6.35" x2="10.16" y2="6.35" width="0.127" layer="51"/>
-<wire x1="10.16" y1="6.35" x2="10.16" y2="-6.35" width="0.127" layer="51"/>
-<wire x1="10.16" y1="-6.35" x2="3.81" y2="-6.35" width="0.127" layer="51"/>
-<wire x1="3.81" y1="-6.35" x2="3.81" y2="6.35" width="0.127" layer="51"/>
-<text x="-2.54" y="5.08" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-<package name="PIEZOBUZZER">
-<pad name="1" x="-2.54" y="0" drill="0.8"/>
-<pad name="2" x="2.54" y="0" drill="0.8"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
-<text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 <package name="SOT23">
 <smd name="3" x="0" y="-1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
 <smd name="2" x="-0.95" y="1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
@@ -551,6 +533,24 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 <wire x1="1.6" y1="-1.4" x2="1.6" y2="1.4" width="0.127" layer="21"/>
 <wire x1="1.6" y1="1.4" x2="-1.6" y2="1.4" width="0.127" layer="21"/>
 </package>
+<package name="PIEZOBUZZER">
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="2" x="2.54" y="0" drill="0.8"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
+<text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PIEZOBUZZER_HORIZONTAL">
+<smd name="P$1" x="0" y="2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
+<smd name="P$2" x="0" y="-2.54" dx="1.5875" dy="6.35" layer="1" rot="R90"/>
+<wire x1="3.81" y1="6.35" x2="10.16" y2="6.35" width="0.127" layer="51"/>
+<wire x1="10.16" y1="6.35" x2="10.16" y2="-6.35" width="0.127" layer="51"/>
+<wire x1="10.16" y1="-6.35" x2="3.81" y2="-6.35" width="0.127" layer="51"/>
+<wire x1="3.81" y1="-6.35" x2="3.81" y2="6.35" width="0.127" layer="51"/>
+<text x="-2.54" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -602,23 +602,6 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 <vertex x="-2.921" y="-2.413"/>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
-</symbol>
-<symbol name="BUZZER">
-<pin name="+" x="-5.08" y="2.54" length="middle"/>
-<pin name="-" x="-5.08" y="0" length="middle"/>
-<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="8.128" y1="4.064" x2="8.89" y2="3.302" width="0.254" layer="94"/>
-<wire x1="8.89" y1="3.302" x2="8.89" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="8.89" y1="-0.762" x2="8.128" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="8.89" y1="5.08" x2="10.16" y2="3.81" width="0.254" layer="94"/>
-<wire x1="10.16" y1="3.81" x2="10.16" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-1.27" x2="8.89" y2="-2.54" width="0.254" layer="94"/>
-<text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="NPN2N2222">
 <wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
@@ -775,6 +758,23 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 <text x="2.54" y="-6.35" size="1.27" layer="94" rot="R90">Blue</text>
 <text x="10.16" y="-7.62" size="1.27" layer="94" rot="R90">Green</text>
 </symbol>
+<symbol name="BUZZER">
+<pin name="+" x="-5.08" y="2.54" length="middle"/>
+<pin name="-" x="-5.08" y="0" length="middle"/>
+<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="8.128" y1="4.064" x2="8.89" y2="3.302" width="0.254" layer="94"/>
+<wire x1="8.89" y1="3.302" x2="8.89" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="8.89" y1="-0.762" x2="8.128" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="8.89" y1="5.08" x2="10.16" y2="3.81" width="0.254" layer="94"/>
+<wire x1="10.16" y1="3.81" x2="10.16" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-1.27" x2="8.89" y2="-2.54" width="0.254" layer="94"/>
+<text x="0" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP" prefix="C" uservalue="yes">
@@ -854,33 +854,6 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 <connects>
 <connect gate="G$1" pin="A" pad="1"/>
 <connect gate="G$1" pin="C" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="PIEZOBUZZER" prefix="B">
-<description>Digikey Part Number: 445-2525-1-ND
-Manufacturer Part Number: PS1240P02BT</description>
-<gates>
-<gate name="G$1" symbol="BUZZER" x="0" y="0"/>
-</gates>
-<devices>
-<device name="PTH" package="PIEZOBUZZER">
-<connects>
-<connect gate="G$1" pin="+" pad="1"/>
-<connect gate="G$1" pin="-" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="" package="PIEZOBUZZER_HORIZONTAL">
-<connects>
-<connect gate="G$1" pin="+" pad="P$1"/>
-<connect gate="G$1" pin="-" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -975,6 +948,33 @@ Manufacturer Part Number: CLVBA-FKA-CAEDH8BBB7A363</description>
 <connect gate="G$1" pin="COMMONANODE" pad="2"/>
 <connect gate="G$1" pin="GREENCATHODE" pad="4"/>
 <connect gate="G$1" pin="REDCATHODE" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PIEZOBUZZER" prefix="B">
+<description>Digikey Part Number: 445-2525-1-ND
+Manufacturer Part Number: PS1240P02BT</description>
+<gates>
+<gate name="G$1" symbol="BUZZER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PTH" package="PIEZOBUZZER">
+<connects>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="PIEZOBUZZER_HORIZONTAL">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1"/>
+<connect gate="G$1" pin="-" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1551,7 +1551,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="CON1" library="Mechanical" deviceset="ISP" device="(2X3)"/>
 <part name="GND5" library="Supply" deviceset="GND" device=""/>
-<part name="B1" library="Passive" deviceset="PIEZOBUZZER" device=""/>
 <part name="R8" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND6" library="Supply" deviceset="GND" device=""/>
 <part name="T1" library="Passive" deviceset="NPN2N2222" device=""/>
@@ -1659,6 +1658,9 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="+3V11" library="Supply" deviceset="+3V3" device=""/>
 <part name="R24" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="P+5" library="Supply" deviceset="+5V" device=""/>
+<part name="CON14" library="Mechanical" deviceset="HEADER_3X1" device=""/>
+<part name="CON15" library="Mechanical" deviceset="HEADER_3X1" device=""/>
+<part name="B1" library="Passive" deviceset="PIEZOBUZZER" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -1673,7 +1675,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="GND4" gate="1" x="-152.4" y="-27.94"/>
 <instance part="CON1" gate="G$1" x="-165.1" y="-15.24"/>
 <instance part="GND5" gate="1" x="147.32" y="-30.48"/>
-<instance part="B1" gate="G$1" x="-172.72" y="-53.34"/>
 <instance part="R8" gate="G$1" x="-185.42" y="-53.34" rot="R90"/>
 <instance part="GND6" gate="1" x="-185.42" y="-78.74"/>
 <instance part="T1" gate="G$1" x="-187.96" y="-68.58"/>
@@ -1781,6 +1782,9 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="+3V11" gate="G$1" x="-83.82" y="86.36"/>
 <instance part="R24" gate="G$1" x="-71.12" y="-68.58" rot="R90"/>
 <instance part="P+5" gate="1" x="-71.12" y="-58.42"/>
+<instance part="CON14" gate="G$1" x="88.9" y="25.4"/>
+<instance part="CON15" gate="G$1" x="195.58" y="104.14"/>
+<instance part="B1" gate="G$1" x="-172.72" y="-53.34"/>
 </instances>
 <busses>
 </busses>
@@ -2028,7 +2032,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="B1" gate="G$1" pin="-"/>
 <wire x1="-177.8" y1="-53.34" x2="-177.8" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-177.8" y1="-60.96" x2="-185.42" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -2036,6 +2039,7 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <junction x="-185.42" y="-60.96"/>
 <wire x1="-185.42" y1="-60.96" x2="-185.42" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="C"/>
+<pinref part="B1" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -2418,12 +2422,12 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="-185.42" y1="-43.18" x2="-185.42" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="B1" gate="G$1" pin="+"/>
 <wire x1="-185.42" y1="-45.72" x2="-185.42" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-185.42" y1="-45.72" x2="-177.8" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="-177.8" y1="-45.72" x2="-177.8" y2="-50.8" width="0.1524" layer="91"/>
 <junction x="-185.42" y="-45.72"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
+<pinref part="B1" gate="G$1" pin="+"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
