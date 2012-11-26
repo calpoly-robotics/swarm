@@ -1657,6 +1657,8 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="GND17" library="Supply" deviceset="GND" device=""/>
 <part name="R23" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="+3V11" library="Supply" deviceset="+3V3" device=""/>
+<part name="R24" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="P+5" library="Supply" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1777,6 +1779,8 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="GND17" gate="1" x="-91.44" y="71.12" rot="R90"/>
 <instance part="R23" gate="G$1" x="-83.82" y="76.2" rot="R270"/>
 <instance part="+3V11" gate="G$1" x="-83.82" y="86.36"/>
+<instance part="R24" gate="G$1" x="-71.12" y="-68.58" rot="R90"/>
+<instance part="P+5" gate="1" x="-71.12" y="-58.42"/>
 </instances>
 <busses>
 </busses>
@@ -2237,6 +2241,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <junction x="251.46" y="78.74"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="-63.5" x2="-71.12" y2="-60.96" width="0.1524" layer="91"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="CURRENTSENSE" class="0">
 <segment>
@@ -2264,9 +2273,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="CHARGER" class="0">
 <segment>
-<wire x1="-63.5" y1="-76.2" x2="-76.2" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-76.2" x2="-71.12" y2="-76.2" width="0.1524" layer="91"/>
 <label x="-76.2" y="-76.2" size="1.778" layer="91" rot="R180" xref="yes"/>
 <pinref part="T3" gate="G$1" pin="G"/>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="-76.2" x2="-76.2" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="-73.66" x2="-71.12" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="-71.12" y="-76.2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB0(XCK0/T0/PCINT8)"/>
