@@ -1655,6 +1655,8 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="C15" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
 <part name="+3V1" library="Supply" deviceset="+3V3" device=""/>
 <part name="GND17" library="Supply" deviceset="GND" device=""/>
+<part name="R23" library="Passive" deviceset="RES" device="0603" value="10k"/>
+<part name="+3V11" library="Supply" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1773,6 +1775,8 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="C15" gate="G$1" x="-104.14" y="73.66"/>
 <instance part="+3V1" gate="G$1" x="-104.14" y="83.82"/>
 <instance part="GND17" gate="1" x="-91.44" y="71.12" rot="R90"/>
+<instance part="R23" gate="G$1" x="-83.82" y="76.2" rot="R270"/>
+<instance part="+3V11" gate="G$1" x="-83.82" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -2101,6 +2105,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="43.18" x2="185.42" y2="43.18" width="0.1524" layer="91"/>
 <label x="185.42" y="43.18" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PA4(ADC4/PCINT4)"/>
+<wire x1="30.48" y1="27.94" x2="58.42" y2="27.94" width="0.1524" layer="91"/>
+<label x="58.42" y="27.94" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -2448,6 +2457,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <junction x="-104.14" y="78.74"/>
 </segment>
+<segment>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="-83.82" y1="81.28" x2="-83.82" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="+3V11" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="SECTION2" class="0">
 <segment>
@@ -2753,6 +2767,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-33.02" y1="17.78" x2="-40.64" y2="17.78" width="0.1524" layer="91"/>
 <label x="-40.64" y="17.78" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="SI/SIO0"/>
+<wire x1="-144.78" y1="73.66" x2="-149.86" y2="73.66" width="0.1524" layer="91"/>
+<label x="-149.86" y="73.66" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
@@ -2764,6 +2783,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="U1" gate="G$1" pin="PB6(PCINT14/MISO)"/>
 <wire x1="-33.02" y1="15.24" x2="-50.8" y2="15.24" width="0.1524" layer="91"/>
 <label x="-50.8" y="15.24" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="SO/SIO1"/>
+<wire x1="-144.78" y1="71.12" x2="-160.02" y2="71.12" width="0.1524" layer="91"/>
+<label x="-160.02" y="71.12" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -2786,13 +2810,41 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <net name="CS" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="CS#"/>
-<wire x1="-111.76" y1="68.58" x2="-99.06" y2="68.58" width="0.1524" layer="91"/>
-<label x="-99.06" y="68.58" size="1.778" layer="91" xref="yes"/>
+<wire x1="-111.76" y1="68.58" x2="-83.82" y2="68.58" width="0.1524" layer="91"/>
+<label x="-78.74" y="68.58" size="1.778" layer="91" xref="yes"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="-83.82" y1="68.58" x2="-78.74" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="71.12" x2="-83.82" y2="68.58" width="0.1524" layer="91"/>
+<junction x="-83.82" y="68.58"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PA7(ADC7/PCINT7)"/>
-<wire x1="30.48" y1="20.32" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
-<label x="43.18" y="20.32" size="1.778" layer="91" xref="yes"/>
+<wire x1="30.48" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
+<label x="45.72" y="20.32" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="WP" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="WP#/SIO2"/>
+<wire x1="-144.78" y1="68.58" x2="-149.86" y2="68.58" width="0.1524" layer="91"/>
+<label x="-149.86" y="68.58" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PA5(ADC5/PCINT5)"/>
+<wire x1="30.48" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<label x="45.72" y="25.4" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="HOLD" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="HOLD#/SIO3"/>
+<wire x1="-144.78" y1="66.04" x2="-160.02" y2="66.04" width="0.1524" layer="91"/>
+<label x="-160.02" y="66.04" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PA6(ADC6/PCINT6)"/>
+<wire x1="30.48" y1="22.86" x2="35.56" y2="22.86" width="0.1524" layer="91"/>
+<label x="35.56" y="22.86" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 </nets>
