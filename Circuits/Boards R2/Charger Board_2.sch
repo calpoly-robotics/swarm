@@ -1661,6 +1661,12 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="CON14" library="Mechanical" deviceset="HEADER_3X1" device=""/>
 <part name="CON15" library="Mechanical" deviceset="HEADER_3X1" device=""/>
 <part name="B1" library="Passive" deviceset="PIEZOBUZZER" device="PTH"/>
+<part name="T4" library="Passive" deviceset="NPN2N2222" device=""/>
+<part name="T5" library="Passive" deviceset="NPN2N2222" device=""/>
+<part name="T6" library="Passive" deviceset="NPN2N2222" device=""/>
+<part name="GND18" library="Supply" deviceset="GND" device=""/>
+<part name="GND19" library="Supply" deviceset="GND" device=""/>
+<part name="GND20" library="Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1785,6 +1791,12 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <instance part="CON14" gate="G$1" x="88.9" y="25.4"/>
 <instance part="CON15" gate="G$1" x="195.58" y="104.14"/>
 <instance part="B1" gate="G$1" x="-172.72" y="-53.34"/>
+<instance part="T4" gate="G$1" x="-160.02" y="-144.78" rot="MR0"/>
+<instance part="T5" gate="G$1" x="-152.4" y="-160.02" rot="MR0"/>
+<instance part="T6" gate="G$1" x="-144.78" y="-175.26" rot="MR0"/>
+<instance part="GND18" gate="1" x="-162.56" y="-154.94"/>
+<instance part="GND19" gate="1" x="-154.94" y="-170.18"/>
+<instance part="GND20" gate="1" x="-147.32" y="-185.42"/>
 </instances>
 <busses>
 </busses>
@@ -1985,6 +1997,21 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <junction x="-104.14" y="71.12"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="T4" gate="G$1" pin="E"/>
+<pinref part="GND18" gate="1" pin="GND"/>
+<wire x1="-162.56" y1="-152.4" x2="-162.56" y2="-149.86" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="T5" gate="G$1" pin="E"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="-154.94" y1="-167.64" x2="-154.94" y2="-165.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="T6" gate="G$1" pin="E"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+<wire x1="-147.32" y1="-182.88" x2="-147.32" y2="-180.34" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="RESET" class="0">
 <segment>
@@ -2139,6 +2166,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-142.24" y1="-119.38" x2="-119.38" y2="-119.38" width="0.1524" layer="91"/>
 <label x="-119.38" y="-119.38" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="T4" gate="G$1" pin="B"/>
+<wire x1="-157.48" y1="-144.78" x2="-149.86" y2="-144.78" width="0.1524" layer="91"/>
+<label x="-149.86" y="-144.78" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="LED2" class="0">
 <segment>
@@ -2151,6 +2183,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-134.62" y1="-114.3" x2="-134.62" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-134.62" y1="-116.84" x2="-129.54" y2="-116.84" width="0.1524" layer="91"/>
 <label x="-129.54" y="-116.84" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="T5" gate="G$1" pin="B"/>
+<wire x1="-149.86" y1="-160.02" x2="-142.24" y2="-160.02" width="0.1524" layer="91"/>
+<label x="-142.24" y="-160.02" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -2712,6 +2749,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="U1" gate="G$1" pin="PB3(AIN1/OC0A/PCINT11)"/>
 <wire x1="30.48" y1="7.62" x2="48.26" y2="7.62" width="0.1524" layer="91"/>
 <label x="48.26" y="7.62" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="T6" gate="G$1" pin="B"/>
+<wire x1="-142.24" y1="-175.26" x2="-134.62" y2="-175.26" width="0.1524" layer="91"/>
+<label x="-134.62" y="-175.26" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="SCL" class="0">
