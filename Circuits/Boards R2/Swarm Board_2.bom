@@ -1,0 +1,39 @@
+Partlist exported from C:/Users/Jeffrey/Desktop/Swarm SVN/Circuits/Boards R2/Swarm Board_2.sch at 12/9/2012 12:17:05 AM
+
+Assembly variant: 
+
+Qty Value          Device                Parts                                          
+1   1.5k           RES0603               R1                                             
+5   1k             RES0603               R2, R8, R16, R23, R28                          
+5   1uf            CAP0603               C1, C3, C4, C8, C9                             
+1   2k             RES0603               R32                                            
+6   4.7k           RES0603               R36, R37, R38, R39, R40, R41                   
+2   4.7uf          CAP0603               C12, C13                                       
+1   7k             RES0603               R29                                            
+1   10Mhz          NX5032GA-10.000000MHZ XTAL1                                          
+10  10k            RES0603               R7, R17, R18, R19, R20, R21, R24, R27, R31, R42
+3   10uf           CAP0805               C2, C6, C7                                     
+2   12pf           CAP0603               C10, C11                                       
+1   15             RES0603               R22                                            
+1   18k            RES0603               R30                                            
+4   20k            RES0603               R9, R33, R34, R35                              
+2   70             RES0603               R4, R5                                         
+6   100            RES0603               R10, R11, R12, R13, R14, R15                   
+1   180            RES0603               R3                                             
+1   500k-20k       CDSPHOTORESISTOR      PR1                                            
+3   ANTENNA        ANTENNA               ANT1, ANT2, ANT3                               
+1   ATMEGA324P     ATMEGA324P            U1                                             
+1   FDFMA2P857     FDFMA2P857            F1                                             
+2   HEADER_3X1     HEADER_3X1            CON4, CON5                                     
+7   IR             LED5MMRA              LED2, LED3, LED4, LED5, LED6, LED7, LED13      
+1   ISP(2X3)       ISP(2X3)              CON1                                           
+1   MAIN_CONNECTOR MAIN_CONNECTOR        CON2                                           
+1   MCP1700-3002E  MCP1700-3002E         V1                                             
+1   MCP73833       MCP73833              U2                                             
+2   MOUNTINGHOLE   MOUNTINGHOLE          H1, H2                                         
+10  NPN2N2222      NPN2N2222             T1, T2, T3, T11, T13, T14, T15, T16, T17, T18  
+1   PIEZOBUZZERPTH PIEZOBUZZERPTH        B1                                             
+1   SMD_RGB        SMD_RGB               LED10                                          
+1   TB6612         TB6612                U$1                                            
+7   TEFT4300       TEFT4300              T4, T5, T6, T7, T8, T9, T10                    
+1   red            LED0603               LED1                                           
