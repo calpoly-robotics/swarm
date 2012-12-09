@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1560,11 +1560,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="GND6" library="Supply" deviceset="GND" device=""/>
 <part name="T1" library="Passive" deviceset="NPN2N2222" device=""/>
 <part name="T2" library="Passive" deviceset="NPN2N2222" device=""/>
-<part name="R10" library="Passive" deviceset="RES" device="0603" value="18"/>
-<part name="R11" library="Passive" deviceset="RES" device="0603" value="18"/>
-<part name="R12" library="Passive" deviceset="RES" device="0603" value="18"/>
-<part name="R13" library="Passive" deviceset="RES" device="0603" value="18"/>
-<part name="R14" library="Passive" deviceset="RES" device="0603" value="18"/>
+<part name="R10" library="Passive" deviceset="RES" device="0603" value="15"/>
+<part name="R11" library="Passive" deviceset="RES" device="0603" value="15"/>
+<part name="R12" library="Passive" deviceset="RES" device="0603" value="15"/>
+<part name="R13" library="Passive" deviceset="RES" device="0603" value="15"/>
+<part name="R14" library="Passive" deviceset="RES" device="0603" value="15"/>
 <part name="R16" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="LED2" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="LED3" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
@@ -1670,7 +1670,7 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="GND21" library="Supply" deviceset="GND" device=""/>
 <part name="+3V12" library="Supply" deviceset="+3V3" device=""/>
 <part name="LED7" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
-<part name="R25" library="Passive" deviceset="RES" device="0603" value="18"/>
+<part name="R25" library="Passive" deviceset="RES" device="0603" value="15"/>
 <part name="H5" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 <part name="H6" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 <part name="H7" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>

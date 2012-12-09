@@ -867,7 +867,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="12.168" y="34.6" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="13.184" y="38.417" size="0.6096" layer="27" rot="R180"/>
 </element>
-<element name="R29" library="Passive" package="0603" value="7k" x="14.478" y="31.877" smashed="yes" rot="R180">
+<element name="R29" library="Passive" package="0603" value="7.5k" x="14.478" y="31.877" smashed="yes" rot="R180">
 <attribute name="NAME" x="15.448" y="32.15" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="15.548" y="33.147" size="0.4064" layer="27" rot="R180"/>
 </element>
@@ -926,7 +926,7 @@ design rules under a new name.</description>
 <element name="B1" library="Passive" package="PIEZOBUZZER" value="PIEZOBUZZERPTH" x="40.132" y="10.033"/>
 <element name="CON4" library="Mechanical" package="3PINHEADER_.100&quot;" value="HEADER_3X1" x="21.59" y="37.846" rot="R90"/>
 <element name="LED10" library="Passive" package="PLCC4" value="SMD_RGB" x="16.637" y="16.764" rot="R270"/>
-<element name="R3" library="Passive" package="0603" value="180" x="21.717" y="13.843" rot="R180"/>
+<element name="R3" library="Passive" package="0603" value="200" x="21.717" y="13.843" rot="R180"/>
 <element name="R4" library="Passive" package="0603" value="70" x="21.717" y="17.399" rot="R180"/>
 <element name="R5" library="Passive" package="0603" value="70" x="21.717" y="15.621" rot="R180"/>
 <element name="CON5" library="Mechanical" package="3PINHEADER_.100&quot;" value="HEADER_3X1" x="46.863" y="32.639" rot="R270"/>

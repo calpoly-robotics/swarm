@@ -1542,7 +1542,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="GND20" library="Supply" deviceset="GND" device=""/>
 <part name="P+3" library="Supply" deviceset="+3V" device=""/>
 <part name="U2" library="PowerIC" deviceset="MCP73833" device=""/>
-<part name="R29" library="Passive" deviceset="RES" device="0603" value="7k"/>
+<part name="R29" library="Passive" deviceset="RES" device="0603" value="7.5k"/>
 <part name="R30" library="Passive" deviceset="RES" device="0603" value="18k"/>
 <part name="R31" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R32" library="Passive" deviceset="RES" device="0603" value="2k"/>
@@ -1570,7 +1570,7 @@ Manufacturer Part Number: NPPN062AFCN-RC</description>
 <part name="P+16" library="Supply" deviceset="+VBAT" device=""/>
 <part name="LED10" library="Passive" deviceset="SMD_RGB" device=""/>
 <part name="P+20" library="Supply" deviceset="+VRAW" device=""/>
-<part name="R3" library="Passive" deviceset="RES" device="0603" value="180"/>
+<part name="R3" library="Passive" deviceset="RES" device="0603" value="200"/>
 <part name="R4" library="Passive" deviceset="RES" device="0603" value="70"/>
 <part name="R5" library="Passive" deviceset="RES" device="0603" value="70"/>
 <part name="CON5" library="Mechanical" deviceset="HEADER_3X1" device=""/>
