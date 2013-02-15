@@ -24,11 +24,19 @@ typedef uint16_t		u16; //!< Unsigned 16-bit integer, range: 0 to +65,535
 typedef int16_t		s16; //!< Signed 16-bit integer, range: -32,768 to +32,767
 typedef uint32_t		u32; //!< Unsigned 32-bit integer, range: 0 to +4,294,967,295
 
+typedef enum {
+	CURRENT_SENSE = 0, // current sensor on ADC0
+} ADC_PIN;
+
 //Bit manipulation macros
 #define sbi(a, b) ((a) |= 1 << (b))       //!< Sets bit b in variable a.
 #define cbi(a, b) ((a) &= ~(1 << (b)))    //!< Clears bit b in variable a.
 #define tbi(a, b) ((a) ^= 1 << (b))       //!< Toggles bit b in variable a.
 #define gbi(a, b) ((a) & (1 << (b)))      //!< Gets bit b in variable a (masks out everything else).
+
+// user-defined includes
+#include "Tasks/tasks.h"
+#include "Drivers/drivers.h"
 
 #endif //ifndef GLOBALS_H
 

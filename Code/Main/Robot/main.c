@@ -5,11 +5,15 @@ void init()
 {
 	uartInit();		// Initialize the UART
 	initClock();	// Connor's Clock init function
+	initADC();
 	initBattery();
 	initBehavior();
 	initBuzzer();
 	initIR();
 	initLED();
+	initLightSensor();
+	initMotor();
+	initDistanceSensor();
 }
 
 int main()
@@ -18,6 +22,15 @@ int main()
 	
 	u08 i = 0;		// Cycles through each task
 	u32 clock;
+
+	sei();
+
+	while (1)
+	{
+		uartPrint_u16(readDistanceSensor());
+		uartPrintString("\r\n");
+		_delay_ms(200);
+   }
 	
 	while (1)
 	{

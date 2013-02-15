@@ -18,15 +18,4 @@ void initLED()
 
 void runLED()
 {
-   tbi(PORTB, 6);
-   tbi(PORTB, 3);
-   tbi(PORTB, 2);
-   if (tasks[LED_TASK].interval == 1000)
-   {
-      tasks[LED_TASK].interval = 9000;
-   }
-   else
-   {
-      tasks[LED_TASK].interval = 1000;
-   }
 }

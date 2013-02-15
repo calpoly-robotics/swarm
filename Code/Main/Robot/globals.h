@@ -30,20 +30,9 @@ typedef uint32_t		u32; //!< Unsigned 32-bit integer, range: 0 to +4,294,967,295
 #define tbi(a, b) ((a) ^= 1 << (b))       //!< Toggles bit b in variable a.
 #define gbi(a, b) ((a) & (1 << (b)))      //!< Gets bit b in variable a (masks out everything else).
 
-//global variables and defines
-#define SENSOR_PIN 2
-#define RED_LED	0
-#define GREEN_LED 1
-#define IR_LED 1
-
-#define MAX_MESSAGESIZE 64
-
-#define PULSE_WIDTH 1
-#define BASE 0
-
 // user-defined includes
 #include "Tasks/tasks.h"
-#include "Drivers/clock.h"
+#include "Drivers/drivers.h"
 
 #endif //ifndef GLOBALS_H
 

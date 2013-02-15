@@ -64,14 +64,3 @@ int main()
    return 0;
 }
 
-/*ISR(TIMER0_COMPA_vect)
-{
-	//sbi(PORTB, 4); // set Buzzer to 1
-	
-	//cbi(PORTB, 4); // set Buzzer to 0
-	
-	tbi(PORTB, 4); // toggle Buzzer value
-	
-	//gbi(PORTB, 4); // get Buzzer value
-}*/
-
