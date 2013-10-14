@@ -1,8 +1,0 @@
-Capacity(mAh)	650
-Config(s)	1
-Discharge(c)	15
-Weight(g)	13
-Max Charge Rate (C)	5
-Length-A(mm)	41
-Height-B(mm)	0
-Width-C(mm)	13
