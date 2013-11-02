@@ -1,6 +1,6 @@
 # C files
 #FILES = main.c Drivers/*.c Tasks/*.c
-FILES = main.c
+FILES = main.c Drivers/*.c
 # chip name
 MCU = atmega1284p
 # abbreviated chip name
@@ -8,7 +8,7 @@ P_MCU = m1284p
 #programmer
 ISP = usbtiny
 
-CFLAGS = -g -mmcu=$(MCU) -Os -Werror -mcall-prologues -fdata-sections -ffunction-sections
+CFLAGS = -g -mmcu=$(MCU) -Os -Wall -mcall-prologues -fdata-sections -ffunction-sections
 LDFLAGS = -Wl,-gc-sections -lm
 
 # Makefile Targets
