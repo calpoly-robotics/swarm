@@ -2,6 +2,10 @@
 
 void initMotor() 
 {
+	// waveform generation mode: fast pwm
+	sbi(TCCR2A, WGM20);
+	sbi(TCCR2A, WGM21);
+	cbi(TCCR2A, WGM22);
 
 }
 
