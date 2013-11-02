@@ -1,0 +1,4 @@
+#binary files
+*.elf
+*.hex
+*.o
