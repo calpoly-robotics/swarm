@@ -30,7 +30,7 @@ int main()
 		uartPrint_u16(readDistanceSensor());
 		uartPrintString("\r\n");
 		_delay_ms(200);
-   }
+	}
 	
 	while (1)
 	{
