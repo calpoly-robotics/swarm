@@ -6,7 +6,7 @@ MCU = atmega1284p
 # abbreviated chip name
 P_MCU = m1284p
 #programmer
-ISP = usbtiny
+ISP = avrispmkII
 
 CFLAGS = -g -mmcu=$(MCU) -Os -Wall -mcall-prologues -fdata-sections -ffunction-sections
 LDFLAGS = -Wl,-gc-sections -lm
