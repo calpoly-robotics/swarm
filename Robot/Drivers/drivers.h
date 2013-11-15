@@ -12,12 +12,12 @@
  * Wrapper for all the init functions for the various drivers
  */
 inline void initDrivers() {
+	uartInit();
 	initClock();
 	initMotor();
 	initLightSensor();
 	initADC();
 	initDistanceSensor();
-	uartInit();
 }
 
 #endif /* DRIVERS_H_*/
