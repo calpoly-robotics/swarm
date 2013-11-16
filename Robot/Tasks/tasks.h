@@ -17,7 +17,7 @@ volatile u08 numTasks;
 volatile Task** tasks; // array of task pointers
 
 void initTasks();
-u08 addTask(Task* task);
+u08 addTask(void(*runFunc)());;
 void removeTask(u08 index);
 
 Task* generateTask(void (*runFunc)());

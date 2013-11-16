@@ -13,7 +13,7 @@ void initTasks() {
 /**
  * returns non-zero on success
  */
-u08 addTask(Task* task) {
+u08 addTask(void (*runFunc)()) {
 	if (numTasks == maxTasks) {
 		// try to reallocate memory
 		void* tmp = realloc(tasks, sizeof(Task*)*(maxTasks+INCREASE_BY));
@@ -24,6 +24,9 @@ u08 addTask(Task* task) {
 		tasks = tmp;
 	}
 
+	Task* task = malloc(sizeof(Task));
+	(*task).run = runFunc;
+	(*task).index = numTasks;
 
 	tasks[numTasks] = task;
 	numTasks++;
@@ -32,11 +35,22 @@ u08 addTask(Task* task) {
 
 void removeTask(u08 index) {
 	tasks[index] = NULL;
-}
+	if (numTasks < maxTasks - INCREASE_BY) {
+		// we should consolidate...
+		int i;
+		for (i = 0; i < maxTasks; i++) {
+			if (tasks[i] == NULL && tasks[i+1] != NULL) {
+				tasks[i] = tasks[i+1];
+				tasks[i+1] = NULL;
+			}
+		}
 
-Task* generateTask(void (*runFunc)()) {
-	Task* tmp = malloc(sizeof(Task));
+		void* tmp = realloc(tasks, sizeof(Task*)*(maxTasks-INCREASE_BY));
+		if (tmp == NULL) // did it fail? :(
+			return;
 
+		maxTasks -= INCREASE_BY;
+		tasks = tmp;
 
-	return tmp;
+	}
 }

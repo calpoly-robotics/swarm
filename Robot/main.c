@@ -7,9 +7,9 @@
 void init() {
 	initDrivers();
 	uartPrintf("Finished driver init\n");
+	
 	uartPrintf("Adding all tasks\n");
-	Task* tmp = generateTask(runIR);
-
+	addTask(runIR);
 }
 
 int main() {
