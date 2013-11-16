@@ -4,7 +4,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>
-
+#include <stdlib.h>
 
 // CPU speed 10MHz
 #define F_CPU 10000000L
