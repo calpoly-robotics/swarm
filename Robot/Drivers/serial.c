@@ -134,7 +134,7 @@ void uartPrint_u32_dec(u32 num)
 /**
  * Flush the recieve buffer
  */
-#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+// #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 void uartFlush() {
 	u08 tmp;
 
@@ -143,7 +143,7 @@ void uartFlush() {
 	while (gbi(UCSR0A, RXC0))
 		tmp = UDR0;
 }
-#pragma GCC diagnostic warning "-Wunused-but-set-variable"
+// #pragma GCC diagnostic warning "-Wunused-but-set-variable"
 
 inline u08 uartDataReady() {
 	return gbi(UCSR0A, RXC0);

@@ -1,0 +1,260 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"uartPrint",
+				"uartPrintString"
+			],
+			[
+				"uart",
+				"uartPrint_u08"
+			],
+			[
+				"transm",
+				"transmitEnd"
+			],
+			[
+				"tran",
+				"transmitEnd"
+			],
+			[
+				"Pla",
+				"PLAYER_DATA"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "#ifndef PINS_H_\n#define PINS_H_\n\n\n\n#endif",
+			"file": "pins.h",
+			"file_size": 46,
+			"file_write_time": 130290596838689085,
+			"settings":
+			{
+				"buffer_size": 41,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Scott/git/swarm/Robot/Makefile",
+		"/C/Users/Scott/git/swarm/Robot/globals.h",
+		"/C/Users/Scott/git/swarm/Robot/Drivers/serial.c",
+		"/C/Users/Scott/git/swarm/Robot/Drivers/drivers.h",
+		"/C/Users/Scott/git/HomeSliceAPI/app/controllers/registrations_controller.rb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/controllers/sessions_controller.rb",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/SettingsViewController.m",
+		"/C/Program Files (x86)/MP3 Skype Recorder/MP3 Skype Recorder.exe.config",
+		"/C/Program Files (x86)/MP3 Skype Recorder/RecorderInstallerDll.InstallState",
+		"/C/Users/Scott/Desktop/mcmod.info",
+		"/C/Users/Scott/Desktop/TConstruct_1.6.4_1.5.0.2",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/PostCreatorViewController.m",
+		"/C/Users/Scott/Desktop/MANIFEST.MF",
+		"/C/Users/Scott/Desktop/README.txt",
+		"/C/Users/Scott/AppData/Local/Temp/7zE6F77.tmp/README.txt",
+		"/C/Users/Scott/AppData/Local/Temp/7zO455B.tmp/mcmod.info",
+		"/C/Users/Scott/dicks/main.cpp",
+		"/C/ProgramData/GFACE/warface/minspec.json",
+		"/C/ProgramData/GFACE/cookie",
+		"/C/Users/Scott/dicks/wat.PTR.0",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/EditProfileViewController.m",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/ContactsViewController.m",
+		"/C/Users/Scott/AppData/Local/GitHub/PortableGit_0f65d050d0c352fd38a0b25d82ee942deb19ef87/bin/vim",
+		"/C/Users/Scott/git/HomeSliceAPI/app/controllers/application_controller.rb",
+		"/C/Users/Scott/git/HomeSliceAPI/project.sublime-project",
+		"/C/WinAVR-20100110/avr/include/avr/iom1284p.h",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/HomeViewController.h",
+		"/C/Users/Scott/git/HomeSliceAPI/app/controllers/reminders_controller.rb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/controllers/pages_controller.rb",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/constants.h",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/HomeViewController.m",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/HomeSliceNetwork.h",
+		"/C/Users/Scott/git/HomeSliceIOS/HomeSlice/LandingViewController.m",
+		"/C/Users/Scott/git/HomeSliceAPI/app/assets/javascripts/bills.js.coffee",
+		"/C/Users/Scott/git/HomeSliceAPI/app/helpers/posts_helper.rb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/helpers/bills_helper.rb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/views/layouts/application.html.erb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/views/pages/index.html.erb",
+		"/C/Users/Scott/git/HomeSliceAPI/app/models/bill.rb",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/swarm.conf",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Makefile",
+		"/C/Program Files (x86)/Arduino/hardware/arduino/cores/robot/wiring_private.h",
+		"/C/Program Files (x86)/Arduino/hardware/arduino/cores/robot/CDC.cpp",
+		"/C/Program Files (x86)/Arduino/hardware/arduino/cores/robot/main.cpp",
+		"/G/teleport.java",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/void teleport() {.java",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Drivers/clock.c",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Drivers/motor.c",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Drivers/adc.c",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/main.c",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/globals.h",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Tasks/tasks.h",
+		"/C/Users/Scott/git/calpoly-swarm/Robot/Drivers/drivers.h",
+		"/C/Users/Scott/Documents/mathematics.cpp",
+		"/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"dev.d4bfef7",
+			"a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1.4.7"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "pins.h",
+					"settings":
+					{
+						"buffer_size": 41,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Scott/git/HomeSliceAPI/project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true
+}

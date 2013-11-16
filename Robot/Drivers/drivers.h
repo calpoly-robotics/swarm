@@ -7,6 +7,7 @@
 #include "adc.h"
 #include "distance.h"
 #include "serial.h"
+#include "ir.h"
 
 /**
  * Wrapper for all the init functions for the various drivers
@@ -18,6 +19,7 @@ inline void initDrivers() {
 	initLightSensor();
 	initADC();
 	initDistanceSensor();
+	initIR();
 }
 
 #endif /* DRIVERS_H_*/
