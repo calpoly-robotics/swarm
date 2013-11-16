@@ -3,6 +3,9 @@
 
 #include "tasks.h"
 
+void initIRTask();
+
 void runIR();
+void txBufferFull();
 
 #endif 

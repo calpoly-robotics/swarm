@@ -2,6 +2,11 @@
 #include "../Drivers/ir.h"
 
 u08 lastRun = 0;
+Task* irTask;
+
+void initIRTask() {
+	irTask = addTask(runIR);
+}
 
 void runIR() {
 
@@ -14,4 +19,8 @@ void runIR() {
 	}
 
 	// TODO anything else here?
+}
+
+void txBufferFull() {
+
 }

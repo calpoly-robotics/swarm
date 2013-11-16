@@ -39,6 +39,7 @@ void initIR(void);
 void sendMessage(u08 hop, msg_type msg, u08 data);
 void manageTransmit(void);
 void manageRecieve(void);
+Message readMessage(void);
 u08 getSenderId(void);
 
 

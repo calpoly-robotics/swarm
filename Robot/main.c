@@ -13,7 +13,7 @@ void init() {
 	uartPrintf("Finished driver init\n");
 	
 	uartPrintf("Adding all tasks\n");
-	addTask(runIR);
+	initIRTask();
 	addTask(runBattery);
 	addTask(runLed);
 	addTask(runBuzzer);

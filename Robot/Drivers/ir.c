@@ -1,8 +1,13 @@
 #include "ir.h"
+#include "../Tasks/irTask.h"
 #include <avr/eeprom.h>
 
 // can be changed to whatever we feel like
 #define SENDER_ID_ADDRESS 0
+
+const Message DEFAULT_MESSAGE = {
+	0,0,0,0,0,0,0
+};
 
 u08 senderId = 0;
 
@@ -10,6 +15,11 @@ volatile Message sendMsgBuf[BUFFER_SIZE];
 volatile u08 sendBufCount = 0;
 volatile u08 sendBufStart = 0;
 volatile u08 sendBufEnd = 0;
+
+volatile Message recvMsgBuf[BUFFER_SIZE];
+volatile u08 recvBufCount = 0;
+volatile u08 recvBufStart = 0;
+volatile u08 recvBufEnd = 0;
 
 volatile u08 sendSequence = 0;
 volatile u08 sendWidthIndex = 0;
@@ -69,6 +79,9 @@ void disablePCINT() {
 
 
 void sendMessage(u08 ttl, msg_type msg, u08 data) {
+	if (sendBufCount > BUFFER_SIZE - 4) // arbitrary number
+		txBufferFull();
+
 	if (sendBufCount == BUFFER_SIZE) // if buffer is full, ignore message
 		return;
 
@@ -82,6 +95,18 @@ void sendMessage(u08 ttl, msg_type msg, u08 data) {
 	if (++sendBufEnd == BUFFER_SIZE)
 		sendBufEnd = 0;
 	sendBufCount++;
+}
+
+Message readMessage() {
+	if (recvBufCount == 0)
+		return DEFAULT_MESSAGE;
+	Message tmp = recvMsgBuf[recvBufStart];
+
+	recvBufCount--;
+	if (++recvBufStart == BUFFER_SIZE)
+		recvBufStart = 0;
+
+	return tmp;
 }
 
 /**
@@ -137,7 +162,56 @@ void manageTransmit() {
 }
 
 void manageRecieve() {
-	
+
+	if (msgReady) {
+		sbi(PORTA, 2); // TODO: what???
+		u08 i;
+		for (i = msgReady; i > 0; i--)
+			recvWidths[i] -= recvWidths[i-1];
+
+		u08 nibbles[NUM_NIBBLES];
+		for (i = 1; i < msgReady; i++) {
+			if (recvWidths[i] < 410)
+				nibbles[i-1] = 0;
+			else
+				nibbles[i-1] = (recvWidths[i]-410)/20;
+		}
+		u08 msgChecksum = nibbles[4];
+		nibbles[4] = 0; // clear the checksum nibble so we calculate the 
+						//  checksum under the same circumstances are gened
+		if (checksum4(nibbles, msgReady-1) != msgChecksum) {
+			// TODO: handle the error properly
+			return;
+		}
+		// not usefull for anything....
+		// else {
+		// 	errorHistory[errorIndex] = 0;
+		// }
+		
+		// if (++errorIndex == 100) {
+		// 	u08 num = 0;
+		// 	for (i = 0; i < 100; i++)
+		// 	{
+		// 		num += errorHistory[i];
+		// 	}
+		// 	uartPrintString("Error Rate ");
+		// 	uartPrint_u16(errorCount++);
+		// 	uartPrintString(": ");
+		// 	uartPrint_u08(num);
+		// 	uartPrintString("\r\n");
+		// 	errorIndex = 0;
+		// }
+
+		recvMsgBuf[recvBufEnd].sender = (nibbles[0] << 2 | nibbles[1] >> 1) & 0x7F;
+		recvMsgBuf[recvBufEnd].ttl = (nibbles[5] >> 1) & 0x07;
+		recvMsgBuf[recvBufEnd].isBase = (nibbles[5]) & 0x01;
+		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
+		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
+
+		if (++recvBufEnd == BUFFER_SIZE)
+			recvBufEnd = 0;
+		recvBufCount++;
+	}
 }
 
 ISR(TIMER1_COMPA_vect) {
