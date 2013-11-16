@@ -5,7 +5,7 @@
 #include "Tasks/batteryTask.h"
 #include "Tasks/buzzerTask.h"
 #include "Tasks/ledTask.h"
-#include "Tasks/mainTask.h"
+#include "Tasks/behaviorTask.h"
 
 
 void init() {
@@ -17,7 +17,7 @@ void init() {
 	addTask(runBattery);
 	addTask(runLed);
 	addTask(runBuzzer);
-	addTask(runMain);
+	addTask(runBehavior);
 
 }
 

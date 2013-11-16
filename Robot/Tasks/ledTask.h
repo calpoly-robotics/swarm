@@ -3,6 +3,8 @@
 
 #include "tasks.h"
 
+void initLEDTask();
+
 void runLed();
 
 #endif 

@@ -3,6 +3,8 @@
 
 #include "tasks.h"
 
+void initBuzzerTask();
+
 void runBuzzer();
 
 #endif 

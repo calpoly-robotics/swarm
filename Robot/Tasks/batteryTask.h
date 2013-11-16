@@ -3,6 +3,8 @@
 
 #include "tasks.h"
 
+void initBatterTask();
+
 void runBattery();
 
 #endif 

@@ -6,6 +6,7 @@ Task* irTask;
 
 void initIRTask() {
 	irTask = addTask(runIR);
+ 	(*irTask).interval = 10;
 }
 
 void runIR() {
@@ -22,5 +23,5 @@ void runIR() {
 }
 
 void txBufferFull() {
-
+	(*irTask).runNow = 1;
 }
