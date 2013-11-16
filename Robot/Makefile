@@ -1,5 +1,5 @@
 # C files
-FILES = main.c Drivers/*.c Tasks/*.c
+FILES = Drivers/*.c Tasks/*.c main.c 
 # chip name
 MCU = atmega1284p
 # abbreviated chip name
