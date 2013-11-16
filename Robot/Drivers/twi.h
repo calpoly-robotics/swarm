@@ -3,12 +3,4 @@
 
 void twiInit();
 
-void twiStart();
-void twiStop();
-
-void twiWrite(u08 data);
-u08 twiRead(u08 ack=0);
-
-u08 twiGetStatus();
-
 #endif

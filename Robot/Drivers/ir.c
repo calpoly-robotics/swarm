@@ -36,7 +36,7 @@ void enablePCINT();
 
 void initIR() {
 	// doesn't have to be first if this causes problems...
-	senderId = eeprom_read_byte((u08*)SENDER_ID_ADDRESS);
+	senderId = eeprom_read_byte((u08*)IR_SENDER_ID_ADDRESS);
 
 	// 0 is init val
 	//TCCR1A = 0; // CTC mode
