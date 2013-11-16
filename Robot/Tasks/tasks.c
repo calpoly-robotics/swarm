@@ -35,7 +35,7 @@ u08 addTask(void (*runFunc)()) {
 
 void removeTask(u08 index) {
 	tasks[index] = NULL;
-	if (numTasks < maxTasks - INCREASE_BY) {
+	if (--numTasks < maxTasks - INCREASE_BY) {
 		// we should consolidate...
 		int i;
 		for (i = 0; i < maxTasks; i++) {
