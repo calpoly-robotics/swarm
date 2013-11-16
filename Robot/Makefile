@@ -18,7 +18,7 @@ LDFLAGS = -Wl,-gc-sections -lm
 all:
 	avr-gcc $(CFLAGS) -o main.elf $(FILES) $(LDFLAGS)
 	avr-objcopy -O ihex main.elf main.hex
-	avr-size main.elf
+	avr-size main.elf main.hex
 
 # This target first executes the "all" target to compile your code, and then programs the hex file into the ATmega using avrdude.
 program: all

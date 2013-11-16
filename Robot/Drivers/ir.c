@@ -1,9 +1,7 @@
 #include "ir.h"
 #include "../Tasks/irTask.h"
-#include <avr/eeprom.h>
+#include "eeprom.h"
 
-// can be changed to whatever we feel like
-#define SENDER_ID_ADDRESS 0
 
 const Message DEFAULT_MESSAGE = {
 	0,0,0,0,0,0,0
