@@ -12,12 +12,14 @@ typedef struct {
 	void (*run)();
 } Task;
 
-volatile u08 numTasks = 0;
+volatile u08 numTasks;
 
 volatile Task** tasks; // array of task pointers
 
 void initTasks();
-void addTask(Task* task);
+u08 addTask(Task* task);
 void removeTask(u08 index);
+
+Task* generateTask(void (*runFunc)());
 
 #endif

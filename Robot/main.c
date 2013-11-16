@@ -1,18 +1,20 @@
 #include "globals.h"
 #include "Drivers/drivers.h"
 #include "Tasks/tasks.h"
+#include "Tasks/irTask.h"
 
 
 void init() {
 	initDrivers();
 	uartPrintf("Finished driver init\n");
+	uartPrintf("Adding all tasks\n");
+	Task* tmp = generateTask(runIR);
+
 }
 
 int main() {
 	init();
 	uartPrintf("Init complete\n");
-
-	uartPrintf("Starting tasks\n");
 
 	u08 i = 0;
 	u32 currTime;
