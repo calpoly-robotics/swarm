@@ -12,7 +12,7 @@ typedef struct {
 	void (*run)();
 } Task;
 
-volatile u08 numTasks = 10;
+volatile u08 numTasks = 0;
 
 volatile Task** tasks; // array of task pointers
 
