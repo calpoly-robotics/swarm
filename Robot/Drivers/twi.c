@@ -1,7 +1,6 @@
 #include "twi.h"
 #include "eeprom.h"
 #include "../globals.h"
-#include <util/twi.h>
 
 void enableTwi() {
 	// load up the address and set it to register
