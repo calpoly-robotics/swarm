@@ -1,6 +1,9 @@
 #ifndef TWI_H_
 #define TWI_H_
 
-void twiInit();
+void enableTwi();
+void disableTwi();
+
+void handleMsg();
 
 #endif
