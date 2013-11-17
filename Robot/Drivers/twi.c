@@ -31,10 +31,17 @@ ISR(TWI_vect) {
 
 	switch(twi_status) {
 	case TW_SR_SLA_ACK: 		// SLA+W received, ACK returned
-
+		// TODO: handle what the base is trying to tell us...
 		break;
 	case TW_SR_DATA_ACK:		// data received, ACK returned
 		twiData = TWDR;		// save data to the register addr
+	case TW_SR_STOP:			// stop or repeated start condition received
+		// TODO: handle this..
+		break;
+	case TW_ST_SLA_ACK:			// SLA+R received, ACK returned
+	case TW_ST_DATA_ACK:		// data tx, ACK received
+		// TODO: handle this...
+		break;
 	}
 
 	// we have to do this manually... :(
