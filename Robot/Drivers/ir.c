@@ -75,10 +75,27 @@ void disablePCINT() {
 	cbi(PCMSK0, PCINT2);
 }
 
-
-void sendMessage(u08 ttl, msg_type msg, u08 data) {
+static inline void sendBufHasSpace() {
 	if (sendBufCount > BUFFER_SIZE - 4) // arbitrary number
 		txBufferFull();
+}
+
+static void retransmit(Message msg) {
+	msg.ttl--;
+	sendBufHasSpace();
+
+	if(sendBufCount == BUFFER_SIZE)
+		return;
+
+	sendMsgBuf[sendBufEnd] = msg;
+
+	if (++sendBufEnd == BUFFER_SIZE)
+		sendBufEnd = 0;
+	sendBufCount++;
+}
+
+void sendMessage(u08 ttl, msg_type msg, u08 data) {
+	sendBufHasSpace();
 
 	if (sendBufCount == BUFFER_SIZE) // if buffer is full, ignore message
 		return;
@@ -199,12 +216,18 @@ void manageRecieve() {
 		// 	uartPrintString("\r\n");
 		// 	errorIndex = 0;
 		// }
+		u08 tmpSender = (nibbles[0] << 2 | nibbles[1] >> 1) & 0x7F;
+		if (senderId == tmpSender) // we sent this message
+			return; //just don't bother with the saving and stuff.
 
-		recvMsgBuf[recvBufEnd].sender = (nibbles[0] << 2 | nibbles[1] >> 1) & 0x7F;
+		recvMsgBuf[recvBufEnd].sender = tmpSender;
 		recvMsgBuf[recvBufEnd].ttl = (nibbles[5] >> 1) & 0x07;
 		recvMsgBuf[recvBufEnd].isBase = (nibbles[5]) & 0x01;
 		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
 		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
+
+		if (recvMsgBuf[recvBufEnd].ttl > 0)
+			retransmit(recvMsgBuf[recvBufEnd]);
 
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
