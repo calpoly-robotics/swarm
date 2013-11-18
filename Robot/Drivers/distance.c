@@ -1,15 +1,15 @@
 #include "distance.h"
-
+#include "../pins.h"
 
 void initDistanceSensor() {
-	sbi(DDRA, 6);
-	cbi(PORTA, 6);
-	cbi(DDRA, 7);
+	sbi(DDRA, DISTANCE_SENSOR);
+	cbi(PORTA, DISTANCE_SENSOR);
+	cbi(DDRA, DISTANCE_EMITTER);
 }
 
 u16 readDistanceSensor() {
-	sbi(PORTA, 6);
-	u16 val = readADC(7);
-	cbi(PORTA, 6);
+	sbi(PORTA, DISTANCE_SENSOR);
+	u16 val = readADC(DISTANCE_EMITTER);
+	cbi(PORTA, DISTANCE_SENSOR);
 	return val;
 }

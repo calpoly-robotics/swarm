@@ -2,6 +2,7 @@
 #define IR_H_
 
 #include "../globals.h"
+#include "../pins.h"
 
 #define BUFFER_SIZE 10
 #define NUM_NIBBLES 10
@@ -12,12 +13,10 @@
 #define RESOLUTION 20
 #define TIMEOUT 1000
 
-#define TRANSMIT_PIN 4
 #define TRANSMIT_ON() (sbi(PORTA, TRANSMIT_PIN))
 #define TRANSMIT_OFF() (cbi(PORTA, TRANSMIT_PIN))
 #define TRANSMIT_STATE() (gbi(PORTA, TRANSMIT_PIN))
-#define RECEIVE_PIN 3
-#define RECEIVE_STATE() (gbi(PINA, RECEIVE_PIN))
+#define RECEIVE_STATE() (gbi(PORTA, RECEIVE_PIN))
 
 typedef enum {
 	WHOS_THERE,

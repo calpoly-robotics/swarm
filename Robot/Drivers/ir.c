@@ -48,9 +48,6 @@ void initIR() {
 	sei();
 	sbi(DDRA, TRANSMIT_PIN);
 	enablePCINT();
-	sbi(DDRB, 4); // TODO figure out what these are for?
-	sbi(DDRA, 2);
-
 }
 
 inline void enableOCR(u16 val) {
@@ -232,6 +229,8 @@ void manageRecieve() {
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
 		recvBufCount++;
+
+
 	}
 }
 

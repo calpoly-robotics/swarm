@@ -1,20 +1,21 @@
 #include "motor.h"
+#include "../pins.h"
 
 void initMotor() 
 {
-	sbi(DDRD, 5);
-	cbi(PORTD, 5);
-	sbi(DDRC, 0);
-	cbi(PORTC, 0);
-	sbi(DDRD, 7);
-	cbi(PORTD, 7);
+	sbi(DDRD, LEFT_MOTOR_AIN1);
+	cbi(PORTD, LEFT_MOTOR_AIN1);
+	sbi(DDRC, LEFT_MOTOR_AIN2);
+	cbi(PORTC, LEFT_MOTOR_AIN2);
+	sbi(DDRD, LEFT_MOTOR_SIGNAL);
+	cbi(PORTD, LEFT_MOTOR_SIGNAL);
 
-	sbi(DDRD, 3);
-	cbi(PORTD, 3);
-	sbi(DDRD, 2);
-	cbi(PORTD, 2);
-	sbi(DDRD, 6);
-	cbi(PORTD, 6);
+	sbi(DDRD, RIGHT_MOTOR_AIN1);
+	cbi(PORTD, RIGHT_MOTOR_AIN1);
+	sbi(DDRD, RIGHT_MOTOR_AIN2);
+	cbi(PORTD, RIGHT_MOTOR_AIN2);
+	sbi(DDRD, RIGHT_MOTOR_SIGNAL);
+	cbi(PORTD, RIGHT_MOTOR_SIGNAL);
 
 	// waveform generation mode: fast pwm
 	sbi(TCCR2A, WGM20);
@@ -31,31 +32,31 @@ void initMotor()
 void leftMotor(s16 speed)
 {
 	if (speed > 0 ) {
-		cbi(PORTD, 3); // AIN1
-		sbi(PORTC, 2); // AIN2
+		cbi(PORTD, LEFT_MOTOR_AIN1); // AIN1
+		sbi(PORTC, LEFT_MOTOR_AIN2); // AIN2
 		OCR2B = speed;
 	} else if (speed < 0) {
-		sbi(PORTD, 3);
-		cbi(PORTC, 2);
+		sbi(PORTD, LEFT_MOTOR_AIN1);
+		cbi(PORTC, LEFT_MOTOR_AIN2);
 		OCR2B = (u08) (speed*-1);
 	} else {
-		cbi(PORTD, 3);
-		cbi(PORTC, 2);
+		cbi(PORTD, LEFT_MOTOR_AIN1);
+		cbi(PORTC, LEFT_MOTOR_AIN2);
 	}
 }
 
 void rightMotor(s16 speed)
 {
 	if (speed > 0 ) {
-		cbi(PORTD, 5); // AIN1
-		sbi(PORTC, 0); // AIN2
+		cbi(PORTD, RIGHT_MOTOR_AIN1); // BIN1
+		sbi(PORTC, RIGHT_MOTOR_AIN2); // BIN2
 		OCR2A = speed;
 	} else if (speed < 0) {
-		sbi(PORTD, 5);
-		cbi(PORTC, 0);
+		sbi(PORTD, RIGHT_MOTOR_AIN1);
+		cbi(PORTC, RIGHT_MOTOR_AIN2);
 		OCR2A = (u08) (speed*-1);
 	} else {
-		cbi(PORTD, 5);
-		cbi(PORTC, 0);
+		cbi(PORTD, RIGHT_MOTOR_AIN1);
+		cbi(PORTC, RIGHT_MOTOR_AIN2);
 	}
 }

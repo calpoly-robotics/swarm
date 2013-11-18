@@ -1,5 +1,19 @@
 #ifndef PINS_H_
 #define PINS_H_
 
+#include <avr/io.h>
+
+#define RIGHT_MOTOR_AIN1	PIND5
+#define RIGHT_MOTOR_AIN2 	PINC0
+#define RIGHT_MOTOR_SIGNAL	PIND7
+#define LEFT_MOTOR_AIN1		PIND3
+#define LEFT_MOTOR_AIN2 	PINC2
+#define LEFT_MOTOR_SIGNAL	PIND6
+
+#define DISTANCE_SENSOR		PINA7
+#define DISTANCE_EMITTER	PINA6
+
+#define TRANSMIT_PIN		PINA4
+#define RECIEVE_PIN			PINA3
 
 #endif
