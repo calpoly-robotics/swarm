@@ -4,7 +4,7 @@
 
 void enableTwi() {
 	// load up the address and set it to register
-	u08 address = eeprom_read_byte((u08*)IR_SENDER_ID_ADDRESS);
+	u08 address = eeprom_read_byte((void*)IR_SENDER_ID_ADDRESS);
 	TWAR = address << 1;
 
 	// sbi(TWCR, TWINT); // clear the interrupt flag

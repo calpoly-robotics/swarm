@@ -33,7 +33,9 @@ void handleReadRequest() {
 
 void handleWriteComplete() {
 	if (recvIndex > 0) { // this should always be the case
+		switch (twiData[0]) {
 
+		}
 	}
 }
 

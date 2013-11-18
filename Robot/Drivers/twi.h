@@ -1,5 +1,5 @@
 #ifndef TWI_H_
-#define TWI_H_
+#define TWI_H_ 1
 
 typedef enum {
 	WHOS_THERE,

@@ -1,5 +1,5 @@
 #ifndef TASKS_H_
-#define TASKS_H_
+#define TASKS_H_ 1
 
 #include "../globals.h"
 

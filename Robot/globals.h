@@ -1,5 +1,5 @@
 #ifndef GLOBALS_H_
-#define GLOBALS_H_
+#define GLOBALS_H_ 1
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
