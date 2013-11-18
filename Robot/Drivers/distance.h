@@ -3,6 +3,7 @@
 
 #include "adc.h"
 #include "../globals.h"
+#include <util/delay.h>
 
 void initDistanceSensor();
 

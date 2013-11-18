@@ -9,3 +9,11 @@ TODO:
 	MX25L25635EZNI-12G
 	UART with base station
 	base station test code
+	Buzzer
+	Ledtask
+		blink specific led
+		on for duration
+	Battery task
+		when voltage is <3.4V full sleep. wake every few minutes
+		when voltage is <3.6V sleep. Wake every minute and be annoying
+	Just ensure all hardware has code
