@@ -1,11 +1,12 @@
 #include "lightSensor.h"
 #include "adc.h"
+#include "../pins.h"
 
 void initLightSensor() {
-	cbi(DDRA, 5);
-	sbi(PORTA, 5);
+	cbi(DDRA, LIGHT_SENSOR);
+	sbi(PORTA, LIGHT_SENSOR);
 }
 
 u16 readLightSensor() {
-	return readADC(5);
+	return readADC(LIGHT_SENSOR);
 }

@@ -176,7 +176,6 @@ void manageTransmit() {
 void manageRecieve() {
 
 	if (msgReady) {
-		sbi(PORTA, 2); // TODO: what???
 		u08 i;
 		for (i = msgReady; i > 0; i--)
 			recvWidths[i] -= recvWidths[i-1];

@@ -32,7 +32,6 @@ void uartInit() {
 }
 
 ISR(USART0_UDRE_vect) {
-	tbi(PORTB, 0);
 	if (transmitStart != transmitEnd)
 		UDR0 = transmitBuffer[transmitStart++];
 	else
@@ -132,7 +131,7 @@ void uartPrint_u32_dec(u32 num)
 }
 
 /**
- * Flush the recieve buffer
+ * Flush the receive buffer
  */
 // #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 void uartFlush() {

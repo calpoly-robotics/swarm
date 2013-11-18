@@ -14,6 +14,8 @@
 #define DISTANCE_EMITTER	PINA6
 
 #define TRANSMIT_PIN		PINA4
-#define RECIEVE_PIN			PINA3
+#define RECEIVE_PIN			PINA3
+
+#define LIGHT_SENSOR		PIND5
 
 #endif
