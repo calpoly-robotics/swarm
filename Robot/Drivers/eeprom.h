@@ -5,7 +5,7 @@
 #include "../globals.h"
 
 // true for both 1281 and 1284
-#define EEPROM_MAX_ADDRESS 4096
+#define EEPROM_MAX_ADDRESS ((4*1024) - 1) // 4k
 
 // can be changed to whatever we feel like
 #define IR_SENDER_ID_ADDRESS 0
@@ -15,11 +15,8 @@
 
 #define DATA_LOGGING_START_ADDRESS 64
 
-void eepromLogByte(u08 data);
-void eepromLogBlock(u08* data, size_t len);
-
-void eepromLogChar(u08 data);
-void eepromLogString(u08* str);
+u08 eepromLogByte(u08 data);
+u08 eepromLogBlock(u08* data, size_t len);
 
 u08* eepromReadLog(size_t* len);
 
