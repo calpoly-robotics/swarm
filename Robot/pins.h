@@ -18,4 +18,6 @@
 
 #define LIGHT_SENSOR		PIND5
 
+#define BUZZER_PIN			PINB4
+
 #endif
