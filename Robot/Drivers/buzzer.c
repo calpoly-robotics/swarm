@@ -4,13 +4,20 @@
 #include "../pins.h"
 
 u16 tempo;
-#if 0
+
+u08 driverState = 0;
+u08 count = 0;
+u08 playTime = 0;
+
+#if 1
 void initBuzzer() {
 	sbi(DDRB, BUZZER_PIN);
 
 	// toggle pin on OC1A
-	sbi(TCCR4A, COM3A0);
-	cbi(TCCR4A, COM3A1);
+	sbi(TCCR1A, COM3A0);
+	cbi(TCCR1A, COM3A1);
+
+	sbi(DDRB, 2);
 
 	/*
 	// fast PWM mode
@@ -21,13 +28,10 @@ void initBuzzer() {
 	*/
 
 	// CTC
-	sbi(TCCR4B, WGM42);
+	sbi(TCCR1B, WGM12);
 
 	// 1/8 prescaler
-	sbi(TCCR4B, CS41);
-
-	//enable interrupt
-	sbi(TIMSK4, OCIE4A);
+	sbi(TCCR1B, CS11);
 
 	tempo = 100;
 }
@@ -45,15 +49,28 @@ u16 noteToCycles(note_t note) {
 }
 
 void playTone(note_t note, u08 len) {
-	TCNT4H = 0;
-	TCNT4L = 0;
+	TCNT1H = 0;
+	TCNT1L = 0;
 
 	u16 ticks = noteToCycles(note);
-	OCR4AH = ticks >> 8;
-	OCR4AL = ticks & 0x0F;
+	OCR1AH = ticks >> 8;
+	OCR1AL = ticks & 0x0F;
+
+	//enable interrupt
+	sbi(TIMSK1, OCIE1A);
+
+	playTime = len;
 }
 
-ISR(TIMER4_COMPA_vect) {
-
+ISR(TIMER1_COMPA_vect) {
+	if (driverState) {
+		cbi(PORTB, BUZZER_PIN);
+		cbi(PORTB, 2);
+		driverState = 0;
+	} else {
+		sbi(PORTB, BUZZER_PIN);
+		cbi(PORTB, 2);
+		driverState = 1;
+	}
 }
 #endif

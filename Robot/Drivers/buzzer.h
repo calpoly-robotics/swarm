@@ -79,4 +79,6 @@ typedef enum {
 
 void initBuzzer();
 
+void playTone(note_t note, u08 len);
+
 #endif

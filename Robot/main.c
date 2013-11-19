@@ -1,7 +1,6 @@
 #include "globals.h"
 #include "Drivers/drivers.h"
 #include "Tasks/tasks.h"
-#include "Tasks/irTask.h"
 #include "Tasks/batteryTask.h"
 #include "Tasks/buzzerTask.h"
 #include "Tasks/ledTask.h"
@@ -13,8 +12,6 @@ void init() {
 	uartPrintf("Finished driver init\n");
 	
 	uartPrintf("Adding all tasks\n");
-	initIRTask();
-	addTask(runBattery);
 	addTask(runLed);
 	addTask(runBuzzer);
 	addTask(runBehavior);
@@ -24,6 +21,10 @@ void init() {
 int main() {
 	init();
 	uartPrintf("Init complete\n");
+
+	while(1) {
+		playTone(A4, 0);
+	}
 
 	u08 i = 0;
 	u32 currTime;

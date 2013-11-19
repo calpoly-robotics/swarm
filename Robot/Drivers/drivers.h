@@ -8,7 +8,6 @@
 #include "adc.h"
 #include "distance.h"
 #include "serial.h"
-#include "ir.h"
 #include "buzzer.h"
 
 /**
@@ -21,7 +20,8 @@ inline void initDrivers() {
 	initLightSensor();
 	initADC();
 	initDistanceSensor();
-	initIR();
+	// initIR();
+	initBuzzer();
 }
 
 #endif /* DRIVERS_H_*/
