@@ -27,7 +27,6 @@ inline void initDrivers() {
 #else
 	initIR();
 #endif
-	initBuzzer();
 }
 
 #endif /* DRIVERS_H_*/
