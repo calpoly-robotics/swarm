@@ -1,7 +1,6 @@
 #ifndef DRIVERS_H_
 #define DRIVERS_H_ 1
 
-#define BUZZER
 
 #include "clock.h"
 #include "motor.h"
@@ -22,12 +21,7 @@ inline void initDrivers() {
 	initLightSensor();
 	initADC();
 	initDistanceSensor();
-#ifdef BUZZER
-	initBuzzer();
-#else
 	initIR();
-#endif
-	initBuzzer();
 }
 
 #endif /* DRIVERS_H_*/
