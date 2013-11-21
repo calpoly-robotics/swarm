@@ -15,7 +15,7 @@ LDFLAGS = -Wl,-gc-sections -lm
 # Since the "all" target is the first target in the file, it will run when you simply type make (or make all).
 #  We have configured this target so that it only compiles the program into .elf and .hex files, and displays their final sizes.
 
-all: 
+all:
 	avr-gcc $(CFLAGS) -o main.elf $(FILES) $(LDFLAGS)
 	avr-objcopy -O ihex main.elf main.hex
 	avr-size main.elf main.hex

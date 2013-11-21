@@ -20,4 +20,7 @@
 
 #define BUZZER_PIN			PINB4
 
+#define LED1				PINB2
+#define LED2				PINB3
+
 #endif

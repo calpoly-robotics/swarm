@@ -1,8 +1,6 @@
 #ifndef DRIVERS_H_
 #define DRIVERS_H_ 1
 
-#define BUZZER
-
 #include "clock.h"
 #include "motor.h"
 #include "lightSensor.h"
@@ -10,7 +8,6 @@
 #include "distance.h"
 #include "serial.h"
 #include "ir.h"
-#include "buzzer.h"
 
 /**
  * Wrapper for all the init functions for the various drivers
