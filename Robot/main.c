@@ -15,7 +15,7 @@ void init() {
 	uartPrintf("Adding all tasks\n");
 	initIRTask();
 	addTask(runBattery);
-	addTask(runLed);
+	
 	addTask(runBuzzer);
 	addTask(runBehavior);
 

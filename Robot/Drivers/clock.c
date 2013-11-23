@@ -4,6 +4,7 @@ volatile u16 upper16;
 
 void initClock() {
 
+	/* 
 	// set timer to "normal" waveform generation mode
 	// don't bother making a wave
 	cbi(TCCR3A, WGM30);
@@ -16,13 +17,13 @@ void initClock() {
 	cbi(TCCR3A, COM3A1);
 	cbi(TCCR3A, COM3B0);
 	cbi(TCCR3A, COM3B1);
+	*/
 
 	// Enable the overflow interrupt
 	sbi(TIMSK3, TOIE3);
 
-	// Set prescaller to 1/1024
+	// Set prescaller to 1/1024 (~8kHz)
 	sbi(TCCR3B, CS30);
-	cbi(TCCR3B, CS31);
 	sbi(TCCR3B, CS32);
 
 }

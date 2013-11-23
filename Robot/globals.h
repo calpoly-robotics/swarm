@@ -6,9 +6,13 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#if defined (__AVR_ATmega1284P__)
 // CPU speed 10MHz
 #define F_CPU 10000000L
-
+#elif defined (__AVR_ATmega1281__)
+// CPU speed 8MHz
+#define F_CPU 8000000L
+#endif
 
 // Define shorthand datatypes
 typedef uint8_t 	u08;
