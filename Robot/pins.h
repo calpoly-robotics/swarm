@@ -3,6 +3,8 @@
 
 #include <avr/io.h>
 
+#define BATTERY_SENSE		PINA0
+
 #define RIGHT_MOTOR_AIN1	PIND5
 #define RIGHT_MOTOR_AIN2 	PINC0
 #define RIGHT_MOTOR_SIGNAL	PIND7
