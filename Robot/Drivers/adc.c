@@ -5,8 +5,10 @@
 #define VREF 2560
 
 void initADC() {
-	sbi(ADMUX, 7);
-	sbi(ADMUX, 6);
+
+	// external AREF(3V), uncomment to use 2.56V
+	// sbi(ADMUX, 7);
+	// sbi(ADMUX, 6);
 
 	//enable
 	sbi(ADCSRA, 7);
