@@ -1,7 +1,7 @@
 #include "serial.h"
 #include <stdio.h>
 
-volatile u08 transmitBuffer[256];
+volatile u08 transmitBuffer[512];
 volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 
@@ -10,11 +10,9 @@ void uartInit() {
 
 	// set theprescaler to match the baud rate
 	u16 ubrr = (F_CPU/16/BAUD_RATE) - 1;
-	UBRR0H = (u08)(ubrr >> 8);
-	UBRR0H = (u08)(ubrr);
-
-	// ensure double tx is off
-	cbi(UCSR0A, U2X0);
+	UBRR0 = ubrr;
+	//UBRR0H = (u08)(ubrr >> 8);
+	//UBRR0H = (u08)(ubrr);
 
 	// enable rx, tx, and tx buffer interrupt;
 	sbi(UCSR0B, RXEN0);
@@ -24,9 +22,6 @@ void uartInit() {
 	// set 8 bit data length
 	sbi(UCSR0C, UCSZ01);
 	sbi(UCSR0C, UCSZ00);
-	
-	// zero rest of register
-	UCSR0C &= 0x06;
 
 	sei();
 }
@@ -39,18 +34,21 @@ ISR(USART0_UDRE_vect) {
 }
 
 void uartPrintChar(u08 data) {
+	// if (data=='\n')
+	// 	transmitBuffer[transmitEnd++] = '\r';
 	transmitBuffer[transmitEnd++] = data;
 	sbi(UCSR0B, UDRIE0);
 }
 
 void uartPrintChar2(u16 data) {
-	uartPrintChar2(data >> 8);
-	uartPrintChar2(data);
+	uartPrintChar(data >> 8);
+	uartPrintChar(data);
 }
 
 void uartPrintString(u08* str) {
-	while (*str) 
+	while (*str) {
 		uartPrintChar(*str++);
+	}
 }
 
 void uartPrintf(const u08* fmt, ... ) {
@@ -128,6 +126,14 @@ void uartPrint_u32_dec(u32 num)
 	uartPrintChar('0' + (num % 1000)/100);
 	uartPrintChar('0' + (num % 100)/10);
 	uartPrintChar('0' + num % 10);
+}
+
+void uartPrintDebug(u08 len) {
+	uartPrintChar('8');
+	for (;len>0;len--) {
+		uartPrintChar('=');
+	}
+	uartPrintString("D\n");
 }
 
 /**

@@ -28,6 +28,12 @@ int main() {
 	u08 i = 0;
 	u32 currTime;
 
+	// while(1) {
+	// 	uartPrintDebug(8);
+	// 	_delay_ms(1000);
+	// }
+
+
 	while (1) {
 		currTime = getTime32();
 		if (tasks[i] != NULL) { 
@@ -49,6 +55,7 @@ int main() {
 		}
 
 	}
+	
 
 	return 0;
 }

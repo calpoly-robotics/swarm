@@ -3,7 +3,7 @@
 
 #include "../globals.h"
 #include <stdarg.h>
-#define BAUD_RATE 9600
+#define BAUD_RATE 19200
 
 void uartInit();
 
@@ -19,6 +19,8 @@ void uartPrint_u32(u32 num);
 void uartPrint_u08_dec(u08 num);
 void uartPrint_u16_dec(u16 num);
 void uartPrint_u32_dec(u32 num);
+
+void uartPrintDebug(u08 len);
 
 void uartFlush();
 

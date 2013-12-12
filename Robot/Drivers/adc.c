@@ -1,6 +1,9 @@
 #include "adc.h"
 #include "../globals.h"
 
+// millivolts
+#define VREF 2560
+
 void initADC() {
 	sbi(ADMUX, 7);
 	sbi(ADMUX, 6);
@@ -23,8 +26,9 @@ u16 readADC(u08 pin) {
 	//set bit 6 to start conversion
 	sbi(ADCSRA, 6);
 
-	// loop until  bit 6 is cleared
-	while ((ADCSRA & 0x40) != 0);
+	// loop until  bit 6 is cleared, indicating 
+	// conversion is complete
+	while (gbi(ADCSRA,6) != 0);
 
-	return ADC;
+	return ADC*VREF;
 }

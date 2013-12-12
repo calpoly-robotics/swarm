@@ -5,6 +5,7 @@
 
 void initADC();
 
+// in millivolts
 u16 readADC(u08 pin);
 
 #endif /* ADC_H_ */

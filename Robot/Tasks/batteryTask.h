@@ -3,6 +3,10 @@
 
 #include "tasks.h"
 
+// millivolts
+#define WARNING_VOLTAGE 	3600
+#define CRITICAL_VOLTAGE	3400
+
 void initBatterTask();
 
 void runBattery();
