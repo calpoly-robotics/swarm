@@ -28,10 +28,10 @@ int main() {
 	u08 i = 0;
 	u32 currTime;
 
-	// while(1) {
-	// 	uartPrintDebug(8);
-	// 	_delay_ms(1000);
-	// }
+	while(1) {
+		uartPrintDebug(3);
+		_delay_ms(250);
+	}
 
 
 	while (1) {
