@@ -31,16 +31,10 @@ void uartInit() {
 }
 
 ISR(USART0_UDRE_vect) {
-	if (transmitCount == 0) {
+	if (transmitStart != transmitEnd)
+		UDR0 = transmitBuffer[transmitStart++];
+	else
 		cbi(UCSR0B, UDRIE0);
-		return;
-	}
-	
-	UDR0 = transmitBuffer[transmitStart];
-	if (++transmitStart == BUFFER_SIZE)
-		transmitStart = 0;
-
-	transmitCount--;
 }
 
 void uartPrintChar(u08 data) {
