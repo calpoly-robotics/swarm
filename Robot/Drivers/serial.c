@@ -1,7 +1,12 @@
 #include "serial.h"
 #include <stdio.h>
 
-volatile u08 transmitBuffer[512];
+#define BUFFER_SIZE 512
+
+#define waitForRoom() while (transmitCount == BUFFER_SIZE)
+
+volatile u08 transmitBuffer[BUFFER_SIZE];
+volatile u08 transmitCount = 0;
 volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 
@@ -27,17 +32,27 @@ void uartInit() {
 }
 
 ISR(USART0_UDRE_vect) {
-	if (transmitStart != transmitEnd)
-		UDR0 = transmitBuffer[transmitStart++];
-	else
+	if (transmitCount == 0) {
 		cbi(UCSR0B, UDRIE0);
+		return;
+	}
+	
+	UDR0 = transmitBuffer[transmitStart];
+	if (++transmitStart == BUFFER_SIZE)
+		transmitStart = 0;
+
+	transmitCount--;
 }
 
 void uartPrintChar(u08 data) {
-	// if (data=='\n')
-	// 	transmitBuffer[transmitEnd++] = '\r';
+	waitForRoom();	
+
 	transmitBuffer[transmitEnd++] = data;
 	sbi(UCSR0B, UDRIE0);
+
+	if (++transmitEnd == BUFFER_SIZE)
+		transmitEnd = 0;
+	transmitCount++;
 }
 
 void uartPrintChar2(u16 data) {
