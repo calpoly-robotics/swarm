@@ -27,10 +27,20 @@ int main() {
 
 	u08 i = 0;
 	u32 currTime;
-
+	u08 tmpStr[64];
+	u08 index = 0;
 	while(1) {
 		// uartPrintDebug(3);
 		// _delay_ms(250);
+
+		// block until data is ready
+		do {
+			while (!uartDataReady());
+			tmpStr[index] = uartRead();
+		} while (tmpStr[index++]!='\n');
+		tmpStr[index] = 0; // null terminate string
+
+		uartPrintString(tmpStr);
 	}
 
 
