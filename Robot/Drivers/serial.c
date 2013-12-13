@@ -1,12 +1,11 @@
 #include "serial.h"
 #include <stdio.h>
 
-#define BUFFER_SIZE 512
-
-#define waitForRoom() while (transmitCount == BUFFER_SIZE)
-
-volatile u08 transmitBuffer[BUFFER_SIZE];
-volatile u08 transmitCount = 0;
+// NOTE: we don't actually ever need to reset or decrease the
+// counter vars because in an unsigned 8-bit C var 255+1=0
+// buffer clobbering could take place, but unlikely since we
+// have a reasonable baudrate and newlines cause a flush(can be disalbed)
+volatile u08 transmitBuffer[256];
 volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 
@@ -45,14 +44,13 @@ ISR(USART0_UDRE_vect) {
 }
 
 void uartPrintChar(u08 data) {
-	waitForRoom();	
-
 	transmitBuffer[transmitEnd++] = data;
 	sbi(UCSR0B, UDRIE0);
 
-	if (++transmitEnd == BUFFER_SIZE)
-		transmitEnd = 0;
-	transmitCount++;
+	#ifdef FLUSH_ON_NEWLINE
+	if(data=='\n')
+		uartFlush();
+	#endif
 }
 
 void uartPrintChar2(u16 data) {

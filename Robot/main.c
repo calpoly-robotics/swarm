@@ -29,8 +29,8 @@ int main() {
 	u32 currTime;
 
 	while(1) {
-		uartPrintDebug(3);
-		_delay_ms(250);
+		// uartPrintDebug(3);
+		// _delay_ms(250);
 	}
 
 

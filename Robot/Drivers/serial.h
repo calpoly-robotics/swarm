@@ -3,7 +3,10 @@
 
 #include "../globals.h"
 #include <stdarg.h>
+
 #define BAUD_RATE 19200
+
+#define FLUSH_ON_NEWLINE 1
 
 void uartInit();
 
