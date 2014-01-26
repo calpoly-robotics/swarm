@@ -9,4 +9,6 @@ void initDistanceSensor();
 
 u16 readDistanceSensor();
 
+void shutdownDistanceSensor();
+
 #endif /*DISTANCE_H_*/

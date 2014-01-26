@@ -46,7 +46,7 @@ void initIR() {
 	sbi(TCCR1B, CS10);
 
 	sei();
-	sbi(DDRA, TRANSMIT_PIN);
+	sbi(DDRC, TRANSMIT_PIN);
 	enablePCINT();
 }
 

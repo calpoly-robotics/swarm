@@ -26,4 +26,8 @@ inline void initDrivers() {
 #endif
 }
 
+void shutdownDrivers() {
+	shutdownMotor();
+}
+
 #endif /* DRIVERS_H_*/

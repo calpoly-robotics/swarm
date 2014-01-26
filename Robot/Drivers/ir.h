@@ -13,10 +13,10 @@
 #define RESOLUTION 20
 #define TIMEOUT 1000
 
-#define TRANSMIT_ON() (sbi(PORTA, TRANSMIT_PIN))
-#define TRANSMIT_OFF() (cbi(PORTA, TRANSMIT_PIN))
-#define TRANSMIT_STATE() (gbi(PORTA, TRANSMIT_PIN))
-#define RECEIVE_STATE() (gbi(PORTA, RECEIVE_PIN))
+#define TRANSMIT_ON() (sbi(PORTC, TRANSMIT_PIN))
+#define TRANSMIT_OFF() (cbi(PORTC, TRANSMIT_PIN))
+#define TRANSMIT_STATE() (gbi(PORTC, TRANSMIT_PIN))
+#define RECEIVE_STATE() (gbi(PORTC, RECEIVE_PIN))
 
 typedef enum {
 	WHOS_THERE,
@@ -35,6 +35,7 @@ typedef struct {
 } Message;
 
 void initIR(void);
+void shutdownIR(void);
 void sendMessage(u08 hop, msg_type msg, u08 data);
 void manageTransmit(void);
 void manageRecieve(void);
