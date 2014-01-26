@@ -7,7 +7,7 @@ P_MCU = m1284p
 #programmer
 ISP = avrispmkII
 
-CFLAGS = -g -mmcu=$(MCU) -Os -Wall -Werror=implicit-function-declaration -mcall-prologues -fdata-sections -ffunction-sections -Wno-pointer-sign -Wno-unused-but-set-variable
+CFLAGS = -g -mmcu=$(MCU) -Os -Wall -Werror=implicit-function-declaration -mcall-prologues -fdata-sections -ffunction-sections -Wno-pointer-sign
 LDFLAGS = -Wl,-gc-sections -lm
 
 # Makefile Targets

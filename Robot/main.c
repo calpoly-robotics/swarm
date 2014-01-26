@@ -38,13 +38,23 @@ int main() {
 	init();
 	// uartPrintf("Init complete\n");
 
-	// u08 i = 0;
-	// u32 currTime;
+	u08 i = 0;
+	u32 currTime;
+	u08 tmpStr[64];
+	u08 index = 0;
+	while(1) {
+		// uartPrintDebug(3);
+		// _delay_ms(250);
 
-	// while(1) {
-	// 	uartPrintDebug(8);
-	// 	_delay_ms(1000);
-	// }
+		// block until data is ready
+		do {
+			while (!uartDataReady());
+			tmpStr[index] = uartRead();
+		} while (tmpStr[index++]!='\n');
+		tmpStr[index] = 0; // null terminate string
+
+		uartPrintString(tmpStr);
+	}
 
 	/*
 	while (1) {
