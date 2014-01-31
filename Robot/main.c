@@ -27,8 +27,6 @@ int main() {
 
 	u08 i = 0;
 	u32 currTime;
-	u08 tmpStr[64];
-	u08 index = 0;
 
 	while (1) {
 		currTime = getTime32();
