@@ -2,6 +2,14 @@
 	"folders":
 	[
 		{
+			"file_exclude_patterns":
+			[
+				"Robot/main.hex",
+				"Robot/main.elf",
+				"Robot/main.elf",
+				"Robot/main.hex"
+			],
+
 			"path": "/C/Users/Scott/git/swarm"
 		}
 	]

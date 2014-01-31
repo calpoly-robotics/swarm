@@ -14,10 +14,10 @@ void init() {
 	
 	uartPrintf("Adding all tasks\n");
 	initIRTask();
-	addTask(runBattery);
+	// addTask(runBattery);
 	
-	addTask(runBuzzer);
-	addTask(runBehavior);
+	// addTask(runBuzzer);
+	// addTask(runBehavior);
 
 }
 
@@ -29,20 +29,6 @@ int main() {
 	u32 currTime;
 	u08 tmpStr[64];
 	u08 index = 0;
-	while(1) {
-		// uartPrintDebug(3);
-		// _delay_ms(250);
-
-		// block until data is ready
-		do {
-			while (!uartDataReady());
-			tmpStr[index] = uartRead();
-		} while (tmpStr[index++]!='\n');
-		tmpStr[index] = 0; // null terminate string
-
-		uartPrintString(tmpStr);
-	}
-
 
 	while (1) {
 		currTime = getTime32();
