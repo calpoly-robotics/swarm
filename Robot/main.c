@@ -2,6 +2,7 @@
 #include "Drivers/drivers.h"
 #include "Tasks/tasks.h"
 #include "Tasks/irTask.h"
+#include "Tasks/irTest.h"
 #include "Tasks/batteryTask.h"
 #include "Tasks/buzzerTask.h"
 #include "Tasks/ledTask.h"
@@ -13,7 +14,8 @@ void init() {
 	uartPrintf("Finished driver init\n");
 	
 	uartPrintf("Adding all tasks\n");
-	initIRTask();
+	// initIRTask();
+	initIRTestTask();
 	// addTask(runBattery);
 	
 	// addTask(runBuzzer);
@@ -30,6 +32,7 @@ int main() {
 
 	while (1) {
 		currTime = getTime32();
+		
 		if (tasks[i] != NULL) { 
 
 			Task task = *tasks[i];
@@ -42,6 +45,7 @@ int main() {
 				task.lastRun = currTime;
 				task.run();
 			}
+			uartPrintf("task:%u\t%.6lu ticks left\t currTime:%.6lu\tlastRun:%.6lu\n",i,(task.lastRun+task.interval - currTime),currTime,task.lastRun);
 		}
 
 		if (++i == numTasks) {

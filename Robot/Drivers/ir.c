@@ -1,6 +1,7 @@
 #include "ir.h"
 #include "../Tasks/irTask.h"
 #include "eeprom.h"
+#include "serial.h"
 
 
 const Message DEFAULT_MESSAGE = {
@@ -176,6 +177,8 @@ void manageTransmit() {
 void manageRecieve() {
 
 	if (msgReady) {
+		msgReady = 0;
+		uartPrintString("Message recieved.\n\r");
 		u08 i;
 		for (i = msgReady; i > 0; i--)
 			recvWidths[i] -= recvWidths[i-1];
@@ -269,8 +272,8 @@ ISR(PCINT0_vect) {
 		OCR1A = (recvWidths[recvWidthIndex] + TIMEOUT);
 
 		// pretty sure these lines are not necessary
-		// sbi(TIFR1, OCF1A) // prevent immediate interrupt
-		// sbi(TIMSK1, OCIE1A); // enable the OCR1A int
+		sbi(TIFR1, OCF1A); // prevent immediate interrupt
+		sbi(TIMSK1, OCIE1A); // enable the OCR1A int
 
 
 		recvWidthIndex++;

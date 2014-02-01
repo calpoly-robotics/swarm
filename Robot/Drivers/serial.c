@@ -13,12 +13,13 @@ volatile u08 transmitCount = 0;
 ISR(USART0_UDRE_vect) {
 	if (transmitCount == 0) {
 		cbi(UCSR0B, UDRIE0);
-		return;
+		
+	} else {
+		transmitCount--;
+		UDR0 = transmitBuffer[transmitStart];
+		if (++transmitStart == UART_BUFFER_SIZE)
+			transmitStart = 0;
 	}
-	if (++transmitStart == UART_BUFFER_SIZE)
-		transmitStart == 0;
-	transmitCount--;
-	UDR0 = transmitBuffer[transmitStart++];
 		
 }
 
@@ -48,6 +49,9 @@ void uartPrintChar(u08 data) {
 #ifdef BLOCK_ON_UART_BUFFER_FULL
 	// block until there is room in the buffer
 	while (transmitCount == UART_BUFFER_SIZE);
+#elif defined(FLUSH_ON_UART_BUFFER_FULL)
+	if (transmitCount == UART_BUFFER_SIZE)
+		while (transmitCount > 0);
 #endif
 
 	transmitBuffer[transmitEnd] = data;
@@ -57,10 +61,10 @@ void uartPrintChar(u08 data) {
 
 	sbi(UCSR0B, UDRIE0);
 
-	#ifdef FLUSH_ON_NEWLINE
+#ifdef FLUSH_ON_NEWLINE
 	if(data=='\n')
 		uartFlush();
-	#endif
+#endif
 }
 
 void uartPrintString(u08* str) {

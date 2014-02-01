@@ -4,13 +4,13 @@
 #include "../globals.h"
 #include <stdarg.h>
 
-#define BAUD_RATE 19200
+#define BAUD_RATE 38400
 
 // must be <= 255
 #define	UART_BUFFER_SIZE 255
 
 #define DEBUG
-#define FLUSH_ON_NEWLINE 1
+// #define FLUSH_ON_NEWLINE 1
 #define BLOCK_ON_UART_BUFFER_FULL 1
 
 void uartInit();
