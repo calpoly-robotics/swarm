@@ -5,10 +5,24 @@
 // counter vars because in an unsigned 8-bit C var 255+1=0
 // buffer clobbering could take place, but unlikely since we
 // have a reasonable baudrate and newlines cause a flush(can be disalbed)
-volatile u08 transmitBuffer[256];
+volatile u08 transmitBuffer[UART_BUFFER_SIZE];
 volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
+volatile u08 transmitCount = 0;
 
+ISR(USART0_UDRE_vect) {
+	if (transmitCount == 0) {
+		cbi(UCSR0B, UDRIE0);
+		return;
+	}
+	if (++transmitStart == UART_BUFFER_SIZE)
+		transmitStart = 0;
+	transmitCount--;
+	UDR0 = transmitBuffer[transmitStart++];
+		
+}
+
+#ifdef DEBUG
 void uartInit() {
 	cli();
 
@@ -30,26 +44,23 @@ void uartInit() {
 	sei();
 }
 
-ISR(USART0_UDRE_vect) {
-	if (transmitStart != transmitEnd)
-		UDR0 = transmitBuffer[transmitStart++];
-	else
-		cbi(UCSR0B, UDRIE0);
-}
-
 void uartPrintChar(u08 data) {
-	transmitBuffer[transmitEnd++] = data;
+#ifdef BLOCK_ON_UART_BUFFER_FULL
+	// block until there is room in the buffer
+	while (transmitCount == UART_BUFFER_SIZE);
+#endif
+
+	transmitBuffer[transmitEnd] = data;
+	if(++transmitEnd == UART_BUFFER_SIZE)
+		transmitEnd = 0;
+	transmitCount++;
+
 	sbi(UCSR0B, UDRIE0);
 
 	#ifdef FLUSH_ON_NEWLINE
 	if(data=='\n')
 		uartFlush();
 	#endif
-}
-
-void uartPrintChar2(u16 data) {
-	uartPrintChar(data >> 8);
-	uartPrintChar(data);
 }
 
 void uartPrintString(u08* str) {
@@ -65,74 +76,6 @@ void uartPrintf(const u08* fmt, ... ) {
 	vsprintf(buffer, fmt, args);
 	uartPrintString(buffer);
 	va_end(args);
-}
-
-void uartPrintNibble(u08 nibble) {
-	if (nibble > 15)
-		uartPrintChar('b'); // wrong
-	else if (nibble > 9)
-		uartPrintChar('A' + (nibble - 10));
-	else
-		uartPrintChar('0' + nibble);
-}
-
-void uartPrint_u08(u08 data) {
-	uartPrintNibble(data >> 4);
-	uartPrintNibble(data & 0xF);
-}
-
-void uartPrint_u16(u16 data) {
-	uartPrint_u08(data >> 8);
-	uartPrint_u08(data & 0xFF);
-}
-
-void uartPrint_u32(u32 data) {
-	uartPrint_u16(data >> 16);
-	uartPrint_u16(data & 0xFFFF);
-}
-
-void uartPrint_u08_dec(u08 num)
-{
-	if (num >= 100)
-	{
-		uartPrintChar('0' + num/100);
-	}
-	else
-	{
-		uartPrintChar(' ');
-	}
-	if (num >= 10)
-	{
-		uartPrintChar('0' + (num % 100)/10);
-	}
-	else
-	{
-		uartPrintChar(' ');
-	}
-	uartPrintChar('0' + num % 10);
-}
-
-void uartPrint_u16_dec(u16 num)
-{
-	uartPrintChar('0' + num/10000);
-	uartPrintChar('0' + (num % 10000)/1000);
-	uartPrintChar('0' + (num % 1000)/100);
-	uartPrintChar('0' + (num % 100)/10);
-	uartPrintChar('0' + num % 10);
-}
-
-void uartPrint_u32_dec(u32 num)
-{
-	uartPrintChar('0' + num/1000000000);
-	uartPrintChar('0' + (num % 1000000000)/100000000);
-	uartPrintChar('0' + (num % 100000000)/10000000);
-	uartPrintChar('0' + (num % 10000000)/1000000);
-	uartPrintChar('0' + (num % 1000000)/100000);
-	uartPrintChar('0' + (num % 100000)/10000);
-	uartPrintChar('0' + (num % 10000)/1000);
-	uartPrintChar('0' + (num % 1000)/100);
-	uartPrintChar('0' + (num % 100)/10);
-	uartPrintChar('0' + num % 10);
 }
 
 void uartPrintDebug(u08 len) {
@@ -167,3 +110,19 @@ u08 uartRead() {
 
 	return UDR0;
 }
+
+#else // don't do anything for these functions
+inline void uartInit() {}
+
+inline void uartPrintChar(u08 data) {}
+inline void uartPrintString(u08* str) {}
+inline void uartPrintf(const u08* fmt, ...) {}
+
+inline void uartPrintDebug(u08 len) {}
+
+inline void uartFlush() {}
+
+inline u08 uartDataReady() {return 1;}
+
+inline u08 uartRead() {return UDR0;}
+#endif

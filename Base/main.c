@@ -3,13 +3,19 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define PIN 0
+#define sbi(a, b) ((a) |= 1 << (b))		// set bit
+#define cbi(a, b) ((a) &= ~(1 << (b)))	// clear bit
+#define tbi(a, b) ((a) ^= 1 << (b))		// toggles bit
+#define gbi(a, b) ((a) & (1 << (b)))	// get bit
+
+#define PIN PINA4
 
 int main() {
-	DDRB |= (1 << PIN);
-	PORTB |= (1 << PIN);
+	sbi(DDRA,PIN);
 	for(;;) {
-		_delay_ms(2000);
-		PINB |= (1 << PIN);
+		sbi(PORTA, PIN);
+		_delay_us(20);
+		cbi(PORTA, PIN);
+		_delay_us(30);
 	}
 }

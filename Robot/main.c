@@ -26,7 +26,7 @@ void init() {
 	uartPrintf("Finished driver init\n");
 	
 	uartPrintf("Adding all tasks\n");
-	// initIRTask();
+	initIRTask();
 	// addTask(runBattery);
 	
 	// addTask(runBuzzer);
@@ -40,23 +40,7 @@ int main() {
 
 	u08 i = 0;
 	u32 currTime;
-	u08 tmpStr[64];
-	u08 index = 0;
-	while(1) {
-		// uartPrintDebug(3);
-		// _delay_ms(250);
-
-		// block until data is ready
-		do {
-			while (!uartDataReady());
-			tmpStr[index] = uartRead();
-		} while (tmpStr[index++]!='\n');
-		tmpStr[index] = 0; // null terminate string
-
-		uartPrintString(tmpStr);
-	}
-
-	/*
+	
 	while (1) {
 		currTime = getTime32();
 		if (tasks[i] != NULL) { 
@@ -77,16 +61,6 @@ int main() {
 			i = 0;
 		}
 
-	}
-	*/
-
-	while(1) {
-		shutdownMotor();
-		_delay_ms(1000);
-		initMotor();
-		leftMotor(-255);
-		rightMotor(255);
-		_delay_ms(1000);
 	}
 
 	return 0;
