@@ -95,12 +95,7 @@ void uartPrintDebug(u08 len) {
  */
 // #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 void uartFlush() {
-	u08 tmp;
-
-	// read from the register until the buffer is cleared
-	// and assign it to a dummy var
-	while (gbi(UCSR0A, RXC0))
-		tmp = UDR0;
+	while (transmitCount == UART_BUFFER_SIZE);
 }
 // #pragma GCC diagnostic warning "-Wunused-but-set-variable"
 

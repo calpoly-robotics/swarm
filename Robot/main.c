@@ -14,7 +14,7 @@ void init() {
 	uartPrintf("Finished driver init\n");
 	
 	uartPrintf("Adding all tasks\n");
-	// initIRTask();
+	initIRTask();
 	initIRTestTask();
 	// addTask(runBattery);
 	
@@ -35,17 +35,20 @@ int main() {
 		
 		if (tasks[i] != NULL) { 
 
-			Task task = *tasks[i];
+			volatile Task* task = tasks[i];
 
-			if (task.runNow) {
-				task.runNow = 0;
-				task.lastRun = currTime;
-				task.run();
-			} else if (currTime > (task.lastRun + task.interval)) {
-				task.lastRun = currTime;
-				task.run();
+			if ((*task).runNow) {
+				(*task).runNow = 0;
+				(*task).lastRun = currTime;
+				(*task).run();
+				uartPrintDebug(5);
+			} else if (currTime > ((*task).lastRun + (*task).interval)) {
+				(*task).lastRun = currTime;
+				(*task).run();
 			}
-			uartPrintf("task:%u\t%.6lu ticks left\t currTime:%.6lu\tlastRun:%.6lu\n",i,(task.lastRun+task.interval - currTime),currTime,task.lastRun);
+			// uartPrintf("lastRun:%.6lu\tcurrTime:%.6lu\tbullshit:%.6lu\n",(*task).lastRun,currTime,bullshit);
+			// uartPrintf("int+lastRun:%.6lu\tcurrTime:%.6lu\n",(*task).lastRun+10000,currTime);
+			// uartPrintf("(*task):%u\t%.6lu ticks left\t currTime:%.6lu\tlastRun:%.6lu\n",i,((*task).lastRun+(*task).interval - currTime),currTime,(*task).lastRun);
 		}
 
 		if (++i == numTasks) {
@@ -53,7 +56,6 @@ int main() {
 		}
 
 	}
-	
 
 	return 0;
 }

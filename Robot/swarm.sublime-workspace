@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"uart",
+				"uartPrintString"
+			],
+			[
+				"pri",
+				"uartPrintf"
+			],
+			[
+				"transm",
+				"transmitCount"
+			],
+			[
+				"dela",
+				"_delay_ms"
+			],
+			[
+				"BYTE",
+				"BYTETOBINARY"
+			],
+			[
+				"uarPin",
+				"uartPrintChar"
+			],
+			[
+				"tranm",
+				"transmitEnd"
+			],
+			[
 				"RIGHT",
 				"RIGHT_MOTOR_AIN2"
 			],
@@ -32,14 +60,6 @@
 				"uartPrintString"
 			],
 			[
-				"uart",
-				"uartPrint_u08"
-			],
-			[
-				"transm",
-				"transmitEnd"
-			],
-			[
 				"tran",
 				"transmitEnd"
 			],
@@ -52,10 +72,50 @@
 	"buffers":
 	[
 		{
-			"file": "Drivers/drivers.h",
+			"file": "main.c",
 			"settings":
 			{
-				"buffer_size": 452,
+				"buffer_size": 1312,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Tasks/irTest.c",
+			"settings":
+			{
+				"buffer_size": 446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Drivers/ir.h",
+			"settings":
+			{
+				"buffer_size": 931,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Drivers/ir.c",
+			"settings":
+			{
+				"buffer_size": 7155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Tasks/irTask.c",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Drivers/serial.h",
+			"settings":
+			{
+				"buffer_size": 465,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,39 +123,15 @@
 			"file": "pins.h",
 			"settings":
 			{
-				"buffer_size": 428,
+				"buffer_size": 702,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "main.c",
+			"file": "Drivers/serial.c",
 			"settings":
 			{
-				"buffer_size": 867,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Tasks/ledTask.c",
-			"settings":
-			{
-				"buffer_size": 40,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Tasks/ledTask.h",
-			"settings":
-			{
-				"buffer_size": 147,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Tasks/tasks.h",
-			"settings":
-			{
-				"buffer_size": 331,
+				"buffer_size": 2621,
 				"line_ending": "Unix"
 			}
 		}
@@ -133,30 +169,46 @@
 	"file_history":
 	[
 		"/home/scott/calpoly-swarm2/Robot/globals.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/ir.c",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/serial.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/clock.c",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/irTask.c",
+		"/home/scott/calpoly-swarm2/Robot/Makefile",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/serial.c",
+		"/home/scott/calpoly-swarm2/Robot/irTest.c",
+		"/home/scott/calpoly-swarm2/Robot/irTest.h",
+		"/home/scott/calpoly-swarm2/Robot/main.c",
+		"/home/scott/calpoly-swarm2/Base/main.c",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/ir.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/motor.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/drivers.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/distance.c",
+		"/home/scott/calpoly-swarm2/Robot/pins.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/motor.c",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/batteryTask.h",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/batteryTask.c",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/adc.c",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/adc.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/distance.h",
+		"/home/scott/calpoly-swarm2/Robot/Drivers/lightSensor.h",
+		"/home/scott/Desktop/BlueCopter-master/BlueCopter/libraries/PIDCont/PIDCont.h",
+		"/home/scott/Desktop/BlueCopter-master/BlueCopter/libraries/PIDCont/PIDCont.cpp",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/ledTask.c",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/tasks.h",
+		"/home/scott/calpoly-swarm2/Robot/Tasks/ledTask.h",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/buzzer.c",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/buzzer.h",
-		"/home/scott/calpoly-swarm2/Robot/Makefile",
 		"/home/scott/calpoly-swarm2/.gitignore",
 		"/home/scott/calpoly-swarm2/Robot/main.elf",
 		"/home/scott/calpoly-swarm2/Robot/Tasks/irTask.h",
-		"/home/scott/calpoly-swarm2/Robot/Tasks/irTask.c",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/clock.c",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/eeprom.c",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/eeprom.h",
-		"/home/scott/calpoly-swarm2/Robot/pins.h",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/distance.h",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/distance.c",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/lightSensor.c",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/serial.c",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/ir.h",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/ir.c",
 		"/home/scott/calpoly-swarm2/Robot/swarm.sublime-project",
 		"/home/scott/calpoly-swarm2/README.md",
 		"/home/scott/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/scott/calpoly-swarm/Circuits/Boards R2/Charger Board_2.sch",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/motor.c",
 		"/home/scott/calpoly-swarm2/Robot/Drivers/twi.c",
-		"/home/scott/calpoly-swarm2/Robot/Drivers/adc.c",
 		"/home/scott/calpoly-swarm2/Robot/swarm.sublime-workspace",
 		"/C/Users/Scott/git/swarm/Robot/Makefile",
 		"/C/Users/Scott/git/swarm/Robot/globals.h",
@@ -223,6 +275,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"-pins.h,/home/scott/calpoly-swarm2/Robot/Tasks,-*.elf,-*.hex,-*.lss,-swarm.*",
 			"<open folders>,-pins.h",
 			"<open folders>"
 		]
@@ -232,6 +285,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"PCI",
+			"disablePCINT",
+			"PORT",
+			"sendBufCount",
+			"manageLastRun",
+			"lastRun",
+			"task",
+			");\n",
+			"\n	// // sbi(PORTC, TRANSMIT_PIN);\n	// while(1) {\n	// 	uartPrintf(BYTETOBINARYPATTERN\"\\n\", BYTETOBINARY(PINC));\n	// 	_delay_ms(200);\n	// }",
+			"DRC,TRANSMIT_PIN);\n	// // sbi(PORTC, TRANSMIT_PIN);\n	// while(1) {\n	// 	uartPrintf(BYTETOBINARYPATTERN\"\\n\", BYTETOBINARY(PINC));\n	// 	_delay_ms(200);\n	// }",
+			"RED_LED",
+			"Ip",
+			"tp",
+			"tPrev",
+			"TCCR2",
 			"4",
 			"1",
 			"0",
@@ -260,6 +328,11 @@
 		"regex": true,
 		"replace_history":
 		[
+			"irManageLastRun",
+			"manageLastRun",
+			"(*task)",
+			"IPrev",
+			"tPrev",
 			"1",
 			"3",
 			"6",
@@ -291,75 +364,23 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Drivers/drivers.h",
-					"settings":
-					{
-						"buffer_size": 452,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								178,
-								178
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "pins.h",
-					"settings":
-					{
-						"buffer_size": 428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								161,
-								161
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "main.c",
 					"settings":
 					{
-						"buffer_size": 867,
+						"buffer_size": 1312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								246,
+								246
 							]
 						],
 						"settings":
@@ -374,50 +395,105 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Tasks/ledTask.c",
+					"buffer": 1,
+					"file": "Tasks/irTest.c",
 					"settings":
 					{
-						"buffer_size": 40,
+						"buffer_size": 446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								338,
+								381
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/C++/C.tmLanguage"
 						},
-						"translation.x": 0.0,
+						"translation.x": 48.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Tasks/ledTask.h",
+					"buffer": 2,
+					"file": "Drivers/ir.h",
 					"settings":
 					{
-						"buffer_size": 147,
+						"buffer_size": 931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								427,
+								427
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Drivers/ir.c",
+					"settings":
+					{
+						"buffer_size": 7155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5759,
+								5759
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4199.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Tasks/irTask.c",
+					"settings":
+					{
+						"buffer_size": 415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -427,18 +503,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "Tasks/tasks.h",
+					"file": "Drivers/serial.h",
 					"settings":
 					{
-						"buffer_size": 331,
+						"buffer_size": 465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								331,
-								331
+								168,
+								168
 							]
 						],
 						"settings":
@@ -447,6 +523,59 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "pins.h",
+					"settings":
+					{
+						"buffer_size": 702,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Drivers/serial.c",
+					"settings":
+					{
+						"buffer_size": 2621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2051,
+								2051
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1530.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -491,7 +620,7 @@
 	},
 	"replace":
 	{
-		"height": 62.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -2,11 +2,7 @@
 #include "../Tasks/irTask.h"
 #include "eeprom.h"
 #include "serial.h"
-
-
-const Message DEFAULT_MESSAGE = {
-	0,0,0,0,0,0,0
-};
+#include <string.h>
 
 u08 senderId = 0;
 
@@ -33,7 +29,15 @@ inline u08 getSenderId() {
 	return senderId;
 }
 
-void enablePCINT();
+void enablePCINT()  {
+	sbi(PCICR, PCIE2);
+	PCMSK2 = (1<<PCINT18) | (1<<PCINT19) | (1<<PCINT20) |
+			 (1<<PCINT21) | (1<<PCINT22) | (1<<PCINT23);
+}
+
+void disablePCINT() {
+	cbi(PCICR, PCIE2);
+}
 
 void initIR() {
 	// doesn't have to be first if this causes problems...
@@ -47,7 +51,7 @@ void initIR() {
 	sbi(TCCR1B, CS10);
 
 	sei();
-	sbi(DDRA, TRANSMIT_PIN);
+	sbi(DDRC, TRANSMIT_PIN);
 	enablePCINT();
 }
 
@@ -55,22 +59,12 @@ inline void enableOCR(u16 val) {
 	TCNT1 = 0; // reset timer
 	OCR1A = val;
 	// pretty sure that line is useless
-	// sbi(TIFR1, OCF1A); // prevent immediate interrupt
+	sbi(TIFR1, OCF1A); // prevent immediate interrupt
 	sbi(TIMSK1, OCIE1A); // turn on OCR1A intterupt
 }
 
 inline void disableOCR() {
 	cbi(TIMSK1, OCIE1A);
-}
-
-void enablePCINT()  {
-	sbi(PCICR, PCIE0);
-	sbi(PCMSK0, PCINT2); // on PINA3
-}
-
-void disablePCINT() {
-	cbi(PCICR, PCIE0);
-	cbi(PCMSK0, PCINT2);
 }
 
 static inline void sendBufHasSpace() {
@@ -110,16 +104,21 @@ void sendMessage(u08 ttl, msg_type msg, u08 data) {
 	sendBufCount++;
 }
 
-Message readMessage() {
+int readMessage(Message* msg) {
 	if (recvBufCount == 0)
-		return DEFAULT_MESSAGE;
-	Message tmp = recvMsgBuf[recvBufStart];
+		return 1;
+	void* tmp = (void*)recvMsgBuf + recvBufCount*sizeof(Message);
+	memcpy(msg,tmp,sizeof(Message));
 
 	recvBufCount--;
 	if (++recvBufStart == BUFFER_SIZE)
 		recvBufStart = 0;
 
-	return tmp;
+	return 0;
+}
+
+u08 getRecvBufCount() {
+	return recvBufCount;
 }
 
 /**
@@ -260,8 +259,9 @@ ISR(TIMER1_COMPA_vect) {
 	}
 }
 
-ISR(PCINT0_vect) {
-	if (!RECEIVE_STATE()) // if we're tx, ignore all incoming tx
+ISR(PCINT2_vect) {
+	// uartPrintString("msg\n");
+	if (PINC & ~(0x03)) // if we're tx, ignore all incoming tx
 		return;
 
 	if (recvWidthIndex > -1) { // >= 0 not the first nibble

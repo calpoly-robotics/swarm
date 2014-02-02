@@ -1,7 +1,7 @@
 #include "irTask.h"
 #include "../Drivers/ir.h"
 
-u08 lastRun = 0;
+u08 irManageLastRun = 0;
 Task* irTask;
 
 void initIRTask() {
@@ -11,12 +11,12 @@ void initIRTask() {
 
 void runIR() {
 
-	if (lastRun) { // rx was last run
+	if (irManageLastRun) { // rx was last run
 		manageTransmit();
-		lastRun = 1;
+		irManageLastRun = 0;
 	} else { // tx last run
 		manageRecieve();
-		lastRun = 0;
+		irManageLastRun = 1;
 	}
 
 	// TODO anything else here?
