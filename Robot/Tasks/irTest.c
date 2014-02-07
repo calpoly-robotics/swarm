@@ -8,7 +8,7 @@ Task* testTask;
 
 void initIRTestTask() {
 	testTask = addTask(runIRTest);
- 	(*testTask).interval = 1000;
+ 	(*testTask).interval = 10000;
 }
 
 void runIRTest() {

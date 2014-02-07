@@ -165,13 +165,15 @@ void manageTransmit() {
 	for (i = 0; i < NUM_NIBBLES; i++) {
 		// nibble in time + time to fall low + plus a little more for good measure
 		sendWidths[i+1] = ((u16)nibbles[i]*RESOLUTION) + LOW_WIDTH + RESOLUTION;
+		uartPrintf("%d\n", sendWidths[i+1]);
 	}
+	uartPrintChar('\n');
 
 	if (++sendBufStart == BUFFER_SIZE)
 		sendBufStart = 0;
 
 	sendBufCount--;
-	sendSequence++;
+	// sendSequence++;
 	sendWidthIndex = 0;
 	TRANSMIT_OFF();
 	enableOCR(HIGH_WIDTH);
@@ -180,7 +182,6 @@ void manageTransmit() {
 void manageRecieve() {
 
 	if (msgReady) {
-		msgReady = 0;
 		uartPrintString("Message recieved.\n");
 		u08 i;
 		for (i = msgReady; i > 0; i--)
@@ -193,11 +194,16 @@ void manageRecieve() {
 			else
 				nibbles[i-1] = (recvWidths[i]-410)/20;
 		}
+
+		for (i = 0; i < msgReady; i++) {
+			uartPrintf("%d\n", recvWidths[i]);
+		}
 		u08 msgChecksum = nibbles[4];
 		nibbles[4] = 0; // clear the checksum nibble so we calculate the 
 						//  checksum under the same circumstances are gened
-		if (checksum4(nibbles, msgReady-1) != msgChecksum) {
-			// TODO: handle the error properly
+		u08 tmpCheck = checksum4(nibbles, msgReady-1);
+		if (tmpCheck != msgChecksum) {
+			uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpCheck);
 			return;
 		}
 		// not usefull for anything....
@@ -235,7 +241,7 @@ void manageRecieve() {
 			recvBufEnd = 0;
 		recvBufCount++;
 
-
+		msgReady = 0;
 	}
 }
 
@@ -270,10 +276,10 @@ ISR(PCINT2_vect) {
 	if (gbi(PINC, TRANSMIT_PIN)) // if we're tx, ignore all incoming tx
 		return;
 
-	if (~())
+	if (PINC == 0b11111100)
+		return;
 
-	uartPrintChar('a');
-	uartPrintChar('\n');
+	// uartPrintf("%d\n",recvWidthIndex);
 	tbi(PORTA, PINA1);
 
 	if (recvWidthIndex > -1) { // >= 0 not the first nibble
@@ -290,7 +296,7 @@ ISR(PCINT2_vect) {
 
 		recvWidthIndex++;
 	} else { // the first nibble of a message
-		PCMSK2 = (~PINC) & (~(0x03));
+		PCMSK2 = (~PINC) & 0b11111100;
 		recvWidthIndex++;
 		enableOCR(TIMEOUT);
 		// really don't think that's necessary...

@@ -31,6 +31,10 @@ int main() {
 	u32 currTime;
 	sbi(DDRA,PINA1);
 
+	// while(1) {
+	// 	sbi(PORTC, TRANSMIT_PIN);
+	// }
+
 	while (1) {
 		currTime = getTime32();
 		
