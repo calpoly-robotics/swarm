@@ -5,9 +5,6 @@
 
 #define ADC_MAX_VAL (1024)
 
-
-#define VOLTS_TO_10BIT(__volts) ((u16)(__volts*(18/(18+7.5)/3*1024)))
-
 // to adjust for voltage divider
 // pin voltage / (18/(18+7.5)) = battery voltage
 

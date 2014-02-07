@@ -11,7 +11,7 @@
 // time for collector to fall low
 #define LOW_WIDTH 200
 #define RESOLUTION 20
-#define TIMEOUT 1000
+#define TIMEOUT 500
 
 #define TRANSMIT_ON() (sbi(PORTC, TRANSMIT_PIN))
 #define TRANSMIT_OFF() (cbi(PORTC, TRANSMIT_PIN))

@@ -29,6 +29,7 @@ int main() {
 
 	u08 i = 0;
 	u32 currTime;
+	sbi(DDRA,PINA1);
 
 	while (1) {
 		currTime = getTime32();

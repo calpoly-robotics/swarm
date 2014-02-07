@@ -30,12 +30,16 @@ inline u08 getSenderId() {
 }
 
 void enablePCINT()  {
+	// uartPrintChar('e');
+	// uartPrintChar('\n');
 	sbi(PCICR, PCIE2);
 	PCMSK2 = (1<<PCINT18) | (1<<PCINT19) | (1<<PCINT20) |
 			 (1<<PCINT21) | (1<<PCINT22) | (1<<PCINT23);
 }
 
 void disablePCINT() {
+	// uartPrintChar('d');
+	// uartPrintChar('\n');
 	cbi(PCICR, PCIE2);
 }
 
@@ -177,7 +181,7 @@ void manageRecieve() {
 
 	if (msgReady) {
 		msgReady = 0;
-		uartPrintString("Message recieved.\n\r");
+		uartPrintString("Message recieved.\n");
 		u08 i;
 		for (i = msgReady; i > 0; i--)
 			recvWidths[i] -= recvWidths[i-1];
@@ -241,6 +245,7 @@ ISR(TIMER1_COMPA_vect) {
 		msgReady = recvWidthIndex;
 		recvWidthIndex = -1;
 		disableOCR();
+		enablePCINT();
 	} else {
 		if (TRANSMIT_STATE()) { // if the emitters are high
 			TRANSMIT_OFF(); // quickly turn it off. time critical
@@ -260,9 +265,16 @@ ISR(TIMER1_COMPA_vect) {
 }
 
 ISR(PCINT2_vect) {
-	// uartPrintString("msg\n");
-	if (PINC & ~(0x03)) // if we're tx, ignore all incoming tx
+	// uartPrintChar('b');
+	// uartPrintChar('\n');
+	if (gbi(PINC, TRANSMIT_PIN)) // if we're tx, ignore all incoming tx
 		return;
+
+	if (~())
+
+	uartPrintChar('a');
+	uartPrintChar('\n');
+	tbi(PORTA, PINA1);
 
 	if (recvWidthIndex > -1) { // >= 0 not the first nibble
 		// save the time
@@ -278,11 +290,11 @@ ISR(PCINT2_vect) {
 
 		recvWidthIndex++;
 	} else { // the first nibble of a message
+		PCMSK2 = (~PINC) & (~(0x03));
 		recvWidthIndex++;
-		TCNT1 = 0;
-		OCR1A = (TCNT1 + TIMEOUT);
+		enableOCR(TIMEOUT);
 		// really don't think that's necessary...
-		// sbi(TIFR1, OCF1A); //prevent immediate int
+		sbi(TIFR1, OCF1A); //prevent immediate int
 		sbi(TIMSK1, OCIE1A); // enable ocr interrupt
 	}
 }
