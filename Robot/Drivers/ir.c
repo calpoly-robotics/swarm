@@ -182,7 +182,8 @@ void manageTransmit() {
 void manageRecieve() {
 
 	if (msgReady) {
-		uartPrintString("Message recieved.\n");
+		// uartPrintString("Message recieved.\n");
+		uartPrintf("msgReady\n",msgReady);
 		u08 i;
 		for (i = msgReady; i > 0; i--)
 			recvWidths[i] -= recvWidths[i-1];
@@ -196,14 +197,14 @@ void manageRecieve() {
 		}
 
 		for (i = 0; i < msgReady; i++) {
-			uartPrintf("%d\n", recvWidths[i]);
+			// uartPrintf("%d\n", recvWidths[i]);
 		}
 		u08 msgChecksum = nibbles[4];
 		nibbles[4] = 0; // clear the checksum nibble so we calculate the 
 						//  checksum under the same circumstances are gened
 		u08 tmpCheck = checksum4(nibbles, msgReady-1);
 		if (tmpCheck != msgChecksum) {
-			uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpCheck);
+			// uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpCheck);
 			return;
 		}
 		// not usefull for anything....

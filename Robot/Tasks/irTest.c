@@ -2,7 +2,7 @@
 #include "../Drivers/ir.h"
 #include "../Drivers/serial.h"
 
-// #define TRANSMIT
+#define TRANSMIT
 
 Task* testTask;
 

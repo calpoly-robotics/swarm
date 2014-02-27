@@ -4,7 +4,7 @@
 #include "../globals.h"
 #include <stdarg.h>
 
-#define BAUD_RATE 38400
+#define BAUD_RATE 19200
 
 // must be <= 255
 #define	UART_BUFFER_SIZE 255
@@ -18,6 +18,7 @@ void uartInit();
 void uartPrintChar(u08 data);
 void uartPrintString(u08* str);
 void uartPrintf(const u08* fmt, ...);
+void uartPrint_u08(u08);
 
 void uartPrintDebug(u08 len);
 
