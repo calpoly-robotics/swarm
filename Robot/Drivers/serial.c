@@ -82,6 +82,38 @@ void uartPrintf(const u08* fmt, ... ) {
 	va_end(args);
 }
 
+void uartPrint_u08(u08 num)
+{
+	if (num >= 100)
+	{
+		uartPrintChar('0' + num/100);
+	}
+	else
+	{
+		uartPrintChar(' ');
+	}
+	if (num >= 10)
+	{
+		uartPrintChar('0' + (num % 100)/10);
+	}
+	else
+	{
+		uartPrintChar(' ');
+	}
+	uartPrintChar('0' + num % 10);
+	uartPrintChar('\n');
+}
+
+void uartPrint_u16(u16 num)
+{
+	uartPrintChar('0' + num/10000);
+	uartPrintChar('0' + (num % 10000)/1000);
+	uartPrintChar('0' + (num % 1000)/100);
+	uartPrintChar('0' + (num % 100)/10);
+	uartPrintChar('0' + num % 10);
+	uartPrintChar('\n');
+}
+
 void uartPrintDebug(u08 len) {
 	uartPrintChar('8');
 	for (;len>0;len--) {

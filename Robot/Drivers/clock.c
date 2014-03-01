@@ -22,7 +22,7 @@ void initClock() {
 	// Enable the overflow interrupt
 	sbi(TIMSK3, TOIE3);
 
-	// Set prescaller to 1/1024 (~8kHz)
+	// Set prescaller to 1/1024 (~10kHz)
 	sbi(TCCR3B, CS30);
 	sbi(TCCR3B, CS32);
 

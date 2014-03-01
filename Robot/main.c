@@ -26,6 +26,7 @@ void init() {
 int main() {
 	init();
 	uartPrintf("Init complete\n");
+	uartPrintString("*************************************************\n");
 
 	u08 i = 0;
 	u32 currTime;

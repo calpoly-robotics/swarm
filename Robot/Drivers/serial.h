@@ -19,6 +19,7 @@ void uartPrintChar(u08 data);
 void uartPrintString(u08* str);
 void uartPrintf(const u08* fmt, ...);
 void uartPrint_u08(u08);
+void uartPrint_u16(u16);
 
 void uartPrintDebug(u08 len);
 
