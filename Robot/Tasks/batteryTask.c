@@ -78,5 +78,6 @@ void runBattery() {
 }
 
 ISR(TIMER2_OVF_vect) {
+	sbi(PINA,1);
 	timeRested++;
 }

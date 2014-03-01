@@ -31,6 +31,7 @@ int main() {
 	u08 i = 0;
 	u32 currTime;
 	sbi(DDRA,PINA1);
+	sbi(DDRB, 2);
 
 	// while(1) {
 	// 	sbi(PORTC, TRANSMIT_PIN);
@@ -38,6 +39,7 @@ int main() {
 
 	while (1) {
 		currTime = getTime32();
+		sbi(PINB, 2);
 		
 		if (tasks[i] != NULL) { 
 

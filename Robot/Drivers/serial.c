@@ -10,18 +10,18 @@ volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 volatile u08 transmitCount = 0;
 
-ISR(USART0_UDRE_vect) {
-	if (transmitCount == 0) {
-		cbi(UCSR0B, UDRIE0);
+// ISR(USART0_UDRE_vect) {
+// 	if (transmitCount == 0) {
+// 		cbi(UCSR0B, UDRIE0);
 		
-	} else {
-		transmitCount--;
-		UDR0 = transmitBuffer[transmitStart];
-		if (++transmitStart == UART_BUFFER_SIZE)
-			transmitStart = 0;
-	}
+// 	} else {
+// 		transmitCount--;
+// 		UDR0 = transmitBuffer[transmitStart];
+// 		if (++transmitStart == UART_BUFFER_SIZE)
+// 			transmitStart = 0;
+// 	}
 		
-}
+// }
 
 #ifdef DEBUG
 void uartInit() {

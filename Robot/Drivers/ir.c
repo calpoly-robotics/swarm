@@ -4,7 +4,7 @@
 #include "serial.h"
 #include <string.h>
 
-#define ALL_RX_MASK 0b00000100
+#define ALL_RX_MASK (1 << RECIEVE_PIN4)
 
 u08 senderId = 0;
 u08 transmitting = 0;
@@ -18,13 +18,12 @@ volatile Message recvMsgBuf[BUFFER_SIZE];
 volatile u08 recvBufCount = 0;
 volatile u08 recvBufStart = 0;
 volatile u08 recvBufEnd = 0;
-
 volatile u08 sendSequence = 0;
 volatile u08 sendWidthIndex = 0;
 volatile u16 sendWidths[NUM_NIBBLES+1];
 
 volatile s08 recvWidthIndex = -1;
-volatile u16 recvWidths[100];
+volatile u16 recvWidths[NUM_NIBBLES+1];
 
 volatile u08 msgReady = 0;
 
@@ -189,14 +188,14 @@ void manageTransmit() {
 }
 
 void manageRecieve() {
-
-	if (msgReady) {
-		sbi(PINA,1); // toggle A1 for debug
+	if (msgReady == NUM_NIBBLES+1) {
+		// sbi(PINA, 1);
 		uartPrintString("MR\n");
-		// uartPrintf("msgReady\t%d\n",msgReady);
+
 		u08 i;
 		for (i = msgReady; i > 0; i--) {
-			// uartPrintf("%d\n",recvWidths[i]);
+			// technically, recvWidths[0] will be random data
+			// but it's only reading from random memory, so we don't care
 			recvWidths[i] -= recvWidths[i-1];
 		}
 
@@ -205,56 +204,31 @@ void manageRecieve() {
 			if (recvWidths[i] < 410)
 				nibbles[i-1] = 0;
 			else
-				nibbles[i-1] = (recvWidths[i]-410)/20;
+				nibbles[i-1] = (recvWidths[i]-400 - RESOLUTION/2)/RESOLUTION;
 		}
 
-		for (i = 0; i < msgReady; i++) {
-			// uartPrintf("%d\n", recvWidths[i]);
-			// uartPrint_u16(recvWidths[i]);
-			// uartPrintChar('\n');
+		for (i=0; i < msgReady; i++) {
+			uartPrintf("");
 		}
-		// uartPrintChar('\n'); 
 
-		u08 msgChecksum = nibbles[4];
-		nibbles[4] = 0; // clear the checksum nibble so we calculate the 
-						//  checksum under the same circumstances are gened
-		u08 tmpCheck = checksum4(nibbles, msgReady-1);
-		if (tmpCheck != msgChecksum) {
-			// uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpCheck);
+		u08 msgChecksum = nibbles[4] & 0x0F;
+		nibbles[4] = 0; // this is how the nibbles were when the checksum happened
+
+		u08 tmpChecksum = checksum4(nibbles, NUM_NIBBLES);
+		if (tmpChecksum != msgChecksum) {
+			// uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpChecksum);
 			return;
 		}
-		// not usefull for anything....
-		// else {
-		// 	errorHistory[errorIndex] = 0;
-		// }
-		
-		// if (++errorIndex == 100) {
-		// 	u08 num = 0;
-		// 	for (i = 0; i < 100; i++)
-		// 	{
-		// 		num += errorHistory[i];
-		// 	}
-		// 	uartPrintString("Error Rate ");
-		// 	uartPrint_u16(errorCount++);
-		// 	uartPrintString(": ");
-		// 	uartPrint_u08(num);
-		// 	uartPrintString("\r\n");
-		// 	errorIndex = 0;
-		// }
+
 		u08 tmpSender = (nibbles[0] << 2 | nibbles[1] >> 1) & 0x7F;
-		if (senderId == tmpSender) // we sent this message
-			return; //just don't bother with the saving and stuff.
+		if (senderId == tmpSender)
+			return; 	// we sent this. Ignore
 
 		recvMsgBuf[recvBufEnd].sender = tmpSender;
 		recvMsgBuf[recvBufEnd].ttl = (nibbles[5] >> 1) & 0x07;
 		recvMsgBuf[recvBufEnd].isBase = (nibbles[5]) & 0x01;
 		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
 		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
-
-		// uartPrintf("Type:%d\tData:%d\n",recvMsgBuf[recvBufEnd].msg,recvMsgBuf[recvBufEnd].data);
-
-		// if (recvMsgBuf[recvBufEnd].ttl > 0)
-		// 	retransmit(recvMsgBuf[recvBufEnd]);
 
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
@@ -265,29 +239,28 @@ void manageRecieve() {
 }
 
 ISR(TIMER1_COMPA_vect) {
-	// if (recvWidthIndex >= 0) {
-	if (recvWidthIndex > -1) { // a timeout occured. Either error or end of rx
-		// if (recvWidthIndex == 11)
+	if (recvWidthIndex > -1) { // timeout occured. Message done or error
+		if (recvWidthIndex == 11)
 			msgReady = recvWidthIndex;
-		// uartPrintChar("~");
 		recvWidthIndex = -1;
 		PCMSK2 = ALL_RX_MASK;
-		disableOCR();
 		enablePCINT();
+		disableOCR();
+		sbi(PINA, 1);
 	} else {
-		if (TRANSMIT_STATE()) { // if the emitters are high
-			TRANSMIT_OFF(); // quickly turn it off. time critical
+		if (TRANSMIT_STATE()) { // the emitter is on
+			TRANSMIT_OFF();
 
-			if (sendWidthIndex == NUM_NIBBLES+1) {// last nibble so stop after this one
-				disableOCR(); 
+			if (sendWidthIndex == NUM_NIBBLES + 1) {// last nibble
+				disableOCR();
 				enablePCINT();
-				transmitting = 0;
+				return;
 			}
 			OCR1A = sendWidths[sendWidthIndex++];
 		} else {
-			TRANSMIT_ON(); // turn on right quick
+			TRANSMIT_ON();
 			if (sendWidthIndex == 0)
-				OCR1A = HIGH_WIDTH*2; // start bit is long.
+				OCR1A = HIGH_WIDTH*2; // start bit is long
 			else
 				OCR1A = HIGH_WIDTH;
 		}
@@ -296,40 +269,30 @@ ISR(TIMER1_COMPA_vect) {
 
 ISR(PCINT2_vect) {
 	u16 tmpTime = TCNT1;
-	// tbi(PORTA, 1);
+	sbi(PINA,1);
 
-	// uartPrintChar('b');
-	// uartPrintChar('\n');
-	if (transmitting) // if we're tx, ignore all incoming tx
+	if (transmitting) // don't recieve if we're tx
 		return;
 
-	if (PINC == ALL_RX_MASK) // if one of pins causing trigger is high, must be a rising edge
+	if (PINC & ALL_RX_MASK) // if pin is low, then this is a falling edge. Fuck falling edges
 		return;
 
-	// uartPrintf("%d\n",recvWidthIndex);
-	// tbi(PORTA, PINA1);
-
-	if (recvWidthIndex > -1) { // >= 0 not the first nibble
-		// save the time
+	// // uartPrintChar('0'+recvWidthIndex);
+	if (recvWidthIndex > -1) { // not the first nibble
 		recvWidths[recvWidthIndex] = tmpTime;
-		// uartPrintChar('a'+recvWidthIndex);
-		// uartPrintChar('\n');
-		// set the next timer int to now + the timeout so if we don't get
-		// another byte by then, message is done, or an error occured
-		OCR1A = (recvWidths[recvWidthIndex] + TIMEOUT);
-
-		// pretty sure these lines are not necessary
-		sbi(TIFR1, OCF1A); // prevent immediate interrupt
-		sbi(TIMSK1, OCIE1A); // enable the OCR1A int
-
-
 		recvWidthIndex++;
-	} else { // the start nibble of a message
+
+		OCR1A = tmpTime + TIMEOUT;
+
+		// sbi(TIFR1, OCR1A);
+		// sbi(TIMSK1, OCIE1A);
+	} else {
+		// cbi(PINA, 1);
 		PCMSK2 = (~PINC) & ALL_RX_MASK;
 		recvWidthIndex = 0;
 		enableOCR(TIMEOUT);
-		// really don't think that's necessary...
-		sbi(TIFR1, OCF1A); //prevent immediate int
-		sbi(TIMSK1, OCIE1A); // enable ocr interrupt
+
+		// sbi(TIFR1, OCR1A);
+		// sbi(TIMSK1, OCIE1A);
 	}
 }
