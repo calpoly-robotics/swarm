@@ -189,27 +189,29 @@ void manageTransmit() {
 
 void manageRecieve() {
 	if (msgReady == NUM_NIBBLES+1) {
+		msgReady = 0;
 		// sbi(PINA, 1);
-		uartPrintString("MR\n");
+		// uartPrintString("MR\n");
 
 		u08 i;
-		for (i = msgReady; i > 0; i--) {
+		for (i = NUM_NIBBLES+1; i > 0; i--) {
 			// technically, recvWidths[0] will be random data
 			// but it's only reading from random memory, so we don't care
 			recvWidths[i] -= recvWidths[i-1];
 		}
 
 		u08 nibbles[NUM_NIBBLES];
-		for (i = 1; i < msgReady; i++) {
+		for (i = 1; i < NUM_NIBBLES+1; i++) {
 			if (recvWidths[i] < 410)
 				nibbles[i-1] = 0;
 			else
 				nibbles[i-1] = (recvWidths[i]-400 - RESOLUTION/2)/RESOLUTION;
 		}
 
-		for (i=0; i < msgReady; i++) {
-			uartPrintf("");
+		for (i=0; i < NUM_NIBBLES; i++) {
+			uartPrintf("%d\t%2d\n",recvWidths[i+1],nibbles[i]);
 		}
+		uartPrintChar('\n');
 
 		u08 msgChecksum = nibbles[4] & 0x0F;
 		nibbles[4] = 0; // this is how the nibbles were when the checksum happened
@@ -233,8 +235,6 @@ void manageRecieve() {
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
 		recvBufCount++;
-
-		msgReady = 0;
 	}
 }
 
@@ -246,7 +246,7 @@ ISR(TIMER1_COMPA_vect) {
 		PCMSK2 = ALL_RX_MASK;
 		enablePCINT();
 		disableOCR();
-		sbi(PINA, 1);
+		// sbi(PINA, 1);
 	} else {
 		if (TRANSMIT_STATE()) { // the emitter is on
 			TRANSMIT_OFF();

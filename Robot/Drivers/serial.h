@@ -9,9 +9,11 @@
 // must be <= 255
 #define	UART_BUFFER_SIZE 255
 
-// #define DEBUG
+#define DEBUG
 // #define FLUSH_ON_NEWLINE 1
-#define BLOCK_ON_UART_BUFFER_FULL 1
+// #define BLOCK_ON_UART_BUFFER_FULL 1
+
+int driverRunSerial();
 
 void uartInit();
 

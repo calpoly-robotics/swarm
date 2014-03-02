@@ -1,5 +1,6 @@
 #include "serial.h"
 #include <stdio.h>
+#include "../Tasks/serialTask.h"
 
 // NOTE: we don't actually ever need to reset or decrease the
 // counter vars because in an unsigned 8-bit C var 255+1=0
@@ -10,18 +11,27 @@ volatile u08 transmitStart = 0;
 volatile u08 transmitEnd = 0;
 volatile u08 transmitCount = 0;
 
-// ISR(USART0_UDRE_vect) {
-// 	if (transmitCount == 0) {
-// 		cbi(UCSR0B, UDRIE0);
-		
-// 	} else {
-// 		transmitCount--;
-// 		UDR0 = transmitBuffer[transmitStart];
-// 		if (++transmitStart == UART_BUFFER_SIZE)
-// 			transmitStart = 0;
-// 	}
-		
-// }
+ISR(USART0_UDRE_vect) {
+	sbi(PINA, 1);
+	cbi(UCSR0B, UDRIE0);
+}
+
+int driverRunSerial() {
+	// sbi(PINA, 1);
+	if (!gbi(UCSR0A,UDRE0))
+		return 0;
+	if (transmitCount == 0) {
+		cbi(UCSR0B, UDRIE0);
+
+	} else {
+		// sbi(PINA, 1);
+		transmitCount--;
+		UDR0 = transmitBuffer[transmitStart];
+		if (++transmitStart == UART_BUFFER_SIZE)
+			transmitStart = 0;
+	}
+	return transmitCount;
+}
 
 #ifdef DEBUG
 void uartInit() {
@@ -37,12 +47,14 @@ void uartInit() {
 	sbi(UCSR0B, RXEN0);
 	sbi(UCSR0B, TXEN0);
 	sbi(UCSR0B, UDRIE0);
+	cbi(UCSR0B, UDRIE0);
 
 	// set 8 bit data length
 	sbi(UCSR0C, UCSZ01);
 	sbi(UCSR0C, UCSZ00);
 
 	sei();
+	initSerialTask();
 }
 
 void uartPrintChar(u08 data) {
@@ -59,7 +71,7 @@ void uartPrintChar(u08 data) {
 		transmitEnd = 0;
 	transmitCount++;
 
-	sbi(UCSR0B, UDRIE0);
+	// sbi(UCSR0B, UDRIE0);
 
 #ifdef FLUSH_ON_NEWLINE
 	if(data=='\n')
