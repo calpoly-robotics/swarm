@@ -19,7 +19,7 @@ volatile u08 recvBufCount = 0;
 volatile u08 recvBufStart = 0;
 volatile u08 recvBufEnd = 0;
 volatile u08 sendSequence = 0;
-volatile u08 sendWidthIndex = 0;
+volatile s08 sendWidthIndex = 0;
 volatile u16 sendWidths[NUM_NIBBLES+1];
 
 volatile s08 recvWidthIndex = -1;
@@ -165,22 +165,21 @@ void manageTransmit() {
 	nibbles[4] = checksum4(nibbles, NUM_NIBBLES);
 
 	// set the pre-start bit and start bit
-	sendWidths[0] = LOW_WIDTH; // note: semi-arbitrary
-	uartPrintf("%d\n",sendWidths[0]);
+	sendWidths[NUM_NIBBLES] = HIGH_WIDTH; // so that we can get the final falling edge
 	u08 i;
 	for (i = 0; i < NUM_NIBBLES; i++) {
 		// nibble in time + time to fall low + plus a little more for good measure
-		sendWidths[i+1] = ((u16)nibbles[i]*RESOLUTION) + LOW_WIDTH + RESOLUTION;
-		uartPrintf("%d\t%d\n", sendWidths[i+1],nibbles[i]);
+		sendWidths[i] = ((u16)nibbles[i]*RESOLUTION) + LOW_WIDTH + RESOLUTION;
+		uartPrintf("%d\t%d\n", sendWidths[i],nibbles[i]);
 	}
-	uartPrintChar('\n');
+	uartPrintf("%d\n\n",sendWidths[10]);
 
 	if (++sendBufStart == BUFFER_SIZE)
 		sendBufStart = 0;
 
 	sendBufCount--;
 	// sendSequence++;
-	sendWidthIndex = 0;
+	sendWidthIndex = -1;
 	TRANSMIT_OFF();
 	enableOCR(HIGH_WIDTH);
 	disablePCINT();
@@ -240,7 +239,8 @@ void manageRecieve() {
 
 ISR(TIMER1_COMPA_vect) {
 	if (recvWidthIndex > -1) { // timeout occured. Message done or error
-		if (recvWidthIndex == 11)
+		uartPrintf("%d\n",recvWidthIndex);
+		if (recvWidthIndex == NUM_NIBBLES+1)
 			msgReady = recvWidthIndex;
 		recvWidthIndex = -1;
 		PCMSK2 = ALL_RX_MASK;
@@ -251,25 +251,28 @@ ISR(TIMER1_COMPA_vect) {
 		if (TRANSMIT_STATE()) { // the emitter is on
 			TRANSMIT_OFF();
 
-			if (sendWidthIndex == NUM_NIBBLES + 1) {// last nibble
+			if (++sendWidthIndex == NUM_NIBBLES + 1) {// last nibble
+				sbi(PINA,1);
 				disableOCR();
 				enablePCINT();
 				return;
 			}
-			OCR1A = sendWidths[sendWidthIndex++];
+			OCR1A = LOW_WIDTH;
 		} else {
 			TRANSMIT_ON();
-			if (sendWidthIndex == 0)
+			if (sendWidthIndex == -1)
 				OCR1A = HIGH_WIDTH*2; // start bit is long
-			else
-				OCR1A = HIGH_WIDTH;
+			else if (sendWidthIndex < NUM_NIBBLES+1) {
+				//sbi(PINA,1);
+				OCR1A = sendWidths[sendWidthIndex];
+			}
 		}
 	}
 }
 
 ISR(PCINT2_vect) {
 	u16 tmpTime = TCNT1;
-	sbi(PINA,1);
+	//sbi(PINA,1);
 
 	if (transmitting) // don't recieve if we're tx
 		return;
