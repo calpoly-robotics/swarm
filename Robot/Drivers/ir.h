@@ -13,7 +13,7 @@
 #define RESOLUTION 20
 // 15*Res for max message + Res because + low in tx + high cuz needs rise and fall
 // TODO: The 100 could be as low as Resolution. Needs revisiting
-#define TIMEOUT ((0x0F+1)*RESOLUTION + HIGH_WIDTH + LOW_WIDTH + 100)
+#define TIMEOUT ((0x0F+1)*RESOLUTION + HIGH_WIDTH + LOW_WIDTH + RESOLUTION*2)
 
 #define TRANSMIT_ON() (sbi(PORTC, TRANSMIT_PIN))
 #define TRANSMIT_OFF() (cbi(PORTC, TRANSMIT_PIN))
@@ -35,6 +35,7 @@ typedef struct {
 	u08 ttl;		// 3 bits
 	u08 msg; 		// 8 bits
 	u08 data; 		// 8 bits
+	u32 timestamp;  // 32 bits
 } Message;
 
 void initIR(void);

@@ -8,6 +8,7 @@
 
 u08 senderId = 0;
 u08 transmitting = 0;
+u08 direction = 0;
 
 volatile Message sendMsgBuf[BUFFER_SIZE];
 volatile u08 sendBufCount = 0;
@@ -243,8 +244,11 @@ void manageRecieve() {
 ISR(TIMER1_COMPA_vect) {
 	if (recvWidthIndex > -1) { // timeout occured. Message done or error
 		// uartPrintf("%d\n",recvWidthIndex);
+		sbi(PINA,1);
 		if (recvWidthIndex == NUM_NIBBLES+1)
 			msgReady = recvWidthIndex;
+		else
+			uartPrintf("Too short:%d\n", recvWidthIndex);
 		recvWidthIndex = -1;
 		PCMSK2 = ALL_RX_MASK;
 		enablePCINT();
