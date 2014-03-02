@@ -115,7 +115,7 @@ int readMessage(Message* msg) {
 	// uartPrintChar('z');
 	// uartPrintf("Count:%d\tEnd:%d\n",recvBufCount,recvBufEnd);
 
-	*msg = recvMsgBuf[recvBufEnd];
+	*msg = recvMsgBuf[recvBufStart];
 	// memcpy(msg,(void*)recvMsgBuf + recvBufEnd*sizeof(Message),sizeof(Message));
 	// Message tmp = recvMsgBuf[recvBufEnd];
 	// uartPrintf("Type:%.3u\tData:%u\n",tmp.msg,tmp.data);
@@ -170,15 +170,16 @@ void manageTransmit() {
 	for (i = 0; i < NUM_NIBBLES; i++) {
 		// nibble in time + time to fall low + plus a little more for good measure
 		sendWidths[i] = ((u16)nibbles[i]*RESOLUTION) + LOW_WIDTH + RESOLUTION;
-		uartPrintf("%d\t%d\n", sendWidths[i],nibbles[i]);
+		// uartPrintf("%d\t%d\n", sendWidths[i],nibbles[i]);
 	}
-	uartPrintf("%d\n\n",sendWidths[10]);
+	// uartPrintf("%d\n\n",sendWidths[10]);
 
 	if (++sendBufStart == BUFFER_SIZE)
 		sendBufStart = 0;
 
 	sendBufCount--;
-	// sendSequence++;
+	sendSequence++;
+	uartPrint_u08(sendSequence);
 	sendWidthIndex = -1;
 	TRANSMIT_OFF();
 	enableOCR(HIGH_WIDTH);
@@ -201,23 +202,23 @@ void manageRecieve() {
 
 		u08 nibbles[NUM_NIBBLES];
 		for (i = 1; i < NUM_NIBBLES+1; i++) {
-			// if (recvWidths[i] < HIGH_WIDTH + LOW_WIDTH + RESOLUTION/2)
-			// 	nibbles[i-1] = 0;
-			// else
+			if (recvWidths[i] < HIGH_WIDTH + LOW_WIDTH + RESOLUTION/2)
+				nibbles[i-1] = 0;
+			else
 				nibbles[i-1] = (recvWidths[i]- HIGH_WIDTH - LOW_WIDTH - RESOLUTION/2)/RESOLUTION;
 		}
 
 		for (i=0; i < NUM_NIBBLES; i++) {
-			uartPrintf("%d\t%2d\n",recvWidths[i+1],nibbles[i]);
+			// uartPrintf("%d\t%2d\n",recvWidths[i+1],nibbles[i]);
 		}
-		uartPrintChar('\n');
+		// uartPrintChar('\n');
 
 		u08 msgChecksum = nibbles[4] & 0x0F;
 		nibbles[4] = 0; // this is how the nibbles were when the checksum happened
 
 		u08 tmpChecksum = checksum4(nibbles, NUM_NIBBLES);
 		if (tmpChecksum != msgChecksum) {
-			// uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpChecksum);
+			uartPrintf("Expected:%x\tGot:%x\n", msgChecksum, tmpChecksum);
 			return;
 		}
 
@@ -231,6 +232,8 @@ void manageRecieve() {
 		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
 		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
 
+		uartPrintf("Type:%.3d\tData:%d\n", recvMsgBuf[recvBufEnd].msg, recvMsgBuf[recvBufEnd].data);
+
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
 		recvBufCount++;
@@ -239,7 +242,7 @@ void manageRecieve() {
 
 ISR(TIMER1_COMPA_vect) {
 	if (recvWidthIndex > -1) { // timeout occured. Message done or error
-		uartPrintf("%d\n",recvWidthIndex);
+		// uartPrintf("%d\n",recvWidthIndex);
 		if (recvWidthIndex == NUM_NIBBLES+1)
 			msgReady = recvWidthIndex;
 		recvWidthIndex = -1;
