@@ -166,7 +166,7 @@ void manageTransmit() {
 
 	// set the pre-start bit and start bit
 	sendWidths[0] = LOW_WIDTH; // note: semi-arbitrary
-
+	uartPrintf("%d\n",sendWidths[0]);
 	u08 i;
 	for (i = 0; i < NUM_NIBBLES; i++) {
 		// nibble in time + time to fall low + plus a little more for good measure
@@ -202,10 +202,10 @@ void manageRecieve() {
 
 		u08 nibbles[NUM_NIBBLES];
 		for (i = 1; i < NUM_NIBBLES+1; i++) {
-			if (recvWidths[i] < 410)
-				nibbles[i-1] = 0;
-			else
-				nibbles[i-1] = (recvWidths[i]-400 - RESOLUTION/2)/RESOLUTION;
+			// if (recvWidths[i] < HIGH_WIDTH + LOW_WIDTH + RESOLUTION/2)
+			// 	nibbles[i-1] = 0;
+			// else
+				nibbles[i-1] = (recvWidths[i]- HIGH_WIDTH - LOW_WIDTH - RESOLUTION/2)/RESOLUTION;
 		}
 
 		for (i=0; i < NUM_NIBBLES; i++) {

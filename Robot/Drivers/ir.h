@@ -9,7 +9,7 @@
 // time for collector to go high
 #define HIGH_WIDTH 200
 // time for collector to fall low
-#define LOW_WIDTH 250
+#define LOW_WIDTH 200
 #define RESOLUTION 20
 // 15*Res for max message + Res because + low in tx + high cuz needs rise and fall
 // TODO: The 100 could be as low as Resolution. Needs revisiting
