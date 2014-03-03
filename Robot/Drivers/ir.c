@@ -10,6 +10,8 @@ u08 senderId = 0;
 u08 transmitting = 0;
 u08 direction = 0;
 
+volatile u08 sequenceNumbers[NUM_BOTS];
+
 volatile Message sendMsgBuf[BUFFER_SIZE];
 volatile u08 sendBufCount = 0;
 volatile u08 sendBufStart = 0;
@@ -227,13 +229,24 @@ void manageRecieve() {
 		if (senderId == tmpSender)
 			return; 	// we sent this. Ignore
 
+		u08 sendSequence = nibbles[2] << 4 | (nibbles[3] & 0x0F);
+		u08 sequenceError = sendSequence - sequenceNumbers[tmpSender];
+		if (sequenceError > 245 || sequenceError == 0) { 
+			uartPrintf("Tossing old message %.3u\n",sendSequence - sequenceNumbers[tmpSender]);
+			return;		// recieving duplicate
+		}
+		// uartPrintf("%d\n",((u08)(sendSequence - sequenceNumbers[tmpSender])));
+		
+		sequenceNumbers[tmpSender] = sendSequence;
+
 		recvMsgBuf[recvBufEnd].sender = tmpSender;
+		recvMsgBuf[recvBufEnd].isBase = nibbles[1] & 0x0F;
 		recvMsgBuf[recvBufEnd].ttl = (nibbles[5] >> 1) & 0x07;
-		recvMsgBuf[recvBufEnd].isBase = (nibbles[5]) & 0x01;
+		recvMsgBuf[recvBufEnd].origSend = (nibbles[5]) & 0x01;
 		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
 		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
 
-		uartPrintf("Type:%.3d\tData:%d\n", recvMsgBuf[recvBufEnd].msg, recvMsgBuf[recvBufEnd].data);
+		uartPrintf("Type:%.3d\tData:%d\tSS:%.3d\n", recvMsgBuf[recvBufEnd].msg, recvMsgBuf[recvBufEnd].data,sendSequence);
 
 		if (++recvBufEnd == BUFFER_SIZE)
 			recvBufEnd = 0;
