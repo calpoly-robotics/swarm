@@ -8,7 +8,8 @@
 
 u08 senderId = 0;
 u08 transmitting = 0;
-u08 direction = 0;
+
+volatile u08 direction = 0;
 
 volatile u08 sequenceNumbers[NUM_BOTS];
 
