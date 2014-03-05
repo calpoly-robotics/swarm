@@ -6,6 +6,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#define NUM_BOTS 30
+
 #if defined (__AVR_ATmega1284P__)
 // CPU speed 10MHz
 #define F_CPU 10000000L

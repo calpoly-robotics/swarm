@@ -4,11 +4,13 @@
 #include "serial.h"
 #include <string.h>
 
-#define ALL_RX_MASK (1 << RECIEVE_PIN4)
+// #define ALL_RX_MASK (1 << RECIEVE_PIN4)
+#define ALL_RX_MASK 0b11111100
 
 u08 senderId = 0;
 u08 transmitting = 0;
-u08 direction = 0;
+
+volatile u08 direction = 0;
 
 volatile u08 sequenceNumbers[NUM_BOTS];
 
@@ -246,6 +248,9 @@ void manageRecieve() {
 		recvMsgBuf[recvBufEnd].msg = nibbles[6] << 4 | (nibbles[7] & 0x0F);
 		recvMsgBuf[recvBufEnd].data = nibbles[8] << 4 | (nibbles[9] & 0x0F);
 
+		if (recvMsgBuf[recvBufEnd].ttl > 0)
+			retransmit(recvMsgBuf[recvBufEnd]);
+
 		uartPrintf("Type:%.3d\tData:%d\tSS:%.3d\n", recvMsgBuf[recvBufEnd].msg, recvMsgBuf[recvBufEnd].data,sendSequence);
 
 		if (++recvBufEnd == BUFFER_SIZE)
@@ -292,12 +297,13 @@ ISR(TIMER1_COMPA_vect) {
 
 ISR(PCINT2_vect) {
 	u16 tmpTime = TCNT1;
-	//sbi(PINA,1);
+	// uartPrintChar('a');
+	sbi(PINA,1);
 
 	if (transmitting) // don't recieve if we're tx
 		return;
 
-	if (PINC & ALL_RX_MASK) // if pin is low, then this is a falling edge. Fuck falling edges
+	if ((PINC & ALL_RX_MASK) == ALL_RX_MASK) 
 		return;
 
 	// // uartPrintChar('0'+recvWidthIndex);
