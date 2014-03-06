@@ -4,8 +4,6 @@
 #include "../globals.h"
 #include "../pins.h"
 
-#define MISSABLE_MESSAGES 10
-
 #define BUFFER_SIZE 10
 #define NUM_NIBBLES 10
 // time for collector to go high
