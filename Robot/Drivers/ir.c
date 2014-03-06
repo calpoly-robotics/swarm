@@ -297,12 +297,13 @@ ISR(TIMER1_COMPA_vect) {
 
 ISR(PCINT2_vect) {
 	u16 tmpTime = TCNT1;
-	//sbi(PINA,1);
+	// uartPrintChar('a');
+	sbi(PINA,1);
 
 	if (transmitting) // don't recieve if we're tx
 		return;
 
-	if ((~PINC) & PCMSK2) 
+	if ((PINC & ALL_RX_MASK) == ALL_RX_MASK) 
 		return;
 
 	// // uartPrintChar('0'+recvWidthIndex);

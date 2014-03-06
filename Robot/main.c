@@ -49,7 +49,7 @@ int main() {
 				(*task).runNow = 0;
 				(*task).lastRun = currTime;
 				(*task).run();
-				uartPrintDebug(5);
+				// uartPrintDebug(5);
 			} else if (currTime > ((*task).lastRun + (*task).interval)) {
 				(*task).lastRun = currTime;
 				(*task).run();

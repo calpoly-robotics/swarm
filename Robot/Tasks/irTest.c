@@ -10,7 +10,7 @@ Message msg;
 void initIRTestTask() {
 	testTask = addTask(runIRTest);
 #ifdef TRANSMIT
- 	(*testTask).interval = 3500;
+ 	(*testTask).interval = 5000;
 #else
  	(*testTask).interval = 500;
 #endif
