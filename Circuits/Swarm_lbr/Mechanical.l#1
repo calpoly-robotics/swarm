@@ -708,14 +708,8 @@ Manufacturer Part Number: A3-14DA-2SV(71)</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR_10" prefix="CON">
-<description>SMD
-Digikey Part Number: H10963-ND
-Manufacturer Part Number: A3-10DA-2SV(71)
-
-
-PTH
-Digikey Part Number: 
-Manufacturer Part Number:</description>
+<description>Digikey Part Number: H10963-ND
+Manufacturer Part Number: A3-10DA-2SV(71)</description>
 <gates>
 <gate name="G$1" symbol="2X5MAIN" x="0" y="0"/>
 </gates>

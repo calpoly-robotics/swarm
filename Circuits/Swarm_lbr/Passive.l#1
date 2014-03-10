@@ -1055,8 +1055,7 @@ Manufacturer Part Number: MCP9700AT-E/TT</description>
 </deviceset>
 <deviceset name="AH182" prefix="U">
 <description>Digikey Part Number: AH182-PL-ADICT-ND
-Manufacturer Part Number: AH182-PL-A
-UPDATE PACKAGE PLACEHOLDER</description>
+Manufacturer Part Number: AH182-PL-A</description>
 <gates>
 <gate name="G$1" symbol="AH182" x="0" y="0"/>
 </gates>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -234,64 +234,22 @@
 <wire x1="-8" y1="-2" x2="-8" y2="2" width="0.127" layer="21"/>
 <text x="-7" y="4" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-7" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
-<smd name="1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="7" x="5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="8" x="7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="9" x="7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="10" x="5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="11" x="3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="12" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="13" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="14" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="15" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="16" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-</package>
-<package name="FEMALE_HEADER_2X8_2MM">
-<pad name="1" x="-5.11" y="-0.81" drill="0.8"/>
-<pad name="2" x="-3.11" y="-0.81" drill="0.8"/>
-<pad name="3" x="-1.11" y="-0.81" drill="0.8"/>
-<pad name="4" x="0.89" y="-0.81" drill="0.8"/>
-<pad name="5" x="2.89" y="-0.81" drill="0.8"/>
-<pad name="6" x="4.89" y="-0.81" drill="0.8"/>
-<pad name="9" x="8.89" y="1.19" drill="0.8"/>
-<pad name="10" x="6.89" y="1.19" drill="0.8"/>
-<pad name="11" x="4.89" y="1.19" drill="0.8"/>
-<pad name="12" x="2.89" y="1.19" drill="0.8"/>
-<pad name="13" x="0.89" y="1.19" drill="0.8"/>
-<pad name="14" x="-1.11" y="1.19" drill="0.8"/>
-<wire x1="-6.11" y1="2.19" x2="9.89" y2="2.19" width="0.127" layer="21"/>
-<wire x1="9.89" y1="2.19" x2="9.89" y2="-1.81" width="0.127" layer="21"/>
-<wire x1="9.89" y1="-1.81" x2="-6.11" y2="-1.81" width="0.127" layer="21"/>
-<wire x1="-6.11" y1="-1.81" x2="-6.11" y2="2.19" width="0.127" layer="21"/>
-<text x="-4.11" y="3.19" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-4.11" y="-3.81" size="0.8128" layer="27">&gt;VALUE</text>
-<pad name="7" x="6.89" y="-0.81" drill="0.8"/>
-<pad name="8" x="8.89" y="-0.81" drill="0.8"/>
-<pad name="15" x="-3.11" y="1.19" drill="0.8"/>
-<pad name="16" x="-5.11" y="1.19" drill="0.8"/>
-</package>
-<package name="FEMALE_HEADER_2MM_2X5_SMD">
-<wire x1="-8" y1="2" x2="2" y2="2" width="0.127" layer="21"/>
-<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
-<wire x1="2" y1="-2" x2="-8" y2="-2" width="0.127" layer="21"/>
-<wire x1="-8" y1="-2" x2="-8" y2="2" width="0.127" layer="21"/>
-<text x="-7" y="4" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-7" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
-<smd name="1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="7" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="8" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="9" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="10" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$6" x="3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$7" x="5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$8" x="7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$10" x="5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$11" x="3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$12" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$13" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$14" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$15" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$16" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 </package>
 </packages>
 <symbols>
@@ -454,30 +412,6 @@
 <wire x1="-7.62" y1="12.7" x2="-7.62" y2="-15.24" width="0.254" layer="94"/>
 <pin name="9" x="-12.7" y="-10.16" length="middle"/>
 <pin name="10" x="-12.7" y="-12.7" length="middle"/>
-</symbol>
-<symbol name="2X8MAIN">
-<pin name="1" x="-12.7" y="20.32" length="middle"/>
-<pin name="2" x="-12.7" y="17.78" length="middle"/>
-<pin name="3" x="-12.7" y="15.24" length="middle"/>
-<pin name="4" x="-12.7" y="12.7" length="middle"/>
-<pin name="5" x="-12.7" y="10.16" length="middle"/>
-<pin name="6" x="-12.7" y="7.62" length="middle"/>
-<pin name="7" x="-12.7" y="5.08" length="middle"/>
-<pin name="8" x="-12.7" y="2.54" length="middle"/>
-<pin name="9" x="-12.7" y="0" length="middle"/>
-<pin name="10" x="-12.7" y="-2.54" length="middle"/>
-<pin name="11" x="-12.7" y="-5.08" length="middle"/>
-<pin name="12" x="-12.7" y="-7.62" length="middle"/>
-<wire x1="-7.62" y1="22.86" x2="7.62" y2="22.86" width="0.254" layer="94"/>
-<wire x1="7.62" y1="22.86" x2="7.62" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-20.32" x2="-7.62" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-20.32" x2="-7.62" y2="22.86" width="0.254" layer="94"/>
-<text x="-5.08" y="25.4" size="0.8128" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-22.86" size="0.8128" layer="96">&gt;VALUE</text>
-<pin name="13" x="-12.7" y="-10.16" length="middle"/>
-<pin name="14" x="-12.7" y="-12.7" length="middle"/>
-<pin name="15" x="-12.7" y="-15.24" length="middle"/>
-<pin name="16" x="-12.7" y="-17.78" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -708,95 +642,16 @@ Manufacturer Part Number: A3-14DA-2SV(71)</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR_10" prefix="CON">
-<description>SMD
-Digikey Part Number: H10963-ND
-Manufacturer Part Number: A3-10DA-2SV(71)
-
-
-PTH
-Digikey Part Number: 
-Manufacturer Part Number:</description>
+<description>Digikey Part Number: H10963-ND
+Manufacturer Part Number: A3-10DA-2SV(71)</description>
 <gates>
 <gate name="G$1" symbol="2X5MAIN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="PTH" package="FEMALE_HEADER_2MM_2X5">
+<device name="" package="FEMALE_HEADER_2MM_2X5">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMD" package="FEMALE_HEADER_2MM_2X5_SMD">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MAINCONNECTOR_16" prefix="CON">
-<description>SMD
-Digikey Part Number: H10966-ND
-Manufacturer Part Number: A3-16DA-2SV(71)</description>
-<gates>
-<gate name="G$1" symbol="2X8MAIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SMD" package="FEMALE_HEADER_2MM_2X8_SMD">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="16" pad="16"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="PTH" package="FEMALE_HEADER_2X8_2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="16" pad="16"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>

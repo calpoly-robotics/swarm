@@ -674,8 +674,6 @@ Manufacturer Part Number: MX25L25735EMI-12G</description>
 </devices>
 </deviceset>
 <deviceset name="ATMEGA1281" prefix="U">
-<description>Digikey Part Number: ATMEGA1281V-8AU-ND
-Manufacturer Part Number: ATMEGA1281V-8AU</description>
 <gates>
 <gate name="G$1" symbol="ATMEGA1281" x="-83.82" y="17.78"/>
 </gates>

@@ -234,22 +234,22 @@
 <wire x1="-8" y1="-2" x2="-8" y2="2" width="0.127" layer="21"/>
 <text x="-7" y="4" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-7" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
-<smd name="1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="7" x="5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="8" x="7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="9" x="7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="10" x="5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="11" x="3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="12" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="13" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="14" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="15" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="16" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$6" x="3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$7" x="5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$8" x="7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$10" x="5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$11" x="3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$12" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$13" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$14" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$15" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="P$16" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 </package>
 <package name="FEMALE_HEADER_2X8_2MM">
 <pad name="1" x="-5.11" y="-0.81" drill="0.8"/>
@@ -274,24 +274,6 @@
 <pad name="8" x="8.89" y="-0.81" drill="0.8"/>
 <pad name="15" x="-3.11" y="1.19" drill="0.8"/>
 <pad name="16" x="-5.11" y="1.19" drill="0.8"/>
-</package>
-<package name="FEMALE_HEADER_2MM_2X5_SMD">
-<wire x1="-8" y1="2" x2="2" y2="2" width="0.127" layer="21"/>
-<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
-<wire x1="2" y1="-2" x2="-8" y2="-2" width="0.127" layer="21"/>
-<wire x1="-8" y1="-2" x2="-8" y2="2" width="0.127" layer="21"/>
-<text x="-7" y="4" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-7" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
-<smd name="1" x="-7" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="-5" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="3" x="-3" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="1" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="7" x="-1" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="8" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="9" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
-<smd name="10" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 </package>
 </packages>
 <symbols>
@@ -708,36 +690,13 @@ Manufacturer Part Number: A3-14DA-2SV(71)</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR_10" prefix="CON">
-<description>SMD
-Digikey Part Number: H10963-ND
-Manufacturer Part Number: A3-10DA-2SV(71)
-
-
-PTH
-Digikey Part Number: 
-Manufacturer Part Number:</description>
+<description>Digikey Part Number: H10963-ND
+Manufacturer Part Number: A3-10DA-2SV(71)</description>
 <gates>
 <gate name="G$1" symbol="2X5MAIN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="PTH" package="FEMALE_HEADER_2MM_2X5">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMD" package="FEMALE_HEADER_2MM_2X5_SMD">
+<device name="" package="FEMALE_HEADER_2MM_2X5">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
@@ -766,28 +725,28 @@ Manufacturer Part Number: A3-16DA-2SV(71)</description>
 <devices>
 <device name="SMD" package="FEMALE_HEADER_2MM_2X8_SMD">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="16" pad="16"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="10" pad="P$10"/>
+<connect gate="G$1" pin="11" pad="P$11"/>
+<connect gate="G$1" pin="12" pad="P$12"/>
+<connect gate="G$1" pin="13" pad="P$13"/>
+<connect gate="G$1" pin="14" pad="P$14"/>
+<connect gate="G$1" pin="15" pad="P$15"/>
+<connect gate="G$1" pin="16" pad="P$16"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="4" pad="P$4"/>
+<connect gate="G$1" pin="5" pad="P$5"/>
+<connect gate="G$1" pin="6" pad="P$6"/>
+<connect gate="G$1" pin="7" pad="P$7"/>
+<connect gate="G$1" pin="8" pad="P$8"/>
+<connect gate="G$1" pin="9" pad="P$9"/>
 </connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="PTH" package="FEMALE_HEADER_2X8_2MM">
+<device name="" package="FEMALE_HEADER_2X8_2MM">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
