@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -582,7 +582,7 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="SparkFunDRC">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -1045,8 +1045,6 @@ design rules under a new name.</description>
 <element name="U5" library="Passive" package="3PINHEADER_.100&quot;" value="AH182" x="6.35" y="24.7015" rot="R90"/>
 <element name="U6" library="Passive" package="3PINHEADER_.100&quot;" value="AH182" x="50.165" y="39.37" rot="R270"/>
 <element name="ANT4" library="Mechanical" package="ANTENNA" value="ANTENNA" x="35.98333125" y="50.8" rot="MR0"/>
-<element name="R6" library="Passive" package="0603" value="50k" x="-28.448" y="-19.685"/>
-<element name="R25" library="Passive" package="0603" value="50k" x="-31.369" y="-19.685"/>
 <element name="C5" library="Passive" package="0603" value="1uf" x="-34.417" y="-36.957"/>
 <element name="C14" library="Passive" package="0603" value="1uf" x="84.582" y="34.925" rot="R180"/>
 <element name="T12" library="Passive" package="SOT23" value="SI2333DS-T1" x="69.6595" y="52.1335"/>
@@ -1064,7 +1062,7 @@ design rules under a new name.</description>
 <element name="T11" library="Passive" package="SOT23" value="NPN2N2222" x="46.763715625" y="10.737428125" rot="R225"/>
 <element name="R44" library="Passive" package="0603" value="4.7k" x="16.361853125" y="49.608134375" rot="R225"/>
 <element name="R45" library="Passive" package="0603" value="4.7k" x="47.13176875" y="13.8400375" rot="R45"/>
-<element name="CON2" library="Mechanical" package="FEMALE_HEADER_2MM_2X7_SMD" value="MAIN_CONNECTOR_14SMD" x="31.75" y="44.45" rot="MR0"/>
+<element name="CON2" library="Mechanical" package="FEMALE_HEADER_2MM_2X7_SMD" value="MAIN_CONNECTOR_14SMD" x="31.75" y="43.18" rot="MR0"/>
 <element name="CON7" library="Mechanical" package="FEMALE_HEADER_2MM_2X4" value="MAIN_CONNECTOR_8" x="86.487" y="26.035"/>
 <element name="R46" library="Passive" package="0603" value="100" x="49.682071875" y="16.346121875" rot="R225"/>
 <element name="R47" library="Passive" package="0603" value="100" x="13.89076875" y="47.159803125" rot="R45"/>
@@ -1456,12 +1454,12 @@ design rules under a new name.</description>
 <signal name="LINESENSE1">
 <contactref element="U1" pad="36"/>
 <contactref element="CON2" pad="4"/>
-<wire x1="31.75" y1="42.05" x2="38.113" y2="67.529" width="0" layer="19" extent="1-16"/>
+<wire x1="31.75" y1="40.78" x2="38.113" y2="67.529" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="LINESENSE2">
 <contactref element="U1" pad="35"/>
 <contactref element="CON2" pad="3"/>
-<wire x1="33.75" y1="42.05" x2="37.313" y2="67.529" width="0" layer="19" extent="1-16"/>
+<wire x1="33.75" y1="40.78" x2="37.313" y2="67.529" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="DATAANTENNA">
 <contactref element="U1" pad="10"/>
@@ -1616,7 +1614,7 @@ design rules under a new name.</description>
 <vertex x="58.6359" y="79.4766"/>
 </polygon>
 <contactref element="CON2" pad="13"/>
-<wire x1="59.614" y1="78.744" x2="35.75" y2="46.85" width="0" layer="19" extent="1-16"/>
+<wire x1="59.614" y1="78.744" x2="35.75" y2="45.58" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="MA-">
 <contactref element="U$1" pad="5"/>
@@ -1628,7 +1626,7 @@ design rules under a new name.</description>
 <vertex x="58.6359" y="76.8731"/>
 </polygon>
 <contactref element="CON2" pad="14"/>
-<wire x1="59.614" y1="76.144" x2="37.75" y2="46.85" width="0" layer="19" extent="1-16"/>
+<wire x1="59.614" y1="76.144" x2="37.75" y2="45.58" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="MB+">
 <contactref element="U$1" pad="11"/>
@@ -1640,7 +1638,7 @@ design rules under a new name.</description>
 <vertex x="58.6359" y="72.9742"/>
 </polygon>
 <contactref element="CON2" pad="2"/>
-<wire x1="59.614" y1="72.244" x2="35.75" y2="42.05" width="0" layer="19" extent="1-16"/>
+<wire x1="59.614" y1="72.244" x2="35.75" y2="40.78" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="MB-">
 <contactref element="U$1" pad="7"/>
@@ -1652,7 +1650,7 @@ design rules under a new name.</description>
 <vertex x="58.6359" y="75.565"/>
 </polygon>
 <contactref element="CON2" pad="1"/>
-<wire x1="59.614" y1="74.844" x2="37.75" y2="42.05" width="0" layer="19" extent="1-16"/>
+<wire x1="59.614" y1="74.844" x2="37.75" y2="40.78" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="LED1">
 <contactref element="U1" pad="42"/>
@@ -1696,7 +1694,7 @@ design rules under a new name.</description>
 <signal name="IRENABLE">
 <contactref element="U1" pad="33"/>
 <contactref element="CON2" pad="5"/>
-<wire x1="29.75" y1="42.05" x2="34.763" y2="69.279" width="0" layer="19" extent="1-16"/>
+<wire x1="29.75" y1="40.78" x2="34.763" y2="69.279" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="BIN2">
 <contactref element="U$1" pad="16"/>
@@ -1951,13 +1949,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="ENCA">
 <contactref element="U5" pad="3"/>
-<contactref element="R25" pad="1"/>
-<wire x1="6.35" y1="27.2415" x2="-32.119" y2="-19.685" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ENCB">
 <contactref element="U6" pad="3"/>
-<contactref element="R6" pad="1"/>
-<wire x1="-29.198" y1="-19.685" x2="50.165" y2="36.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="ANT4" pad="P$1"/>
@@ -1983,7 +1977,7 @@ design rules under a new name.</description>
 <signal name="N$5">
 <contactref element="CON4" pad="1"/>
 <contactref element="CON2" pad="7"/>
-<wire x1="25.75" y1="42.05" x2="78.486" y2="41.529" width="0" layer="19" extent="16-16"/>
+<wire x1="25.75" y1="40.78" x2="78.486" y2="41.529" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="SGND">
 <contactref element="C14" pad="2"/>
@@ -2096,9 +2090,7 @@ design rules under a new name.</description>
 <contactref element="T10" pad="1"/>
 <contactref element="U4" pad="1"/>
 <contactref element="U5" pad="1"/>
-<contactref element="R25" pad="2"/>
 <contactref element="U6" pad="1"/>
-<contactref element="R6" pad="2"/>
 <contactref element="PR1" pad="2"/>
 <contactref element="C4" pad="1"/>
 <contactref element="R44" pad="2"/>
@@ -2115,7 +2107,7 @@ design rules under a new name.</description>
 <wire x1="36.588" y1="55.245" x2="48.832709375" y2="50.5815375" width="0" layer="19" extent="1-1"/>
 <wire x1="26.67" y1="57.15" x2="34.29" y2="57.15" width="0" layer="19" extent="1-1"/>
 <wire x1="15.831521875" y1="49.077803125" x2="26.67" y2="57.15" width="0" layer="19" extent="1-1"/>
-<wire x1="27.75" y1="42.05" x2="15.831521875" y2="49.077803125" width="0" layer="19" extent="1-16"/>
+<wire x1="27.75" y1="40.78" x2="15.831521875" y2="49.077803125" width="0" layer="19" extent="1-16"/>
 <wire x1="50.68156875" y1="14.63316875" x2="51.406421875" y2="30.6585" width="0" layer="19" extent="1-1"/>
 <wire x1="47.662096875" y1="14.370365625" x2="50.68156875" y2="14.63316875" width="0" layer="19" extent="1-1"/>
 <wire x1="61.4172" y1="13.716" x2="50.68156875" y2="14.63316875" width="0" layer="19" extent="1-1"/>
@@ -2124,9 +2116,7 @@ design rules under a new name.</description>
 <wire x1="14.337990625" y1="15.923790625" x2="6.35" y2="22.1615" width="0" layer="19" extent="1-1"/>
 <wire x1="30.722" y1="8.255" x2="14.749725" y2="12.93829375" width="0" layer="19" extent="1-1"/>
 <wire x1="-3.241" y1="-17.542" x2="14.749725" y2="12.93829375" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.698" y1="-19.685" x2="-3.241" y2="-17.542" width="0" layer="19" extent="1-1"/>
-<wire x1="-30.619" y1="-19.685" x2="-27.698" y2="-19.685" width="0" layer="19" extent="1-1"/>
-<wire x1="-35.167" y1="-36.957" x2="-30.619" y2="-19.685" width="0" layer="19" extent="1-1"/>
+<wire x1="-35.167" y1="-36.957" x2="-3.241" y2="-17.542" width="0" layer="19" extent="1-1"/>
 <wire x1="-42.279" y1="-36.957" x2="-35.167" y2="-36.957" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SEN">
