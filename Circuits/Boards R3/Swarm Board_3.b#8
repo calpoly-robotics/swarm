@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -582,7 +582,7 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -1045,8 +1045,6 @@ design rules under a new name.</description>
 <element name="U5" library="Passive" package="3PINHEADER_.100&quot;" value="AH182" x="6.35" y="24.7015" rot="R90"/>
 <element name="U6" library="Passive" package="3PINHEADER_.100&quot;" value="AH182" x="50.165" y="39.37" rot="R270"/>
 <element name="ANT4" library="Mechanical" package="ANTENNA" value="ANTENNA" x="35.98333125" y="50.8" rot="MR0"/>
-<element name="R6" library="Passive" package="0603" value="50k" x="-28.448" y="-19.685"/>
-<element name="R25" library="Passive" package="0603" value="50k" x="-31.369" y="-19.685"/>
 <element name="C5" library="Passive" package="0603" value="1uf" x="-34.417" y="-36.957"/>
 <element name="C14" library="Passive" package="0603" value="1uf" x="84.582" y="34.925" rot="R180"/>
 <element name="T12" library="Passive" package="SOT23" value="SI2333DS-T1" x="69.6595" y="52.1335"/>
@@ -1951,13 +1949,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="ENCA">
 <contactref element="U5" pad="3"/>
-<contactref element="R25" pad="1"/>
-<wire x1="6.35" y1="27.2415" x2="-32.119" y2="-19.685" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ENCB">
 <contactref element="U6" pad="3"/>
-<contactref element="R6" pad="1"/>
-<wire x1="-29.198" y1="-19.685" x2="50.165" y2="36.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="ANT4" pad="P$1"/>
@@ -2096,9 +2090,7 @@ design rules under a new name.</description>
 <contactref element="T10" pad="1"/>
 <contactref element="U4" pad="1"/>
 <contactref element="U5" pad="1"/>
-<contactref element="R25" pad="2"/>
 <contactref element="U6" pad="1"/>
-<contactref element="R6" pad="2"/>
 <contactref element="PR1" pad="2"/>
 <contactref element="C4" pad="1"/>
 <contactref element="R44" pad="2"/>
@@ -2124,9 +2116,7 @@ design rules under a new name.</description>
 <wire x1="14.337990625" y1="15.923790625" x2="6.35" y2="22.1615" width="0" layer="19" extent="1-1"/>
 <wire x1="30.722" y1="8.255" x2="14.749725" y2="12.93829375" width="0" layer="19" extent="1-1"/>
 <wire x1="-3.241" y1="-17.542" x2="14.749725" y2="12.93829375" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.698" y1="-19.685" x2="-3.241" y2="-17.542" width="0" layer="19" extent="1-1"/>
-<wire x1="-30.619" y1="-19.685" x2="-27.698" y2="-19.685" width="0" layer="19" extent="1-1"/>
-<wire x1="-35.167" y1="-36.957" x2="-30.619" y2="-19.685" width="0" layer="19" extent="1-1"/>
+<wire x1="-35.167" y1="-36.957" x2="-3.241" y2="-17.542" width="0" layer="19" extent="1-1"/>
 <wire x1="-42.279" y1="-36.957" x2="-35.167" y2="-36.957" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SEN">

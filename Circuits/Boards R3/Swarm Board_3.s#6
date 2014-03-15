@@ -2159,8 +2159,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R40" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="R41" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="U2" library="PowerIC" deviceset="MCP73833" device=""/>
-<part name="R29" library="Passive" deviceset="RES" device="0603" value="7.5k"/>
-<part name="R30" library="Passive" deviceset="RES" device="0603" value="18k"/>
+<part name="R29" library="Passive" deviceset="RES" device="0603" value="100k"/>
+<part name="R30" library="Passive" deviceset="RES" device="0603" value="100k"/>
 <part name="R31" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R32" library="Passive" deviceset="RES" device="0603" value="2k"/>
 <part name="P+14" library="Supply" deviceset="+VCHG" device=""/>

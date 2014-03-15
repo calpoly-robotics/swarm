@@ -2003,7 +2003,7 @@ design rules under a new name.</description>
 <contactref element="CON7" pad="2"/>
 <wire x1="85.487" y1="23.635" x2="89.142" y2="32.639" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="S3V">
+<signal name="S+VSENSE">
 <contactref element="C14" pad="1"/>
 <contactref element="CON7" pad="1"/>
 <contactref element="R48" pad="2"/>
