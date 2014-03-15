@@ -31,6 +31,8 @@ int main() {
 	u08 i = 0;
 	u32 currTime;
 	sbi(DDRA,PINA1);
+	sbi(DDRA,PINA2);
+	sbi(DDRA,PINA3);
 	sbi(DDRB, 2);
 
 	// while(1) {
@@ -53,6 +55,7 @@ int main() {
 			} else if (currTime > ((*task).lastRun + (*task).interval)) {
 				(*task).lastRun = currTime;
 				(*task).run();
+				sbi(PINA,3);
 			}
 			// uartPrintf("lastRun:%.6lu\tcurrTime:%.6lu\tbullshit:%.6lu\n",(*task).lastRun,currTime,bullshit);
 			// uartPrintf("int+lastRun:%.6lu\tcurrTime:%.6lu\n",(*task).lastRun+10000,currTime);
