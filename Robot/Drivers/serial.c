@@ -12,8 +12,19 @@ volatile u08 transmitEnd = 0;
 volatile u08 transmitCount = 0;
 
 ISR(USART0_UDRE_vect) {
-	sbi(PINA, 1);
-	cbi(UCSR0B, UDRIE0);
+	if (!gbi(UCSR0A,UDRE0))
+		return;
+	if (transmitCount == 0) {
+		cbi(UCSR0B, UDRIE0);
+
+	} else {
+		// sbi(PINA, 1);
+		transmitCount--;
+		UDR0 = transmitBuffer[transmitStart];
+		if (++transmitStart == UART_BUFFER_SIZE)
+			transmitStart = 0;
+	}
+	// return transmitCount;
 }
 
 int driverRunSerial() {
@@ -71,7 +82,7 @@ void uartPrintChar(u08 data) {
 		transmitEnd = 0;
 	transmitCount++;
 
-	// sbi(UCSR0B, UDRIE0);
+	sbi(UCSR0B, UDRIE0);
 
 #ifdef FLUSH_ON_NEWLINE
 	if(data=='\n')

@@ -9,6 +9,5 @@ void initSerialTask() {
 }
 
 void runSerial() {
-	sbi(PINA,1);
 	driverRunSerial();
 }

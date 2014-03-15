@@ -29,7 +29,7 @@ void enableTwiTask() {
 }
 
 void disableTwiTask() {
-	removeTask((*myTask).index);
+	// removeTask((*myTask).index);
 	disableTwi();
 }
 /**
