@@ -1636,7 +1636,7 @@ Manufacturer Part Number: SI2333DS-T1-E3</description>
 <description>Digikey Part Number: IRLML6244TRPBFCT-ND
 Manufacturer Part Number: IRLML6244TRPBF</description>
 <gates>
-<gate name="G$1" symbol="N-FET" x="-2.54" y="0"/>
+<gate name="G$1" symbol="N-FET" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23">

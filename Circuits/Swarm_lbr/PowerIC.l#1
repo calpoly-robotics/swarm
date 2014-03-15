@@ -327,18 +327,11 @@ Mouser Part Number: 579-MCP73833-AMI/UN</description>
 </devices>
 </deviceset>
 <deviceset name="BA30BC0FP" prefix="V">
-<description>Digikey Part Number: BA30BC0FP-E2CT-ND
-Manufacturer Cart Number: BA30BC0FP-E2</description>
 <gates>
 <gate name="G$1" symbol="VOLTAGEREGULATOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="DPAK">
-<connects>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="3"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
