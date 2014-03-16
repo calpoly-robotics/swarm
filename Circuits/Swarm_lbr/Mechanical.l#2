@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -292,6 +292,11 @@
 <smd name="8" x="-3" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 <smd name="9" x="-5" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 <smd name="10" x="-7" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+</package>
+<package name="TESTPOINT">
+<pad name="P$1" x="0" y="0" drill="0.508"/>
+<text x="1.27" y="0" size="0.8128" layer="25">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -708,13 +713,36 @@ Manufacturer Part Number: A3-14DA-2SV(71)</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR_10" prefix="CON">
-<description>Digikey Part Number: H10963-ND
-Manufacturer Part Number: A3-10DA-2SV(71)</description>
+<description>SMD
+Digikey Part Number: H10963-ND
+Manufacturer Part Number: A3-10DA-2SV(71)
+
+
+PTH
+Digikey Part Number: 
+Manufacturer Part Number:</description>
 <gates>
 <gate name="G$1" symbol="2X5MAIN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="FEMALE_HEADER_2MM_2X5">
+<device name="PTH" package="FEMALE_HEADER_2MM_2X5">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD" package="FEMALE_HEADER_2MM_2X5_SMD">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
