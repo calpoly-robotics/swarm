@@ -1636,7 +1636,7 @@ Manufacturer Part Number: SI2333DS-T1-E3</description>
 <description>Digikey Part Number: IRLML6244TRPBFCT-ND
 Manufacturer Part Number: IRLML6244TRPBF</description>
 <gates>
-<gate name="G$1" symbol="N-FET" x="-2.54" y="0"/>
+<gate name="G$1" symbol="N-FET" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23">
@@ -2231,16 +2231,16 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R51" library="Passive" deviceset="RES" device="0603" value="220"/>
 <part name="U9" library="Passive" deviceset="QRE1113" device=""/>
 <part name="R52" library="Passive" deviceset="RES" device="0603" value="100"/>
-<part name="LED11" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED11" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R53" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+3" library="Supply" deviceset="+3V" device=""/>
-<part name="LED12" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED12" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R54" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+8" library="Supply" deviceset="+3V" device=""/>
-<part name="LED14" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED14" library="Passive" deviceset="LED" device="0603" value="GREEN"/>
 <part name="R55" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+11" library="Supply" deviceset="+3V" device=""/>
-<part name="LED15" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED15" library="Passive" deviceset="LED" device="0603" value="GREEN"/>
 <part name="R56" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+17" library="Supply" deviceset="+3V" device=""/>
 <part name="C7" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
@@ -2251,6 +2251,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="C16" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="P+21" library="Supply" deviceset="+VRAW" device=""/>
 <part name="M1" library="Mechanical" deviceset="VIBMOTOR" device=""/>
+<part name="H3" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
+<part name="H4" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2289,7 +2291,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="P+6" gate="1" x="-68.58" y="17.78" rot="R90"/>
 <instance part="GND4" gate="1" x="-71.12" y="22.86"/>
 <instance part="CON1" gate="G$1" x="-86.36" y="35.56"/>
-<instance part="GND5" gate="1" x="71.12" y="-248.92"/>
+<instance part="GND5" gate="1" x="63.5" y="25.4"/>
 <instance part="R8" gate="G$1" x="-132.08" y="35.56" rot="R90"/>
 <instance part="P+7" gate="1" x="-132.08" y="48.26"/>
 <instance part="GND6" gate="1" x="-132.08" y="10.16"/>
@@ -2397,7 +2399,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="R3" gate="G$1" x="-139.7" y="-43.18" rot="R90"/>
 <instance part="R4" gate="G$1" x="-132.08" y="-43.18" rot="R90"/>
 <instance part="R5" gate="G$1" x="-124.46" y="-43.18" rot="R90"/>
-<instance part="CON5" gate="G$1" x="78.74" y="-241.3"/>
+<instance part="CON5" gate="G$1" x="71.12" y="33.02"/>
 <instance part="U3" gate="G$1" x="5.08" y="12.7"/>
 <instance part="U4" gate="G$1" x="170.18" y="-78.74"/>
 <instance part="GND21" gate="1" x="157.48" y="-86.36"/>
@@ -2463,6 +2465,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="C16" gate="G$1" x="-149.86" y="-127"/>
 <instance part="P+21" gate="G$1" x="-149.86" y="-93.98" rot="MR0"/>
 <instance part="M1" gate="G$1" x="-167.64" y="-104.14" rot="MR0"/>
+<instance part="H3" gate="G$1" x="91.44" y="124.46"/>
+<instance part="H4" gate="G$1" x="96.52" y="124.46"/>
 </instances>
 <busses>
 </busses>
@@ -2625,8 +2629,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="CON1" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="73.66" y1="-243.84" x2="71.12" y2="-243.84" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="-243.84" x2="71.12" y2="-246.38" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="30.48" x2="63.5" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="30.48" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="CON5" gate="G$1" pin="3"/>
 </segment>
@@ -3000,20 +3004,20 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 </net>
 <net name="DATAANTENNA" class="0">
 <segment>
-<wire x1="73.66" y1="-238.76" x2="40.64" y2="-238.76" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-238.76" x2="38.1" y2="-241.3" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PD1(PCINT25/TXD0)"/>
-<wire x1="38.1" y1="-241.3" x2="15.24" y2="-241.3" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="35.56" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="35.56" x2="60.96" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="CON5" gate="G$1" pin="1"/>
+<pinref part="U3" gate="G$1" pin="PD3(TXD1/INT3)"/>
+<wire x1="38.1" y1="33.02" x2="60.96" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD0(PCINT24/RXD0)"/>
-<wire x1="15.24" y1="-238.76" x2="38.1" y2="-238.76" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="-238.76" x2="40.64" y2="-241.3" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-241.3" x2="73.66" y2="-241.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="35.56" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="33.02" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="CON5" gate="G$1" pin="2"/>
+<pinref part="U3" gate="G$1" pin="PD2(RXD1/INT2)"/>
+<wire x1="38.1" y1="35.56" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -3682,6 +3686,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-76.2" y1="38.1" x2="-30.48" y2="38.1" width="0.1524" layer="91"/>
 <label x="-53.34" y="38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R55" gate="G$1" pin="1"/>
+<wire x1="-86.36" y1="-48.26" x2="-86.36" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-86.36" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="TEMPSENSE" class="0">
 <segment>
@@ -3702,30 +3711,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="U6" gate="G$1" pin="OUT"/>
 <wire x1="119.38" y1="-78.74" x2="99.06" y2="-78.74" width="0.1524" layer="91"/>
 <label x="99.06" y="-78.74" size="1.778" layer="91" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="SCL" class="0">
-<segment>
-<pinref part="ANT4" gate="G$1" pin="P$1"/>
-<wire x1="-200.66" y1="-50.8" x2="-180.34" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-180.34" y="-50.8" size="1.778" layer="91" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U3" gate="G$1" pin="PD0(SCL/INT0)"/>
-<wire x1="-30.48" y1="22.86" x2="-33.02" y2="22.86" width="0.1524" layer="91"/>
-<label x="-33.02" y="22.86" size="1.778" layer="91" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="SDA" class="0">
-<segment>
-<wire x1="-180.34" y1="-25.4" x2="-200.66" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-180.34" y="-25.4" size="1.778" layer="91" xref="yes"/>
-<pinref part="ANT2" gate="G$1" pin="P$1"/>
-</segment>
-<segment>
-<pinref part="U3" gate="G$1" pin="PD1(SDA/INT1)"/>
-<wire x1="-30.48" y1="20.32" x2="-40.64" y2="20.32" width="0.1524" layer="91"/>
-<label x="-40.64" y="20.32" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IRBUMBER" class="0">
@@ -3936,6 +3921,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="U3" gate="G$1" pin="PB2(MOSI/PCINT2)"/>
 <wire x1="-76.2" y1="40.64" x2="-30.48" y2="40.64" width="0.1524" layer="91"/>
 <label x="-53.34" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R53" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="-48.26" x2="-106.68" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-106.68" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -4217,24 +4207,9 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 </net>
 <net name="LED4" class="0">
 <segment>
-<pinref part="R53" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="-48.26" x2="-106.68" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-106.68" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R54" gate="G$1" pin="1"/>
 <wire x1="-96.52" y1="-48.26" x2="-96.52" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-96.52" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R55" gate="G$1" pin="1"/>
-<wire x1="-86.36" y1="-48.26" x2="-86.36" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-86.36" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R56" gate="G$1" pin="1"/>
-<wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-76.2" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -4290,6 +4265,37 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-160.02" y1="-111.76" x2="-160.02" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="M1" gate="G$1" pin="-VM"/>
 <wire x1="-160.02" y1="-109.22" x2="-162.56" y2="-109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED5" class="0">
+<segment>
+<pinref part="R56" gate="G$1" pin="1"/>
+<wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-76.2" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="CRX" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="PE0(RXD0/PCINT8/PDI)"/>
+<wire x1="38.1" y1="17.78" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
+<label x="43.18" y="17.78" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ANT4" gate="G$1" pin="P$1"/>
+<wire x1="-200.66" y1="-50.8" x2="-180.34" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-180.34" y="-50.8" size="1.778" layer="91" xref="yes"/>
+</segment>
+</net>
+<net name="CTX" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="PE1(TXD0/PDO)"/>
+<wire x1="38.1" y1="15.24" x2="53.34" y2="15.24" width="0.1524" layer="91"/>
+<label x="53.34" y="15.24" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<wire x1="-180.34" y1="-25.4" x2="-200.66" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-180.34" y="-25.4" size="1.778" layer="91" xref="yes"/>
+<pinref part="ANT2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 </nets>

@@ -2159,8 +2159,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R40" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="R41" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="U2" library="PowerIC" deviceset="MCP73833" device=""/>
-<part name="R29" library="Passive" deviceset="RES" device="0603" value="7.5k"/>
-<part name="R30" library="Passive" deviceset="RES" device="0603" value="18k"/>
+<part name="R29" library="Passive" deviceset="RES" device="0603" value="100k"/>
+<part name="R30" library="Passive" deviceset="RES" device="0603" value="100k"/>
 <part name="R31" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R32" library="Passive" deviceset="RES" device="0603" value="2k"/>
 <part name="P+14" library="Supply" deviceset="+VCHG" device=""/>
@@ -3819,7 +3819,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="314.96" y1="-50.8" x2="320.04" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="S3V" class="0">
+<net name="S+VSENSE" class="0">
 <segment>
 <pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="383.54" y1="-50.8" x2="383.54" y2="-48.26" width="0.1524" layer="91"/>

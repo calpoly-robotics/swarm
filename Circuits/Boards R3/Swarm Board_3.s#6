@@ -2275,6 +2275,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="294.64" y1="-50.8" x2="292.1" y2="-53.34" width="0.1524" layer="97"/>
 <text x="-76.2" y="2.54" size="1.778" layer="97">PICK NEW 8MHX XTAL</text>
 <text x="-76.2" y="73.66" size="1.778" layer="97">CHANGE DIVIDER VALUES</text>
+<text x="370.84" y="-86.36" size="1.778" layer="97">maybe replace ir bumper with +3v?</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="-15.24" y="-215.9"/>
@@ -3819,7 +3820,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="314.96" y1="-50.8" x2="320.04" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="S3V" class="0">
+<net name="S+VSENSE" class="0">
 <segment>
 <pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="383.54" y1="-50.8" x2="383.54" y2="-48.26" width="0.1524" layer="91"/>

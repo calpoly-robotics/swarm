@@ -1717,6 +1717,7 @@ Manufacturer Part Number: QRE1113</description>
 <pad name="P$1" x="0" y="0" drill="0.8"/>
 <text x="-1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
+<pad name="P$2" x="0" y="-2.794" drill="0.8"/>
 </package>
 <package name="MOUNTINGHOLE">
 <pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
@@ -1748,8 +1749,8 @@ Manufacturer Part Number: QRE1113</description>
 <wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
 <wire x1="7" y1="-2" x2="-7" y2="-2" width="0.127" layer="21"/>
 <wire x1="-7" y1="-2" x2="-7" y2="2" width="0.127" layer="21"/>
-<text x="-6" y="4" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-6" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-5" y="4" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-5" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
 <smd name="1" x="-6" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
 <smd name="2" x="-4" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
 <smd name="3" x="-2" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
@@ -1917,7 +1918,7 @@ Manufacturer Part Number: QRE1113</description>
 <devices>
 <device name="" package="ANTENNA">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$1" pad="P$1 P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1955,7 +1956,12 @@ Manufacturer Part Number: QRE1113</description>
 </devices>
 </deviceset>
 <deviceset name="MAIN_CONNECTOR_14" prefix="CON">
-<description>Digikey Part Number: H10965-ND
+<description>PTH:
+Digikey Part Number: 
+Manufacturer Part Number: 
+
+SMD:
+Digikey Part Number: H10965-ND
 Manufacturer Part Number: A3-14DA-2SV(71)</description>
 <gates>
 <gate name="G$1" symbol="2X7MAIN" x="0" y="7.62"/>
@@ -2153,8 +2159,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R40" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="R41" library="Passive" deviceset="RES" device="0603" value="4.7k"/>
 <part name="U2" library="PowerIC" deviceset="MCP73833" device=""/>
-<part name="R29" library="Passive" deviceset="RES" device="0603" value="7.5k"/>
-<part name="R30" library="Passive" deviceset="RES" device="0603" value="18k"/>
+<part name="R29" library="Passive" deviceset="RES" device="0603" value="100k"/>
+<part name="R30" library="Passive" deviceset="RES" device="0603" value="100k"/>
 <part name="R31" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R32" library="Passive" deviceset="RES" device="0603" value="2k"/>
 <part name="P+14" library="Supply" deviceset="+VCHG" device=""/>
