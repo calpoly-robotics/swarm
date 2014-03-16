@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.005" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.005" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -533,6 +533,11 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 <text x="-3.81" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 <pad name="4" x="5.08" y="0" drill="0.8"/>
 </package>
+<package name="TESTPOINT">
+<pad name="P$1" x="0" y="0" drill="0.508"/>
+<text x="1.27" y="0" size="0.8128" layer="25">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 </library>
 <library name="PowerIC">
@@ -997,6 +1002,8 @@ design rules under a new name.</description>
 <element name="U6" library="DigitalIC" package="24SOIC" value="CD74HC154M96" x="-52.324" y="-159.893"/>
 <element name="C25" library="Passive" package="0603" value="1uf" x="-61.595" y="-163.83"/>
 <element name="R43" library="Passive" package="0603" value="10k" x="-64.643" y="-163.83"/>
+<element name="TST1" library="Mechanical" package="TESTPOINT" value="TESTPOINT" x="-65.151" y="-166.878"/>
+<element name="TST2" library="Mechanical" package="TESTPOINT" value="TESTPOINT" x="-65.151" y="-169.799"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1127,8 +1134,6 @@ design rules under a new name.</description>
 <wire x1="-3.109" y1="1.762" x2="-11.491" y2="1.762" width="0" layer="19" extent="1-1"/>
 <wire x1="3.81" y1="15.24" x2="-3.109" y2="1.762" width="0" layer="19" extent="1-1"/>
 <wire x1="57.568" y1="15.727" x2="60.712" y2="13.218" width="0" layer="19" extent="1-1"/>
-<wire x1="10.1346" y1="48.4378" x2="6.604" y2="43.434" width="0" layer="19" extent="1-1"/>
-<wire x1="10.1346" y1="54.9402" x2="12.3818" y2="50.685" width="0" layer="19" extent="1-1"/>
 <wire x1="51.1175" y1="4.5205" x2="60.198" y2="12.065" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RESET">
@@ -2124,6 +2129,12 @@ design rules under a new name.</description>
 <contactref element="U5" pad="P$28"/>
 <contactref element="CON17" pad="3"/>
 <wire x1="8.89" y1="15.24" x2="-48.635" y2="-25.149" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="DEBUG1">
+<contactref element="TST2" pad="P$1"/>
+</signal>
+<signal name="DEBUG2">
+<contactref element="TST1" pad="P$1"/>
 </signal>
 </signals>
 </board>

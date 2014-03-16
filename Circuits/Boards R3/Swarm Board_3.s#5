@@ -2251,6 +2251,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="C16" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="P+21" library="Supply" deviceset="+VRAW" device=""/>
 <part name="M1" library="Mechanical" deviceset="VIBMOTOR" device=""/>
+<part name="H3" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
+<part name="H4" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2463,6 +2465,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="C16" gate="G$1" x="-149.86" y="-127"/>
 <instance part="P+21" gate="G$1" x="-149.86" y="-93.98" rot="MR0"/>
 <instance part="M1" gate="G$1" x="-167.64" y="-104.14" rot="MR0"/>
+<instance part="H3" gate="G$1" x="91.44" y="124.46"/>
+<instance part="H4" gate="G$1" x="96.52" y="124.46"/>
 </instances>
 <busses>
 </busses>
