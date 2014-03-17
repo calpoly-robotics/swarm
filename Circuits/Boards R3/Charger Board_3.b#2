@@ -1134,8 +1134,6 @@ design rules under a new name.</description>
 <wire x1="-3.109" y1="1.762" x2="-11.491" y2="1.762" width="0" layer="19" extent="1-1"/>
 <wire x1="3.81" y1="15.24" x2="-3.109" y2="1.762" width="0" layer="19" extent="1-1"/>
 <wire x1="57.568" y1="15.727" x2="60.712" y2="13.218" width="0" layer="19" extent="1-1"/>
-<wire x1="10.1346" y1="48.4378" x2="6.604" y2="43.434" width="0" layer="19" extent="1-1"/>
-<wire x1="10.1346" y1="54.9402" x2="12.3818" y2="50.685" width="0" layer="19" extent="1-1"/>
 <wire x1="51.1175" y1="4.5205" x2="60.198" y2="12.065" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RESET">

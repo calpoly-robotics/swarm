@@ -1024,6 +1024,8 @@ Digikey Part Number: MMSS8550-L-TPMSCT-ND</description>
 </devices>
 </deviceset>
 <deviceset name="MCP9700A" prefix="U">
+<description>Digikey Part Number: MCP9700AT-E/TTCT-ND
+Manufacturer Part Number: MCP9700AT-E/TT</description>
 <gates>
 <gate name="G$1" symbol="MCP9700A" x="0" y="-2.54"/>
 </gates>
