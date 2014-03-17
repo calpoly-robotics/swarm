@@ -37,7 +37,7 @@ int main() {
 	uartPrintString("*************************************************\n");
 
 	u32 currTime;
-	
+
 	// while(1) {
 	// 	sbi(PORTC, TRANSMIT_PIN);
 	// }
@@ -48,8 +48,6 @@ int main() {
 		currTime = getTime32();
 		sbi(PINB, 2);
 		
-
-
 		// if (tasks[i] != NULL) { 
 
 		// 	volatile Task* task = tasks[i];

@@ -41,6 +41,7 @@ void enablePCINT()  {
 	// uartPrintChar('\n');
 	sbi(PCICR, PCIE2);
 	PCMSK2 = ALL_RX_MASK;
+	direction = ALL_RX_MASK;
 }
 
 void disablePCINT() {
@@ -262,7 +263,7 @@ void manageRecieve() {
 ISR(TIMER1_COMPA_vect) {
 	if (recvWidthIndex > -1) { // timeout occured. Message done or error
 		// uartPrintf("%d\n",recvWidthIndex);
-		sbi(PINA,1);
+		// sbi(PINA,1);
 		if (recvWidthIndex == NUM_NIBBLES+1)
 			msgReady = recvWidthIndex;
 		else
@@ -298,14 +299,17 @@ ISR(TIMER1_COMPA_vect) {
 ISR(PCINT2_vect) {
 	u16 tmpTime = TCNT1;
 	// uartPrintChar('a');
-	sbi(PINA,1);
-
+	// sbi(PINA,1);
+	// sbi(PINA,1);
 	if (transmitting) // don't recieve if we're tx
 		return;
 
-	if ((PINC & ALL_RX_MASK) == ALL_RX_MASK) 
+	// sbi(PINA,1);
+	if ((PINC & direction) == ALL_RX_MASK) 
 		return;
 
+	// sbi(PINA,1);
+	// sbi(PINA,1);
 	// // uartPrintChar('0'+recvWidthIndex);
 	if (recvWidthIndex > -1) { // not the first nibble
 		recvWidths[recvWidthIndex] = tmpTime;
@@ -318,6 +322,7 @@ ISR(PCINT2_vect) {
 	} else {
 		// cbi(PINA, 1);
 		PCMSK2 = (~PINC) & ALL_RX_MASK;
+		direction = (~PINC) & ALL_RX_MASK;
 		recvWidthIndex = 0;
 		enableOCR(TIMEOUT);
 

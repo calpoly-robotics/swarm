@@ -1,5 +1,4 @@
 #include "tasks.h"
-#include "../Drivers/serial.h"
 
 void initTasks() {
 	last = NULL;

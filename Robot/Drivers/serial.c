@@ -76,7 +76,7 @@ void uartPrintChar(u08 data) {
 	if (transmitCount == UART_BUFFER_SIZE)
 		while (transmitCount > 0);
 #endif
-
+	// sbi(PINA,1);
 	transmitBuffer[transmitEnd] = data;
 	if(++transmitEnd == UART_BUFFER_SIZE)
 		transmitEnd = 0;
