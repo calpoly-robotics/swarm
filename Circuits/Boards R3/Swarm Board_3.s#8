@@ -1636,7 +1636,7 @@ Manufacturer Part Number: SI2333DS-T1-E3</description>
 <description>Digikey Part Number: IRLML6244TRPBFCT-ND
 Manufacturer Part Number: IRLML6244TRPBF</description>
 <gates>
-<gate name="G$1" symbol="N-FET" x="-2.54" y="0"/>
+<gate name="G$1" symbol="N-FET" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23">
@@ -2231,16 +2231,16 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R51" library="Passive" deviceset="RES" device="0603" value="220"/>
 <part name="U9" library="Passive" deviceset="QRE1113" device=""/>
 <part name="R52" library="Passive" deviceset="RES" device="0603" value="100"/>
-<part name="LED11" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED11" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R53" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+3" library="Supply" deviceset="+3V" device=""/>
-<part name="LED12" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED12" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R54" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+8" library="Supply" deviceset="+3V" device=""/>
-<part name="LED14" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED14" library="Passive" deviceset="LED" device="0603" value="GREEN"/>
 <part name="R55" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+11" library="Supply" deviceset="+3V" device=""/>
-<part name="LED15" library="Passive" deviceset="LED" device="0603"/>
+<part name="LED15" library="Passive" deviceset="LED" device="0603" value="GREEN"/>
 <part name="R56" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+17" library="Supply" deviceset="+3V" device=""/>
 <part name="C7" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
@@ -2251,6 +2251,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="C16" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="P+21" library="Supply" deviceset="+VRAW" device=""/>
 <part name="M1" library="Mechanical" deviceset="VIBMOTOR" device=""/>
+<part name="H3" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
+<part name="H4" library="Mechanical" deviceset="MOUNTINGHOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2463,6 +2465,8 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="C16" gate="G$1" x="-149.86" y="-127"/>
 <instance part="P+21" gate="G$1" x="-149.86" y="-93.98" rot="MR0"/>
 <instance part="M1" gate="G$1" x="-167.64" y="-104.14" rot="MR0"/>
+<instance part="H3" gate="G$1" x="91.44" y="124.46"/>
+<instance part="H4" gate="G$1" x="96.52" y="124.46"/>
 </instances>
 <busses>
 </busses>
@@ -3682,6 +3686,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-76.2" y1="38.1" x2="-30.48" y2="38.1" width="0.1524" layer="91"/>
 <label x="-53.34" y="38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R55" gate="G$1" pin="1"/>
+<wire x1="-86.36" y1="-48.26" x2="-86.36" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-86.36" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="TEMPSENSE" class="0">
 <segment>
@@ -3936,6 +3945,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="U3" gate="G$1" pin="PB2(MOSI/PCINT2)"/>
 <wire x1="-76.2" y1="40.64" x2="-30.48" y2="40.64" width="0.1524" layer="91"/>
 <label x="-53.34" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R53" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="-48.26" x2="-106.68" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-106.68" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -4217,24 +4231,9 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 </net>
 <net name="LED4" class="0">
 <segment>
-<pinref part="R53" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="-48.26" x2="-106.68" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-106.68" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R54" gate="G$1" pin="1"/>
 <wire x1="-96.52" y1="-48.26" x2="-96.52" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-96.52" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R55" gate="G$1" pin="1"/>
-<wire x1="-86.36" y1="-48.26" x2="-86.36" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-86.36" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R56" gate="G$1" pin="1"/>
-<wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-76.2" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -4290,6 +4289,13 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-160.02" y1="-111.76" x2="-160.02" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="M1" gate="G$1" pin="-VM"/>
 <wire x1="-160.02" y1="-109.22" x2="-162.56" y2="-109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED5" class="0">
+<segment>
+<pinref part="R56" gate="G$1" pin="1"/>
+<wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-76.2" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
 </net>
 </nets>
