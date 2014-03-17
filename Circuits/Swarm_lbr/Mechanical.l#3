@@ -158,10 +158,10 @@
 <pad name="4" x="5.08" y="0" drill="0.8"/>
 </package>
 <package name="ANTENNA">
-<pad name="P$1" x="0" y="0" drill="1.2"/>
+<pad name="P$1" x="0" y="0" drill="1.2" thermals="no"/>
 <text x="-1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
-<pad name="P$2" x="0" y="-2.794" drill="1.2"/>
+<pad name="P$2" x="0" y="-2.794" drill="1.2" thermals="no"/>
 </package>
 <package name="MOUNTINGHOLE">
 <pad name="P$2" x="0" y="0" drill="2.032" diameter="2.286"/>
@@ -298,6 +298,28 @@
 <pad name="P$1" x="0" y="0" drill="0.508"/>
 <text x="1.27" y="0" size="0.8128" layer="25">&gt;NAME</text>
 <text x="1.27" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
+<package name="FEMALE_HEADER_2MM_2X7_SMD">
+<wire x1="-7" y1="2" x2="7" y2="2" width="0.127" layer="21"/>
+<wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
+<wire x1="7" y1="-2" x2="-7" y2="-2" width="0.127" layer="21"/>
+<wire x1="-7" y1="-2" x2="-7" y2="2" width="0.127" layer="21"/>
+<text x="-6" y="4" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-6" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
+<smd name="1" x="-6" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="-4" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="3" x="-2" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="4" x="0" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="5" x="2" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="6" x="4" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="7" x="6" y="-2.4" dx="2.2" dy="1" layer="1" rot="R90"/>
+<smd name="8" x="6" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="9" x="4" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="10" x="2" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="11" x="0" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="12" x="-2" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="13" x="-4" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
+<smd name="14" x="-6" y="2.4" dx="2.2" dy="1" layer="1" rot="R270"/>
 </package>
 </packages>
 <symbols>
@@ -699,7 +721,28 @@ Manufacturer Part Number: A3-14DA-2SV(71)</description>
 <gate name="G$1" symbol="2X7MAIN" x="0" y="7.62"/>
 </gates>
 <devices>
-<device name="" package="FEMALE_HEADER_2MM_2X7">
+<device name="PTH" package="FEMALE_HEADER_2MM_2X7">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="FEMALE_HEADER_2MM_2X7_SMD">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="10" pad="10"/>
