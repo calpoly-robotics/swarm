@@ -2,7 +2,7 @@
 #include "../Drivers/ir.h"
 #include "../Drivers/serial.h"
 
-// #define TRANSMIT
+#define TRANSMIT
 
 Task* testTask;
 Message msg;
@@ -20,8 +20,8 @@ void runIRTest() {
 	// uartPrintDebug(4);
 #ifdef TRANSMIT
 	sendMessage(0,WHOS_THERE,69);
-	sbi(PINA,1);
-#else
+// 	sbi(PINA,1);
+// #else
 	if (!readMessage(&msg));
 		// uartPrintf("\n*Type:%.3u\tData:%u\n",msg.msg,msg.data);
 #endif

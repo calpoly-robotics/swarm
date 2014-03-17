@@ -46,7 +46,7 @@ int main() {
 
 	while (1) {
 		currTime = getTime32();
-		// sbi(PINB, 2);
+		sbi(PINB, 2);
 		
 
 
@@ -60,13 +60,12 @@ int main() {
 			(*task).run();
 			// uartPrintDebug(5);
 		} else if (currTime > ((*task).lastRun + (*task).interval)) {
-			tbi(PORTB,3);
 			(*task).lastRun = currTime;
 			(*task).run();
 		}
 
 		task = (*task).next;
-		_delay_ms(1000);
+		// _delay_ms(1000);
 		// 	// uartPrintf("lastRun:%.6lu\tcurrTime:%.6lu\tbullshit:%.6lu\n",(*task).lastRun,currTime,bullshit);
 		// 	// uartPrintf("int+lastRun:%.6lu\tcurrTime:%.6lu\n",(*task).lastRun+10000,currTime);
 		// 	// uartPrintf("(*task):%u\t%.6lu ticks left\t currTime:%.6lu\tlastRun:%.6lu\n",i,((*task).lastRun+(*task).interval - currTime),currTime,(*task).lastRun);

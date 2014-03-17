@@ -10,7 +10,7 @@ void initIRTask() {
 }
 
 void runIR() {
-	sbi(PINB,3);
+	// sbi(PINB,3);
 
 	if (irManageLastRun) { // rx was last run
 		manageTransmit();
