@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -104,67 +104,6 @@
 <libraries>
 <library name="DigitalIC">
 <packages>
-<package name="TQFP44">
-<smd name="1" x="-5.75" y="4" dx="1.5" dy="0.406" layer="1"/>
-<smd name="2" x="-5.75" y="3.2" dx="1.5" dy="0.406" layer="1"/>
-<smd name="3" x="-5.75" y="2.4" dx="1.5" dy="0.406" layer="1"/>
-<smd name="4" x="-5.75" y="1.6" dx="1.5" dy="0.406" layer="1"/>
-<smd name="5" x="-5.75" y="0.8" dx="1.5" dy="0.406" layer="1"/>
-<smd name="6" x="-5.75" y="0" dx="1.5" dy="0.406" layer="1"/>
-<smd name="7" x="-5.75" y="-0.8" dx="1.5" dy="0.406" layer="1"/>
-<smd name="8" x="-5.75" y="-1.6" dx="1.5" dy="0.406" layer="1"/>
-<smd name="9" x="-5.75" y="-2.4" dx="1.5" dy="0.406" layer="1"/>
-<smd name="10" x="-5.75" y="-3.2" dx="1.5" dy="0.406" layer="1"/>
-<smd name="11" x="-5.75" y="-4" dx="1.5" dy="0.406" layer="1"/>
-<smd name="12" x="-4" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="13" x="-3.2" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="14" x="-2.4" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="15" x="-1.6" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="16" x="-0.8" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="17" x="0" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="18" x="0.8" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="19" x="1.6" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="20" x="2.4" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="21" x="3.2" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="22" x="4" y="-5.75" dx="1.5" dy="0.406" layer="1" rot="R90"/>
-<smd name="23" x="5.75" y="-4" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="24" x="5.75" y="-3.2" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="25" x="5.75" y="-2.4" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="26" x="5.75" y="-1.6" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="27" x="5.75" y="-0.8" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="28" x="5.75" y="0" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="29" x="5.75" y="0.8" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="30" x="5.75" y="1.6" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="31" x="5.75" y="2.4" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="32" x="5.75" y="3.2" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="33" x="5.75" y="4" dx="1.5" dy="0.406" layer="1" rot="R180"/>
-<smd name="34" x="4" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="35" x="3.2" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="36" x="2.4" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="37" x="1.6" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="38" x="0.8" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="39" x="0" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="40" x="-0.8" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="41" x="-1.6" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="42" x="-2.4" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="43" x="-3.2" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<smd name="44" x="-4" y="5.75" dx="1.5" dy="0.406" layer="1" rot="R270"/>
-<wire x1="-5" y1="5" x2="5" y2="5" width="0.127" layer="51"/>
-<wire x1="5" y1="5" x2="5" y2="-5" width="0.127" layer="51"/>
-<wire x1="5" y1="-5" x2="-5" y2="-5" width="0.127" layer="51"/>
-<wire x1="-5" y1="-5" x2="-5" y2="5" width="0.127" layer="51"/>
-<circle x="-4" y="4" radius="0.178884375" width="0.127" layer="21"/>
-<wire x1="-5.6" y1="4.8" x2="-5.6" y2="5.6" width="0.127" layer="21"/>
-<wire x1="-5.6" y1="5.6" x2="-4.8" y2="5.6" width="0.127" layer="21"/>
-<wire x1="-5.6" y1="-4.8" x2="-5.6" y2="-5.6" width="0.127" layer="21"/>
-<wire x1="-5.6" y1="-5.6" x2="-4.8" y2="-5.6" width="0.127" layer="21"/>
-<wire x1="4.8" y1="-5.6" x2="5.6" y2="-5.6" width="0.127" layer="21"/>
-<wire x1="5.6" y1="-5.6" x2="5.6" y2="-4.8" width="0.127" layer="21"/>
-<wire x1="5.6" y1="4.8" x2="5.6" y2="5.6" width="0.127" layer="21"/>
-<wire x1="5.6" y1="5.6" x2="4.8" y2="5.6" width="0.127" layer="21"/>
-<text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;VALUE</text>
-</package>
 <package name="SOIC16R">
 <description>&lt;b&gt;16-Lead SOIC (R) Package&lt;/b&gt;&lt;p&gt;
 Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</description>
@@ -308,53 +247,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 </package>
 </packages>
 <symbols>
-<symbol name="ATMEGA324P">
-<pin name="PB5(PCINT13/MOSI)" x="-33.02" y="17.78" length="middle"/>
-<pin name="PB6(PCINT14/MISO)" x="-33.02" y="15.24" length="middle"/>
-<pin name="PB7(PCINT15/SCK)" x="-33.02" y="12.7" length="middle"/>
-<pin name="!RESET" x="-33.02" y="10.16" length="middle"/>
-<pin name="VCC" x="-33.02" y="38.1" length="middle"/>
-<pin name="GND" x="-33.02" y="30.48" length="middle"/>
-<pin name="XTAL2" x="-33.02" y="-2.54" length="middle"/>
-<pin name="XTAL1" x="-33.02" y="-5.08" length="middle"/>
-<pin name="PD0(PCINT24/RXD0)" x="30.48" y="-22.86" length="middle" rot="R180"/>
-<pin name="PD1(PCINT25/TXD0)" x="30.48" y="-25.4" length="middle" rot="R180"/>
-<pin name="PD2(PCINT26/RXD1/INT0)" x="30.48" y="-27.94" length="middle" rot="R180"/>
-<pin name="PD3(PCINT27/TXD1/INT1)" x="30.48" y="-30.48" length="middle" rot="R180"/>
-<pin name="PD4(PCINT28/XCK1/OC1B)" x="30.48" y="-33.02" length="middle" rot="R180"/>
-<pin name="PD5(PCINT29/OC1A)" x="30.48" y="-35.56" length="middle" rot="R180"/>
-<pin name="PD6(PCINT30/OC2B/ICP)" x="30.48" y="-38.1" length="middle" rot="R180"/>
-<pin name="PD7(PCINT31/OC2A)" x="30.48" y="-40.64" length="middle" rot="R180"/>
-<pin name="PC0(PCINT16/SCL)" x="30.48" y="0" length="middle" rot="R180"/>
-<pin name="PC1(PCINT17/SDA)" x="30.48" y="-2.54" length="middle" rot="R180"/>
-<pin name="PC2(PCINT18/TCK)" x="30.48" y="-5.08" length="middle" rot="R180"/>
-<pin name="PC3(PCINT19/TMS)" x="30.48" y="-7.62" length="middle" rot="R180"/>
-<pin name="PC4(TDO/PCINT20)" x="30.48" y="-10.16" length="middle" rot="R180"/>
-<pin name="PC5(TDI/PCINT21)" x="30.48" y="-12.7" length="middle" rot="R180"/>
-<pin name="PC6(TOSC1/PCINT22)" x="30.48" y="-15.24" length="middle" rot="R180"/>
-<pin name="PC7(TOSC2/PCINT23)" x="30.48" y="-17.78" length="middle" rot="R180"/>
-<pin name="AVCC" x="-33.02" y="35.56" length="middle"/>
-<pin name="AREF" x="-33.02" y="33.02" length="middle"/>
-<pin name="PA7(ADC7/PCINT7)" x="30.48" y="20.32" length="middle" rot="R180"/>
-<pin name="PA6(ADC6/PCINT6)" x="30.48" y="22.86" length="middle" rot="R180"/>
-<pin name="PA5(ADC5/PCINT5)" x="30.48" y="25.4" length="middle" rot="R180"/>
-<pin name="PA4(ADC4/PCINT4)" x="30.48" y="27.94" length="middle" rot="R180"/>
-<pin name="PA3(ADC3/PCINT3)" x="30.48" y="30.48" length="middle" rot="R180"/>
-<pin name="PA2(ADC2/PCINT2)" x="30.48" y="33.02" length="middle" rot="R180"/>
-<pin name="PA1(ADC1/PCINT1)" x="30.48" y="35.56" length="middle" rot="R180"/>
-<pin name="PA0(ADC0/PCINT0)" x="30.48" y="38.1" length="middle" rot="R180"/>
-<pin name="PB0(XCK0/T0/PCINT8)" x="30.48" y="15.24" length="middle" rot="R180"/>
-<pin name="PB1(T1/CLKO/PCINT9)" x="30.48" y="12.7" length="middle" rot="R180"/>
-<pin name="PB2(AIN0/INT2/PCINT10)" x="30.48" y="10.16" length="middle" rot="R180"/>
-<pin name="PB3(AIN1/OC0A/PCINT11)" x="30.48" y="7.62" length="middle" rot="R180"/>
-<pin name="PB4(!SS!/OC0B/PCINT12)" x="30.48" y="5.08" length="middle" rot="R180"/>
-<wire x1="-27.94" y1="43.18" x2="25.4" y2="43.18" width="0.254" layer="94"/>
-<wire x1="25.4" y1="43.18" x2="25.4" y2="-45.72" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-45.72" x2="-27.94" y2="-45.72" width="0.254" layer="94"/>
-<wire x1="-27.94" y1="-45.72" x2="-27.94" y2="43.18" width="0.254" layer="94"/>
-<text x="-27.94" y="45.72" size="1.778" layer="95">&gt;NAME</text>
-<text x="-27.94" y="-50.8" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="MX25L25735E">
 <pin name="HOLD#/SIO3" x="-17.78" y="-2.54" length="middle"/>
 <pin name="VCC" x="15.24" y="5.08" length="middle" rot="R180"/>
@@ -474,61 +366,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ATMEGA324P" prefix="U">
-<description>Digikey Part Number: ATMEGA324P-20AU-ND
-Manufacturer Part Number: ATMEGA324P-20AU</description>
-<gates>
-<gate name="G$1" symbol="ATMEGA324P" x="-22.86" y="7.62"/>
-</gates>
-<devices>
-<device name="" package="TQFP44">
-<connects>
-<connect gate="G$1" pin="!RESET" pad="4"/>
-<connect gate="G$1" pin="AREF" pad="29"/>
-<connect gate="G$1" pin="AVCC" pad="27"/>
-<connect gate="G$1" pin="GND" pad="6 18 28 39"/>
-<connect gate="G$1" pin="PA0(ADC0/PCINT0)" pad="37"/>
-<connect gate="G$1" pin="PA1(ADC1/PCINT1)" pad="36"/>
-<connect gate="G$1" pin="PA2(ADC2/PCINT2)" pad="35"/>
-<connect gate="G$1" pin="PA3(ADC3/PCINT3)" pad="34"/>
-<connect gate="G$1" pin="PA4(ADC4/PCINT4)" pad="33"/>
-<connect gate="G$1" pin="PA5(ADC5/PCINT5)" pad="32"/>
-<connect gate="G$1" pin="PA6(ADC6/PCINT6)" pad="31"/>
-<connect gate="G$1" pin="PA7(ADC7/PCINT7)" pad="30"/>
-<connect gate="G$1" pin="PB0(XCK0/T0/PCINT8)" pad="40"/>
-<connect gate="G$1" pin="PB1(T1/CLKO/PCINT9)" pad="41"/>
-<connect gate="G$1" pin="PB2(AIN0/INT2/PCINT10)" pad="42"/>
-<connect gate="G$1" pin="PB3(AIN1/OC0A/PCINT11)" pad="43"/>
-<connect gate="G$1" pin="PB4(!SS!/OC0B/PCINT12)" pad="44"/>
-<connect gate="G$1" pin="PB5(PCINT13/MOSI)" pad="1"/>
-<connect gate="G$1" pin="PB6(PCINT14/MISO)" pad="2"/>
-<connect gate="G$1" pin="PB7(PCINT15/SCK)" pad="3"/>
-<connect gate="G$1" pin="PC0(PCINT16/SCL)" pad="19"/>
-<connect gate="G$1" pin="PC1(PCINT17/SDA)" pad="20"/>
-<connect gate="G$1" pin="PC2(PCINT18/TCK)" pad="21"/>
-<connect gate="G$1" pin="PC3(PCINT19/TMS)" pad="22"/>
-<connect gate="G$1" pin="PC4(TDO/PCINT20)" pad="23"/>
-<connect gate="G$1" pin="PC5(TDI/PCINT21)" pad="24"/>
-<connect gate="G$1" pin="PC6(TOSC1/PCINT22)" pad="25"/>
-<connect gate="G$1" pin="PC7(TOSC2/PCINT23)" pad="26"/>
-<connect gate="G$1" pin="PD0(PCINT24/RXD0)" pad="9"/>
-<connect gate="G$1" pin="PD1(PCINT25/TXD0)" pad="10"/>
-<connect gate="G$1" pin="PD2(PCINT26/RXD1/INT0)" pad="11"/>
-<connect gate="G$1" pin="PD3(PCINT27/TXD1/INT1)" pad="12"/>
-<connect gate="G$1" pin="PD4(PCINT28/XCK1/OC1B)" pad="13"/>
-<connect gate="G$1" pin="PD5(PCINT29/OC1A)" pad="14"/>
-<connect gate="G$1" pin="PD6(PCINT30/OC2B/ICP)" pad="15"/>
-<connect gate="G$1" pin="PD7(PCINT31/OC2A)" pad="16"/>
-<connect gate="G$1" pin="VCC" pad="5 17 38"/>
-<connect gate="G$1" pin="XTAL1" pad="8"/>
-<connect gate="G$1" pin="XTAL2" pad="7"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MX25L25735E" prefix="U">
 <description>Digikey Part Number: 1092-1000-ND
 Manufacturer Part Number: MX25L25735EMI-12G</description>
@@ -1894,7 +1731,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </class>
 </classes>
 <parts>
-<part name="U1" library="DigitalIC" deviceset="ATMEGA324P" device=""/>
 <part name="R7" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="CON1" library="Mechanical" deviceset="ISP" device="(2X3)"/>
@@ -1926,16 +1762,16 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="C4" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
 <part name="C5" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
 <part name="T3" library="Passive" deviceset="SI4421DY" device=""/>
-<part name="R2" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R3" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R4" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R5" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R6" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R9" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R17" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R18" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R19" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R20" library="Passive" deviceset="RES" device="0603" value="300"/>
+<part name="R2" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R3" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R4" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R5" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R6" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R9" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R17" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R18" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R19" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R20" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="U$3" library="Passive" deviceset="MBRS410LT3" device=""/>
 <part name="U$4" library="Passive" deviceset="MBRS410LT3" device=""/>
 <part name="GND7" library="Supply" deviceset="GND" device=""/>
@@ -2047,12 +1883,12 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="CON26" library="Mechanical" deviceset="HEADER_4X1" device=""/>
 <part name="CON27" library="Mechanical" deviceset="HEADER_4X1" device=""/>
 <part name="CON28" library="Mechanical" deviceset="HEADER_4X1" device=""/>
-<part name="R37" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R38" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R39" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R40" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R41" library="Passive" deviceset="RES" device="0603" value="300"/>
-<part name="R42" library="Passive" deviceset="RES" device="0603" value="300"/>
+<part name="R37" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R38" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R39" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R40" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R41" library="Passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R42" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="CON3" library="Mechanical" deviceset="HEADER_4X1" device=""/>
 <part name="CON4" library="Mechanical" deviceset="HEADER_4X1" device=""/>
 <part name="CON5" library="Mechanical" deviceset="HEADER_4X1" device=""/>
@@ -2075,7 +1911,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <text x="-81.28" y="-142.24" size="1.778" layer="97">These go to the charger contacts</text>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="167.64" y="-218.44"/>
 <instance part="R7" gate="G$1" x="-124.46" y="20.32" rot="R270"/>
 <instance part="GND4" gate="1" x="-147.32" y="2.54"/>
 <instance part="CON1" gate="G$1" x="-160.02" y="15.24"/>
@@ -2616,7 +2451,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="TRANSMITLEDS" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA4(ADC4/PCINT4)"/>
 <wire x1="198.12" y1="-190.5" x2="226.06" y2="-190.5" width="0.1524" layer="91"/>
 <label x="226.06" y="-190.5" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2625,6 +2459,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="195.58" y1="66.04" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="66.04" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
 <label x="193.04" y="73.66" size="1.778" layer="91" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PB0(!SS!/PCINT0)"/>
+<wire x1="-10.16" y1="-35.56" x2="-12.7" y2="-35.56" width="0.1524" layer="91"/>
+<label x="-12.7" y="-35.56" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -2636,7 +2475,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="LED1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB1(T1/CLKO/PCINT9)"/>
 <wire x1="198.12" y1="-205.74" x2="215.9" y2="-205.74" width="0.1524" layer="91"/>
 <label x="215.9" y="-205.74" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2645,10 +2483,14 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="238.76" y1="2.54" x2="241.3" y2="2.54" width="0.1524" layer="91"/>
 <label x="241.3" y="2.54" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PC4(A12)"/>
+<wire x1="58.42" y1="43.18" x2="60.96" y2="43.18" width="0.1524" layer="91"/>
+<label x="60.96" y="43.18" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="LED2" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB2(AIN0/INT2/PCINT10)"/>
 <wire x1="198.12" y1="-208.28" x2="226.06" y2="-208.28" width="0.1524" layer="91"/>
 <label x="226.06" y="-208.28" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2656,6 +2498,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R29" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="-20.32" x2="236.22" y2="-20.32" width="0.1524" layer="91"/>
 <label x="236.22" y="-20.32" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PC3(A11)"/>
+<wire x1="58.42" y1="45.72" x2="60.96" y2="45.72" width="0.1524" layer="91"/>
+<label x="60.96" y="45.72" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -2670,11 +2517,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R28" gate="G$1" pin="1"/>
 <wire x1="-205.74" y1="-68.58" x2="-213.36" y2="-68.58" width="0.1524" layer="91"/>
 <label x="-213.36" y="-68.58" size="1.778" layer="91" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="PB4(!SS!/OC0B/PCINT12)"/>
-<wire x1="198.12" y1="-213.36" x2="226.06" y2="-213.36" width="0.1524" layer="91"/>
-<label x="226.06" y="-213.36" size="1.778" layer="91" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="PG5(OC0B)"/>
@@ -2723,7 +2565,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="CURRENTSENSE" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA0(ADC0/PCINT0)"/>
 <wire x1="198.12" y1="-180.34" x2="226.06" y2="-180.34" width="0.1524" layer="91"/>
 <label x="226.06" y="-180.34" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2731,6 +2572,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="U2" gate="G$1" pin="VIOUT"/>
 <wire x1="-116.84" y1="-116.84" x2="-96.52" y2="-116.84" width="0.1524" layer="91"/>
 <label x="-96.52" y="-116.84" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PF2(ADC2)"/>
+<wire x1="58.42" y1="-20.32" x2="60.96" y2="-20.32" width="0.1524" layer="91"/>
+<label x="60.96" y="-20.32" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2746,7 +2592,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="CHARGER" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB0(XCK0/T0/PCINT8)"/>
 <wire x1="198.12" y1="-203.2" x2="226.06" y2="-203.2" width="0.1524" layer="91"/>
 <label x="226.06" y="-203.2" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2754,6 +2599,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R31" gate="G$1" pin="2"/>
 <wire x1="-180.34" y1="-109.22" x2="-175.26" y2="-109.22" width="0.1524" layer="91"/>
 <label x="-180.34" y="-109.22" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PA7(AD7)"/>
+<wire x1="-10.16" y1="-30.48" x2="-12.7" y2="-30.48" width="0.1524" layer="91"/>
+<label x="-12.7" y="-30.48" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHARGE+" class="0">
@@ -2873,7 +2723,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="LED3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB3(AIN1/OC0A/PCINT11)"/>
 <wire x1="198.12" y1="-210.82" x2="215.9" y2="-210.82" width="0.1524" layer="91"/>
 <label x="215.9" y="-210.82" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2881,6 +2730,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R30" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="-43.18" x2="231.14" y2="-43.18" width="0.1524" layer="91"/>
 <label x="231.14" y="-43.18" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PC2(A10)"/>
+<wire x1="58.42" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
+<label x="60.96" y="48.26" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="VERTICAL" class="0">
@@ -2890,9 +2744,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <label x="109.22" y="119.38" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA1(ADC1/PCINT1)"/>
 <wire x1="198.12" y1="-182.88" x2="210.82" y2="-182.88" width="0.1524" layer="91"/>
 <label x="210.82" y="-182.88" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PF1(ADC1)"/>
+<wire x1="58.42" y1="-17.78" x2="60.96" y2="-17.78" width="0.1524" layer="91"/>
+<label x="60.96" y="-17.78" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="HORIZONTAL" class="0">
@@ -2902,9 +2760,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <label x="109.22" y="109.22" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA2(ADC2/PCINT2)"/>
 <wire x1="198.12" y1="-185.42" x2="226.06" y2="-185.42" width="0.1524" layer="91"/>
 <label x="226.06" y="-185.42" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PF0(ADC0)"/>
+<wire x1="58.42" y1="-15.24" x2="60.96" y2="-15.24" width="0.1524" layer="91"/>
+<label x="60.96" y="-15.24" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="BUTTON" class="0">
@@ -2923,7 +2785,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <junction x="116.84" y="93.98"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA3(ADC3/PCINT3)"/>
 <wire x1="198.12" y1="-187.96" x2="210.82" y2="-187.96" width="0.1524" layer="91"/>
 <label x="210.82" y="-187.96" size="1.778" layer="91" xref="yes"/>
 </segment>
@@ -2990,9 +2851,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <junction x="-83.82" y="68.58"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA7(ADC7/PCINT7)"/>
 <wire x1="198.12" y1="-198.12" x2="213.36" y2="-198.12" width="0.1524" layer="91"/>
 <label x="213.36" y="-198.12" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PE7(ICP3/CLKO/INT7)"/>
+<wire x1="58.42" y1="-10.16" x2="60.96" y2="-10.16" width="0.1524" layer="91"/>
+<label x="60.96" y="-10.16" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="WP" class="0">
@@ -3002,9 +2867,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <label x="-149.86" y="68.58" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA5(ADC5/PCINT5)"/>
 <wire x1="198.12" y1="-193.04" x2="213.36" y2="-193.04" width="0.1524" layer="91"/>
 <label x="213.36" y="-193.04" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PB4(OC2A/PCINT4)"/>
+<wire x1="-10.16" y1="-38.1" x2="-12.7" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-12.7" y="-38.1" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="HOLD" class="0">
@@ -3014,9 +2883,13 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <label x="-160.02" y="66.04" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA6(ADC6/PCINT6)"/>
 <wire x1="198.12" y1="-195.58" x2="203.2" y2="-195.58" width="0.1524" layer="91"/>
 <label x="203.2" y="-195.58" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PB5(OC1A/PCINT5)"/>
+<wire x1="-10.16" y1="-40.64" x2="-12.7" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-12.7" y="-40.64" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -3124,11 +2997,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="GREEN" class="0">
 <segment>
-<pinref part="CON16" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="-35.56" x2="193.04" y2="-35.56" width="0.1524" layer="91"/>
-<label x="193.04" y="-35.56" size="1.778" layer="91" xref="yes"/>
-</segment>
-<segment>
 <wire x1="215.9" y1="-12.7" x2="215.9" y2="-10.16" width="0.1524" layer="91"/>
 <label x="215.9" y="-10.16" size="1.778" layer="91" rot="R90" xref="yes"/>
 <pinref part="T5" gate="G$1" pin="D"/>
@@ -3138,6 +3006,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="180.34" y1="-7.62" x2="180.34" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="-10.16" x2="185.42" y2="-10.16" width="0.1524" layer="91"/>
 <label x="185.42" y="-10.16" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON16" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="-33.02" x2="182.88" y2="-33.02" width="0.1524" layer="91"/>
+<label x="182.88" y="-33.02" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="RED" class="0">
@@ -3160,11 +3033,6 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 </net>
 <net name="BLUE" class="0">
 <segment>
-<pinref part="CON16" gate="G$1" pin="1"/>
-<wire x1="180.34" y1="-33.02" x2="182.88" y2="-33.02" width="0.1524" layer="91"/>
-<label x="182.88" y="-33.02" size="1.778" layer="91" xref="yes"/>
-</segment>
-<segment>
 <wire x1="220.98" y1="10.16" x2="220.98" y2="12.7" width="0.1524" layer="91"/>
 <label x="220.98" y="12.7" size="1.778" layer="91" rot="R90" xref="yes"/>
 <pinref part="T4" gate="G$1" pin="D"/>
@@ -3174,6 +3042,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="172.72" y1="-7.62" x2="172.72" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="-12.7" x2="195.58" y2="-12.7" width="0.1524" layer="91"/>
 <label x="195.58" y="-12.7" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CON16" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="-35.56" x2="193.04" y2="-35.56" width="0.1524" layer="91"/>
+<label x="193.04" y="-35.56" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -3227,6 +3100,7 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="P+5" gate="1" pin="+3V"/>
 <wire x1="45.72" y1="91.44" x2="45.72" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="LED13" gate="G$1" pin="A"/>
+<junction x="45.72" y="101.6"/>
 </segment>
 <segment>
 <pinref part="C16" gate="G$1" pin="1"/>
@@ -3402,6 +3276,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <pinref part="R35" gate="G$1" pin="2"/>
 <wire x1="-71.12" y1="-60.96" x2="-71.12" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-71.12" y="-63.5" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PG1(!RD!)"/>
+<wire x1="58.42" y1="-40.64" x2="60.96" y2="-40.64" width="0.1524" layer="91"/>
+<label x="60.96" y="-40.64" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="LED4" class="0">
@@ -3856,6 +3735,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="218.44" y1="-228.6" x2="226.06" y2="-228.6" width="0.1524" layer="91"/>
 <label x="226.06" y="-228.6" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PG4(TOSC1)"/>
+<wire x1="58.42" y1="-48.26" x2="60.96" y2="-48.26" width="0.1524" layer="91"/>
+<label x="60.96" y="-48.26" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="A2" class="0">
 <segment>
@@ -3866,6 +3750,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <segment>
 <wire x1="218.44" y1="-226.06" x2="226.06" y2="-226.06" width="0.1524" layer="91"/>
 <label x="226.06" y="-226.06" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PG3(TOSC2)"/>
+<wire x1="58.42" y1="-45.72" x2="60.96" y2="-45.72" width="0.1524" layer="91"/>
+<label x="60.96" y="-45.72" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="A1" class="0">
@@ -3878,6 +3767,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="218.44" y1="-223.52" x2="226.06" y2="-223.52" width="0.1524" layer="91"/>
 <label x="226.06" y="-223.52" size="1.778" layer="91" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PB7(OC0A/OC1C/PCINT7)"/>
+<wire x1="-10.16" y1="-45.72" x2="-12.7" y2="-45.72" width="0.1524" layer="91"/>
+<label x="-12.7" y="-45.72" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="A0" class="0">
 <segment>
@@ -3888,6 +3782,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <segment>
 <wire x1="218.44" y1="-220.98" x2="226.06" y2="-220.98" width="0.1524" layer="91"/>
 <label x="226.06" y="-220.98" size="1.778" layer="91" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PB6(OC1B/PCINT6)"/>
+<wire x1="-10.16" y1="-43.18" x2="-12.7" y2="-43.18" width="0.1524" layer="91"/>
+<label x="-12.7" y="-43.18" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$55" class="0">
@@ -3932,6 +3831,11 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-119.38" y1="-58.42" x2="-119.38" y2="-55.88" width="0.1524" layer="91"/>
 <label x="-119.38" y="-55.88" size="1.778" layer="91" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PG2(ALE)"/>
+<wire x1="58.42" y1="-43.18" x2="60.96" y2="-43.18" width="0.1524" layer="91"/>
+<label x="60.96" y="-43.18" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="DEBUG2" class="0">
 <segment>
@@ -3943,12 +3847,22 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-106.68" y1="-58.42" x2="-106.68" y2="-55.88" width="0.1524" layer="91"/>
 <label x="-106.68" y="-55.88" size="1.778" layer="91" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PG0(!WR!)"/>
+<wire x1="58.42" y1="-38.1" x2="60.96" y2="-38.1" width="0.1524" layer="91"/>
+<label x="60.96" y="-38.1" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="LED6" class="0">
 <segment>
 <pinref part="R32" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="-60.96" x2="-58.42" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-58.42" y="-63.5" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PC0(A8)"/>
+<wire x1="58.42" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
+<label x="60.96" y="53.34" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="LED7" class="0">
@@ -3957,10 +3871,18 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <wire x1="-45.72" y1="-60.96" x2="-45.72" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-45.72" y="-63.5" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="PA2(AD2)"/>
+<wire x1="-10.16" y1="-17.78" x2="-12.7" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-12.7" y="-17.78" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="115,1,-119.769,0,S1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

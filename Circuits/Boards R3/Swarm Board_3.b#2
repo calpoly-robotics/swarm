@@ -118,7 +118,7 @@
 <wire x1="59.783471875" y1="43" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20"/>
 <wire x1="3.716528125" y1="46.6557375" x2="59.783471875" y2="46.6557375" width="0.2032" layer="20" curve="-124"/>
 <wire x1="3.716528125" y1="16.8442625" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20" curve="124"/>
-<text x="115.951" y="27.051" size="1.778" layer="51">Long lead = circle for IR detector</text>
+<text x="15.9385" y="67.691" size="1.778" layer="51">Long lead = circle for IR detector</text>
 <wire x1="0" y1="31.75" x2="101.6" y2="31.75" width="0" layer="47"/>
 <wire x1="31.75" y1="0" x2="31.75" y2="76.2" width="0" layer="47"/>
 <wire x1="0" y1="0" x2="63.5" y2="63.5" width="0" layer="47"/>
@@ -138,6 +138,7 @@
 <text x="45.212" y="48.4505" size="0.6096" layer="21" rot="R90">TXO</text>
 <text x="23.0505" y="47.117" size="0.6096" layer="21" rot="R90">ON</text>
 <text x="23.0505" y="49.784" size="0.6096" layer="21" rot="R90">OFF</text>
+<text x="16.0655" y="22.479" size="0.6096" layer="21" rot="R90">CABLE</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
