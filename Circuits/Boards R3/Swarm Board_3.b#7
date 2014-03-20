@@ -108,8 +108,8 @@
 <wire x1="59.783471875" y1="46.6557375" x2="59.783471875" y2="45" width="0.2032" layer="20"/>
 <text x="30.353" y="11.1125" size="0.8128" layer="21">RXI</text>
 <text x="32.8295" y="11.1125" size="0.8128" layer="21">TXO</text>
-<text x="18.288" y="49.022" size="0.6096" layer="21">GND</text>
-<text x="26.797" y="49.022" size="0.6096" layer="21">PWR</text>
+<text x="19.177" y="48.768" size="0.6096" layer="21" rot="R90">GND</text>
+<text x="26.8605" y="48.7045" size="0.6096" layer="21" rot="R90">PWR</text>
 <text x="46.4185" y="46.6725" size="0.6096" layer="21">DATA</text>
 <text x="18.005" y="43.608" size="1.016" layer="21" rot="R180">CHGSTATUS</text>
 <text x="58.42" y="5.842" size="1.27" layer="21">11-26-12</text>
@@ -134,6 +134,8 @@
 <wire x1="72" y1="18" x2="74.5" y2="18" width="0.2032" layer="20"/>
 <wire x1="62" y1="36" x2="62" y2="43" width="0.2032" layer="20"/>
 <wire x1="62" y1="43" x2="59.783471875" y2="43" width="0.2032" layer="20"/>
+<text x="33.401" y="50.4825" size="0.6096" layer="21" rot="R270">RXI</text>
+<text x="45.212" y="48.4505" size="0.6096" layer="21" rot="R90">TXO</text>
 </plain>
 <libraries>
 <library name="DigitalIC">

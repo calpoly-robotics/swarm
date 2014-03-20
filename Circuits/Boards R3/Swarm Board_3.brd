@@ -138,7 +138,7 @@
 <text x="45.212" y="48.4505" size="0.6096" layer="21" rot="R90">TXO</text>
 <text x="23.0505" y="47.117" size="0.6096" layer="21" rot="R90">ON</text>
 <text x="23.0505" y="49.784" size="0.6096" layer="21" rot="R90">OFF</text>
-<text x="16.0655" y="22.479" size="0.6096" layer="21" rot="R90">CABLE</text>
+<text x="16.0655" y="23.114" size="0.6096" layer="21" rot="R90">KEY</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
