@@ -1594,9 +1594,9 @@ Manufacturer Part Number: QRE1113</description>
 <wire x1="-3.81" y1="-2.54" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
 <text x="-3.175" y="3.175" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-3.175" y="-4.445" size="0.8128" layer="25">&gt;VALUE</text>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.175" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-3.175" x2="2.54" y2="-3.175" width="0.127" layer="21"/>
-<wire x1="2.54" y1="-3.175" x2="2.54" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-3.81" x2="2.54" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="-2.54" width="0.127" layer="21"/>
 </package>
 <package name="3PINHEADER_.100&quot;">
 <pad name="2" x="0" y="0" drill="0.8"/>

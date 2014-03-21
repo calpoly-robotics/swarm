@@ -333,6 +333,7 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 <wire x1="7.7" y1="3.75" x2="7.7" y2="-3.75" width="0.127" layer="21"/>
 <text x="-5.08" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-6.985" y="-2.921" radius="0.457903125" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1291,6 +1292,8 @@ design rules under a new name.</description>
 <wire x1="20.13" y1="31.15" x2="20.13" y2="35.751" width="0.254" layer="1"/>
 <wire x1="20.13" y1="35.751" x2="26.9755" y2="42.5965" width="0.254" layer="1"/>
 <wire x1="26.9755" y1="42.5965" x2="26.9755" y2="52.1335" width="0.254" layer="1"/>
+<contactref element="U5" pad="P$1"/>
+<wire x1="20.13" y1="31.15" x2="-59.185" y2="-11.399" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="T3" pad="1"/>
@@ -1548,9 +1551,7 @@ design rules under a new name.</description>
 <wire x1="16.002" y1="29.845" x2="15.367" y2="29.21" width="0.254" layer="16"/>
 <wire x1="15.367" y1="29.21" x2="12.7" y2="29.21" width="0.254" layer="16"/>
 <contactref element="U5" pad="P$12"/>
-<contactref element="R34" pad="2"/>
-<wire x1="-54.749" y1="-0.381" x2="-59.185" y2="-20.199" width="0" layer="19" extent="1-1"/>
-<wire x1="4.217" y1="37.084" x2="-54.749" y2="-0.381" width="0" layer="19" extent="1-1"/>
+<wire x1="7.747" y1="32.639" x2="-59.185" y2="-20.199" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MISO">
 <contactref element="CON1" pad="6"/>
@@ -1563,9 +1564,7 @@ design rules under a new name.</description>
 <wire x1="11.684" y1="30.48" x2="10.414" y2="31.75" width="0.254" layer="1"/>
 <wire x1="10.414" y1="31.75" x2="10.16" y2="31.75" width="0.254" layer="1"/>
 <contactref element="U5" pad="P$13"/>
-<contactref element="R32" pad="2"/>
-<wire x1="-48.653" y1="-0.381" x2="-59.185" y2="-20.999" width="0" layer="19" extent="1-1"/>
-<wire x1="10.16" y1="31.75" x2="-48.653" y2="-0.381" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="31.75" x2="-59.185" y2="-20.999" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCK">
 <contactref element="CON1" pad="5"/>
@@ -1869,10 +1868,12 @@ design rules under a new name.</description>
 <wire x1="-47.232" y1="-0.381" x2="-59.297" y2="-0.381" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LED5">
-<contactref element="R33" pad="2"/>
+<contactref element="R35" pad="2"/>
 </signal>
 <signal name="LED4">
-<contactref element="R35" pad="2"/>
+<contactref element="U5" pad="P$7"/>
+<contactref element="R34" pad="2"/>
+<wire x1="-54.749" y1="-0.381" x2="-59.185" y2="-16.199" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$46">
 <contactref element="LED13" pad="1"/>
@@ -2135,6 +2136,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="DEBUG2">
 <contactref element="TST1" pad="P$1"/>
+</signal>
+<signal name="LED6">
+<contactref element="R32" pad="2"/>
+</signal>
+<signal name="LED7">
+<contactref element="R33" pad="2"/>
 </signal>
 </signals>
 </board>

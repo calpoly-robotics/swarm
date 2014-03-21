@@ -277,9 +277,7 @@
 <pad name="16" x="-5.11" y="1.19" drill="0.8"/>
 </package>
 <package name="FEMALE_HEADER_2MM_2X5_SMD">
-<wire x1="-8" y1="2" x2="2" y2="2" width="0.127" layer="21"/>
 <wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
-<wire x1="2" y1="-2" x2="-8" y2="-2" width="0.127" layer="21"/>
 <wire x1="-8" y1="-2" x2="-8" y2="2" width="0.127" layer="21"/>
 <text x="-7" y="4" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-7" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
@@ -300,9 +298,7 @@
 <text x="1.27" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 <package name="FEMALE_HEADER_2MM_2X7_SMD">
-<wire x1="-7" y1="2" x2="7" y2="2" width="0.127" layer="21"/>
 <wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
-<wire x1="7" y1="-2" x2="-7" y2="-2" width="0.127" layer="21"/>
 <wire x1="-7" y1="-2" x2="-7" y2="2" width="0.127" layer="21"/>
 <text x="-6" y="4" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-6" y="-5" size="0.8128" layer="27">&gt;VALUE</text>
@@ -325,7 +321,7 @@
 <pad name="P$1" x="0" y="0" drill="0.8" shape="offset" rot="R90"/>
 <smd name="P$2" x="0" y="5.08" dx="2.54" dy="1.27" layer="1" rot="R90"/>
 </package>
-<package name="CL-SB-22A">
+<package name="CL-SB-22A-01T">
 <smd name="1" x="-2.5" y="-1.4" dx="1.6" dy="1.2" layer="1" rot="R90"/>
 <smd name="2" x="0" y="-1.4" dx="1.6" dy="1.2" layer="1" rot="R90"/>
 <smd name="3" x="2.5" y="-1.4" dx="1.6" dy="1.2" layer="1" rot="R90"/>
@@ -941,6 +937,28 @@ Manufacturer Part Number: A3-16DA-2SV(71)</description>
 <device name="" package="WHISKER">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1 P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CL-SB-22A" prefix="SW">
+<description>Digikey Part Number: 563-1338-1-ND
+Manufacturer Part Number: CL-SB-22A-01T</description>
+<gates>
+<gate name="G$1" symbol="DPDT" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="CL-SB-22A-01T">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
