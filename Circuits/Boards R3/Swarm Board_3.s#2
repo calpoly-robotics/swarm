@@ -662,10 +662,10 @@ Manufacturer Part Number: XC6210B302MR-G</description>
 <package name="LED0603">
 <smd name="1" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="2" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<wire x1="-1.3" y1="0.635" x2="1.3" y2="0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="0.635" x2="1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="-0.635" x2="-1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-1.3" y1="-0.635" x2="-1.3" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.3335" y1="0.6858" x2="1.3335" y2="0.6858" width="0.127" layer="21"/>
+<wire x1="1.3335" y1="0.6858" x2="1.3335" y2="-0.6858" width="0.127" layer="21"/>
+<wire x1="1.3335" y1="-0.6858" x2="-1.3335" y2="-0.6858" width="0.127" layer="21"/>
+<wire x1="-1.3335" y1="-0.6858" x2="-1.3335" y2="0.6858" width="0.127" layer="21"/>
 <text x="-0.97" y="0.87" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.07" y="-1.27" size="0.4064" layer="27">&gt;VALUE</text>
 <circle x="-1.37" y="0.97" radius="0.07615625" width="0.127" layer="21"/>
@@ -673,10 +673,10 @@ Manufacturer Part Number: XC6210B302MR-G</description>
 <package name="0603">
 <smd name="1" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="2" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<wire x1="-1.3" y1="0.635" x2="1.3" y2="0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="0.635" x2="1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="1.3" y1="-0.635" x2="-1.3" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-1.3" y1="-0.635" x2="-1.3" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.3335" y1="0.6858" x2="1.3335" y2="0.6858" width="0.127" layer="21"/>
+<wire x1="1.3335" y1="0.6858" x2="1.3335" y2="-0.6858" width="0.127" layer="21"/>
+<wire x1="1.3335" y1="-0.6858" x2="-1.3335" y2="-0.6858" width="0.127" layer="21"/>
+<wire x1="-1.3335" y1="-0.6858" x2="-1.3335" y2="0.6858" width="0.127" layer="21"/>
 <text x="-0.97" y="0.87" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.07" y="-1.27" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
@@ -788,10 +788,8 @@ Manufacturer Part Number: XC6210B302MR-G</description>
 <smd name="3" x="1.5" y="-0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
 <smd name="2" x="-1.5" y="-0.8" dx="1.1" dy="1.4" layer="1" rot="R90"/>
 <circle x="-2.11" y="1.97" radius="0.25" width="0.127" layer="21"/>
-<wire x1="-1.6" y1="1.4" x2="-1.6" y2="-1.4" width="0.127" layer="21"/>
-<wire x1="-1.6" y1="-1.4" x2="1.6" y2="-1.4" width="0.127" layer="21"/>
-<wire x1="1.6" y1="-1.4" x2="1.6" y2="1.4" width="0.127" layer="21"/>
-<wire x1="1.6" y1="1.4" x2="-1.6" y2="1.4" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="-1.5494" x2="1.6" y2="-1.5494" width="0.127" layer="21"/>
+<wire x1="1.6" y1="1.5494" x2="-1.6" y2="1.5494" width="0.127" layer="21"/>
 </package>
 <package name="3PINHEADER_.100&quot;">
 <pad name="2" x="0" y="0" drill="0.8"/>

@@ -2164,7 +2164,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="R42" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="P+19" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+2" library="Supply" deviceset="+VRAW" device=""/>
-<part name="LED1" library="Passive" deviceset="LED" device="0603" value="red"/>
+<part name="LED1" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R1" library="Passive" deviceset="RES" device="0603" value="1.5k"/>
 <part name="R2" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="U$1" library="DigitalIC" deviceset="TB6612" device=""/>

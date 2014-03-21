@@ -4229,6 +4229,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-96.52" y1="-48.26" x2="-96.52" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-96.52" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PG1(!RD!)"/>
+<wire x1="38.1" y1="-30.48" x2="40.64" y2="-30.48" width="0.1524" layer="91"/>
+<label x="40.64" y="-30.48" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="CRX" class="0">
 <segment>
@@ -4271,6 +4276,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="R55" gate="G$1" pin="1"/>
 <wire x1="-86.36" y1="-48.26" x2="-86.36" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-86.36" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PC0(A8)"/>
+<wire x1="38.1" y1="63.5" x2="40.64" y2="63.5" width="0.1524" layer="91"/>
+<label x="40.64" y="63.5" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="LED7" class="0">
@@ -4354,12 +4364,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <label x="40.64" y="0" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
-<net name="N$60" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PC0(A8)"/>
-<wire x1="38.1" y1="63.5" x2="40.64" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$69" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="PD5(XCK1)"/>
@@ -4382,12 +4386,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <segment>
 <pinref part="U3" gate="G$1" pin="PG0(!WR!)"/>
 <wire x1="38.1" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$81" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PG1(!RD!)"/>
-<wire x1="38.1" y1="-30.48" x2="40.64" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$82" class="0">

@@ -3148,9 +3148,9 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <label x="129.54" y="-17.78" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="PA0(AD0)"/>
-<wire x1="-30.48" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-33.02" y="-2.54" size="1.778" layer="91" rot="R180" xref="yes"/>
+<pinref part="U3" gate="G$1" pin="PA1(AD1)"/>
+<wire x1="-30.48" y1="-5.08" x2="-33.02" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-33.02" y="-5.08" size="1.778" layer="91" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="STBY" class="0">
@@ -4289,6 +4289,11 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-76.2" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PA2(AD2)"/>
+<wire x1="-30.48" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-33.02" y="-7.62" size="1.778" layer="91" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="PB0" class="0">
 <segment>
@@ -4404,18 +4409,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <segment>
 <pinref part="U3" gate="G$1" pin="PG4(TOSC1)"/>
 <wire x1="38.1" y1="-38.1" x2="40.64" y2="-38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$86" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PA1(AD1)"/>
-<wire x1="-30.48" y1="-5.08" x2="-33.02" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$87" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PA2(AD2)"/>
-<wire x1="-30.48" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
