@@ -2214,9 +2214,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="GND14" library="Supply" deviceset="GND" device=""/>
 <part name="GND15" library="Supply" deviceset="GND" device=""/>
 <part name="C8" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
-<part name="C9" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="GND16" library="Supply" deviceset="GND" device=""/>
-<part name="GND17" library="Supply" deviceset="GND" device=""/>
 <part name="P+12" library="Supply" deviceset="+3V" device=""/>
 <part name="R28" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+15" library="Supply" deviceset="+VCHG" device=""/>
@@ -2341,7 +2339,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="TST1" library="Mechanical" deviceset="TESTPOINT" device=""/>
 <part name="TST2" library="Mechanical" deviceset="TESTPOINT" device=""/>
 <part name="P+21" library="Supply" deviceset="+3V" device=""/>
-<part name="P+13" library="Supply" deviceset="+3V" device=""/>
 <part name="V1" library="PowerIC" deviceset="XC6210B302" device=""/>
 <part name="R6" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R25" library="Passive" deviceset="RES" device="0603" value="10k"/>
@@ -2353,6 +2350,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <part name="R62" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="C17" library="Passive" deviceset="CAP" device="PTH" value="10uf"/>
 <part name="C2" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
+<part name="C18" library="Passive" deviceset="CAP" device="PTH" value="10uf"/>
 </parts>
 <sheets>
 <sheet>
@@ -2439,11 +2437,9 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="GND13" gate="1" x="353.06" y="60.96"/>
 <instance part="GND14" gate="1" x="373.38" y="60.96"/>
 <instance part="GND15" gate="1" x="393.7" y="60.96"/>
-<instance part="C8" gate="G$1" x="-2.54" y="-101.6" rot="MR270"/>
-<instance part="C9" gate="G$1" x="20.32" y="-109.22" rot="MR270"/>
-<instance part="GND16" gate="1" x="7.62" y="-104.14" rot="MR270"/>
-<instance part="GND17" gate="1" x="30.48" y="-111.76" rot="MR270"/>
-<instance part="P+12" gate="1" x="-10.16" y="-93.98" rot="MR0"/>
+<instance part="C8" gate="G$1" x="-5.08" y="-109.22" rot="MR0"/>
+<instance part="GND16" gate="1" x="-5.08" y="-119.38" rot="MR0"/>
+<instance part="P+12" gate="1" x="-5.08" y="-96.52" rot="MR0"/>
 <instance part="R28" gate="G$1" x="-144.78" y="17.78"/>
 <instance part="P+15" gate="G$1" x="-180.34" y="-12.7" rot="R270"/>
 <instance part="GND18" gate="1" x="-177.8" y="-38.1" rot="R90"/>
@@ -2567,7 +2563,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="TST1" gate="G$1" x="-63.5" y="-40.64" rot="R90"/>
 <instance part="TST2" gate="G$1" x="-50.8" y="-40.64" rot="R90"/>
 <instance part="P+21" gate="1" x="-149.86" y="-91.44"/>
-<instance part="P+13" gate="1" x="12.7" y="-101.6" rot="MR0"/>
 <instance part="V1" gate="G$1" x="27.94" y="99.06"/>
 <instance part="R6" gate="G$1" x="297.18" y="53.34" rot="R180"/>
 <instance part="R25" gate="G$1" x="317.5" y="50.8" rot="R180"/>
@@ -2579,6 +2574,7 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <instance part="R62" gate="G$1" x="439.42" y="35.56" rot="R180"/>
 <instance part="C17" gate="G$1" x="53.34" y="91.44"/>
 <instance part="C2" gate="G$1" x="45.72" y="91.44"/>
+<instance part="C18" gate="G$1" x="2.54" y="-109.22" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -2683,12 +2679,20 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-101.6" x2="-7.62" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="-101.6" x2="-10.16" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-101.6" x2="-5.08" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-101.6" x2="-5.08" y2="-99.06" width="0.1524" layer="91"/>
 <pinref part="P+12" gate="1" pin="+3V"/>
-<junction x="-10.16" y="-101.6"/>
+<pinref part="U$1" gate="G$1" pin="VM"/>
+<wire x1="-15.24" y1="-109.22" x2="-12.7" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-109.22" x2="-12.7" y2="-101.6" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="-15.24" y1="-101.6" x2="-10.16" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-101.6" x2="-15.24" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-101.6" x2="-5.08" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-104.14" x2="2.54" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-101.6" x2="2.54" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="-5.08" y="-101.6"/>
+<junction x="-12.7" y="-101.6"/>
+<pinref part="C18" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="G$1" pin="VCC"/>
@@ -2723,15 +2727,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="C16" gate="G$1" pin="1"/>
 <pinref part="M1" gate="G$1" pin="+VM"/>
 <pinref part="P+21" gate="1" pin="+3V"/>
-</segment>
-<segment>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="-15.24" y1="-109.22" x2="12.7" y2="-109.22" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-109.22" x2="15.24" y2="-109.22" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-109.22" x2="12.7" y2="-104.14" width="0.1524" layer="91"/>
-<junction x="12.7" y="-109.22"/>
-<pinref part="U$1" gate="G$1" pin="VM"/>
-<pinref part="P+13" gate="1" pin="+3V"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -2803,24 +2798,22 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="C7" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<wire x1="-15.24" y1="-104.14" x2="2.54" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="2.54" y1="-104.14" x2="5.08" y2="-104.14" width="0.1524" layer="91"/>
-<wire x1="0" y1="-101.6" x2="2.54" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-101.6" x2="2.54" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-111.76" x2="-5.08" y2="-114.3" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<junction x="2.54" y="-104.14"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="27.94" y1="-111.76" x2="25.4" y2="-111.76" width="0.1524" layer="91"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="-111.76" x2="-15.24" y2="-111.76" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-109.22" x2="25.4" y2="-109.22" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="-109.22" x2="25.4" y2="-111.76" width="0.1524" layer="91"/>
-<junction x="25.4" y="-111.76"/>
+<wire x1="-5.08" y1="-114.3" x2="-5.08" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-104.14" x2="-10.16" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="-104.14" x2="-10.16" y2="-111.76" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="PGND"/>
+<wire x1="-10.16" y1="-111.76" x2="-10.16" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-111.76" x2="-10.16" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="-114.3" x2="-5.08" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-111.76" x2="2.54" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-114.3" x2="2.54" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="-5.08" y="-114.3"/>
+<junction x="-10.16" y="-111.76"/>
+<pinref part="C18" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND18" gate="1" pin="GND"/>
