@@ -1092,6 +1092,25 @@ Manufacturer Part Number: IRLML6244TRPBF</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="SI2333DS-T1" prefix="T">
+<description>Digikey Part Number: SI2333DS-T1-E3CT-ND
+Manufacturer Part Number: SI2333DS-T1-E3</description>
+<gates>
+<gate name="G$1" symbol="P-FET" x="0" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="SOT23">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
