@@ -304,6 +304,7 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 <wire x1="7.7" y1="3.75" x2="7.7" y2="-3.75" width="0.127" layer="21"/>
 <text x="-5.08" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-6.985" y="-2.921" radius="0.457903125" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0025" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.0025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -106,14 +106,14 @@
 <plain>
 <wire x1="3.716528125" y1="46.6557375" x2="3.716528125" y2="16.8442625" width="0.2032" layer="20"/>
 <wire x1="59.783471875" y1="46.6557375" x2="59.783471875" y2="45" width="0.2032" layer="20"/>
-<text x="30.353" y="11.1125" size="0.8128" layer="21" font="vector">RXI</text>
-<text x="32.8295" y="11.1125" size="0.8128" layer="21" font="vector">TXO</text>
-<text x="19.177" y="48.768" size="0.8128" layer="21" font="vector" rot="R90">GND</text>
-<text x="26.8605" y="48.7045" size="0.8128" layer="21" font="vector" rot="R90">PWR</text>
-<text x="18.005" y="43.608" size="1.016" layer="21" font="vector" rot="R180">CHGSTATUS</text>
-<text x="31.496" y="41.148" size="1.27" layer="21">3-17-14</text>
-<text x="29.7815" y="44.323" size="1.27" layer="21">SwarmBoard V3</text>
-<text x="31.5595" y="39.0525" size="1.27" layer="21">CPRC</text>
+<text x="29.718" y="10.795" size="1.016" layer="21" font="vector">RXI</text>
+<text x="32.7025" y="10.8585" size="1.016" layer="21" font="vector">TXO</text>
+<text x="19.177" y="48.768" size="1.016" layer="21" font="vector" rot="R90">GND</text>
+<text x="26.797" y="48.3235" size="1.016" layer="21" font="vector" rot="R90">PWR</text>
+<text x="10.5065" y="42.5615" size="1.016" layer="21" font="vector">CHGSTATUS</text>
+<text x="31.496" y="41.148" size="1.016" layer="21">3-17-14</text>
+<text x="29.7815" y="44.323" size="1.016" layer="21">SwarmBoard V3</text>
+<text x="31.5595" y="39.0525" size="1.016" layer="21">CPRC</text>
 <wire x1="59.783471875" y1="43" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20"/>
 <wire x1="3.716528125" y1="46.6557375" x2="59.783471875" y2="46.6557375" width="0.2032" layer="20" curve="-124"/>
 <wire x1="3.716528125" y1="16.8442625" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20" curve="124"/>
@@ -129,16 +129,16 @@
 <wire x1="72" y1="18" x2="74.5" y2="18" width="0.2032" layer="20"/>
 <wire x1="62" y1="36" x2="62" y2="43" width="0.2032" layer="20"/>
 <wire x1="62" y1="43" x2="59.783471875" y2="43" width="0.2032" layer="20"/>
-<text x="33.401" y="50.4825" size="0.8128" layer="21" font="vector" rot="R270">RXI</text>
-<text x="45.212" y="48.4505" size="0.8128" layer="21" font="vector" rot="R90">TXO</text>
-<text x="28.448" y="41.3385" size="0.8128" layer="21" font="vector" rot="R90">ON</text>
-<text x="28.5115" y="43.7515" size="0.8128" layer="21" font="vector" rot="R90">OFF</text>
-<text x="16.129" y="22.86" size="0.8128" layer="21" font="vector" rot="R90">KEY</text>
+<text x="33.02" y="50.927" size="1.016" layer="21" font="vector" rot="R270">RXI</text>
+<text x="45.466" y="48.641" size="1.016" layer="21" font="vector" rot="R90">TXO</text>
+<text x="28.956" y="40.894" size="1.016" layer="21" font="vector" rot="R90">ON</text>
+<text x="29.0195" y="43.6245" size="1.016" layer="21" font="vector" rot="R90">OFF</text>
+<text x="16.3195" y="22.7965" size="1.016" layer="21" font="vector" rot="R90">KEY</text>
 <circle x="33.5915" y="47.6885" radius="0.26940625" width="0.4064" layer="22"/>
 <circle x="73.2155" y="43.3705" radius="0.261815625" width="0.4064" layer="22"/>
-<text x="8.9535" y="25.654" size="0.8128" layer="21" font="vector" rot="R90">ENCA</text>
-<text x="55.3085" y="35.179" size="0.8128" layer="21" font="vector" rot="R90">ENCB</text>
-<text x="29.1465" y="59.309" size="0.8128" layer="22" font="vector" rot="MR0">DIST</text>
+<text x="9.144" y="25.781" size="1.016" layer="21" font="vector" rot="R90">ENCA</text>
+<text x="55.245" y="34.29" size="1.016" layer="21" font="vector" rot="R90">ENCB</text>
+<text x="29.5275" y="59.309" size="1.016" layer="22" font="vector" rot="MR0">DIST</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
@@ -416,7 +416,6 @@
 <pad name="1" x="-2.54" y="0" drill="0.8"/>
 <pad name="2" x="2.54" y="0" drill="0.8"/>
 <circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
 <text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
 </package>

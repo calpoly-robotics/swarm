@@ -1756,8 +1756,8 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="LED5" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="LED6" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="C6" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
-<part name="LED10" library="Passive" deviceset="LED" device="0603" value="red"/>
-<part name="R27" library="Passive" deviceset="RES" device="0603" value="470"/>
+<part name="LED10" library="Passive" deviceset="LED" device="0603" value="RED"/>
+<part name="R27" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="R28" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="U2" library="PowerIC" deviceset="ACS711" device=""/>
 <part name="C1" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
@@ -1789,9 +1789,9 @@ Joystick commonly found in PS2 controllers. Two pots and a select switch. Footpr
 <part name="CON2" library="Mechanical" deviceset="SCREWTERMINAL_1X2" device=""/>
 <part name="GND12" library="Supply" deviceset="GND" device=""/>
 <part name="LED1" library="Passive" deviceset="SMD_RGB" device=""/>
-<part name="R1" library="Passive" deviceset="RES" device="0603" value="310"/>
-<part name="R21" library="Passive" deviceset="RES" device="0603" value="200"/>
-<part name="R22" library="Passive" deviceset="RES" device="0603" value="200"/>
+<part name="R1" library="Passive" deviceset="RES" device="0603" value="220"/>
+<part name="R21" library="Passive" deviceset="RES" device="0603" value="70"/>
+<part name="R22" library="Passive" deviceset="RES" device="0603" value="70"/>
 <part name="P+1" library="Supply" deviceset="+5V" device=""/>
 <part name="C2" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
 <part name="C7" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>

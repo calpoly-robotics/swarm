@@ -702,7 +702,6 @@ Manufacturer Part Number: CD74HC154M96</description>
 <pad name="1" x="-2.54" y="0" drill="0.8"/>
 <pad name="2" x="2.54" y="0" drill="0.8"/>
 <circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
 <text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
 </package>

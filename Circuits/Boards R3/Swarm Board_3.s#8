@@ -4193,12 +4193,22 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <label x="-63.5" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 <pinref part="TST1" gate="G$1" pin="P$1"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PG2(ALE)"/>
+<wire x1="38.1" y1="-33.02" x2="40.64" y2="-33.02" width="0.1524" layer="91"/>
+<label x="40.64" y="-33.02" size="1.778" layer="91" xref="yes"/>
+</segment>
 </net>
 <net name="DEBUG2" class="0">
 <segment>
 <wire x1="-50.8" y1="-48.26" x2="-50.8" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-50.8" y="-50.8" size="1.778" layer="91" rot="R270" xref="yes"/>
 <pinref part="TST2" gate="G$1" pin="P$1"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="PG0(!WR!)"/>
+<wire x1="38.1" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
+<label x="40.64" y="-27.94" size="1.778" layer="91" xref="yes"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -4353,62 +4363,6 @@ Manufacturer Part Number: A3-8DA-2SV(71)</description>
 <pinref part="R62" gate="G$1" pin="2"/>
 <wire x1="434.34" y1="35.56" x2="281.94" y2="35.56" width="0.1524" layer="91"/>
 <label x="281.94" y="35.56" size="1.778" layer="91" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$58" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PE6(T3/INT6)"/>
-<wire x1="38.1" y1="2.54" x2="40.64" y2="2.54" width="0.1524" layer="91"/>
-<label x="40.64" y="2.54" size="1.778" layer="91" xref="yes"/>
-</segment>
-</net>
-<net name="N$59" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PE7(ICP3/CLKO/INT7)"/>
-<wire x1="38.1" y1="0" x2="40.64" y2="0" width="0.1524" layer="91"/>
-<label x="40.64" y="0" size="1.778" layer="91" xref="yes"/>
-</segment>
-</net>
-<net name="N$69" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PD5(XCK1)"/>
-<wire x1="38.1" y1="27.94" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$70" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PD6(T1)"/>
-<wire x1="38.1" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$71" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PD7(T0)"/>
-<wire x1="38.1" y1="22.86" x2="40.64" y2="22.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$80" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PG0(!WR!)"/>
-<wire x1="38.1" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$82" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PG2(ALE)"/>
-<wire x1="38.1" y1="-33.02" x2="40.64" y2="-33.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$83" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PG3(TOSC2)"/>
-<wire x1="38.1" y1="-35.56" x2="40.64" y2="-35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$84" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="PG4(TOSC1)"/>
-<wire x1="38.1" y1="-38.1" x2="40.64" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

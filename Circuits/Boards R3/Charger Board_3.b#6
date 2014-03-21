@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -113,21 +113,21 @@
 <wire x1="69.85" y1="69.85" x2="69.85" y2="4.064" width="0.2032" layer="20"/>
 <wire x1="69.85" y1="4.064" x2="71.755" y2="4.064" width="0.2032" layer="20"/>
 <wire x1="71.755" y1="4.064" x2="71.755" y2="50.8" width="0.2032" layer="20"/>
-<text x="29.55925" y="18.63725" size="0.8128" layer="21">UART 1</text>
-<text x="24.73325" y="2.667" size="0.8128" layer="21" rot="R90">LEDs</text>
-<text x="61.468" y="38.481" size="0.8128" layer="21">IR TX</text>
+<text x="33.62325" y="19.78025" size="1.016" layer="21" rot="SR180">UART 1</text>
+<text x="28.448" y="2.50825" size="1.016" layer="21" rot="SR180">LEDs</text>
 <text x="68.961" y="25.781" size="1.778" layer="21" rot="R180">+</text>
 <text x="68.58" y="38.354" size="1.778" layer="21" rot="R90">-</text>
-<text x="29.591" y="0.889" size="1.27" layer="21">+</text>
 <text x="73.152" y="24.765" size="1.27" layer="21">+</text>
-<text x="26.924" y="0.889" size="1.27" layer="21">-</text>
 <text x="72.898" y="28.575" size="1.27" layer="21" rot="R270">-</text>
-<text x="32.131" y="1.016" size="1.27" layer="21">s</text>
 <text x="72.898" y="23.495" size="1.27" layer="21" rot="R270">s</text>
-<text x="38.0365" y="4.7625" size="0.8128" layer="21" rot="R270">I2C</text>
-<text x="73.406" y="62.103" size="1.27" layer="21">Cal Poly Robotics Club</text>
-<text x="77.343" y="59.944" size="1.27" layer="21">Jeffrey D'Amelio</text>
-<text x="80.772" y="57.912" size="1.27" layer="21">3/19/14</text>
+<text x="37.1475" y="2.6035" size="1.016" layer="21" rot="SR180">I2C</text>
+<text x="40.5765" y="21.87575" size="0.8128" layer="21" rot="SR180">Cal Poly Robotics Club</text>
+<text x="39.02075" y="23.241" size="0.8128" layer="21" rot="SR180">Jeffrey D'Amelio</text>
+<text x="38.13175" y="24.638" size="0.8128" layer="21" rot="SR180">3/19/14</text>
+<text x="18.415" y="46.83125" size="1.016" layer="21" rot="SR180">1</text>
+<text x="19.3675" y="8.73125" size="1.016" layer="21" rot="SR180">16</text>
+<text x="11.27125" y="51.7525" size="1.016" layer="21" rot="SR180">IRTX</text>
+<text x="36.83" y="46.83125" size="0.8128" layer="21" rot="SR180">KEY</text>
 </plain>
 <libraries>
 <library name="DigitalIC">
@@ -426,9 +426,9 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD745.pdf</descr
 <wire x1="-3.81" y1="-2.54" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
 <text x="-3.175" y="3.175" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-3.175" y="-4.445" size="0.8128" layer="25">&gt;VALUE</text>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.175" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-3.175" x2="2.54" y2="-3.175" width="0.127" layer="21"/>
-<wire x1="2.54" y1="-3.175" x2="2.54" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-3.81" x2="2.54" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="-2.54" width="0.127" layer="21"/>
 </package>
 <package name="3PINHEADER_.100&quot;">
 <pad name="2" x="0" y="0" drill="0.8"/>
@@ -638,7 +638,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -938,9 +938,9 @@ design rules under a new name.</description>
 <element name="CON7" library="Mechanical" package="4PINHEADER_.100&quot;" value="HEADER_4X1" x="5.842" y="10.795"/>
 <element name="CON8" library="Mechanical" package="4PINHEADER_.100&quot;" value="HEADER_4X1" x="5.842" y="8.255"/>
 <element name="U6" library="DigitalIC" package="24SOIC" value="CD74HC154M96" x="25.05075" y="32.639" rot="R270"/>
-<element name="C25" library="Passive" package="0603" value="1uf" x="22.5425" y="41.275" rot="R180"/>
-<element name="R43" library="Passive" package="0603" value="10k" x="22.25675" y="23.8125" rot="R180"/>
-<element name="TST1" library="Mechanical" package="TESTPOINT" value="TESTPOINT" x="39.9415" y="23.14575"/>
+<element name="C25" library="Passive" package="0603" value="1uf" x="22.5425" y="42.06875" rot="R180"/>
+<element name="R43" library="Passive" package="0603" value="10k" x="22.25675" y="22.86" rot="R180"/>
+<element name="TST1" library="Mechanical" package="TESTPOINT" value="TESTPOINT" x="40.5765" y="22.82825"/>
 <element name="TST2" library="Mechanical" package="TESTPOINT" value="TESTPOINT" x="50.1015" y="22.12975"/>
 </elements>
 <signals>
@@ -1061,9 +1061,9 @@ design rules under a new name.</description>
 <wire x1="55.91475" y1="37.42625" x2="53.7775" y2="37.42625" width="0.254" layer="1"/>
 <wire x1="53.7775" y1="37.42625" x2="53.18125" y2="36.83" width="0.254" layer="1"/>
 <via x="53.18125" y="36.83" extent="1-16" drill="0.508"/>
-<wire x1="21.7925" y1="41.275" x2="21.7925" y2="26.94375" width="0.254" layer="1"/>
+<wire x1="21.7925" y1="42.06875" x2="21.7925" y2="26.94375" width="0.254" layer="1"/>
 <wire x1="21.7925" y1="26.94375" x2="22.38375" y2="26.3525" width="0.254" layer="1"/>
-<wire x1="21.50675" y1="23.8125" x2="21.50675" y2="24.8405" width="0.254" layer="1"/>
+<wire x1="21.50675" y1="22.86" x2="21.50675" y2="24.8405" width="0.254" layer="1"/>
 <wire x1="21.50675" y1="24.8405" x2="22.32025" y2="25.654" width="0.254" layer="1"/>
 <wire x1="5.842" y1="48.895" x2="3.572" y2="51.165" width="0.6096" layer="1"/>
 <wire x1="3.572" y1="51.165" x2="3.572" y2="51.562" width="0.6096" layer="1"/>
@@ -1785,8 +1785,8 @@ design rules under a new name.</description>
 <wire x1="57.30875" y1="36.98875" x2="57.30875" y2="37.94125" width="0.254" layer="1"/>
 <wire x1="57.30875" y1="37.94125" x2="57.02375" y2="38.22625" width="0.254" layer="1"/>
 <wire x1="57.02375" y1="38.22625" x2="55.91475" y2="38.22625" width="0.254" layer="1"/>
-<wire x1="23.2925" y1="41.275" x2="24.9435" y2="39.624" width="0.254" layer="1"/>
-<wire x1="24.9435" y1="39.624" x2="29.75075" y2="39.624" width="0.254" layer="1"/>
+<wire x1="23.2925" y1="42.06875" x2="25.73725" y2="39.624" width="0.254" layer="1"/>
+<wire x1="25.73725" y1="39.624" x2="29.75075" y2="39.624" width="0.254" layer="1"/>
 <wire x1="8.382" y1="48.895" x2="8.239" y2="48.895" width="0.6096" layer="1"/>
 <wire x1="8.239" y1="48.895" x2="5.572" y2="51.562" width="0.6096" layer="1"/>
 <wire x1="58.2175" y1="21.209" x2="57.9755" y2="20.967" width="0.254" layer="1"/>
@@ -2282,8 +2282,8 @@ design rules under a new name.</description>
 <signal name="N$57">
 <contactref element="U6" pad="P$19"/>
 <contactref element="R43" pad="1"/>
-<wire x1="23.00675" y1="23.8125" x2="23.33625" y2="24.142" width="0.254" layer="1"/>
-<wire x1="23.33625" y1="24.142" x2="23.33625" y2="30.48" width="0.254" layer="1"/>
+<wire x1="23.00675" y1="22.86" x2="23.33625" y2="23.34825" width="0.254" layer="1"/>
+<wire x1="23.33625" y1="23.34825" x2="23.33625" y2="30.48" width="0.254" layer="1"/>
 <wire x1="23.33625" y1="30.48" x2="26.13025" y2="33.274" width="0.254" layer="1"/>
 <wire x1="26.13025" y1="33.274" x2="29.75075" y2="33.274" width="0.254" layer="1"/>
 </signal>
@@ -2388,8 +2388,8 @@ design rules under a new name.</description>
 <signal name="DEBUG2">
 <contactref element="TST1" pad="P$1"/>
 <contactref element="U5" pad="P$33"/>
-<wire x1="42.16475" y1="24.47625" x2="40.83425" y2="23.14575" width="0.254" layer="1"/>
-<wire x1="40.83425" y1="23.14575" x2="39.9415" y2="23.14575" width="0.254" layer="1"/>
+<wire x1="42.16475" y1="24.47625" x2="42.10425" y2="23.622" width="0.254" layer="1"/>
+<wire x1="42.10425" y1="23.622" x2="40.5765" y2="22.82825" width="0.254" layer="1"/>
 </signal>
 <signal name="LED6">
 <contactref element="R32" pad="2"/>

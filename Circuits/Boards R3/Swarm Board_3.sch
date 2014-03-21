@@ -2067,7 +2067,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="P+5" library="Supply" deviceset="+3V" device=""/>
 <part name="C1" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="GND2" library="Supply" deviceset="GND" device=""/>
-<part name="C3" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="C3" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="R7" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="P+6" library="Supply" deviceset="+3V" device=""/>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
@@ -2095,7 +2095,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="LED7" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
 <part name="C6" library="Passive" deviceset="CAP" device="0805" value="10uf"/>
 <part name="P+9" library="Supply" deviceset="+3V" device=""/>
-<part name="R22" library="Passive" deviceset="RES" device="0603" value="32"/>
+<part name="R22" library="Passive" deviceset="RES" device="0603" value="30"/>
 <part name="R23" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="GND9" library="Supply" deviceset="GND" device=""/>
 <part name="LED13" library="Passive" deviceset="LED" device="5MMRA" value="IR"/>
@@ -2118,7 +2118,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="GND13" library="Supply" deviceset="GND" device=""/>
 <part name="GND14" library="Supply" deviceset="GND" device=""/>
 <part name="GND15" library="Supply" deviceset="GND" device=""/>
-<part name="C8" library="Passive" deviceset="CAP" device="0603" value=".1uf"/>
+<part name="C8" library="Passive" deviceset="CAP" device="0603" value="1uf"/>
 <part name="GND16" library="Supply" deviceset="GND" device=""/>
 <part name="P+12" library="Supply" deviceset="+3V" device=""/>
 <part name="R28" library="Passive" deviceset="RES" device="0603" value="1k"/>
@@ -2129,7 +2129,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="GND19" library="Supply" deviceset="GND" device=""/>
 <part name="R33" library="Passive" deviceset="RES" device="0603" value="22k"/>
 <part name="R35" library="Passive" deviceset="RES" device="0603" value="22k"/>
-<part name="XTAL1" library="Passive" deviceset="NX5032GA-10.000000MHZ" device="" value="10Mhz"/>
+<part name="XTAL1" library="Passive" deviceset="NX5032GA-10.000000MHZ" device="" value="8Mhz"/>
 <part name="C10" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="C11" library="Passive" deviceset="CAP" device="0603" value="12pf"/>
 <part name="GND27" library="Supply" deviceset="GND" device=""/>
@@ -2172,9 +2172,9 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="P+16" library="Supply" deviceset="+VBAT" device=""/>
 <part name="LED10" library="Passive" deviceset="SMD_RGB" device=""/>
 <part name="P+20" library="Supply" deviceset="+VRAW" device=""/>
-<part name="R3" library="Passive" deviceset="RES" device="0603" value="200"/>
-<part name="R4" library="Passive" deviceset="RES" device="0603" value="70"/>
-<part name="R5" library="Passive" deviceset="RES" device="0603" value="70"/>
+<part name="R3" library="Passive" deviceset="RES" device="0603" value="220"/>
+<part name="R4" library="Passive" deviceset="RES" device="0603" value="75"/>
+<part name="R5" library="Passive" deviceset="RES" device="0603" value="75"/>
 <part name="CON5" library="Mechanical" deviceset="HEADER_3X1" device=""/>
 <part name="U3" library="DigitalIC" deviceset="ATMEGA1281" device=""/>
 <part name="U4" library="Passive" deviceset="MCP9700A" device=""/>

@@ -168,9 +168,9 @@
 <text x="-2.54" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOT23">
-<smd name="3" x="0" y="-1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
-<smd name="2" x="-0.95" y="1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
-<smd name="1" x="0.95" y="1" dx="0.7" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="0" y="-1.0795" dx="0.889" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="-0.95" y="1.0795" dx="0.889" dy="0.6" layer="1" rot="R90"/>
+<smd name="1" x="0.95" y="1.0795" dx="0.889" dy="0.6" layer="1" rot="R90"/>
 <wire x1="-1.65" y1="-0.85" x2="1.65" y2="-0.85" width="0.127" layer="51"/>
 <wire x1="1.65" y1="-0.85" x2="1.65" y2="0.85" width="0.127" layer="51"/>
 <wire x1="1.65" y1="0.85" x2="-1.65" y2="0.85" width="0.127" layer="51"/>

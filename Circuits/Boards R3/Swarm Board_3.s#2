@@ -764,7 +764,6 @@ Manufacturer Part Number: XC6210B302MR-G</description>
 <pad name="1" x="-2.54" y="0" drill="0.8"/>
 <pad name="2" x="2.54" y="0" drill="0.8"/>
 <circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
 <text x="-3.81" y="6.35" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -2164,7 +2163,7 @@ Manufacturer Part Number: CL-SB-22A-01T</description>
 <part name="R42" library="Passive" deviceset="RES" device="0603" value="10k"/>
 <part name="P+19" library="Supply" deviceset="+VRAW" device=""/>
 <part name="P+2" library="Supply" deviceset="+VRAW" device=""/>
-<part name="LED1" library="Passive" deviceset="LED" device="0603" value="red"/>
+<part name="LED1" library="Passive" deviceset="LED" device="0603" value="RED"/>
 <part name="R1" library="Passive" deviceset="RES" device="0603" value="1.5k"/>
 <part name="R2" library="Passive" deviceset="RES" device="0603" value="1k"/>
 <part name="U$1" library="DigitalIC" deviceset="TB6612" device=""/>
