@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -114,7 +114,7 @@
 <text x="31.496" y="41.148" size="1.016" layer="21">3-17-14</text>
 <text x="29.7815" y="44.323" size="1.016" layer="21">SwarmBoard V3</text>
 <text x="31.5595" y="39.0525" size="1.016" layer="21">CPRC</text>
-<wire x1="59.783471875" y1="43" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20"/>
+<wire x1="59.783471875" y1="36" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20"/>
 <wire x1="3.716528125" y1="46.6557375" x2="59.783471875" y2="46.6557375" width="0.2032" layer="20" curve="-124"/>
 <wire x1="3.716528125" y1="16.8442625" x2="59.783471875" y2="16.8442625" width="0.2032" layer="20" curve="124"/>
 <text x="15.9385" y="67.691" size="1.778" layer="51">Long lead = circle for IR detector</text>
@@ -124,11 +124,9 @@
 <wire x1="74.5" y1="52" x2="78.331" y2="52" width="0.2032" layer="20"/>
 <wire x1="74.5" y1="11" x2="78.331" y2="11" width="0.2032" layer="20"/>
 <wire x1="78.331" y1="52" x2="78.331" y2="11" width="0.2032" layer="20" curve="-80.43"/>
-<wire x1="62" y1="36" x2="72" y2="36" width="0.2032" layer="20"/>
+<wire x1="59.783471875" y1="36" x2="72" y2="36" width="0.2032" layer="20"/>
 <wire x1="72" y1="36" x2="72" y2="18" width="0.2032" layer="20"/>
 <wire x1="72" y1="18" x2="74.5" y2="18" width="0.2032" layer="20"/>
-<wire x1="62" y1="36" x2="62" y2="43" width="0.2032" layer="20"/>
-<wire x1="62" y1="43" x2="59.783471875" y2="43" width="0.2032" layer="20"/>
 <text x="33.02" y="50.927" size="1.016" layer="21" font="vector" rot="R270">RXI</text>
 <text x="45.466" y="48.641" size="1.016" layer="21" font="vector" rot="R90">TXO</text>
 <text x="28.956" y="40.894" size="1.016" layer="21" font="vector" rot="R90">ON</text>
@@ -139,6 +137,8 @@
 <text x="9.144" y="25.781" size="1.016" layer="21" font="vector" rot="R90">ENCA</text>
 <text x="55.245" y="34.29" size="1.016" layer="21" font="vector" rot="R90">ENCB</text>
 <text x="29.5275" y="59.309" size="1.016" layer="22" font="vector" rot="MR0">DIST</text>
+<wire x1="62" y1="36.5" x2="62" y2="44.5" width="0.2032" layer="21"/>
+<wire x1="60" y1="36.5" x2="60" y2="44.5" width="0.2032" layer="21"/>
 </plain>
 <libraries>
 <library name="DigitalIC">
@@ -1227,8 +1227,8 @@ design rules under a new name.</description>
 <vertex x="16.002" y="61.214"/>
 <vertex x="27.432" y="66.294"/>
 <vertex x="46.99" y="63.246"/>
-<vertex x="59.69" y="48.895"/>
-<vertex x="59.563" y="12.446"/>
+<vertex x="59.5" y="48.895"/>
+<vertex x="59.5" y="12.446"/>
 <vertex x="55.118" y="4.064"/>
 <vertex x="27.686" y="-4.064"/>
 <vertex x="4.064" y="8.636"/>
@@ -2433,10 +2433,10 @@ design rules under a new name.</description>
 <contactref element="R49" pad="1"/>
 <contactref element="R48" pad="1"/>
 <polygon width="0.2032" layer="2" isolate="0.3048">
-<vertex x="61.849" y="53.848"/>
+<vertex x="62" y="53.848"/>
 <vertex x="86.614" y="53.848"/>
 <vertex x="86.487" y="10.414"/>
-<vertex x="61.722" y="10.414"/>
+<vertex x="62" y="10.414"/>
 </polygon>
 <wire x1="63.373" y1="41.136" x2="63.373" y2="42.926" width="0.254" layer="1"/>
 <via x="63.373" y="42.926" extent="1-16" drill="0.508"/>
@@ -2476,10 +2476,10 @@ design rules under a new name.</description>
 <contactref element="U7" pad="P$1"/>
 <contactref element="U8" pad="P$1"/>
 <polygon width="0.2032" layer="15" isolate="0.3048" thermals="no">
-<vertex x="61.849" y="53.848"/>
+<vertex x="62" y="53.848"/>
 <vertex x="86.614" y="53.848"/>
 <vertex x="86.487" y="10.414"/>
-<vertex x="61.722" y="10.414"/>
+<vertex x="62" y="10.414"/>
 </polygon>
 <contactref element="W3" pad="P$2"/>
 <contactref element="W3" pad="P$1"/>
